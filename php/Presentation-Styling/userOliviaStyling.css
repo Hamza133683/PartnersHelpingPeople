@@ -1,0 +1,108 @@
+﻿body {
+}
+
+@media screen and (min-width:992px) {
+    .UserSideMenu {
+        display: none;
+    }
+}
+.right-side-bar {
+    min-width: 250px;
+    overflow-y: auto;
+    background-color: rgba(241, 250, 255, 1);
+    border-radius: 12px;
+    padding:1rem 0;
+    height:min-content;
+}
+
+.olivia-head {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    text-transform: capitalize;
+    color: #025599;
+}
+
+.olivia-para {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 17px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #797979;
+    text-transform: capitalize;
+}
+
+
+.UserSelectDrop {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 17px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #797979;
+    text-transform: capitalize;
+    max-width: unset;
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    padding: 6px 0;
+    appearance: none;
+    position: relative;
+    z-index: 2;
+}
+.UserSelectDrop:focus{
+    outline:none;
+}
+.selectDiv{
+    position:relative;
+}
+.selectDiv::after {
+    content: url(../images/downArrow.svg);
+    position: absolute;
+    left: 100%;
+    top: 6px;
+    z-index:1
+}
+
+    .UserSelectDrop > option {
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 17px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: black;
+        text-transform:capitalize;
+    }
+
+.UserSideMenu {
+    margin-top: 30px;
+}
+
+    .UserSideMenu ul {
+        list-style: none;
+        padding-left: 0;
+    }
+
+        .UserSideMenu ul li {
+            width: 100%;
+        }
+
+            .UserSideMenu ul li a {
+                text-decoration: none;
+                color: #797979;
+                padding: 5px;
+                display: block;
+                margin: 0 auto;
+                text-align: center;
+                font-weight: 600;
+                font-size: 15px;
+            }
+
+                .UserSideMenu ul li a:hover {
+                    background-color: #025599;
+                    box-shadow: 2px 2px 10px 0 rgba(0,0,0,0.15);
+                    color: white;
+                }

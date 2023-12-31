@@ -1,0 +1,193 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/Dashboards_Layout.cshtml";
+}
+
+<link href="~/Dashboard-styling/DashsIndex.css" rel="stylesheet" />
+<link href="~/Dashboard-styling/bars_Stylings.css" rel="stylesheet" />
+
+<div class="container-fluid containWidth">
+    <div class="row" >
+        <div class="col-lg-3 rightSideBar order-1">
+            <div class="right-side-bar" style=" overflow-y: auto;">
+                <div>
+                    @{
+                        Html.RenderPartial("User_data_partial_view");
+                    }
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-9 order-0">
+
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" style="height:100%;">
+                <ol class="carousel-indicators hero-indicators">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    
+                </ol>
+                <div class="carousel-inner " style="height:100%;">
+                    <div class="carousel-item active">
+                        <img src="~/images/carousel image.png" alt="...">
+                        <div class="carousel-caption ">
+                            <h5 class="caro-head">Explora nuestra Career Track</h5>
+                            <p class="caro-para">Eleva tu carrera profesional y comprende los criterios de promoción. Embárcate en una emocionante trayectoria profesional familiarizándote con nuestra completa Trayectoria Profesional. Desbloquea el potencial de crecimiento y obtén información sobre los requisitos para lograr una promoción.</p>
+                        </div>
+                        <div class="btn-flow">
+                            <button class="caro-btn">
+                               Mas informacion
+                            </button>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="~/images/carousel image (1).png" alt="...">
+                        <div class="carousel-caption ">
+                            <h5 class="caro-head">World Greatest Bonus 2023</h5>
+                            <p class="caro-para">Descubre la Mecánica del Sistema de bonificaciones de AIL: Obtén un conocimiento profundo de cómo funciona el excepcional programa de bonificaciones de AIL, que te permitirá disfrutar de la encantadora experiencia de ser recompensado adecuadamente por tu arduo trabajo.</p>
+                        </div>
+                        <div class="btn-flow">
+                            <button class="caro-btn">
+                               Mas informacion
+                            </button>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="~/images/carousel image (2).png" alt="...">
+                        <div class="carousel-caption ">
+                            <h5 class="caro-head">¡Celebrando a nuestros líderes promovidos recientemente!</h5>
+                            <p class="caro-para">Únete a nosotros para felicitar de corazón a nuestra nueva cohorte de gerentes promovidos. Conozcamos a estos individuos destacados que han iniciado su trayectoria como líderes.</p>
+                        </div>
+                        <div class="btn-flow">
+                            <button class="caro-btn">
+                               Mas informacion
+                            </button>
+                        </div>
+                    </div>
+                   
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<div class="container-fluid pt-3 containWidth">
+    <div class="row">
+        <div class="col-md-4 col-sm-6 col-12">
+            <div class="figur">
+                <img src="~/images/announmentImges (1).svg"/>
+                <div class="figurCaption">
+                    <h6 class="card-head">
+                        Estos son nuestros más recientes top performers
+                    </h6>
+                    <button class="fig-btn">
+                        ver
+                    </button>
+                </div>
+            </div>          
+        </div>
+        <div class="col-md-4 col-sm-6 col-12">
+            <div class="figur">
+                <img src="~/images/announmentImges (2).svg"/>
+                <div class="figurCaption">
+                    <h6 class="card-head">
+                        Descubre nuestros concursos actuales
+                    </h6>
+                    <button class="fig-btn">
+                       ver
+                    </button>
+                </div>
+            </div>          
+        </div>
+        <div class="col-md-4 col-sm-6 col-12">
+            <div class="figur">
+                <img src="~/images/indexfigures (5).png"/>
+                <div class="figurCaption">
+                    <h6 class="card-head">
+                        Únete a nuestro Canal de Telegram
+                    </h6>
+                    <button class="fig-btn">
+                        ver
+                    </button>
+                </div>
+            </div>          
+        </div>
+
+        <div class="col-12" style="height:300px;">
+            <div class="figur" >
+                <img src="~/images/indexfigures (6).png" />
+                <div class="figurCaptionCenter">
+                    <h6 class="card-head-center">
+                        continued education
+                    </h6>
+                    
+                </div>
+            </div>
+        </div>
+
+        @*without buttons*@
+       
+        <div class="col-md-4 col-sm-6 col-12">
+            <div class="figur">
+                <img src="~/images/indexfigures (7).png" />
+                <div class="figurCaption">
+                    <h6 class="card-head">
+                        AIL Documents
+                    </h6>
+                </div>
+            </div>          
+        </div>  <div class="col-md-4 col-sm-6 col-12">
+            <div class="figur">
+                <img src="~/images/indexfigures (8).png" />
+                <div class="figurCaption">
+                    <h6 class="card-head">
+                        sales presentation
+                    </h6>
+                </div>
+            </div>          
+        </div>  <div class="col-md-4 col-sm-6 col-12">
+            <div class="figur">
+                <img src="~/images/indexfigures (9).png" />
+                <div class="figurCaption">
+                    <h6 class="card-head">
+                        QP TV
+                    </h6>
+                </div>
+            </div>          
+        </div>  <div class="col-md-4 col-sm-6 col-12">
+            <div class="figur">
+                <img src="~/images/indexfigures (3).png" />
+                <div class="figurCaption">
+                    <h6 class="card-head">
+                        conventions
+                    </h6>
+                </div>
+            </div>          
+        </div> 
+        <div class="col-md-4 col-sm-6 col-12">
+            <div class="figur">
+                <img src="~/images/indexfigures (2).png" />
+                <div class="figurCaption">
+                    <h6 class="card-head">
+                        Agency Resource center
+                    </h6>
+                </div>
+            </div>          
+        </div> 
+        <div class="col-md-4 col-sm-6 col-12">
+            <div class="figur">
+                <img src="~/images/indexfigures (1).png" />
+                <div class="figurCaption">
+                    <h6 class="card-head">
+                        follow us on social media
+                    </h6>
+                </div>
+            </div>          
+        </div>
+       
+    </div>
+</div>
+

@@ -1,0 +1,134 @@
+﻿
+@{
+    ViewBag.Title = "Documents";
+    Layout = "~/Views/Shared/Dashboards_Layout.cshtml";
+}
+
+
+<link href="~/Dashboard-styling/Documents.css" rel="stylesheet" />
+<link href="~/Dashboard-styling/bars_Stylings.css" rel="stylesheet" />
+
+
+<div class="ml-3">
+    <img src="~/images/Translation.svg" style="width:25px" />
+    <span style="font-size: 14px; font-weight: 400; line-height: 29px; letter-spacing: 0em; text-align: left; color: #797979; ">
+        Spanish
+    </span>
+</div>
+
+
+
+
+<div class="container-fluid px-0" style="height:100%;">
+    <div class="row w-100 mx-0" style="height:100%;">
+        <div class=" col-12 px-0  center-back">
+            @*main page and date*@
+            <div class="container-fluid mt-2 multiple-cards px-2">
+                <div class="row mx-0">
+                    <div class="col-md-3 col-sm-6 col-12">
+                        <figure>
+
+                            <img src="~/images/cont-images (1).svg" />
+
+                            <figcaption class="card-caption">
+                                <h6 class="card-head">
+                                    Documentos de American Income Life
+                                </h6>
+                                <p class="card-para">
+
+                                </p>
+                                <div class="d-flex align-items-center justify-content-end">
+
+
+                                    <a href="@Url.Action("Document_Detail","Dashboards")">
+                                        <button class="fig-btn">
+                                    ver todo
+                                        </button>
+                                    </a>
+                                </div>
+                            </figcaption>
+                        </figure>
+
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-12">
+                        <figure>
+                            <img src="~/images/cont-images (2).svg" />
+                            <figcaption class="card-caption">
+                                <h6 class="card-head">
+                                    dcumentos de leads
+                                </h6>
+                                <p class="card-para">
+
+                                </p>
+                                <div class="d-flex align-items-center justify-content-end">
+
+
+                                    <a href="@Url.Action("Document2","Dashboards")">
+                                        <button class="fig-btn">
+                                    ver todo
+                                        </button>
+                                    </a>
+
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </div>
+
+
+
+
+
+                    <div class="col-md-3 col-sm-6 col-12">
+                        <figure>
+                            <img src="~/images/cont-images (3).svg" />
+                            <figcaption class="card-caption">
+                                <h6 class="card-head">
+                                    tutoriales
+                                </h6>
+                                <p class="card-para">
+
+                                </p>
+                                <div class="d-flex align-items-center justify-content-end">
+
+
+                                    <a href="@Url.Action("Document3","Dashboards")">
+                                        <button class="fig-btn">
+                                    ver todo
+                                        </button>
+                                    </a>
+                                </div>
+                            </figcaption>
+                        </figure>
+                    </div>
+
+
+                </div>
+            </div>
+
+
+            @*main page and date*@
+
+        </div>
+    </div>
+</div>
+
+
+
+
+@*modal to add videos*@
+
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content" style="border-radius:2px;">
+
+
+            <img src="~/images/A4 - 2.svg" />
+
+
+
+        </div>
+    </div>
+</div>
+
+
+@*modal to add videos*@

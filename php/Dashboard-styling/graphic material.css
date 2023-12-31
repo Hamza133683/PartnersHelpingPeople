@@ -1,0 +1,202 @@
+﻿body {
+}
+
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+    grid-gap: 45px;
+    padding: 0 38px;
+    grid-template-rows: repeat(1, minmax(150px, min-content));
+    margin-bottom: 40px;
+    margin-top: 20px;
+}
+
+.grid-item {
+    margin: 0 auto;
+}
+
+.grid-content {
+    position: relative;
+}
+
+    .grid-content img:nth-child(1) {
+        width: 100%;
+    }
+
+    .grid-content .powerpoint {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        z-index: 3;
+        width: unset !important;
+    }
+
+.grid-content-pdf {
+    display: flex;
+}
+
+    .grid-content-pdf img {
+        margin: 0 auto;
+    }
+
+.grid-item-name {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 15px;
+    letter-spacing: 0em;
+    text-align: center;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    color: black;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+
+/*for graphics material content page*/
+
+
+
+.content-grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-gap: 22px;
+    padding: 0 38px;
+    grid-template-rows: repeat(2, minmax(90px, min-content));
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.grid-item {
+    margin: 0 auto;
+}
+
+.content-grid-container p {
+    font-size: 10px !important;
+}
+
+
+.multiple-cards .row > div {
+    padding: 0 7px;
+}
+
+    .multiple-cards .row > div figure {
+        max-height: 100%;
+    }
+
+figure {
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+}
+
+
+    figure img {
+        width: 100%;
+    }
+
+.card-caption {
+    background-color: white;
+    border-radius: 0 0 6px 6px;
+    padding: 20px 15px 10px 15px;
+}
+
+.card-head {
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 20px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: black;
+    text-transform: capitalize;
+}
+
+.card-para {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0em;
+    text-align: left;
+    text-transform: capitalize;
+    color: #797979;
+    margin-bottom: 8px;
+}
+
+.fig-btn {
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 17px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: white;
+    background-color: #025599;
+    padding: 6px 20px;
+    border: none;
+    border-radius: 4px;
+    text-transform: capitalize;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+
+
+
+
+/*for graphics material content page*/
+
+/*Graphic_Material_File styling*/
+
+.file-width {
+    max-width: 1100px;
+}
+
+.download-span {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: left;
+    text-transform: capitalize;
+    color: #797979;
+}
+
+.file-img {
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+
+.file-para {
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 21px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    color: black;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+
+/*Graphic_Material_File styling*/
+
+
+
+.dropdownUser {
+    display: block !important;
+}
+
+.RigthSideBar {
+    display: none !important;
+}
+
+
+.center-bar-head:after {
+    content: "Material Grafico"
+}

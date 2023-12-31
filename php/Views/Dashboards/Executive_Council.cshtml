@@ -1,0 +1,84 @@
+﻿
+@{
+    ViewBag.Title = "Executive_Council";
+    Layout = "~/Views/Shared/Dashboards_Layout.cshtml";
+}
+<link href="~/Dashboard-styling/Executive Council.css" rel="stylesheet" />
+
+<div class="container-fluid mt-5">
+    <h3 class="executiveHead">
+        2023 executive council team
+    </h3>
+    <div class="grid-container1 mt-5">
+        <figure>
+            <img src="~/images/executiveimg.png" />
+            <figcaption>
+                <p class="executiveHead1">omaira graces</p>
+               
+            </figcaption>
+        </figure>
+
+        <figure>
+            <img src="~/images/executiveimg (6).png" />
+            <figcaption>
+                <p class="executiveHead1">
+                    diego vargas
+                </p>
+               
+            </figcaption>
+        </figure>
+        <figure>
+            <img src="~/images/executiveimg (5).png" />
+            <figcaption>
+                <p class="executiveHead1">
+                    Klyo Vidal
+                </p>
+               
+            </figcaption>
+        </figure>
+        <figure>
+            <img src="~/images/executiveimg (4).png" />
+            <figcaption>
+                <p class="executiveHead1">
+                    Daniel Pacheco
+                </p>
+               
+            </figcaption>
+        </figure>
+        <figure>
+            <img src="~/images/executiveimg (3).png" />
+            <figcaption>
+                <p class="executiveHead1">
+                    yairy magon
+                </p>
+               
+            </figcaption>
+        </figure>
+        <figure>
+            <img src="~/images/executiveimg (2).png" />
+            <figcaption>
+                <p class="executiveHead1">
+                    andres moreno
+                </p>
+               
+            </figcaption>
+        </figure>
+        <figure>
+            <img src="~/images/executiveimg (7).png" />
+            <figcaption>
+                <p class="executiveHead1">
+                    Beto Quintero
+                </p>
+               
+            </figcaption>
+        </figure>
+
+    </div>
+    <div class="d-flex w-100 mt-5">
+        <a href="@Url.Action("Executive_Council_Updates","Dashboards")" class="mx-auto">
+            <button class="executiveBtn">
+                view more
+            </button>
+        </a>
+    </div>
+</div>

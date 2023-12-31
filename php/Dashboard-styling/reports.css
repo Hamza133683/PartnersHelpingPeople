@@ -1,0 +1,199 @@
+﻿body {
+}
+
+
+
+.inputs-field div input {
+    max-width: unset;
+    width: 100%;
+    background-color: transparent;
+}
+
+input[type=date] {
+    display: block;
+    height: 36.5px;
+    padding: 5px 10px;
+    border: none;
+    border-bottom: 1px solid rgba(121, 121, 121, 1);
+    border-radius: 0;
+    background-color: transparent;
+    max-width: unset;
+    width: 100%;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: black;
+}
+
+    input[type=date]:invalid + span:after {
+        content: "Select Date";
+        position: absolute;
+        left: 11px;
+        top: 9px;
+        font-size: 15px;
+        font-weight: 300;
+        line-height: 20px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: black;
+        text-transform: capitalize;
+    }
+
+    input[type=date]:focus:invalid + span:after {
+        display: none;
+    }
+
+input:not(:focus):invalid {
+    color: transparent;
+}
+
+input[type=date]:focus {
+    outline: none;
+    border-bottom: 1px solid rgba(121, 121, 121, 1);
+    border-radius: 0;
+}
+
+
+label.wrapper {
+    position: relative;
+    width: 100%;
+    background-color: transparent;
+    margin-bottom: 0;
+}
+
+
+/*form styling*/
+
+.form {
+    max-width: unset !important;
+    width: 100%;
+}
+
+div.form-item {
+    position: relative;
+    display: block;
+    margin-bottom: 17px;
+    width: 100%;
+}
+
+@media screen and (max-width:557px) {
+    div.form-item {
+        margin-right: 10px;
+    }
+}
+
+
+.file-span {
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 20px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: black;
+    text-transform: capitalize;
+    margin-top: 16px;
+    margin-left: 5px;
+    z-index: 5;
+}
+
+.form-control:focus {
+    box-shadow: none;
+}
+
+input {
+    transition: all 0.2s ease;
+}
+
+    input::placeholder {
+        font-size: 15px;
+        font-weight: 300;
+        line-height: 20px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: black;
+        text-transform: capitalize;
+    }
+
+    input.form-style {
+        display: block;
+        height: 45px;
+        padding: 5px 10px;
+        border: none;
+        border-bottom: 1px solid rgba(121, 121, 121, 1);
+        border-radius: 0;
+        background-color: transparent;
+        max-width: unset;
+        width: 100%;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: black;
+    }
+
+div.form-item .form-style:focus {
+    outline: none;
+    border: none;
+    border-bottom: 1px solid rgba(121, 121, 121, 1);
+    background-color: transparent;
+}
+
+
+input[type="file"]::-webkit-file-upload-button {
+    background: transparent;
+    color: transparent !important;
+    border: none;
+    position: absolute;
+    right: 20px;
+    top: 12.5px;
+    background: url(../images/Vector.svg) no-repeat;
+    background-position: right;
+}
+
+input[type="file"] {
+    color: transparent;
+    background-color: transparent;
+}
+
+    input[type="file"]:focus {
+        color: transparent !important;
+        background-color: transparent;
+    }
+
+
+
+/*form styling*/
+
+.report-save-btn {
+    padding: 12px 30px;
+    border-radius: 6px;
+    background-color: #025599;
+    color: white;
+    border: none;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-top:40px;
+}
+
+.right-side-bar {
+    height: unset !important;
+    padding: 30px 10px 30px 10px !important;
+}
+
+
+.center-bar-head:after {
+    content: "Reportes de actividad"
+}
+
+
+@media screen and (max-width:992px) {
+    .right-side-bar {
+        height: 100% !important;
+    }
+}

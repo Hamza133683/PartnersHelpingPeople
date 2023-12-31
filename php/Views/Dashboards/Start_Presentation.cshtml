@@ -1,0 +1,142 @@
+﻿
+@{
+    ViewBag.Title = "Start_Presentation";
+    Layout = "~/Views/Shared/Dashboards_Layout.cshtml";
+}
+
+
+
+<link href="~/Dashboard-styling/start-presentation.css" rel="stylesheet" />
+<link href="~/Dashboard-styling/bars_Stylings.css" rel="stylesheet" />
+
+<div class="container-fluid px-0 back-img-presentation" style=" ">
+    <div class="row w-100 mx-0" style="height:100%;">
+        <div class=" col-12 px-lg-4 px-0 mt-xl-3 center-back">
+
+            <div class="center-bar">
+                <div class="d-flex align-items-center justify-content-between">
+                    <div class="d-flex align-items-center">
+                        <a class="sideBarTrigger" onclick="openSideNav()" style="cursor:pointer; margin-right:5px; display:none;">
+                            <img src="~/images/Menu Rounded.svg" style="filter:brightness(100)" width="35px" />
+                        </a>
+                        <h4 class="center-bar-head" style="color:white;font-size:26px;">
+                            iniciar presentación
+                        </h4>
+                    </div>
+                    <div class="d-flex">
+
+                        <a class="SmallScreenSearchBar1" onclick="openSearchBar1()">
+
+                            <img src="~/images/Search.svg" width="24px" />
+
+                            <div class="" id="SmallScreenSearchBox1">
+                                <div style="position:relative;">
+                                    <input type="search" />
+                                    <button class="SearchBtnBox1">
+                                        Search
+                                    </button>
+                                </div>
+                            </div>
+                        </a>
+                        <form role="search" method="get" class="search-form search-btn" action="" style="position: relative; box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.15);border-radius:25px;">
+                            <label>
+
+                                <input type="search" class="search-field" placeholder="Search" value="" name="s" title="Search for:" />
+                            </label>
+                            <input type="submit" class="search-submit" value="Search" />
+                        </form>
+                        <a href="#" type="button" data-toggle="modal" data-target="#languagemodel">
+                            <div class="side-img mr-2 ml-2">
+                                <img src="~/images/Geography.svg" />
+                            </div>
+                        </a>
+
+
+                        <div class="nav-item action2">
+                            <div class="menu2 ">
+                                <ul class="mb-0" style="padding:0 !important;">
+                                    <li style="border:none !important;">
+                                        <a href="@Url.Action("About","Home")">
+                                            About
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="@Url.Action("FAQs","Home")">
+                                            FAQ
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="@Url.Action("Contact","Home")">
+                                            Contact
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <a class="profile2 " onclick="menuToggle2();">
+                                <div class="side-img ">
+                                    <img src="~/images/userIcon.png" width="45px" />
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            @*main page and date*@
+
+            <div class="container-fluid mt-5 pt-5" style="max-width:1800px;">
+                <div class="row mt-5 ">
+                    <div class="col-12 d-flex align-content-center justify-content-center mt-5">
+                        <div class="d-flex flex-column align-items-center justify-content-center mt-5">
+                            <h3 class="presen-head1">
+                                Welcome to
+                            </h3>
+                            <h2 class="presen-head2" style="max-width:1200px;">
+                                thrive presentation system
+                            </h2>
+                            <a href="@Url.Action("Index","Presentation")">
+                                <button class="presentation-btn mt-3">
+                                    Launch
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           
+            @*main page and date*@
+        </div>
+    </div>
+</div>
+
+
+<div id="closeSearchBox1" onclick="closeSearchBox()"></div>
+
+<script>
+    function menuToggle2() {
+        const toggleMenu = document.querySelector(".menu2");
+        toggleMenu.classList.toggle("active2");
+    }
+
+    $(document).on('click', '.sl-nav', function () {
+        $('.menu2').removeClass('active2');
+    });
+</script>
+@*for small scrreen search bar*@
+<script>
+
+    function openSearchBar1() {
+
+        jQuery("#SmallScreenSearchBox1").addClass("SmallScreenSearchBox1");
+        jQuery("#closeSearchBox1").addClass("closeSearchBox1");
+    }
+    function closeSearchBox() {
+
+        jQuery("#SmallScreenSearchBox1").removeClass("SmallScreenSearchBox1");
+        jQuery("#closeSearchBox1").removeClass("closeSearchBox1");
+    }
+
+</script>
+
+
+@*for small scrreen search bar*@

@@ -1,0 +1,884 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>FamilyProtectionFullViewH34</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-3.6.4.min.js"></script>
+    <script src="~/Scripts/bootstrap.js"></script>
+
+    <link href="~/Presentation-Styling/FamilyProtectionFullViewH34.css" rel="stylesheet" />
+    <link href="~/Presentation-Styling/Presentaion-Bar-styling.css" rel="stylesheet" />
+
+
+
+</head>
+<body>
+
+
+    @*for dropdown of userInfo*@
+
+    <script>
+        function menuToggle() {
+            const toggleMenu = document.querySelector(".menu");
+            toggleMenu.classList.toggle("active");
+        }
+
+        $(document).on('click', '.sl-nav', function () {
+            $('.menu').removeClass('active');
+        });
+    </script>
+
+    @*for dropdown of userInfo*@
+
+
+    <script>
+
+        function openSideNav() {
+
+            jQuery("#side-menu").addClass("aside-show");
+            jQuery("#overlay").addClass("overlay");
+        }
+
+        function closeSideNav() {
+
+            jQuery("#side-menu").removeClass("aside-show");
+            jQuery("#overlay").removeClass("overlay");
+        }
+
+    </script>
+
+
+    <div id="overlay" onclick="closeSideNav()"></div>
+
+    <div class="aside" id="side-menu" style="overflow-y:hidden !important;">
+        <div class="d-flex align-items-center justify-content-start" style="padding-left:30px;padding-bottom:15px;">
+            <a href=" @Url.Action("Index","Dashboards")">
+                <img src="~/images/white logo.svg" width="135px" />
+            </a>
+        </div>
+        <div class="side-bar">
+
+            <ul class="side-bar-list">
+                <li class="one six">
+                    <a href="@Url.Action("Announcements","Dashboards")">
+                        <div class="d-flex align-items-center justify-content-center   mr-3">
+                            <img src="~/images/announcement.svg" width="32px" />
+                        </div>
+                        Anuncios
+                    </a>
+                </li>
+                <li class="one">
+                    <a href="@Url.Action("Hired_Agent","Dashboards")">
+                        <div class="d-flex align-items-center justify-content-center   mr-3">
+                            <img src="~/images/hired agent.svg" width="32px" />
+                        </div>
+                        De contratado a ser Agente
+                    </a>
+                </li>
+                <li class="one">
+                    <a href="@Url.Action("Agent_Training","Dashboards")">
+                        <div class="d-flex align-items-center justify-content-center   mr-3">
+                            <img src="~/images/agent Training.svg" width="32px" />
+                        </div>
+                        Entrenamiento para nuevos agentes
+                    </a>
+                </li>
+                <li class="one">
+                    <a href="@Url.Action("Start_Presentation","Dashboards")">
+                        <div class="d-flex align-items-center justify-content-center   mr-3">
+                            <img src="~/images/Microsoft PowerPoint.svg" width="32px" />
+                        </div>
+                        iniciar presentación
+                    </a>
+                </li>
+                <li class="one">
+                    <a href="@Url.Action("Continue_Training","Dashboards")">
+                        <div class="d-flex align-items-center justify-content-center   mr-3">
+                            <img src="~/images/Development.svg" width="32px" />
+                        </div>
+                        Educación y desarrollo profesional
+                    </a>
+                </li>
+                <li class="one">
+                    <a href="@Url.Action("Current_Contests","Dashboards")">
+                        <div class="d-flex align-items-center justify-content-center   mr-3">
+                            <img src="~/images/Prize.svg" width="32px" />
+                        </div>
+                        Concursos Actuales
+                    </a>
+                </li>
+                <li class="one">
+                    <a href="@Url.Action("Executive_Council","Dashboards")">
+                        <div class="d-flex align-items-center justify-content-center   mr-3">
+                            <img src="~/images/City Hall.svg" width="32px" />
+                        </div>
+                        executive council
+                    </a>
+                </li>
+                <li class="one">
+                    <a href="@Url.Action("Free_Benefits","Dashboards")">
+                        <div class="d-flex align-items-center justify-content-center   mr-3">
+                            <img src="~/images/Extra Features.svg" width="32px" />
+                        </div>
+                        Beneficios sin costo
+                    </a>
+                </li>
+                <li class="one">
+                    <a href="@Url.Action("Reports","Dashboards")">
+                        <div class="d-flex align-items-center justify-content-center   mr-3">
+                            <img src="~/images/report and goals.svg" width="32px" />
+                        </div>
+                        Reportes de actividad
+                    </a>
+                </li>
+                <li class="one">
+                    <a href="@Url.Action("Production_Reports","Dashboards")">
+                        <div class="d-flex align-items-center justify-content-center   mr-3">
+                            <img src="~/images/Report File.svg" width="32px" />
+                        </div>
+                        Reportes de Producción
+                    </a>
+                </li>
+                <li class="one">
+                    <a href="@Url.Action("My_Goals","Dashboards")">
+                        <div class="d-flex align-items-center justify-content-center   mr-3">
+                            <img src="~/images/Goal.svg" width="32px" />
+                        </div>
+                        Metas de producción
+                    </a>
+                </li>
+                <li class="one">
+                    <a href="@Url.Action("IE_Calculator","Dashboards")">
+                        <div class="d-flex align-items-center justify-content-center   mr-3">
+                            <img src="~/images/Calculator.svg" width="32px" />
+                        </div>
+                        Calculador de Ingresos y Gastos
+                    </a>
+                </li>
+                <li class="one">
+                    <a href="@Url.Action("Recruiting_Reports","Dashboards")">
+                        <div class="d-flex align-items-center justify-content-center   mr-3">
+                            <img src="~/images/Human Resources.svg" width="32px" />
+                        </div>
+                        Reportes de Reclutamiento
+                    </a>
+                </li>
+
+                <li class="one">
+                    <a href="@Url.Action("Agency_Resource_Center","Dashboards")">
+                        <div class="d-flex align-items-center justify-content-center   mr-3">
+                            <img src="~/images/Data Center.svg" width="32px" />
+                        </div>
+                        agency resource center
+                    </a>
+                </li>
+                <li class="one">
+                    <a href="@Url.Action("Follow_Us","Dashboards")">
+                        <div class="d-flex align-items-center justify-content-center   mr-3">
+                            <img src="~/images/Add User Male.svg" width="32px" />
+                        </div>
+                        Siguenos en Redes
+                    </a>
+                </li>
+                <li class="one">
+                    <a href="@Url.Action("Virtual_Card","Dashboards")">
+                        <div class="d-flex align-items-center justify-content-center   mr-3">
+                            <img src="~/images/Credit Card.svg" width="32px" />
+                        </div>
+                        switch virtual card
+                    </a>
+                </li>
+                <li class="one">
+                    <a href="@Url.Action("Legacy_Rewards","Dashboards")">
+                        <div class="d-flex align-items-center justify-content-center   mr-3">
+                            <img src="~/images/Giveaway.svg" width="32px" />
+                        </div>
+                        legacy rewards
+                    </a>
+                </li>
+                <li class="one">
+                    <a href="@Url.Action("Documents","Dashboards")">
+                        <div class="d-flex align-items-center justify-content-center   mr-3">
+                            <img src="~/images/Documents.svg" width="32px" />
+                        </div>
+                        Documentos
+                    </a>
+                </li>
+                <li class="one">
+                    <a href="@Url.Action("Career_Path","Dashboards")">
+                        <div class="d-flex align-items-center justify-content-center   mr-3">
+                            <img src="~/images/Personal Growth.svg" width="32px" />
+                        </div>
+                        pista de carrera
+                    </a>
+                </li>
+                <li class="one">
+                    <a href="@Url.Action("Helpful_Links","Dashboards")">
+                        <div class="d-flex align-items-center justify-content-center   mr-3">
+                            <img src="~/images/Link.svg" width="32px" />
+                        </div>
+                        Enlaces Útiles
+                    </a>
+                </li>
+                <li class="one">
+                    <a href="@Url.Action("Conventions","Dashboards")">
+                        <div class="d-flex align-items-center justify-content-center   mr-3">
+                            <img src="~/images/Internet Connection.svg" width="32px" />
+                        </div>
+                        Convenciones
+                    </a>
+                </li>
+                <li class="one">
+                    <a href="@Url.Action("Graphic_Material","Dashboards")">
+                        <div class="d-flex align-items-center justify-content-center   mr-3">
+                            <img src="~/images/Photo Editor.svg" width="32px" />
+                        </div>
+                        Material Grafico
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+
+    <div class="container-fluid px-0" style="">
+        <div class="row w-100 mx-0" style="">
+            <div class="col-12 pr-0 px-3">
+                <div class="center-bar">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <a onclick="openSideNav()" style="cursor:pointer;">
+                            <img src="~/images/Menu Rounded.svg" style="filter:brightness(0)" width="35px" />
+                        </a>
+                        <div class="d-flex align-items-center">
+
+                            <form role="search" method="get" class="search-form search-btn" action="" style="position: relative; box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.15);border-radius:25px;">
+                                <label>
+
+                                    <input type="search" class="search-field" placeholder="Search" value="" name="s" title="Search for:" />
+                                </label>
+                                <input type="submit" class="search-submit" value="Search" />
+                            </form>
+                            <a href="#" type="button" data-toggle="modal" data-target="#languagemodel">
+                                <div class="side-img mr-2 ml-2">
+                                    <img src="~/images/Geography.svg" />
+                                </div>
+                            </a>
+                            <div class="nav-item action">
+                                <div class="menu ">
+                                    <ul class="mb-0" style="padding:0 !important;">
+                                        <li style="border:none !important;">
+                                            <a href="@Url.Action("About","Home")">
+                                                About
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="@Url.Action("FAQs","Home")">
+                                                FAQ
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="@Url.Action("Contact","Home")">
+                                                Contact
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <a class="profile dropdownUser" onclick="menuToggle();">
+                                    <div class="side-img ">
+                                            <img src="~/images/userIcon.png" width="45px" />
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <h3 class="fullViewHead">
+        Family protection plan
+    </h3>
+
+    <div class="d-flex align-items-center justify-content-between px-4 mx-2">
+        <div class="d-flex flex-column">
+            <img src="~/images/global life.svg" class="mb-3" width="174px" />
+            <a>
+                <button class="FullViewBtn">
+                    Full View
+                </button>
+            </a>
+        </div>
+        <div class="d-flex flex-column">
+            <img src="~/images/quintero.svg" class="mb-3 mx-auto" width="130px" />
+            <a href="@Url.Action("FamlyProtectionDetail","Presentation")">
+                <button class="FullViewBtn">
+                    Presentation
+                </button>
+            </a>
+        </div>
+    </div>
+
+    <div class="px-4 mx-2">
+        <div style="position:relative;">
+            <div class="overflowContainer" style="">
+                <div class="scrollWidth" style="">
+                    <table class="FullViewTable">
+                        <thead>
+                            <tr>
+                                <td>
+                                </td>
+                                <td>
+                                    Primary
+                                </td>
+                                <td>
+                                    Spouse
+                                </td>
+                                <td>
+                                    children
+                                </td>
+                                <td>
+                                </td>
+                            </tr>
+                        </thead>
+                    </table>
+                    <p class="FullViewTablePara">
+                        <span>H34</span> Hospital visit dua to accident injury
+                    </p>
+                    <table class="FullViewTable">
+                        <tbody>
+
+                            <tr>
+                                <td>
+                                    daily hospital stay
+                                </td>
+                                <td id="nav">
+                                    <a class="dropdown-toggle">
+                                        $200
+                                    </a>
+                                    <ul class="dropdown" style="z-index:2;">
+                                        <li>
+                                            <a>
+                                                $50
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a>
+                                                $100
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a>
+                                                $150
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a>
+                                                $200
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </td>
+                                <td id="nav">
+                                    <a class="dropdown-toggle">
+                                        $200
+                                    </a>
+                                    <ul class="dropdown" style="z-index:2;">
+                                        <li>
+                                            <a>
+                                                $50
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a>
+                                                $100
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a>
+                                                $150
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a>
+                                                $200
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </td>
+                                <td id="nav">
+                                    <a class="dropdown-toggle">
+                                        $200
+                                    </a>
+                                    <ul class="dropdown" style="z-index:2;">
+                                        <li>
+                                            <a>
+                                                $50
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a>
+                                                $100
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a>
+                                                $150
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a>
+                                                $200
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <button>
+                                        <img src="~/images/Create.svg" width="26px" />
+                                    </button>
+                                    <button>
+                                        <img src="~/images/Delete.svg" width="26px" />
+
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    intensive care unit
+                                </td>
+                                <td id="nav">
+                                    <a class="dropdown-toggle">
+                                        $200
+                                    </a>
+                                    <ul class="dropdown" style="z-index:2;">
+                                        <li>
+                                            <a>
+                                                $50
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a>
+                                                $100
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a>
+                                                $150
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a>
+                                                $200
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </td>
+                                <td id="nav">
+                                    <a class="dropdown-toggle">
+                                        $200
+                                    </a>
+                                    <ul class="dropdown" style="z-index:2;">
+                                        <li>
+                                            <a>
+                                                $50
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a>
+                                                $100
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a>
+                                                $150
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a>
+                                                $200
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </td>
+                                <td id="nav">
+                                    <a class="dropdown-toggle">
+                                        $200
+                                    </a>
+                                    <ul class="dropdown" style="z-index:2;">
+                                        <li>
+                                            <a>
+                                                $50
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a>
+                                                $100
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a>
+                                                $150
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a>
+                                                $200
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </td>
+                                <td>
+                                    <button>
+                                        <img src="~/images/Create.svg" width="26px" />
+                                    </button>
+                                    <button>
+                                        <img src="~/images/Delete.svg" width="26px" />
+
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="d-flex align-items-center justify-content-end mt-5">
+            <button class="addRowBtn">
+                Add row <img src="~/images/plusBlue.svg" width="15px" class="ml-1" />
+            </button>
+        </div>
+
+
+        <p class="FullViewTablePara">
+            <span>Products</span>
+        </p>
+        <div class="" style="overflow-x:scroll;">
+            <table class="productTable">
+                <thead>
+                    <tr>
+                        <td>
+                            Product name
+                        </td>
+                        <td>
+                            Product name
+                        </td>
+                        <td>
+                            Product name
+                        </td>
+                        <td>
+                            Product name
+                        </td>
+                        <td>
+                            Product name
+                        </td>
+                        <td>
+                            <button>
+                                <img src="~/images/Create.svg" width="22px" />
+                            </button>
+                            <button>
+                                <img src="~/images/Delete.svg" width="22px" />
+
+                            </button>
+                        </td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            -----
+                        </td>
+                        <td>
+                            -----
+                        </td>
+                        <td>
+                            -----
+                        </td>
+                        <td>
+                            -----
+                        </td>
+                        <td>
+                            -----
+                        </td>
+                        <td>
+                            <button>
+                                <img src="~/images/Create.svg" width="22px" />
+                            </button>
+                            <button>
+                                <img src="~/images/Delete.svg" width="22px" />
+
+                            </button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            -----
+                        </td>
+                        <td>
+                            -----
+                        </td>
+                        <td>
+                            -----
+                        </td>
+                        <td>
+                            -----
+                        </td>
+                        <td>
+                            -----
+                        </td>
+                        <td>
+                            <button>
+                                <img src="~/images/Create.svg" width="22px" />
+                            </button>
+                            <button>
+                                <img src="~/images/Delete.svg" width="22px" />
+
+                            </button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            -----
+                        </td>
+                        <td>
+                            -----
+                        </td>
+                        <td>
+                            -----
+                        </td>
+                        <td>
+                            -----
+                        </td>
+                        <td>
+                            -----
+                        </td>
+                        <td>
+                            <button>
+                                <img src="~/images/Create.svg" width="22px" />
+                            </button>
+                            <button>
+                                <img src="~/images/Delete.svg" width="22px" />
+
+                            </button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            -----
+                        </td>
+                        <td>
+                            -----
+                        </td>
+                        <td>
+                            -----
+                        </td>
+                        <td>
+                            -----
+                        </td>
+                        <td>
+                            -----
+                        </td>
+                        <td>
+                            <button>
+                                <img src="~/images/Create.svg" width="22px" />
+                            </button>
+                            <button>
+                                <img src="~/images/Delete.svg" width="22px" />
+
+                            </button>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            -----
+                        </td>
+                        <td>
+                            -----
+                        </td>
+                        <td>
+                            -----
+                        </td>
+                        <td>
+                            -----
+                        </td>
+                        <td>
+                            -----
+                        </td>
+                        <td>
+                            <button>
+                                <img src="~/images/Create.svg" width="22px" />
+                            </button>
+                            <button>
+                                <img src="~/images/Delete.svg" width="22px" />
+
+                            </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="d-flex justify-content-between flex-wrap" style="margin-bottom:6rem;">
+            <div class="" style="max-width:900px;">
+                <p class="FullViewTablePara" style="display:inline-block;">
+                    <span>Notes</span>
+                </p>
+
+                <p class="notesPara my-3">
+                    Lorem ipsum dolor sit amet consectetur. A cras sagittis faucibus faucibus eu nunc a pulvinar lobortis. Dis erat sit nunc amet quis vitae sit nisl. Turpis laoreet metus etiam risus faucibus viverra rhoncus nec. Egestas sit risus porttitor quam convallis. Libero vitae eu tellus praesent convallis vel. Risus sit auctor dui sed. Ut tellus amet est vel.
+                </p>
+            </div>
+            <div class="d-flex flex-column align-content-start ml-auto">
+                <p class="FullViewTablePara" style="display:inline-block;">
+                    <span>Program Investment</span>
+                </p>
+                <div class="d-flex justify-content-center mt-3" style="padding: 15px 35px; border: 1px solid rgba(211, 211, 211, 1); border-radius: 4px; box-shadow: 0 2px 5px 0 rgba(5, 137, 200, 0.5); ">
+                    <div style="font-size: 30px; font-weight: 400; line-height: 30px; letter-spacing: 0em; text-align: right; color: #797979; text-transform: capitalize; ">
+                        I
+                    </div>
+                    <div class="d-flex flex-column align-items-end ml-2">
+                        <span style=" font-size: 30px; font-weight: 400; line-height: 30px; letter-spacing: 0em; text-align: right; color: #797979; text-transform: capitalize;">
+                            $80.00
+                        </span>
+                        <span style=" font-size: 12px; font-weight: 400; line-height: 19px; letter-spacing: 0em; text-align: right; text-transform: capitalize; color: #025599; ">
+                            per month
+                        </span>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-end">
+                    <button class="HousePowerBtn" data-toggle="modal" data-target="#HouseOfPower" type="button">
+                        house of power
+                    </button>
+                </div>
+                <div class="d-flex justify-content-end mt-2">
+                    <button class="addRowBtn">
+                        Option B
+                    </button>
+                </div>
+                <div class="d-flex justify-content-end mt-2">
+                    <button class="addRowBtn">
+                        Option c
+                    </button>
+                </div>
+
+
+            </div>
+        </div>
+
+    </div>
+
+    @*hose of power model*@
+
+    <div class="modal fade" id="HouseOfPower" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered mx-auto" role="document" style="max-width:420px; ">
+            <div class="modal-content">
+                <div class="mt-3 mr-3">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <img src="~/images/Cancel.svg" />
+                    </button>
+                </div>
+                <div style="padding:10px 35px;">
+                    <h3 class="FullViewTablePara text-center" style="border:none;display:block;">
+                        <span>House of Power</span>
+                    </h3>
+                    <div class="d-flex flex-column align-items-start mt-3">
+                        <div class="d-flex">
+                            <div style="font-size: 18px; font-weight: 600; line-height: 22px; letter-spacing: 0em; text-align: right; text-transform: capitalize; ">
+                                I
+                            </div>
+                            <span class="ml-1" style=" font-size: 18px; font-weight: 600; line-height: 22px; letter-spacing: 0em; text-align: right;  text-transform: capitalize;">
+                                $20
+                            </span>
+                        </div>
+                        <span style=" font-size: 12px; font-weight: 400; line-height: 16px; letter-spacing: 0em; text-align: right; text-transform: capitalize; color: #797979;">
+                            Hourly Income
+                        </span>
+
+                    </div>
+                    <div class="d-flex flex-column align-items-end mt-3">
+                        <span style=" font-size: 12px; font-weight: 400; line-height: 16px; letter-spacing: 0em; text-align: right; text-transform: capitalize; color: #797979;">
+                            Cost of program
+                        </span>
+                        <div class="d-flex">
+                            <div style="font-size: 18px; font-weight: 600; line-height: 22px; letter-spacing: 0em; text-align: right; text-transform: capitalize; ">
+                                I
+                            </div>
+                            <span class="ml-1" style=" font-size: 18px; font-weight: 600; line-height: 22px; letter-spacing: 0em; text-align: right;  text-transform: capitalize;">
+                                $80.00
+                            </span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="my-3" style="border: 0.1px solid rgba(211, 211, 211, 1); width: 100%;">
+
+                </div>
+
+                <div style="padding:0 35px 25px 35px;">
+
+                    <div class="d-flex flex-column align-items-start mt-3">
+                        <span style=" font-size: 12px; font-weight: 400; line-height: 16px; letter-spacing: 0em; text-align: right; text-transform: capitalize; color: #797979;">
+                            Formula
+                        </span>
+                        <div class="d-flex">
+                            <div style="font-size: 18px; font-weight: 600; line-height: 22px; letter-spacing: 0em; text-align: right; text-transform: capitalize; ">
+                                I
+                            </div>
+                            <span class="ml-1" style=" font-size: 18px; font-weight: 600; line-height: 22px; letter-spacing: 0em; text-align: right;  text-transform: capitalize;">
+                                $80.00 <span style="color:#025599;font-size:10px;">per week</span>
+                            </span>
+                        </div>
+                    </div>
+
+
+                    <p class="mt-4" style="font-size: 14px; font-weight: 400; line-height: 17px; letter-spacing: 0em; text-align: left;text-transform:capitalize;max-width:300px;">
+                        how many hours per week they need to work to pay the program
+                    </p>
+
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+
+    @*hose of power model*@
+
+
+
+    <script>
+        $(function () { // Dropdown toggle
+            $('.dropdown-toggle').click(function () {
+                $(this).next('.dropdown').slideToggle();
+            });
+
+            $(document).click(function (e) {
+                var target = e.target;
+                if (!$(target).is('.dropdown-toggle') && !$(target).parents().is('.dropdown-toggle'))
+                //{$('.dropdown').hide(); }
+                { $('.dropdown').slideUp(); }
+            });
+        });
+    </script>
+
+
+
+</body>
+</html>

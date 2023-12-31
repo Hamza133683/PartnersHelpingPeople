@@ -1,0 +1,3261 @@
+﻿
+@{
+    ViewBag.Title = "Family_Protection_SDetail";
+    Layout = "~/Views/Shared/Presentation_Layout.cshtml";
+}
+
+<link href="~/Presentation-Styling/Presentaion-Bar-styling.css" rel="stylesheet" />
+<link href="~/Presentation-Styling/Family_Protection_SDetail.css" rel="stylesheet" />
+
+<style type="text/css">
+   /* tr.tr-hover-class:hover {
+        border: 1px solid;
+        border-color: #FFF3C7;
+    }
+
+    .rowselected {
+        border: 1px solid;
+        border-color: #FFF3C7;
+        background-color: #FFF3C7;
+    }
+
+    .dropdowncss {
+    }
+
+    .RowBackgroundColor {
+        background-color: #FFF3C7 !important;
+    }*/
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+    /* Firefox */
+    input[type=number] {
+        -moz-appearance: textfield;
+    }
+</style>
+
+<div class="d-flex align-items-center px-4 mt-3">
+    <a href="@Url.Action("Family_Protection","Presentation")" style="text-decoration: none; cursor: pointer;">
+        <h1 class="mb-0 " style=" font-size: 14px; font-weight: 400; line-height: 19px; letter-spacing: 0em; text-align: left; color: rgba(0, 0, 0, 1);">
+            Back
+            <img src="~/images/Back To.svg" alt="" width="25px" />
+        </h1>
+    </a>
+    
+    <h1 class="mb-0 ml-2 nextbtn" style=" font-size: 14px; font-weight: 400; cursor: pointer; line-height: 19px; letter-spacing: 0em; text-align: left; color: rgba(0, 0, 0, 1);">
+        <img src="~/images/next.svg" alt="" width="25px" />
+        Next
+    </h1>
+</div>
+<div class="col-12 d-flex align-items-center justify-content-between py-3 px-4 twoImgBar">
+    <img src="~/images/global life.svg" width="120px" />
+    <div class="d-flex flex-column mt-5">
+        <h3 class="olivia-head" style="font-size: 30px; text-align: center; color: #00558E;">
+            FAMILY PROTECTION PLAN BUILDER
+        </h3>
+        <h2 class="olivia-head" style="font-size: 20px; font-weight: 400; line-height: 24px; letter-spacing: 0em; text-align: center;color:black;text-transform:capitalize; ">
+            Añade los miembros de la familia
+        </h2>
+    </div>
+    <div>
+        <img src="~/images/elemphant TV IMage.png" width="40px" class="mr-2" />
+        <img src="~/images/quintero.svg" width="90px" />
+    </div>
+</div>
+
+
+<div class="col-12 d-flex align-items-center justify-content-between py-3 px-4">
+
+    <button class="indication-btn" data-toggle="modal" data-target="#AnadirProducto" style="white-space:nowrap;padding:8px 15px;width:unset;">
+        Anadir producto
+    </button>
+    <button class="indication-btn" data-toggle="modal" data-target="#RemoverProducto" style="white-space: nowrap; padding: 8px 15px; width: unset;">
+        Remover Producto
+    </button>
+</div>
+
+<div class="col-12" id="parent_products_div">
+
+    <div class=" mx-2" id="product1" >
+        <p class="FullViewTablePara">
+            <span>A71</span> Hospital visit due to accident injury
+        </p>
+        <div class="overflowContainer" style="">
+            <div class="scrollWidth" style="">
+                <table class="FullViewTable" style="">
+                    <thead>
+                        <tr class="childrentdheading">
+                            <td></td>
+                           @* <td>
+                                Primary
+                            </td>
+                            <td>
+                                Spouse
+                            </td>*@
+                           @* <td>
+                                children1
+                            </td>*@
+
+                        </tr>
+                    </thead>
+                    <tbody id="A71Product1">
+                        <tr class="optionstd">
+                            <td></td>
+                            <td>
+                                <div>
+                                    <div class="options1" onclick="coloumnhighlight('A71_Product1_EmergencyRow1','A71_Product1_HospitalRow1','A71_Product1_IntensiveRow1')" style="cursor:pointer">Opción A</div>
+                                    <div class="options2 td-coloumn-class">Opción B</div>
+                                    <div class="options3 td-coloumn-class">Opción C</div>
+                                </div>
+                            </td>
+                            <td >
+                                <div>
+                                    <div class="options1 td-coloumn-class">Opción A</div>
+                                    <div class="options2 td-coloumn-class">Opción B</div>
+                                    <div class="options3 td-coloumn-class">Opción C</div>
+                                </div>
+                            </td>
+                           @* <td>
+                                <div>
+                                    <div class="options1">Opción A</div>
+                                    <div class="options2">Opción B</div>
+                                    <div class="options3">Opción C</div>
+                                </div>
+                            </td>*@
+                        </tr>
+                        <tr class='tr-hover-class A71_Product1_EmergencyRow'>
+                            <td class="cc"  style="cursor:pointer">
+                                <h1>
+                                    emergency
+                                </h1>
+                            </td>
+                            <td class="DropDownSelects" style="cursor:pointer">
+                                <div class="re">
+                                    <select class="options1" id="A71_Product1_EmergencyRow1" onchange="childdropdown(this,1)">
+                                        <option value="0">$50</option>
+                                        <option value="1">$100</option>
+                                        <option value="2">$150</option>
+                                        <option value="3">$200</option>
+                                        <option value="4">$250</option>
+                                        <option value="5">$300</option>
+
+                                    </select>
+                                    <select class="options2" id="A71_Product1_EmergencyRow2" onchange="childdropdown(this,2)">
+                                        <option value="0">$50</option>
+                                        <option value="1">$100</option>
+                                        <option value="2">$150</option>
+                                        <option value="3">$200</option>
+                                        <option value="4">$250</option>
+                                        <option value="5">$300</option>
+                                    </select>
+                                    <select class="options3" id="A71_Product1_EmergencyRow3" onchange="childdropdown(this,3)">
+                                        <option value="0">$50</option>
+                                        <option value="1">$100</option>
+                                        <option value="2">$150</option>
+                                        <option value="3>$200</option>
+                                        <option value="4">$250</option>
+                                        <option value="5">$300</option>
+                                    </select>
+                                </div>
+                            </td>
+                            <td class="DropDownSelects" style="cursor:pointer">
+                                <div class="re">
+                                    <select class="options1" id="A71_Product1_EmergencyRow4" onchange="childdropdown(this,4)">
+                                        <option value="0">$50</option>
+                                        <option value="1">$100</option>
+                                        <option value="2">$150</option>
+                                        <option value="3">$200</option>
+                                        <option value="4">$250</option>
+                                        <option value="5">$300</option>
+                                    </select>
+                                    <select class="options2" id="A71_Product1_EmergencyRow5" onchange="childdropdown(this,5)">
+
+                                        <option value="0">$50</option>
+                                        <option value="1">$100</option>
+                                        <option value="2">$150</option>
+                                        <option value="3">$200</option>
+                                        <option value="4">$250</option>
+                                        <option value="5">$300</option>
+                                    </select>
+                                    <select class="options3" id="A71_Product1_EmergencyRow6" onchange="childdropdown(this,6)">
+                                        <option value="0">$50</option>
+                                        <option value="1">$100</option>
+                                        <option value="2">$150</option>
+                                        <option value="3">$200</option>
+                                        <option value="4">$250</option>
+                                        <option value="5">$300</option>
+                                    </select>
+                                </div>
+                            </td>
+                            @*   <td class="DropDownSelects c">
+            <div class="re">
+                <select class="options1">
+                    <option>$50</option>
+                    <option>$100</option>
+                    <option>$150</option>
+                    <option>$200</option>
+                    <option>$250</option>
+                    <option>$300</option>
+                </select>
+                <select class="options2">
+                    <option>$50</option>
+                    <option>$100</option>
+                    <option>$150</option>
+                    <option>$200</option>
+                    <option>$250</option>
+                    <option>$300</option>
+                </select>
+                <select class="options3">
+                    <option>$50</option>
+                    <option>$100</option>
+                    <option>$150</option>
+                    <option>$200</option>
+                    <option>$250</option>
+                    <option>$300</option>
+                </select>
+            </div>
+        </td>*@
+
+                        </tr>
+                        <tr class='tr-hover-class A71_Product1_HospitalRow'>
+                            <td style="cursor:pointer">
+                                <h1>
+                                    Hospital
+                                </h1>
+                            </td>
+                            <td class="DropDownSelects">
+                                <div class="re">
+                                    <select class="options1" id="A71_Product1_HospitalRow1" onchange="childdropdown(this,1)">
+                                        <option value="0">$100</option>
+                                        <option value="1">$200</option>
+                                        <option value="2">$300</option>
+                                        <option value="3">$400</option>
+                                        <option value="4">$500</option>
+                                        <option value="5">$600</option>
+
+                                    </select>
+                                    <select class="options2" id="A71_Product1_HospitalRow2" onchange="childdropdown(this,2">
+                                        <option value="0">$100</option>
+                                        <option value="1">$200</option>
+                                        <option value="2">$300</option>
+                                        <option value="3">$400</option>
+                                        <option value="4">$500</option>
+                                        <option value="5">$600</option>
+                                    </select>
+                                    <select class="options3" id="A71_Product1_HospitalRow3" onchange="childdropdown(this,3)">
+                                        <option value="0">$100</option>
+                                        <option value="1">$200</option>
+                                        <option value="2">$300</option>
+                                        <option value="3">$400</option>
+                                        <option value="4">$500</option>
+                                        <option value="5">$600</option>
+                                    </select>
+                                </div>
+                            </td>
+                            <td class="DropDownSelects">
+                                <div class="re">
+                                    <select class="options1" id="A71_Product1_HospitalRow4" onchange="childdropdown(this,4)">
+                                        <option value="0">$100</option>
+                                        <option value="1">$200</option>
+                                        <option value="2">$300</option>
+                                        <option value="3">$400</option>
+                                        <option value="4">$500</option>
+                                        <option value="5">$600</option>
+                                    </select>
+                                    <select class="options2" id="A71_Product1_HospitalRow5" onchange="childdropdown(this,5)">
+                                        <option value="0">$100</option>
+                                        <option value="1">$200</option>
+                                        <option value="2">$300</option>
+                                        <option value="3">$400</option>
+                                        <option value="4">$500</option>
+                                        <option value="5">$600</option>
+                                    </select>
+                                    <select class="options3" id="A71_Product1_HospitalRow6" onchange="childdropdown(this,6)">
+                                        <option value="0">$100</option>
+                                        <option value="1">$200</option>
+                                        <option value="2">$300</option>
+                                        <option value="3">$400</option>
+                                        <option value="4">$500</option>
+                                        <option value="5">$600</option>
+                                    </select>
+                                </div>
+                            </td>
+                           @* <td class="DropDownSelects">
+                                <div class="re">
+                                    <select class="options1">
+                                        <option>$100</option>
+                                        <option>$200</option>
+                                        <option>$300</option>
+                                        <option>$400</option>
+                                        <option>$500</option>
+                                        <option>$600</option>
+                                    </select>
+                                    <select class="options2">
+                                        <option>$100</option>
+                                        <option>$200</option>
+                                        <option>$300</option>
+                                        <option>$400</option>
+                                        <option>$500</option>
+                                        <option>$600</option>
+                                    </select>
+                                    <select class="options3">
+                                        <option>$100</option>
+                                        <option>$200</option>
+                                        <option>$300</option>
+                                        <option>$400</option>
+                                        <option>$500</option>
+                                        <option>$600</option>
+                                    </select>
+                                </div>
+                            </td>*@
+
+
+                        </tr>
+                        <tr class='tr-hover-class A71_Product1_IntensiveRow'>
+                            <td style="cursor:pointer">
+                                <h1>
+                                    Cuidados intensivos
+                                </h1>
+                            </td>
+                            <td class="DropDownSelects">
+                                <div class="re">
+                                    <select class="options1"  id="A71_Product1_IntensiveRow1" onchange="childdropdown(this,1)">
+                                        <option value="0">$200</option>
+                                        <option value="1">$400</option>
+                                        <option value="2">$600</option>
+                                        <option value="3">$800</option>
+                                        <option value="4">$1,000</option>
+                                        <option value="5">$1,200</option>
+                                    </select>
+                                    <select class="options2" id="A71_Product1_IntensiveRow2" onchange="childdropdown(this,2)">
+                                        <option value="0">$200</option>
+                                        <option value="1">$400</option>
+                                        <option value="2">$600</option>
+                                        <option value="3">$800</option>
+                                        <option value="4">$1,000</option>
+                                        <option value="5">$1,200</option>
+                                    </select>
+                                    <select class="options3" id="A71_Product1_IntensiveRow3" onchange="childdropdown(this,3)">
+
+                                        <option value="0">$200</option>
+                                        <option value="1">$400</option>
+                                        <option value="2">$600</option>
+                                        <option value="3">$800</option>
+                                        <option value="4">$1,000</option>
+                                        <option value="5">$1,200</option>
+                                    </select>
+                                </div>
+                            </td>
+                            <td class="DropDownSelects">
+                                <div class="re">
+                                    <select class="options1" id="A71_Product1_IntensiveRow4" onchange="childdropdown(this,4)">
+                                        <option value="0">$200</option>
+                                        <option value="1">$400</option>
+                                        <option value="2">$600</option>
+                                        <option value="3">$800</option>
+                                        <option value="4">$1,000</option>
+                                        <option value="5">$1,200</option>
+                                    </select>
+                                    <select class="options2" id="A71_Product1_IntensiveRow5" onchange="childdropdown(this,5)">
+                                        <option value="0">$200</option>
+                                        <option value="1">$400</option>
+                                        <option value="2">$600</option>
+                                        <option value="3">$800</option>
+                                        <option value="4">$1,000</option>
+                                        <option value="5">$1,200</option>
+                                    </select>
+                                    <select class="options3" id="A71_Product1_IntensiveRow6" onchange="childdropdown(this,6)">
+                                        <option value="0">$200</option>
+                                        <option value="1">$400</option>
+                                        <option value="2">$600</option>
+                                        <option value="3">$800</option>
+                                        <option value="4">$1,000</option>
+                                        <option value="5">$1,200</option>
+                                    </select>
+                                </div>
+                            </td>
+                            @*<td class="DropDownSelects">
+                                <div class="re">
+                                    <select class="options1">
+                                        <option>$200</option>
+                                        <option>$400</option>
+                                        <option>$600</option>
+                                        <option>$800</option>
+                                        <option>$1,000</option>
+                                        <option>$1,200</option>
+                                    </select>
+                                    <select class="options2">
+                                        <option>$200</option>
+                                        <option>$400</option>
+                                        <option>$600</option>
+                                        <option>$800</option>
+                                        <option>$1,000</option>
+                                        <option>$1,200</option>
+                                    </select>
+                                    <select class="options3">
+                                        <option>$200</option>
+                                        <option>$400</option>
+                                        <option>$600</option>
+                                        <option>$800</option>
+                                        <option>$1,000</option>
+                                        <option>$1,200</option>
+                                    </select>
+                                </div>
+                            </td>*@
+
+
+
+
+                        </tr>
+
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class=" mx-2" id="product2">
+        <p class="FullViewTablePara">
+            <span>H34</span> Hospital visit due to accident injury
+        </p>
+        <div class="overflowContainer" style="">
+            <div class="scrollWidth" style="">
+                <table class="FullViewTable" style="">
+                    <thead>
+                        <tr class="childrentdheading">
+                            <td></td>
+                         @*   <td>
+                                Primary
+                            </td>
+                            <td>
+                                Spouse
+                            </td>*@
+                           @* <td>
+                                children1
+                            </td>*@
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="optionstd">
+                            <td></td>
+                            <td>
+                                <div>
+                                    <div class="options1">Opción A</div>
+                                    <div class="options2">Opción B</div>
+                                    <div class="options3">Opción C</div>
+                                </div>
+                            </td>
+                            <td>
+                                <div>
+                                    <div class="options1">Opción A</div>
+                                    <div class="options2">Opción B</div>
+                                    <div class="options3">Opción C</div>
+                                </div>
+                            </td>
+                            @*<td>
+                                <div>
+                                    <div class="options1">Opción A</div>
+                                    <div class="options2">Opción B</div>
+                                    <div class="options3">Opción C</div>
+                                </div>
+                            </td>*@
+                        </tr>
+                        <tr class='tr-hover-class h34product2'>
+                            <td style="cursor:pointer">
+                                <h1>
+                                    Estancia en el hospital Diaria.
+                                </h1>
+                            </td>
+                            <td class="DropDownSelects">
+                                <div>
+                                    <select class="options1" id="Product2_H34_Row1">
+                                        <option value="0">$50</option>
+                                        <option value="1">$75</option>
+                                        <option value="2">$100</option>
+                                        <option value="3">$150</option>
+                                    </select>
+                                    <select class="options2" id="Product2_H34_Row2">
+                                        <option value="0">$50</option>
+                                        <option value="1">$75</option>
+                                        <option value="2">$100</option>
+                                        <option value="3">$150</option>
+                                    </select>
+                                    <select class="options3" id="Product2_H34_Row3">
+                                        <option value="0">$50</option>
+                                        <option value="1">$75</option>
+                                        <option value="2">$100</option>
+                                        <option value="3">$150</option>
+                                    </select>
+
+                                </div>
+                            </td>
+                            <td class="DropDownSelects">
+                                <div>
+                                    <select class="options1" id="Product2_H34_Row4">
+                                        <option value="0">$50</option>
+                                        <option value="1">$75</option>
+                                        <option value="2">$100</option>
+                                        <option value="3">$150</option>
+                                    </select>
+                                    <select class="options2" id="Product2_H34_Row5">
+                                        <option value="0">$50</option>
+                                        <option value="1">$75</option>
+                                        <option value="2">$100</option>
+                                        <option value="3">$150</option>
+                                    </select>
+                                    <select class="options3" id="Product2_H34_Row6">
+                                        <option value="0">$50</option>
+                                        <option value="1">$75</option>
+                                        <option value="2">$100</option>
+                                        <option value="3">$150</option>
+                                    </select>
+
+                                </div>
+                            </td>
+                            @*<td class="DropDownSelects">
+                                <div>
+                                    <select class="options1">
+                                        <option>$50</option>
+                                        <option>$75</option>
+                                        <option>$100</option>
+                                        <option>$150</option>
+                                    </select>
+                                    <select class="options2">
+                                        <option>$50</option>
+                                        <option>$75</option>
+                                        <option>$100</option>
+                                        <option>$150</option>
+                                    </select>
+                                    <select class="options3">
+                                        <option>$50</option>
+                                        <option>$75</option>
+                                        <option>$100</option>
+                                        <option>$150</option>
+                                    </select>
+
+                                </div>
+                            </td>*@
+
+
+
+                        </tr>
+
+
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class=" mx-2" id="product3">
+        <p class="FullViewTablePara">
+            Freedoom of choice (Gastos finales)
+        </p>
+        <div class="overflowContainer" style="">
+            <div class="scrollWidth" style="">
+                <table class="FullViewTable InputTables" style="">
+                    <thead>
+                        <tr class="childrentdheading">
+                            <td></td>
+                            @*<td>
+                                Primary
+                            </td>
+                            <td>
+                                Spouse
+                            </td>*@
+                          @*  <td>
+                                children1
+                            </td>*@
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="optionstd">
+                            <td></td>
+                            <td>
+                                <div>
+                                    <div class="options1">Opción A</div>
+                                    <div class="options2">Opción B</div>
+                                    <div class="options3">Opción C</div>
+                                </div>
+                            </td>
+                            <td>
+                                <div>
+                                    <div class="options1">Opción A</div>
+                                    <div class="options2">Opción B</div>
+                                    <div class="options3">Opción C</div>
+                                </div>
+                            </td>
+                            @*<td>
+                <div>
+                    <div class="options1">Opción A</div>
+                    <div class="options2">Opción B</div>
+                    <div class="options3">Opción C</div>
+                </div>
+            </td>*@
+                        </tr>
+                        <tr class='tr-hover-class product3'>
+                            <td style="cursor:pointer">
+                                <h1>
+                                    Cualquier tipo de fallecimiento (Whole Life)
+                                </h1>
+                            </td>
+                            <td class="DropDownSelects">
+                                <div>
+                                    <div class="options1">
+                                        <input type="text" id="Product3_Row1" oninput="formatCurrency(this)" value="$" />
+                                    </div>
+                                    <div class="options2">
+                                        <input type="text" id="Product3_Row2" oninput="formatCurrency(this)" value="$" />
+                                    </div>
+                                    <div class="options3">
+                                        <input type="text" id="Product3_Row3" oninput="formatCurrency(this)" value="$" />
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="DropDownSelects">
+                                <div>
+                                    <div class="options1">
+                                        <input type="text" id="Product3_Row4" oninput="formatCurrency(this)" value="$" />
+                                    </div>
+                                    <div class="options2">
+                                        <input type="text" id="Product3_Row5" oninput="formatCurrency(this)" value="$" />
+                                    </div>
+                                    <div class="options3">
+                                        <input type="text" id="Product3_Row6" oninput="formatCurrency(this)" value="$" />
+                                    </div>
+                                </div>
+                            </td>
+                            @* <td class="DropDownSelects">
+                <div>
+                    <input type="text" oninput="formatCurrency(this)" value="$" />
+                </div>
+            </td>*@
+
+
+                        </tr>
+
+
+                        @*                        <tr class='tr-hover-class'>
+            <td>
+                <h1>
+                </h1>
+            </td>
+            <td class="DropDownSelects">
+                <div>
+                    <select class="options1">
+                        <option>check</option>
+
+                    </select>
+                    <select class="options2">
+                        <option>check</option>
+
+                    </select>
+                    <select class="options3">
+                        <option>check</option>
+
+                    </select>
+
+                </div>
+            </td>
+            <td class="DropDownSelects">
+                <div>
+                    <select class="options1">
+                        <option>check</option>
+
+                    </select>
+                    <select class="options2">
+                        <option>check</option>
+
+                    </select>
+                    <select class="options3">
+                        <option>check</option>
+
+                    </select>
+                </div>
+            </td>
+            <td class="DropDownSelects">
+                <div>
+                    <select class="options1">
+                        <option>check</option>
+
+                    </select>
+                    <select class="options2">
+                        <option>check</option>
+
+                    </select>
+                    <select class="options3">
+                        <option>check</option>
+
+                    </select>
+                </div>
+            </td>
+
+
+
+            <td class="">
+                <button>
+                    <img src="~/images/Create.svg" width="26px" />
+                </button>
+                <button>
+                    <img src="~/images/Delete.svg" width="26px" />
+
+                </button>
+            </td>
+        </tr>
+
+        <tr class='tr-hover-class'>
+            <td>
+                <h1>
+                </h1>
+            </td>
+            <td class="DropDownSelects">
+                <div>
+                    <select class="options1">
+                        <option>Certificate</option>
+
+                    </select>
+                    <select class="options2">
+                        <option>Certificate</option>
+
+                    </select>
+                    <select class="options3">
+                        <option>Certificate</option>
+
+                    </select>
+                </div>
+            </td>
+            <td class="DropDownSelects">
+                <div>
+
+                    <select class="options1">
+                        <option>Certificate</option>
+
+                    </select>
+
+                    <select class="options2">
+                        <option>Certificate</option>
+
+                    </select>
+
+                    <select class="options3">
+                        <option>Certificate</option>
+
+                    </select>
+                </div>
+            </td>
+            <td class="DropDownSelects">
+                <div>
+
+                    <select class="options1">
+                        <option>Certificate</option>
+
+                    </select>
+
+                    <select class="options2">
+                        <option>Certificate</option>
+
+                    </select>
+
+                    <select class="options3">
+                        <option>Certificate</option>
+
+                    </select>
+                </div>
+            </td>
+
+
+
+            <td class="">
+                <button>
+                    <img src="~/images/Create.svg" width="26px" />
+                </button>
+                <button>
+                    <img src="~/images/Delete.svg" width="26px" />
+
+                </button>
+            </td>
+        </tr>*@
+
+
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <div class=" mx-2" id="product4">
+        <p class="FullViewTablePara">
+            Protector de Ingresos
+        </p>
+        <div class="overflowContainer" style="">
+            <div class="scrollWidth" style="">
+                <table class="FullViewTable InputTables" style="">
+                    <thead>
+                        <tr class="parentstdheading">
+                            <td></td>
+
+                           @* <td>
+                                Primary
+                            </td>
+                            <td>
+                                Spouse
+                            </td>*@
+
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <div>
+                                    <div class="options1">Opción A</div>
+                                    <div class="options2">Opción B</div>
+                                    <div class="options3">Opción C</div>
+                                </div>
+                            </td>
+                            <td>
+                                <div>
+                                    <div class="options1">Opción A</div>
+                                    <div class="options2">Opción B</div>
+                                    <div class="options3">Opción C</div>
+                                </div>
+                            </td>
+
+                        </tr>
+                        <tr class='tr-hover-class'>
+                            <td style="cursor:pointer">
+                                <h1>
+                                    Por Mes
+                                </h1>
+                            </td>
+                            <td class="DropDownSelects">
+                                <div>
+                                    <div class="options1">
+                                        <input type="text" id="Product4_Row1" oninput="formatCurrency(this)" value="$" />
+                                    </div>
+                                    <div class="options2">
+                                        <input type="text" id="Product4_Row2" oninput="formatCurrency(this)" value="$" />
+                                    </div>
+                                    <div class="options3">
+                                        <input type="text" id="Product4_Row3" oninput="formatCurrency(this)" value="$" />
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="DropDownSelects">
+                                <div>
+                                    <div class="options1">
+                                        <input type="text" id="Product4_Row4" oninput="formatCurrency(this)" value="$" />
+                                    </div>
+                                    <div class="options2">
+                                        <input type="text" id="Product4_Row5" oninput="formatCurrency(this)" value="$" />
+                                    </div>
+                                    <div class="options3">
+                                        <input type="text" id="Product4_Row6" oninput="formatCurrency(this)" value="$" />
+                                    </div>
+                                </div>
+                            </td>
+
+
+                        </tr>
+
+                        <tr class='tr-hover-class'>
+                            <td style="cursor:pointer">
+                                <h1>
+                                    Valor total
+                                </h1>
+                            </td>
+                            <td class="DropDownSelects">
+                                <div>
+                                    <div class="options1">
+                                        <input type="text" id="Product4_Row7" oninput="formatCurrency(this)" value="$" />
+                                    </div>
+                                    <div class="options2">
+                                        <input type="text" id="Product4_Row8" oninput="formatCurrency(this)" value="$" />
+                                    </div>
+                                    <div class="options3">
+                                        <input type="text" id="Product4_Row9" oninput="formatCurrency(this)" value="$" />
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="DropDownSelects">
+                                <div>
+                                    <div class="options1">
+                                        <input type="text" id="Product4_Row10" oninput="formatCurrency(this)" value="$" />
+                                    </div>
+                                    <div class="options2">
+                                        <input type="text" id="Product4_Row11" oninput="formatCurrency(this)" value="$" />
+                                    </div>
+                                    <div class="options3">
+                                        <input type="text" id="Product4_Row12" oninput="formatCurrency(this)" value="$" />
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class=" mx-2" id="product5">
+        <p class="FullViewTablePara">
+            <span>ADB</span>  Fallecimiento por accidente
+        </p>
+        <div class="overflowContainer" style="">
+            <div class="scrollWidth" style="">
+                <table class="FullViewTable InputTables" style="">
+                    <thead>
+                        <tr class="childrentdheading">
+                            <td></td>
+                          @*  <td>
+                                Primary
+                            </td>
+                            <td>
+                                Spouse
+                            </td>*@
+                           @* <td>
+                                children1
+                            </td>*@
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="optionstd">
+                            <td></td>
+                            <td>
+                                <div>
+                                    <div class="options1">Opción A</div>
+                                    <div class="options2">Opción B</div>
+                                    <div class="options3">Opción C</div>
+                                </div>
+                            </td>
+                            <td>
+                                <div>
+                                    <div class="options1">Opción A</div>
+                                    <div class="options2">Opción B</div>
+                                    <div class="options3">Opción C</div>
+                                </div>
+                            </td>
+                           @* <td>
+                                <div>
+                                    <div class="options1">Opción A</div>
+                                    <div class="options2">Opción B</div>
+                                    <div class="options3">Opción C</div>
+                                </div>
+                            </td>*@
+                        </tr>
+                        <tr class='tr-hover-class product5'>
+                            <td style="cursor:pointer">
+                                <h1>
+                                    Pago por accidente
+                                </h1>
+                            </td>
+                            <td class="DropDownSelects">
+                                <div>
+                                    <div class="options1">
+                                        <input type="text" id="Product5_Row1" oninput="formatCurrency(this)" value="$" />
+                                    </div>
+                                    <div class="options2">
+                                        <input type="text" id="Product5_Row2" oninput="formatCurrency(this)" value="$" />
+                                    </div>
+                                    <div class="options3">
+                                        <input type="text" id="Product5_Row3" oninput="formatCurrency(this)" value="$" />
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="DropDownSelects">
+                                <div>
+                                    <div class="options1">
+                                        <input type="text" id="Product5_Row4" oninput="formatCurrency(this)" value="$" />
+                                    </div>
+                                    <div class="options2">
+                                        <input type="text" id="Product5_Row5" oninput="formatCurrency(this)" value="$" />
+                                    </div>
+                                    <div class="options3">
+                                        <input type="text" id="Product5_Row6" oninput="formatCurrency(this)" value="$" />
+                                    </div>
+                                </div>
+                            </td>
+                            @*<td class="DropDownSelects">
+                                <div>
+                                    <div>
+                                        <input type="text" oninput="formatCurrency(this)" value="$" />
+                                    </div>
+                                    <div>
+                                        <input type="text" oninput="formatCurrency(this)" value="$" />
+                                    </div>
+                                    <div>
+                                        <input type="text" oninput="formatCurrency(this)" value="$" />
+                                    </div>
+                                </div>
+                            </td>*@
+
+
+
+
+                        </tr>
+
+
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class=" mx-2" id="product6">
+        <p class="FullViewTablePara">
+            <span>A71</span>  Muerte Accidental
+        </p>
+        <div class="overflowContainer" style="">
+            <div class="scrollWidth" style="">
+                <table class="FullViewTable" style="">
+                    <thead>
+                        <tr class="childrentdheading">
+                            <td></td>
+                            @*<td>
+                                Primary
+                            </td>
+                            <td>
+                                Spouse
+                            </td>*@
+                           @* <td>
+                                children1
+                            </td>*@
+
+                        </tr>
+                    </thead>
+                    <tbody id="product6_A71">
+                        <tr class="optionstd">
+                            <td></td>
+                            <td>
+                                <div>
+                                    <div class="options1">Opción A</div>
+                                    <div class="options2">Opción B</div>
+                                    <div class="options3">Opción C</div>
+                                </div>
+                            </td>
+                            <td>
+                                <div>
+                                    <div class="options1">Opción A</div>
+                                    <div class="options2">Opción B</div>
+                                    <div class="options3">Opción C</div>
+                                </div>
+                            </td>
+                            @*<td>
+                                <div>
+                                    <div class="options1">Opción A</div>
+                                    <div class="options2">Opción B</div>
+                                    <div class="options3">Opción C</div>
+                                </div>
+                            </td>*@
+                        </tr>
+                        <tr class='tr-hover-class product6standard_row'>
+                            <td style="cursor:pointer">
+                                <h1>
+                                    Estandar
+                                </h1>
+                            </td>
+
+                            <td class="DropDownSelects ">
+                                <div>
+                                    <select class="options1" id="product6standard_row1" onchange="Product6Dropdowns(this,1)">
+                                        <option value="0">$10,000</option>
+                                        <option value="1">$20,000</option>
+                                        <option value="2">$30,000</option>
+                                        <option value="3">$40,000</option>
+                                        <option value="4">$50,000</option>
+                                        <option value="5">$60,000</option>
+                                    </select>
+                                    <select class="options2" id="product6standard_row2" onchange="Product6Dropdowns(this,2)">
+                                        <option value="0">$10,000</option>
+                                        <option value="1">$20,000</option>
+                                        <option value="2">$30,000</option>
+                                        <option value="3">$40,000</option>
+                                        <option value="4">$50,000</option>
+                                        <option value="5">$60,000</option>
+                                    </select>
+                                    <select class="options3" id="product6standard_row3" onchange="Product6Dropdowns(this,3)">
+                                        <option value="0">$10,000</option>
+                                        <option value="1">$20,000</option>
+                                        <option value="2">$30,000</option>
+                                        <option value="3">$40,000</option>
+                                        <option value="4">$50,000</option>
+                                        <option value="5">$60,000</option>
+                                    </select>
+                                </div>
+                            </td>
+                            <td class="DropDownSelects">
+                                <div>
+                                    <select class="options1" id="product6standard_row4" onchange="Product6Dropdowns(this,4)">
+                                        <option value="0">$10,000</option>
+                                        <option value="1">$20,000</option>
+                                        <option value="2">$30,000</option>
+                                        <option value="3">$40,000</option>
+                                        <option value="4">$50,000</option>
+                                        <option value="5">$60,000</option>
+                                    </select>
+                                    <select class="options2" id="product6standard_row5" onchange="Product6Dropdowns(this,5)">
+                                        <option value="0">$10,000</option>
+                                        <option value="1">$20,000</option>
+                                        <option value="2">$30,000</option>
+                                        <option value="3">$40,000</option>
+                                        <option value="4">$50,000</option>
+                                        <option value="5">$60,000</option>
+                                    </select>
+                                    <select class="options3" id="product6standard_row6" onchange="Product6Dropdowns(this,6)">
+                                        <option value="0">$10,000</option>
+                                        <option value="1">$20,000</option>
+                                        <option value="2">$30,000</option>
+                                        <option value="3">$40,000</option>
+                                        <option value="4">$50,000</option>
+                                        <option value="5">$60,000</option>
+                                    </select>
+                                </div>
+                            </td>
+                            @*<td class="DropDownSelects">
+            <div>
+                <select class="options1">
+                    <option>$50</option>
+                    <option>$50</option>
+                    <option>$50</option>
+                    <option>$50</option>
+                </select>
+                <select class="options2">
+                    <option>$50</option>
+                    <option>$50</option>
+                    <option>$50</option>
+                    <option>$50</option>
+                </select>
+                <select class="options3">
+                    <option>$50</option>
+                    <option>$50</option>
+                    <option>$50</option>
+                    <option>$50</option>
+                </select>
+            </div>
+        </td>*@
+                        </tr>
+
+                        <tr class='tr-hover-class product6automobile_row'>
+                            <td style="cursor:pointer">
+                                <h1>
+                                    Automóvil
+                                </h1>
+                            </td>
+                            <td class="DropDownSelects">
+                                <div>
+                                    <select class="options1" id="product6automobile_row1" onchange="Product6Dropdowns(this,1)">
+                                        <option value="0">$20,000</option>
+                                        <option value="1">$40,000</option>
+                                        <option value="2">$60,000</option>
+                                        <option value="3">$80,000</option>
+                                        <option value="4">$100,000</option>
+                                        <option value="5">$120,000</option>
+                                    </select>
+                                    <select class="options2" id="product6automobile_row2" onchange="Product6Dropdowns(this,2)">
+                                        <option value="0">$20,000</option>
+                                        <option value="1">$40,000</option>
+                                        <option value="2">$60,000</option>
+                                        <option value="3">$80,000</option>
+                                        <option value="4">$100,000</option>
+                                        <option value="5">$120,000</option>
+                                    </select>
+                                    <select class="options3" id="product6automobile_row3" onchange="Product6Dropdowns(this,3)">
+                                        <option value="0">$20,000</option>
+                                        <option value="1">$40,000</option>
+                                        <option value="2">$60,000</option>
+                                        <option value="3">$80,000</option>
+                                        <option value="4">$100,000</option>
+                                        <option value="5">$120,000</option>
+                                    </select>
+                                </div>
+                            </td>
+                            <td class="DropDownSelects">
+                                <div>
+                                    <select class="options1" id="product6automobile_row4" onchange="Product6Dropdowns(this,4)">
+                                        <option value="0">$20,000</option>
+                                        <option value="1">$40,000</option>
+                                        <option value="2">$60,000</option>
+                                        <option value="3">$80,000</option>
+                                        <option value="4">$100,000</option>
+                                        <option value="5">$120,000</option>
+                                    </select>
+                                    <select class="options2" id="product6automobile_row5" onchange="Product6Dropdowns(this,5)">
+                                        <option value="0">$20,000</option>
+                                        <option value="1">$40,000</option>
+                                        <option value="2">$60,000</option>
+                                        <option value="3">$80,000</option>
+                                        <option value="4">$100,000</option>
+                                        <option value="5">$120,000</option>
+                                    </select>
+                                    <select class="options3" id="product6automobile_row6" onchange="Product6Dropdowns(this,6)">
+                                        <option value="0">$20,000</option>
+                                        <option value="1">$40,000</option>
+                                        <option value="2">$60,000</option>
+                                        <option value="3">$80,000</option>
+                                        <option value="4">$100,000</option>
+                                        <option value="5">$120,000</option>
+                                    </select>
+                                </div>
+                            </td>
+                            @*                            <td class="DropDownSelects">
+            <div>
+                <select class="options1">
+                    <option>$50</option>
+                    <option>$50</option>
+                    <option>$50</option>
+                    <option>$50</option>
+                </select>
+                <select class="options2">
+                    <option>$50</option>
+                    <option>$50</option>
+                    <option>$50</option>
+                    <option>$50</option>
+                </select>
+                <select class="options3">
+                    <option>$50</option>
+                    <option>$50</option>
+                    <option>$50</option>
+                    <option>$50</option>
+                </select>
+            </div>
+        </td>*@
+
+
+                        </tr>
+
+                        <tr class='tr-hover-class product6transport_row'>
+                            <td style="cursor:pointer">
+                                <h1>
+                                    Transporte Pago
+                                </h1>
+                            </td>
+                            <td class="DropDownSelects">
+                                <div>
+                                    <select class="options1" id="product6transport_row1" onchange="Product6Dropdowns(this,1)">
+                                        <option value="0">$50,000</option>
+                                        <option value="1">$100,000</option>
+                                        <option value="2">$150,000</option>
+                                        <option value="3">$200,000</option>
+                                        <option value="4">$250,000</option>
+                                        <option value="5">$300,000</option>
+                                    </select>
+                                    <select class="options2" id="product6transport_row2" onchange="Product6Dropdowns(this,2)">
+                                        <option value="0">$50,000</option>
+                                        <option value="1">$100,000</option>
+                                        <option value="2">$150,000</option>
+                                        <option value="3">$200,000</option>
+                                        <option value="4">$250,000</option>
+                                        <option value="5">$300,000</option>
+                                    </select>
+                                    <select class="options3" id="product6transport_row3" onchange="Product6Dropdowns(this,3)">
+                                        <option value="0">$50,000</option>
+                                        <option value="1">$100,000</option>
+                                        <option value="2">$150,000</option>
+                                        <option value="3">$200,000</option>
+                                        <option value="4">$250,000</option>
+                                        <option value="5">$300,000</option>
+                                    </select>
+                                </div>
+                            </td>
+                            <td class="DropDownSelects" >
+                                <div>
+                                    <select class="options1" id="product6transport_row4" onchange="Product6Dropdowns(this,4)">
+                                        <option value="0">$50,000</option>
+                                        <option value="1">$100,000</option>
+                                        <option value="2">$150,000</option>
+                                        <option value="3">$200,000</option>
+                                        <option value="4">$250,000</option>
+                                        <option value="5">$300,000</option>
+                                    </select>
+                                    <select class="options2" id="product6transport_row5" onchange="Product6Dropdowns(this,5)">
+                                        <option value="0">$50,000</option>
+                                        <option value="1">$100,000</option>
+                                        <option value="2">$150,000</option>
+                                        <option value="3">$200,000</option>
+                                        <option value="4">$250,000</option>
+                                        <option value="5">$300,000</option>
+                                    </select>
+                                    <select class="options3" id="product6transport_row6" onchange="Product6Dropdowns(this,6)">
+                                        <option value="0">$50,000</option>
+                                        <option value="1">$100,000</option>
+                                        <option value="2">$150,000</option>
+                                        <option value="3">$200,000</option>
+                                        <option value="4">$250,000</option>
+                                        <option value="5">$300,000</option>
+                                    </select>
+                                </div>
+                            </td>
+                           @* <td class="DropDownSelects">
+                                <div>
+                                    <select class="options1">
+                                        <option>$50</option>
+                                        <option>$50</option>
+                                        <option>$50</option>
+                                        <option>$50</option>
+                                    </select>
+                                    <select class="options2">
+                                        <option>$50</option>
+                                        <option>$50</option>
+                                        <option>$50</option>
+                                        <option>$50</option>
+                                    </select>
+                                    <select class="options3">
+                                        <option>$50</option>
+                                        <option>$50</option>
+                                        <option>$50</option>
+                                        <option>$50</option>
+                                    </select>
+                                </div>
+                            </td>*@
+
+                        </tr>
+
+
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <div class=" mx-2" id="product7">
+        <p class="FullViewTablePara">
+            <span>A71</span>   Desmembramiento por accidente.
+        </p>
+        <div class="overflowContainer" style="">
+            <div class="scrollWidth" style="">
+                <table class="FullViewTable" style="">
+                    <thead>
+                        <tr class="childrentdheading">
+                            <td></td>
+                           @* <td>
+                                Primary
+                            </td>
+                            <td>
+                                Spouse
+                            </td>*@
+                          @*  <td>
+                                children1
+                            </td>*@
+
+                        </tr>
+                    </thead>
+                    <tbody id="Product7_A71">
+                        <tr class="optionstd">
+                            <td></td>
+                            <td>
+                                <div>
+                                    <div class="options1">Opción A</div>
+                                    <div class="options2">Opción B</div>
+                                    <div class="options3">Opción C</div>
+                                </div>
+                            </td>
+                            <td>
+                                <div>
+                                    <div class="options1">Opción A</div>
+                                    <div class="options2">Opción B</div>
+                                    <div class="options3">Opción C</div>
+                                </div>
+                            </td>
+                           @* <td>
+                                <div>
+                                    <div class="options1">Opción A</div>
+                                    <div class="options2">Opción B</div>
+                                    <div class="options3">Opción C</div>
+                                </div>
+                            </td>*@
+                        </tr>
+                        <tr class='tr-hover-class product7standard_row'>
+                            <td style="cursor:pointer">
+                                <h1>
+                                    Estandar
+                                </h1>
+                            </td>
+                            <td class="DropDownSelects">
+                                <div>
+                                    <select class="options1" id="product7standard_row1" onchange="Product7Dropdowns(this,1)">
+                                        <option value="0">$5,000</option>
+                                        <option value="1">$10,000</option>
+                                        <option value="2">$15,000</option>
+                                        <option value="3">$20,000</option>
+                                        <option value="4">$25,000</option>
+                                        <option value="5">$30,000</option>
+                                    </select>
+                                    <select class="options2" id="product7standard_row2" onchange="Product7Dropdowns(this,2)">
+                                        <option value="0">$5,000</option>
+                                        <option value="1">$10,000</option>
+                                        <option value="2">$15,000</option>
+                                        <option value="3">$20,000</option>
+                                        <option value="4">$25,000</option>
+                                        <option value="5">$30,000</option>
+                                    </select>
+                                    <select class="options3" id="product7standard_row3" onchange="Product7Dropdowns(this,3)">
+                                        <option value="0">$5,000</option>
+                                        <option value="1">$10,000</option>
+                                        <option value="2">$15,000</option>
+                                        <option value="3">$20,000</option>
+                                        <option value="4">$25,000</option>
+                                        <option value="5">$30,000</option>
+                                    </select>
+                                </div>
+                            </td>
+                            <td class="DropDownSelects">
+                                <div>
+                                    <select class="options1" id="product7standard_row4" onchange="Product7Dropdowns(this,4)">
+                                        <option value="0">$5,000</option>
+                                        <option value="1">$10,000</option>
+                                        <option value="2">$15,000</option>
+                                        <option value="3">$20,000</option>
+                                        <option value="4">$25,000</option>
+                                        <option value="5">$30,000</option>
+                                    </select>
+                                    <select class="options2" id="product7standard_row5" onchange="Product7Dropdowns(this,5)">
+                                        <option value="0">$5,000</option>
+                                        <option value="1">$10,000</option>
+                                        <option value="2">$15,000</option>
+                                        <option value="3">$20,000</option>
+                                        <option value="4">$25,000</option>
+                                        <option value="5">$30,000</option>
+                                    </select>
+                                    <select class="options3" id="product7standard_row6" onchange="Product7Dropdowns(this,6)">
+                                        <option value="0">$5,000</option>
+                                        <option value="1">$10,000</option>
+                                        <option value="2">$15,000</option>
+                                        <option value="3">$20,000</option>
+                                        <option value="4">$25,000</option>
+                                        <option value="5">$30,000</option>
+                                    </select>
+                                </div>
+                            </td>
+                            @*<td class="DropDownSelects">
+                                <div>
+                                    <select class="options1">
+                                        <option>$50</option>
+                                        <option>$50</option>
+                                        <option>$50</option>
+                                        <option>$50</option>
+                                    </select>
+                                    <select class="options2">
+                                        <option>$50</option>
+                                        <option>$50</option>
+                                        <option>$50</option>
+                                        <option>$50</option>
+                                    </select>
+                                    <select class="options3">
+                                        <option>$50</option>
+                                        <option>$50</option>
+                                        <option>$50</option>
+                                        <option>$50</option>
+                                    </select>
+                                </div>
+                            </td>*@
+
+
+                        </tr>
+
+                        <tr class='tr-hover-class product7automobile_row'>
+                            <td style="cursor:pointer">
+                                <h1>
+                                    Automóvil
+                                </h1>
+                            </td>
+                            <td class="DropDownSelects">
+                                <div>
+                                    <select class="options1" id="product7automobile_row1" onchange="Product7Dropdowns(this,1)">
+                                        <option value="0">$10,000</option>
+                                        <option value="1">$20,000</option>
+                                        <option value="2">$30,000</option>
+                                        <option value="3">$40,000</option>
+                                        <option value="4">$50,000</option>
+                                        <option value="5">$60,000</option>
+                                    </select>
+                                    <select class="options2" id="product7automobile_row2" onchange="Product7Dropdowns(this,2)">
+                                        <option value="0">$10,000</option>
+                                        <option value="1">$20,000</option>
+                                        <option value="2">$30,000</option>
+                                        <option value="3">$40,000</option>
+                                        <option value="4">$50,000</option>
+                                        <option value="5">$60,000</option>
+                                    </select>
+                                    <select class="options3" id="product7automobile_row3" onchange="Product7Dropdowns(this,3)">
+                                        <option value="0">$10,000</option>
+                                        <option value="1">$20,000</option>
+                                        <option value="2">$30,000</option>
+                                        <option value="3">$40,000</option>
+                                        <option value="4">$50,000</option>
+                                        <option value="5">$60,000</option>
+                                    </select>
+                                </div>
+                            </td>
+                            <td class="DropDownSelects">
+                                <div>
+                                    <select class="options1" id="product7automobile_row4" onchange="Product7Dropdowns(this,4)">
+                                        <option value="0">$10,000</option>
+                                        <option value="1">$20,000</option>
+                                        <option value="2">$30,000</option>
+                                        <option value="3">$40,000</option>
+                                        <option value="4">$50,000</option>
+                                        <option value="5">$60,000</option>
+                                    </select>
+                                    <select class="options2" id="product7automobile_row5" onchange="Product7Dropdowns(this,5)">
+                                        <option value="0">$10,000</option>
+                                        <option value="1">$20,000</option>
+                                        <option value="2">$30,000</option>
+                                        <option value="3">$40,000</option>
+                                        <option value="4">$50,000</option>
+                                        <option value="5">$60,000</option>
+                                    </select>
+                                    <select class="options3" id="product7automobile_row6" onchange="Product7Dropdowns(this,6)">
+                                        <option value="0">$10,000</option>
+                                        <option value="1">$20,000</option>
+                                        <option value="2">$30,000</option>
+                                        <option value="3">$40,000</option>
+                                        <option value="4">$50,000</option>
+                                        <option value="5">$60,000</option>
+                                    </select>
+                                </div>
+                            </td>
+                           @* <td class="DropDownSelects">
+                                <div>
+                                    <select class="options1">
+                                        <option>$50</option>
+                                        <option>$50</option>
+                                        <option>$50</option>
+                                        <option>$50</option>
+                                    </select>
+                                    <select class="options2">
+                                        <option>$50</option>
+                                        <option>$50</option>
+                                        <option>$50</option>
+                                        <option>$50</option>
+                                    </select>
+                                    <select class="options3">
+                                        <option>$50</option>
+                                        <option>$50</option>
+                                        <option>$50</option>
+                                        <option>$50</option>
+                                    </select>
+                                </div>
+                            </td>*@
+
+
+                        </tr>
+
+                        <tr class='tr-hover-class product7transport_row'>
+                            <td style="cursor:pointer">
+                                <h1>
+                                    Transporte Pago
+                                </h1>
+                            </td>
+                            <td class="DropDownSelects">
+                                <div>
+                                    <select class="options1" id="product7transport_row1" onchange="Product7Dropdowns(this,1)">
+                                        <option value="0">$25,000</option>
+                                        <option value="1">$50,000</option>
+                                        <option value="2">$75,000</option>
+                                        <option value="3">$100,000</option>
+                                        <option value="4">$125,000</option>
+                                        <option value="5">$150,000</option>
+                                    </select>
+                                    <select class="options2" id="product7transport_row2" onchange="Product7Dropdowns(this,2)">
+                                        <option value="0">$25,000</option>
+                                        <option value="1">$50,000</option>
+                                        <option value="2">$75,000</option>
+                                        <option value="3">$100,000</option>
+                                        <option value="4">$125,000</option>
+                                        <option value="5">$150,000</option>
+                                    </select> 
+                                    <select class="options3" id="product7transport_row3" onchange="Product7Dropdowns(this,3)">
+                                        <option value="0">$25,000</option>
+                                        <option value="1">$50,000</option>
+                                        <option value="2">$75,000</option>
+                                        <option value="3">$100,000</option>
+                                        <option value="4">$125,000</option>
+                                        <option value="5">$150,000</option>
+                                    </select>
+                                </div>
+                            </td>
+                            <td class="DropDownSelects">
+                                <div>
+                                    <select class="options1" id="product7transport_row4" onchange="Product7Dropdowns(this,4)">
+                                        <option value="0">$25,000</option>
+                                        <option value="1">$50,000</option>
+                                        <option value="2">$75,000</option>
+                                        <option value="3">$100,000</option>
+                                        <option value="4">$125,000</option>
+                                        <option value="5">$150,000</option>
+                                    </select>
+                                    <select class="options2" id="product7transport_row5" onchange="Product7Dropdowns(this,5)">
+                                        <option value="0">$25,000</option>
+                                        <option value="1">$50,000</option>
+                                        <option value="2">$75,000</option>
+                                        <option value="3">$100,000</option>
+                                        <option value="4">$125,000</option>
+                                        <option value="5">$150,000</option>
+                                    </select>
+                                    <select class="options3" id="product7transport_row6" onchange="Product7Dropdowns(this,6)">
+                                        <option value="0">$25,000</option>
+                                        <option value="1">$50,000</option>
+                                        <option value="2">$75,000</option>
+                                        <option value="3">$100,000</option>
+                                        <option value="4">$125,000</option>
+                                        <option value="5">$150,000</option>
+                                    </select>
+                                </div>
+                            </td>
+                            @*<td class="DropDownSelects">
+                                <div>
+                                    <select class="options1">
+                                        <option>$50</option>
+                                        <option>$50</option>
+                                        <option>$50</option>
+                                        <option>$50</option>
+                                    </select>
+                                    <select class="options2">
+                                        <option>$50</option>
+                                        <option>$50</option>
+                                        <option>$50</option>
+                                        <option>$50</option>
+                                    </select>
+                                    <select class="options3">
+                                        <option>$50</option>
+                                        <option>$50</option>
+                                        <option>$50</option>
+                                        <option>$50</option>
+                                    </select>
+                                </div>
+                            </td>*@
+
+
+                        </tr>
+
+
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class=" mx-2" id="product8">
+        <p class="FullViewTablePara">
+            CNM Indemnización por Cancer
+        </p>
+        <div class="overflowContainer" style="">
+            <div class="scrollWidth" style="">
+                <table class="FullViewTable" style="">
+                    <thead>
+                        <tr class="childrentdheading">
+                            <td></td>
+                           @* <td>
+                                Primary
+                            </td>
+                            <td>
+                                Spouse
+                            </td>*@
+                         @*   <td>
+                                children1
+                            </td>*@
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="optionstd">
+                            <td></td>
+                            <td>
+                                <div>
+                                    <div class="options1">Opción A</div>
+                                    <div class="options2">Opción B</div>
+                                    <div class="options3">Opción C</div>
+                                </div>
+                            </td>
+                            <td>
+                                <div>
+                                    <div class="options1">Opción A</div>
+                                    <div class="options2">Opción B</div>
+                                    <div class="options3">Opción C</div>
+                                </div>
+                            </td>
+                         @*   <td>
+                                <div>
+                                    <div class="options1">Opción A</div>
+                                    <div class="options2">Opción B</div>
+                                    <div class="options3">Opción C</div>
+                                </div>
+                            </td>*@
+                        </tr>
+                        <tr class='tr-hover-class product8row'>
+                            <td style="cursor:pointer">
+                                <h1>
+                                    Hasta
+                                </h1>
+                            </td>
+                            <td class="DropDownSelects">
+                                <div>
+                                    <select class="options1" id="product8_CNM_row1">
+                                        <option value="0">$50,000</option>
+                                        <option value="1">$100,000</option>
+                                        <option value="2">$150,000</option>     
+                                    </select>
+                                    <select class="options2" id="product8_CNM_row2">
+                                        <option value="0">$50,000</option>
+                                        <option value="1">$100,000</option>
+                                        <option value="2">$150,000</option>
+                                    </select>
+                                    <select class="options3" id="product8_CNM_row3">
+                                        <option value="0">$50,000</option>
+                                        <option value="1">$100,000</option>
+                                        <option value="2">$150,000</option>
+                                    </select>
+                                </div>
+                            </td>
+                            <td class="DropDownSelects">
+                                <div>
+                                    <select class="options1" id="product8_CNM_row4">
+                                        <option value="0">$50,000</option>
+                                        <option value="1">$100,000</option>
+                                        <option value="2">$150,000</option>
+                                    </select>
+                                    <select class="options2" id="product8_CNM_row5">
+                                        <option value="0">$50,000</option>
+                                        <option value="1">$100,000</option>
+                                        <option value="2">$150,000</option>
+                                    </select>
+                                    <select class="options3" id="product8_CNM_row6">
+                                        <option value="0">$50,000</option>
+                                        <option value="1">$100,000</option>
+                                        <option value="2">$150,000</option>
+                                    </select>
+                                </div>
+                            </td>
+                           @* <td class="DropDownSelects">
+                                <div>
+                                    <select class="options1">
+                                        <option>$50</option>
+                                        <option>$50</option>
+                                        <option>$50</option>
+                                        <option>$50</option>
+                                    </select>
+                                    <select class="options2">
+                                        <option>$50</option>
+                                        <option>$50</option>
+                                        <option>$50</option>
+                                        <option>$50</option>
+                                    </select>
+                                    <select class="options3">
+                                        <option>$50</option>
+                                        <option>$50</option>
+                                        <option>$50</option>
+                                        <option>$50</option>
+                                    </select>
+                                </div>
+                            </td>*@
+
+
+                        </tr>
+
+
+
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class=" mx-2" id="product9">
+        <p class="FullViewTablePara">
+            C20 Pago total por Cancer
+        </p>
+        <div class="overflowContainer" style="">
+            <div class="scrollWidth" style="">
+                <table class="FullViewTable" style="">
+                    <thead>
+                        <tr class="childrentdheading">
+                            <td></td>
+                          @*  <td>
+                                Primary
+                            </td>
+                            <td>
+                                Spouse
+                            </td>*@
+                            @*<td>
+                                children1
+                            </td>*@
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="optionstd">
+                            <td></td>
+                            <td>
+                                <div>
+                                    <div class="options1">Opción A</div>
+                                    <div class="options2">Opción B</div>
+                                    <div class="options3">Opción C</div>
+                                </div>
+                            </td>
+                            <td>
+                                <div>
+                                    <div class="options1">Opción A</div>
+                                    <div class="options2">Opción B</div>
+                                    <div class="options3">Opción C</div>
+                                </div>
+                            </td>
+                           @* <td>
+                                <div>
+                                    <div class="options1">Opción A</div>
+                                    <div class="options2">Opción B</div>
+                                    <div class="options3">Opción C</div>
+                                </div>
+                            </td>*@
+                        </tr>
+                        <tr class='tr-hover-class product9row'>
+                            <td style="cursor:pointer">
+                                <h1>
+                                    Primer diagnóstico
+                                </h1>
+                            </td>
+                            <td class="DropDownSelects">
+                                <div>
+                                    <select class="options1" id="product9_C20_row1">
+                                        <option value="0">$10,000</option>
+                                        <option value="1">$25,000</option>
+                                        <option value="2">$50,000</option>
+                                    </select>
+                                    <select class="options2" id="product9_C20_row2">
+                                        <option value="0">$10,000</option>
+                                        <option value="1">$25,000</option>
+                                        <option value="2">$50,000</option>
+                                    </select>
+                                    <select class="options3" id="product9_C20_row3">
+                                        <option value="0">$10,000</option>
+                                        <option value="1">$25,000</option>
+                                        <option value="2">$50,000</option>
+                                    </select>
+                                </div>
+                            </td>
+                            <td class="DropDownSelects">
+                                <div>
+                                    <select class="options1" id="product9_C20_row4">
+                                        <option value="0">$10,000</option>
+                                        <option value="1">$25,000</option>
+                                        <option value="2">$50,000</option>
+                                    </select>
+                                    <select class="options2" id="product9_C20_row5">
+                                        <option value="0">$10,000</option>
+                                        <option value="1">$25,000</option>
+                                        <option value="2">$50,000</option>
+                                    </select>
+                                    <select class="options3" id="product9_C20_row6">
+                                        <option value="0">$10,000</option>
+                                        <option value="1">$25,000</option>
+                                        <option value="2">$50,000</option>
+                                    </select>
+                                </div>
+                            </td>
+                            @*<td class="DropDownSelects">
+                                <div>
+                                    <select class="options1">
+                                        <option>$50</option>
+                                        <option>$50</option>
+                                        <option>$50</option>
+                                        <option>$50</option>
+                                    </select>
+                                    <select class="options2">
+                                        <option>$50</option>
+                                        <option>$50</option>
+                                        <option>$50</option>
+                                        <option>$50</option>
+                                    </select>
+                                    <select class="options3">
+                                        <option>$50</option>
+                                        <option>$50</option>
+                                        <option>$50</option>
+                                        <option>$50</option>
+                                    </select>
+                                </div>
+                            </td>*@
+
+
+                        </tr>
+
+
+
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class=" mx-2" id="product10">
+        <p class="FullViewTablePara">
+            CT Enfermedades críticas
+        </p>
+        <div class="overflowContainer" style="">
+            <div class="scrollWidth" style="">
+                <table class="FullViewTable" style="">
+                    <thead>
+                        <tr class="childrentdheading">
+                            <td></td>
+                            @*<td>
+                                Primary
+                            </td>
+                            <td>
+                                Spouse
+                            </td>*@
+                            @*<td>
+                                children1
+                            </td>*@
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="optionstd">
+                            <td></td>
+                            <td>
+                                <div>
+                                    <div class="options1">Opción A</div>
+                                    <div class="options2">Opción B</div>
+                                    <div class="options3">Opción C</div>
+                                </div>
+                            </td>
+                            <td>
+                                <div>
+                                    <div class="options1">Opción A</div>
+                                    <div class="options2">Opción B</div>
+                                    <div class="options3">Opción C</div>
+                                </div>
+                            </td>
+                          @*  <td>
+                                <div>
+                                    <div class="options1">Opción A</div>
+                                    <div class="options2">Opción B</div>
+                                    <div class="options3">Opción C</div>
+                                </div>
+                            </td>*@
+                        </tr>
+                        <tr class='tr-hover-class product10row'>
+                            <td style="cursor:pointer">
+                                <h1>
+                                    Infarto
+                                </h1>
+                            </td>
+                            <td class="DropDownSelects">
+                                <div>
+                                    <select class="options1" id="product10_CT_row1">
+                                        <option value="0" selected disabled hidden>Selecciona el valor</option>
+                                        <option value="1">$10,000</option>
+                                        <option value="2">$25,000</option>
+                                        <option value="3">$50,000</option>
+                                    </select>
+                                    <select class="options2" id="product10_CT_row2">
+                                        <option  value="0" selected disabled hidden>Selecciona el valor</option>
+                                        <option value="1">$10,000</option>
+                                        <option value="2">$25,000</option>
+                                        <option value="3">$50,000</option>
+                                    </select>
+                                    <select class="options3" id="product10_CT_row3">
+                                        <option value="0" selected disabled hidden>Selecciona el valor</option>
+                                        <option value="1">$10,000</option>
+                                        <option value="2">$25,000</option>
+                                        <option value="3">$50,000</option>
+                                    </select>
+                                </div>
+                            </td>
+                            <td class="DropDownSelects">
+                                <div>
+                                    <select class="options1" id="product10_CT_row4">
+                                        <option value="0" selected disabled hidden>Selecciona el valor</option>
+                                        <option value="1">$10,000</option>
+                                        <option value="2">$25,000</option>
+                                        <option value="3">$50,000</option>
+                                    </select>
+                                    <select class="options2" id="product10_CT_row5">
+                                        <option value="0" selected disabled hidden>Selecciona el valor</option>
+                                        <option value="1">$10,000</option>
+                                        <option value="2">$25,000</option>
+                                        <option value="3">$50,000</option>
+                                    </select>
+                                    <select class="options3" id="product10_CT_row6">
+                                        <option value="0"selected disabled hidden>Selecciona el valor</option>
+                                        <option value="1">$10,000</option>
+                                        <option value="2">$25,000</option>
+                                        <option value="3">$50,000</option>
+                                    </select>
+                                </div>
+                            </td>
+                           @* <td class="DropDownSelects">
+                                <div>
+                                    <select class="options1">
+                                        <option>$50</option>
+                                        <option>$50</option>
+                                        <option>$50</option>
+                                        <option>$50</option>
+                                    </select>
+                                    <select class="options2">
+                                        <option>$50</option>
+                                        <option>$50</option>
+                                        <option>$50</option>
+                                        <option>$50</option>
+                                    </select>
+                                    <select class="options3">
+                                        <option>$50</option>
+                                        <option>$50</option>
+                                        <option>$50</option>
+                                        <option>$50</option>
+                                    </select>
+                                </div>
+                            </td>*@
+
+
+                        </tr>
+
+                        <tr class='tr-hover-class product10row'>
+                            <td style="cursor:pointer">
+                                <h1>
+                                    Derrame Cerebral
+                                </h1>
+                            </td>
+                            <td class="DropDownSelects">
+                                <div>
+                                    <select class="options1"id="product10_CT_row7">
+                                        <option value="0"selected disabled hidden>Selecciona el valor</option>
+                                        <option value="1">$10,000</option>
+                                        <option value="2">$25,000</option>
+                                        <option value="3">$50,000</option>
+                                    </select>
+                                    <select class="options2" id="product10_CT_row8">
+                                        <option value="0"selected disabled hidden>Selecciona el valor</option>
+                                        <option value="1">$10,000</option>
+                                        <option value="2">$25,000</option>
+                                        <option value="3">$50,000</option>
+                                    </select>
+                                    <select class="options3" id="product10_CT_row9">
+                                        <option value="0"selected disabled hidden>Selecciona el valor</option>
+                                        <option value="1">$10,000</option>
+                                        <option value="2">$25,000</option>
+                                        <option value="3">$50,000</option>
+                                    </select>
+                                </div>
+                            </td>
+                            <td class="DropDownSelects">
+                                <div>
+                                    <select class="options1" id="product10_CT_row10">
+                                        <option value="0" selected disabled hidden>Selecciona el valor</option>
+                                        <option value="1">$10,000</option>
+                                        <option value="2">$25,000</option>
+                                        <option value="3">$50,000</option>
+                                    </select>
+                                    <select class="options2"id="product10_CT_row11">
+                                        <option value="0" selected disabled hidden>Selecciona el valor</option>
+                                        <option value="1">$10,000</option>
+                                        <option value="2">$25,000</option>
+                                        <option value="3">$50,000</option>
+                                    </select>
+                                    <select class="options3"id="product10_CT_row12">
+                                        <option value="0" selected disabled hidden>Selecciona el valor</option>
+                                        <option value="1">$10,000</option>
+                                        <option value="2">$25,000</option>
+                                        <option value="3">$50,000</option>
+                                    </select>
+                                </div>
+                            </td>
+                           @* <td class="DropDownSelects">
+                                <div>
+                                    <select class="options1">
+                                        <option>$50</option>
+                                        <option>$50</option>
+                                        <option>$50</option>
+                                        <option>$50</option>
+                                    </select>
+                                    <select class="options2">
+                                        <option>$50</option>
+                                        <option>$50</option>
+                                        <option>$50</option>
+                                        <option>$50</option>
+                                    </select>
+                                    <select class="options3">
+                                        <option>$50</option>
+                                        <option>$50</option>
+                                        <option>$50</option>
+                                        <option>$50</option>
+                                    </select>
+                                </div>
+                            </td>*@
+
+
+                        </tr>
+
+                        <tr class='tr-hover-class product10row'>
+                            <td style="cursor:pointer">
+                                <h1>
+                                    Derrame Cerebral
+                                </h1>
+                            </td>
+                            <td class="DropDownSelects">
+                                <div>
+                                    <select class="options1" id="product10_CT_row13">
+                                        <option value="0" selected disabled hidden>Selecciona el valor</option>
+                                        <option value="1">$10,000</option>
+                                        <option value="2">$25,000</option>
+                                        <option value="3">$50,000</option>
+                                    </select>
+                                    <select class="options2" id="product10_CT_row14">
+                                        <option value="0" selected disabled hidden>Selecciona el valor</option>
+                                        <option value="1">$10,000</option>
+                                        <option value="2">$25,000</option>
+                                        <option value="3">$50,000</option>
+                                    </select>
+                                    <select class="options3" id="product10_CT_row15">
+                                        <option value="0" selected disabled hidden>Selecciona el valor</option>
+                                        <option value="1">$10,000</option>
+                                        <option value="2">$25,000</option>
+                                        <option value="3">$50,000</option>
+                                    </select>
+                                </div>
+                            </td>
+                            <td class="DropDownSelects">
+                                <div>
+                                    <select class="options1"id="product10_CT_row16">
+                                        <option value="0" selected disabled hidden>Selecciona el valor</option>
+                                        <option value="1">$10,000</option>
+                                        <option value="2">$25,000</option>
+                                        <option value="3">$50,000</option>
+                                    </select>
+                                    <select class="options2"id="product10_CT_row17">
+                                        <option value="0" selected disabled hidden>Selecciona el valor</option>
+                                        <option value="1">$10,000</option>
+                                        <option value="2">$25,000</option>
+                                        <option value="3">$50,000</option>
+                                    </select>
+                                    <select class="options3"id="product10_CT_row18">
+                                        <option value="0" selected disabled hidden>Selecciona el valor</option>
+                                        <option value="1">$10,000</option>
+                                        <option value="2">$25,000</option>
+                                        <option value="3">$50,000</option>
+                                    </select>
+                                </div>
+                            </td>
+                           @* <td class="DropDownSelects">
+                                <div>
+                                    <select class="options1">
+                                        <option>$50</option>
+                                        <option>$50</option>
+                                        <option>$50</option>
+                                        <option>$50</option>
+                                    </select>
+                                    <select class="options2">
+                                        <option>$50</option>
+                                        <option>$50</option>
+                                        <option>$50</option>
+                                        <option>$50</option>
+                                    </select>
+                                    <select class="options3">
+                                        <option>$50</option>
+                                        <option>$50</option>
+                                        <option>$50</option>
+                                        <option>$50</option>
+                                    </select>
+                                </div>
+                            </td>*@
+
+
+                        </tr>
+
+                        <tr class='tr-hover-class product10row'>
+                            <td style="cursor:pointer">
+                                <h1>
+                                    Pérdida total de la vista en ambos ojos
+                                </h1>
+                            </td>
+                            <td class="DropDownSelects">
+                                <div>
+                                    <select class="options1" id="product10_CT_row19">
+                                        <option value="0" selected disabled hidden>Selecciona el valor</option>
+                                        <option value="1">$10,000</option>
+                                        <option value="2">$25,000</option>
+                                        <option value="3">$50,000</option>
+                                    </select>
+                                    <select class="options2"id="product10_CT_row20">
+                                        <option value="0" selected disabled hidden>Selecciona el valor</option>
+                                        <option value="1">$10,000</option>
+                                        <option value="2">$25,000</option>
+                                        <option value="3">$50,000</option>
+                                    </select>
+                                    <select class="options3"id="product10_CT_row21">
+                                        <option value="0" selected disabled hidden>Selecciona el valor</option>
+                                        <option value="1">$10,000</option>
+                                        <option value="2">$25,000</option>
+                                        <option value="3">$50,000</option>
+                                    </select>
+                                </div>
+                            </td>
+                            <td class="DropDownSelects">
+                                <div>
+                                    <select class="options1"id="product10_CT_row22">
+                                        <option value="0" selected disabled hidden>Selecciona el valor</option>
+                                        <option value="1">$10,000</option>
+                                        <option value="2">$25,000</option>
+                                        <option value="3">$50,000</option>
+                                    </select>
+                                    <select class="options2"id="product10_CT_row23">
+                                        <option value="0" selected disabled hidden>Selecciona el valor</option>
+                                        <option value="1">$10,000</option>
+                                        <option value="2">$25,000</option>
+                                        <option value="3">$50,000</option>
+                                    </select>
+                                    <select class="options3"id="product10_CT_row24">
+                                        <option value="0"selected disabled hidden>Selecciona el valor</option>
+                                        <option value="1">$10,000</option>
+                                        <option value="2">$25,000</option>
+                                        <option value="3">$50,000</option>
+                                    </select>
+                                </div>
+                            </td>
+                            @*<td class="DropDownSelects">
+                                <div>
+                                    <select class="options1">
+                                        <option>$50</option>
+                                        <option>$50</option>
+                                        <option>$50</option>
+                                        <option>$50</option>
+                                    </select>
+                                    <select class="options2">
+                                        <option>$50</option>
+                                        <option>$50</option>
+                                        <option>$50</option>
+                                        <option>$50</option>
+                                    </select>
+                                    <select class="options3">
+                                        <option>$50</option>
+                                        <option>$50</option>
+                                        <option>$50</option>
+                                        <option>$50</option>
+                                    </select>
+                                </div>
+                            </td>*@
+
+
+                        </tr>
+
+                        <tr class='tr-hover-class product10row'>
+                            <td style="cursor:pointer">
+                                <h1>
+                                    Pérdida total de audición en ambos oídos
+                                </h1>
+                            </td>
+                            <td class="DropDownSelects">
+                                <div>
+                                    <select class="options1" id="product10_CT_row25">
+                                        <option value="0" selected disabled hidden>Selecciona el valor</option>
+                                        <option value="1">$10,000</option>
+                                        <option value="2">$25,000</option>
+                                        <option value="3">$50,000</option>
+                                    </select>
+                                    <select class="options2"id="product10_CT_row26">
+                                        <option value="0" selected disabled hidden>Selecciona el valor</option>
+                                        <option value="1">$10,000</option>
+                                        <option value="2">$25,000</option>
+                                        <option value="3">$50,000</option>
+                                    </select>
+                                    <select class="options3"id="product10_CT_row27">
+                                        <option  value="0" selected disabled hidden>Selecciona el valor</option>
+                                        <option value="1">$10,000</option>
+                                        <option value="2">$25,000</option>
+                                        <option value="3">$50,000</option>
+                                    </select>
+                                </div>
+                            </td>
+                            <td class="DropDownSelects">
+                                <div>
+                                    <select class="options1" id="product10_CT_row28">
+                                        <option value="0" selected disabled hidden>Selecciona el valor</option>
+                                        <option value="1">$10,000</option>
+                                        <option value="2">$25,000</option>
+                                        <option value="3">$50,000</option>
+                                    </select>
+                                    <select class="options2"id="product10_CT_row29">
+                                        <option value="0" selected disabled hidden>Selecciona el valor</option>
+                                        <option value="1">$10,000</option>
+                                        <option value="2">$25,000</option>
+                                        <option value="3">$50,000</option>
+                                    </select>
+                                    <select class="options3"id="product10_CT_row30">
+                                        <option value="0" selected disabled hidden>Selecciona el valor</option>
+                                        <option value="1">$10,000</option>
+                                        <option value="2">$25,000</option>
+                                        <option value="3">$50,000</option>
+                                    </select>
+                                </div>
+                            </td>
+                          @*  <td class="DropDownSelects">
+                                <div>
+                                    <select class="options1">
+                                        <option>$50</option>
+                                        <option>$50</option>
+                                        <option>$50</option>
+                                        <option>$50</option>
+                                    </select>
+                                    <select class="options2">
+                                        <option>$50</option>
+                                        <option>$50</option>
+                                        <option>$50</option>
+                                        <option>$50</option>
+                                    </select>
+                                    <select class="options3">
+                                        <option>$50</option>
+                                        <option>$50</option>
+                                        <option>$50</option>
+                                        <option>$50</option>
+                                    </select>
+                                </div>
+                            </td>*@
+
+
+                        </tr>
+
+                        <tr class='tr-hover-class product10row'>
+                            <td style="cursor:pointer">
+                                <h1>
+                                    Trasplante de órganos importantes
+                                </h1>
+                            </td>
+                            <td class="DropDownSelects">
+                                <div>
+                                    <select class="options1"id="product10_CT_row31">
+                                        <option value="0" selected disabled hidden>Selecciona el valor</option>
+                                        <option value="1">$10,000</option>
+                                        <option value="2">$25,000</option>
+                                        <option value="3">$50,000</option>
+                                    </select>
+                                    <select class="options2"id="product10_CT_row32">
+                                        <option value="0" selected disabled hidden>Selecciona el valor</option>
+                                        <option value="1">$10,000</option>
+                                        <option value="2">$25,000</option>
+                                        <option value="3">$50,000</option>
+                                    </select>
+                                    <select class="options3"id="product10_CT_row33">
+                                        <option value="0" selected disabled hidden>Selecciona el valor</option>
+                                        <option value="1">$10,000</option>
+                                        <option value="2">$25,000</option>
+                                        <option value="3">$50,000</option>
+                                    </select>
+                                </div>
+                            </td>
+                            <td class="DropDownSelects">
+                                <div>
+                                    <select class="options1"id="product10_CT_row34">
+                                        <option value="0" selected disabled hidden>Selecciona el valor</option>
+                                        <option value="1">$10,000</option>
+                                        <option value="2">$25,000</option>
+                                        <option value="3">$50,000</option>
+                                    </select>
+                                    <select class="options2"id="product10_CT_row35">
+                                        <option value="0" selected disabled hidden>Selecciona el valor</option>
+                                        <option value="1">$10,000</option>
+                                        <option value="2">$25,000</option>
+                                        <option value="3">$50,000</option>
+                                    </select>
+                                    <select class="options3"id="product10_CT_row36">
+                                        <option value="0" selected disabled hidden>Selecciona el valor</option>
+                                        <option value="1">$10,000</option>
+                                        <option value="2">$25,000</option>
+                                        <option value="3">$50,000</option>
+                                    </select>
+                                </div>
+                            </td>
+                            @*<td class="DropDownSelects">
+                                <div>
+                                    <select class="options1">
+                                        <option>$50</option>
+                                        <option>$50</option>
+                                        <option>$50</option>
+                                        <option>$50</option>
+                                    </select>
+                                    <select class="options2">
+                                        <option>$50</option>
+                                        <option>$50</option>
+                                        <option>$50</option>
+                                        <option>$50</option>
+                                    </select>
+                                    <select class="options3">
+                                        <option>$50</option>
+                                        <option>$50</option>
+                                        <option>$50</option>
+                                        <option>$50</option>
+                                    </select>
+                                </div>
+                            </td>*@
+
+
+                        </tr>
+                  </tbody>
+                </table>
+
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class=" mx-2" id="product11">
+        <p class="FullViewTablePara">
+            Protector de hipotecario
+        </p>
+        <div class="overflowContainer" style="">
+            <div class="scrollWidth" style="">
+                <table class="FullViewTable InputTables" style="">
+                    <thead>
+                        <tr class="parentstdheading">
+                            <td></td>
+                           @* <td>
+                                Primary
+                            </td>
+                            <td>
+                                Spouse
+                            </td>*@
+                            @*<td>
+                                children1
+                            </td>*@
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <div>
+                                    <div class="options1">Opción A</div>
+                                    <div class="options2">Opción B</div>
+                                    <div class="options3">Opción C</div>
+                                </div>
+                            </td>
+                            <td>
+                                <div>
+                                    <div class="options1">Opción A</div>
+                                    <div class="options2">Opción B</div>
+                                    <div class="options3">Opción C</div>
+                                </div>
+                            </td>
+                          @*  <td>
+                                <div>
+                                    <div class="options1">Opción A</div>
+                                    <div class="options2">Opción B</div>
+                                    <div class="options3">Opción C</div>
+                                </div>
+                            </td>*@
+                        </tr>
+                        <tr class='tr-hover-class'>
+                            <td style="cursor:pointer">
+                                <h1>
+                                    Porcentaje de la propiedad en la cobertura
+                                </h1>
+                            </td>
+                            <td class="DropDownSelects">
+                                <div>
+                                    <div class="options1">
+                                        <input type="text" id="Product11_Row1" oninput="formatCurrency(this)" value="$" />
+                                    </div>
+                                    <div class="options2">
+                                        <input type="text" id="Product11_Row2" oninput="formatCurrency(this)" value="$" />
+                                    </div>
+                                    <div class="options3">
+                                        <input type="text" id="Product11_Row3" oninput="formatCurrency(this)" value="$" />
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="DropDownSelects">
+                                <div>
+                                    <div class="options1">
+                                        <input type="text" id="Product11_Row4" oninput="formatCurrency(this)" value="$" />
+                                    </div>
+                                    <div class="options2">
+                                        <input type="text" id="Product11_Row5" oninput="formatCurrency(this)" value="$" />
+                                    </div>
+                                    <div class="options3">
+                                        <input type="text" id="Product11_Row6" oninput="formatCurrency(this)" value="$" />
+                                    </div>
+                                </div>
+                            </td>
+                           @* <td class="DropDownSelects">
+                                <div>
+                                    <select class="options1">
+                                        <option>$50</option>
+                                        <option>$50</option>
+                                        <option>$50</option>
+                                        <option>$50</option>
+                                    </select>
+                                    <select class="options2">
+                                        <option>$50</option>
+                                        <option>$50</option>
+                                        <option>$50</option>
+                                        <option>$50</option>
+                                    </select>
+                                    <select class="options3">
+                                        <option>$50</option>
+                                        <option>$50</option>
+                                        <option>$50</option>
+                                        <option>$50</option>
+                                    </select>
+                                </div>
+                            </td>*@
+
+
+                        </tr>
+
+
+
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class=" mx-2" id="product12">
+        <p class="FullViewTablePara">
+            LPU65 Termino a los 65 años
+        </p>
+        <div class="overflowContainer" style="">
+            <div class="scrollWidth" style="">
+                <table class="FullViewTable InputTables" style="">
+                    <thead>
+                        <tr class="childrentdheading">
+                            <td></td>
+                            @*<td>
+                                Primary
+                            </td>
+                            <td>
+                                Spouse
+                            </td>*@
+                        @*    <td>
+                                children1
+                            </td>*@
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="optionstd">
+                            <td></td>
+                            <td>
+                                <div>
+                                    <div class="options1">Opción A</div>
+                                    <div class="options2">Opción B</div>
+                                    <div class="options3">Opción C</div>
+                                </div>
+                            </td>
+                            <td>
+                                <div>
+                                    <div class="options1">Opción A</div>
+                                    <div class="options2">Opción B</div>
+                                    <div class="options3">Opción C</div>
+                                </div>
+                            </td>
+                         @*   <td>
+                                <div>
+                                    <div class="options1">Opción A</div>
+                                    <div class="options2">Opción B</div>
+                                    <div class="options3">Opción C</div>
+                                </div>
+                            </td>*@
+                        </tr>
+                        <tr class='tr-hover-class product12row'>
+                            <td style="cursor:pointer">
+                                <h1>
+                                    Cualquier casusa de muerte
+                                </h1>
+                            </td>
+                            <td class="DropDownSelects">
+                                <div>
+                                    <div class="options1">
+                                        <input type="text" id="Product12_Row1" oninput="formatCurrency(this)" value="$"/>
+                                    </div>
+                                    <div class="options2">
+                                        <input type="text" id="Product12_Row2" oninput="formatCurrency(this)" />
+                                    </div>
+                                    <div class="options3">
+                                        <input type="text" id="Product12_Row3" oninput="formatCurrency(this)"/>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="DropDownSelects">
+                                <div>
+                                    <div class="options1">
+                                        <input type="text" id="Product12_Row4" oninput="formatCurrency(this)"/>
+                                    </div>
+                                    <div class="options2">
+                                        <input type="text" id="Product12_Row5" oninput="formatCurrency(this)"/>
+                                    </div>
+                                    <div class="options3">
+                                        <input type="text" id="Product12_Row6" oninput="formatCurrency(this)"/>
+                                    </div>
+                                </div>
+                            </td>
+                           @* <td class="DropDownSelects">
+                                <div>
+                                    <select class="options1">
+                                        <option>$50</option>
+                                        <option>$50</option>
+                                        <option>$50</option>
+                                        <option>$50</option>
+                                    </select>
+                                    <select class="options2">
+                                        <option>$50</option>
+                                        <option>$50</option>
+                                        <option>$50</option>
+                                        <option>$50</option>
+                                    </select>
+                                    <select class="options3">
+                                        <option>$50</option>
+                                        <option>$50</option>
+                                        <option>$50</option>
+                                        <option>$50</option>
+                                    </select>
+                                </div>
+                            </td>*@
+
+
+                        </tr>
+
+
+
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+
+
+
+
+<div class="col-12 d-flex align-items-center justify-content-between px-3 mt-4 mb-5 pb-5">
+
+    <a href="@Url.Action("Family_Protection","Presentation")">
+        <button class="indication-btn">
+            Previous
+        </button>
+    </a>
+
+
+    <a @*href="@Url.Action("FamilyProtectionFullView")"*@ class="nextbtn">
+        <button class="indication-btn">
+            next
+        </button>
+    </a>
+</div>
+
+@*modal for family protection*@
+<div class="modal fade" id="AnadirProducto" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document" style="max-width: 470px; border-radius: 0; ">
+        <div class="familyModalBox modal-content pl-4 pt-3 pr-3">
+            <div class="d-flex justify-content-end align-content-center">
+                <img src="~/images/Cancel.svg" data-dismiss="modal" style="pointer-events:all; cursor:pointer;" />
+            </div>
+            <div class="d-flex justify-content-center align-content-center my-3">
+                <img src="~/images/quinteroWhite.svg" width="110px" style="filter:brightness(0%)" />
+            </div>
+            <h2 class="AnadirProductoHead">
+                Anadir producto
+            </h2>
+            <ul class="AnadirProductoList">
+                <li class="form-group">
+                    <input type="checkbox" id="html">
+                    <label for="html">
+                        <span> A71</span> Hospital visit due to accident injury
+                    </label>
+                </li>
+                <li class="form-group">
+                    <input type="checkbox" id="html2">
+                    <label for="html2">
+                        <span> H34 </span> Visita al hospital por enfermedades
+                    </label>
+                </li>
+                <li class="form-group">
+                    <input type="checkbox" id="html22">
+                    <label for="html22">
+                        Freedoom of choice (Gastos finales)
+                    </label>
+                </li>
+                <li class="form-group">
+                    <input type="checkbox" id="html33">
+                    <label for="html33">
+                        Protector de Ingresos
+                    </label>
+                </li>
+                <li class="form-group">
+                    <input type="checkbox" id="html3">
+                    <label for="html3">
+                        ADB Fallecimiento por accidente
+                    </label>
+                </li>
+                <li class="form-group">
+                    <input type="checkbox" id="html4">
+                    <label for="html4">
+                        <span> A71</span> Muerte Accidental
+                    </label>
+                </li>
+                <li class="form-group">
+                    <input type="checkbox" id="html44">
+                    <label for="html44">
+                        <span> A71</span> Desmembramiento por accidente.
+                    </label>
+                </li>
+                <li class="form-group">
+                    <input type="checkbox" id="html5">
+                    <label for="html5">
+                        CNM Indemnización por Cancer
+                    </label>
+                </li>
+                <li class="form-group">
+                    <input type="checkbox" id="html55">
+                    <label for="html55">
+                        C20 Pago total por Cancer
+                    </label>
+                </li>
+                <li class="form-group">
+                    <input type="checkbox" id="html6">
+                    <label for="html6">
+                        CT Enfermedades críticas
+                    </label>
+                </li>
+                <li class="form-group">
+                    <input type="checkbox" id="html66">
+                    <label for="html66">
+                        Protector de hipotecario
+                    </label>
+                </li>
+                <li class="form-group">
+                    <input type="checkbox" id="html7">
+                    <label for="html7">
+                        LPU65 Termino a los 65 años
+                    </label>
+                </li>
+            </ul>
+            <div class="d-flex justify-content-center align-content-center my-3">
+                <button class="familyModalBtn" style="border-radius:6px;">
+                    Anadir
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@*modal for family protection*@
+@*modal for family protection*@
+<div class="modal fade" id="RemoverProducto" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document" style="max-width: 470px; border-radius: 0; ">
+        <div class="familyModalBox modal-content pl-4 pt-3 pr-3">
+            <div class="d-flex justify-content-end align-content-center">
+                <img src="~/images/Cancel.svg" data-dismiss="modal" style="pointer-events:all; cursor:pointer;" />
+            </div>
+            <div class="d-flex justify-content-center align-content-center my-3">
+                <img src="~/images/quinteroWhite.svg" width="110px" style="filter:brightness(0%)" />
+            </div>
+            <h2 class="AnadirProductoHead">
+                Remover Producto
+            </h2>
+            <ul class="AnadirProductoList">
+                <li class="form-group">
+                    <input type="checkbox" id="html00">
+                    <label for="html00">
+                        <span> A71</span> Hospital visit due to accident injury
+                    </label>
+                </li>
+                <li class="form-group">
+                    <input type="checkbox" id="html20">
+                    <label for="html20">
+                        <span> H34 </span> Visita al hospital por enfermedades
+                    </label>
+                </li>
+                <li class="form-group">
+                    <input type="checkbox" id="html220">
+                    <label for="html220">
+                        Freedoom of choice (Gastos finales)
+                    </label>
+                </li>
+                <li class="form-group">
+                    <input type="checkbox" id="html330">
+                    <label for="html330">
+                        Protector de Ingresos
+                    </label>
+                </li>
+                <li class="form-group">
+                    <input type="checkbox" id="html30">
+                    <label for="html30">
+                        ADB Fallecimiento por accidente
+                    </label>
+                </li>
+                <li class="form-group">
+                    <input type="checkbox" id="html40">
+                    <label for="html40">
+                        <span> A71</span> Muerte Accidental
+                    </label>
+                </li>
+                <li class="form-group">
+                    <input type="checkbox" id="html440">
+                    <label for="html440">
+                        <span> A71</span> Desmembramiento por accidente.
+                    </label>
+                </li>
+                <li class="form-group">
+                    <input type="checkbox" id="html50">
+                    <label for="html50">
+                        CNM Indemnización por Cancer
+                    </label>
+                </li>
+                <li class="form-group">
+                    <input type="checkbox" id="html550">
+                    <label for="html550">
+                        C20 Pago total por Cancer
+                    </label>
+                </li>
+                <li class="form-group">
+                    <input type="checkbox" id="html60">
+                    <label for="html60">
+                        CT Enfermedades críticas
+                    </label>
+                </li>
+                <li class="form-group">
+                    <input type="checkbox" id="html660">
+                    <label for="html660">
+                        Protector de hipotecario
+                    </label>
+                </li>
+                <li class="form-group" >
+                    <input type="checkbox" id="html70">
+                    <label for="html70">
+                        LPU65 Termino a los 65 años
+                    </label>
+                </li>
+            </ul>
+            <div class="d-flex justify-content-center align-content-center my-3">
+                <button  class="familyModalBtn" style="border-radius:6px;">
+                    remover
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@*modal for family protection*@
+<script src="~/jquery 3.3/jquery-3.3.1.min.js"></script>
+<script>
+
+    function formatCurrency(input) {
+
+        var sanitizedValue = input.value.replace(/[^0-9$]/g, '');
+
+        if (!sanitizedValue.startsWith('$')) {
+            sanitizedValue = '$' + sanitizedValue;
+        }
+
+        input.value = sanitizedValue;
+    }
+
+    function childdropdown(val,options)
+    {
+        var rowIndex = $(val).closest('tr').index();
+        var row1 = 'A71_Product1_EmergencyRow'+options;
+        var row2 = 'A71_Product1_HospitalRow' + options;
+        var row3 = 'A71_Product1_IntensiveRow' + options;
+        var dropdownindex;
+        if (rowIndex == 1)
+        {
+            var targetRow = $('#A71Product1 tr:eq(' + 2 + ')');
+            var targetElement = targetRow.find('#' + row2);
+            var index = $('#' + row1).val();
+            targetElement.prop("selectedIndex", index);
+            var targetRow2 = $('#A71Product1 tr:eq(' + 3 + ')');
+            var targetElement2 = targetRow2.find('#' + row3);
+           // var index2 = $('#' + row3).val();
+            targetElement2.prop("selectedIndex", index);
+            dropdownindex = index;
+        }
+        else if (rowIndex == 2)
+        {
+            var targetRow = $('#A71Product1 tr:eq(' + 1 + ')');
+            var targetElement = targetRow.find('#' + row1);
+            var index = $('#' + row2).val();
+            targetElement.prop("selectedIndex", index);
+            var targetRow2 = $('#A71Product1 tr:eq(' + 3 + ')');
+            var targetElement2 = targetRow2.find('#' + row3);
+            //var index2 = $('#' + row3).val();
+            targetElement2.prop("selectedIndex", index);
+            dropdownindex = index;
+        }
+        else if (rowIndex == 3)
+        {
+            var targetRow = $('#A71Product1 tr:eq(' + 1 + ')');
+            var targetElement = targetRow.find('#' + row1);
+            var index = $('#' + row3).val();
+            targetElement.prop("selectedIndex", index);
+            var targetRow2 = $('#A71Product1 tr:eq(' + 2 + ')');
+            var targetElement2 = targetRow2.find('#' + row2);
+            //var index2 = $('#' + row2).val();
+            targetElement2.prop("selectedIndex", index);
+            dropdownindex = index;
+        }
+        ChangeProduct6_7Dropdowns(val, options, index)
+        var s = 0;
+    }
+    function Product1Dropdown(val) {
+        var check2 = val.val();
+        var check = val.selected;
+        if (val == "op1") {
+            $('#R2C1Dropdown').prop("selectedIndex", 0);
+            $('#R3C1Dropdown').prop("selectedIndex", 0);
+        }
+    }
+    function Product6Dropdowns(val, options) {
+
+        var rowIndex = $(val).closest('tr').index();
+
+        var row1 = 'product6standard_row' + options;
+        var row2 = 'product6automobile_row' + options;
+        var row3 = 'product6transport_row' + options;
+        var dropdownindex;
+        if (rowIndex == 1) {
+            var targetRow = $('#product6_A71 tr:eq(' + 2 + ')');
+            var targetElement = targetRow.find('#' + row2);
+            var index = $('#' + row1).val();
+            targetElement.prop("selectedIndex", index);
+            var targetRow2 = $('#product6_A71 tr:eq(' + 3 + ')');
+            var targetElement2 = targetRow2.find('#' + row3);
+            // var index2 = $('#' + row3).val();
+            targetElement2.prop("selectedIndex", index);
+            dropdownindex = index;
+        }
+        else if (rowIndex == 2) {
+            var targetRow = $('#product6_A71 tr:eq(' + 1 + ')');
+            var targetElement = targetRow.find('#' + row1);
+            var index = $('#' + row2).val();
+            targetElement.prop("selectedIndex", index);
+            var targetRow2 = $('#product6_A71 tr:eq(' + 3 + ')');
+            var targetElement2 = targetRow2.find('#' + row3);
+            //var index2 = $('#' + row3).val();
+            targetElement2.prop("selectedIndex", index);
+            dropdownindex = index;
+        }
+        else if (rowIndex == 3) {
+            var targetRow = $('#product6_A71 tr:eq(' + 1 + ')');
+            var targetElement = targetRow.find('#' + row1);
+            var index = $('#' + row3).val();
+            targetElement.prop("selectedIndex", index);
+            var targetRow2 = $('#product6_A71 tr:eq(' + 2 + ')');
+            var targetElement2 = targetRow2.find('#' + row2);
+            //var index2 = $('#' + row2).val();
+            targetElement2.prop("selectedIndex", index);
+            dropdownindex = index;
+        }
+        ChangeProduct7_1Dropdowns(val, options, dropdownindex);
+        var s = 0;
+    }
+    function Product7Dropdowns(val, options) {
+
+        var rowIndex = $(val).closest('tr').index();
+        var row1 = 'product7standard_row' + options;
+        var row2 = 'product7automobile_row' + options;
+        var row3 = 'product7transport_row' + options;
+        var dropdownindex;
+        if (rowIndex == 1) {
+            var targetRow = $('#Product7_A71 tr:eq(' + 2 + ')');
+            var targetElement = targetRow.find('#' + row2);
+            var index = $('#' + row1).val();
+            targetElement.prop("selectedIndex", index);
+            var targetRow2 = $('#Product7_A71 tr:eq(' + 3 + ')');
+            var targetElement2 = targetRow2.find('#' + row3);
+            // var index2 = $('#' + row3).val();
+            targetElement2.prop("selectedIndex", index);
+            dropdownindex = index;
+        }
+        else if (rowIndex == 2) {
+            var targetRow = $('#Product7_A71 tr:eq(' + 1 + ')');
+            var targetElement = targetRow.find('#' + row1);
+            var index = $('#' + row2).val();
+            targetElement.prop("selectedIndex", index);
+            var targetRow2 = $('#Product7_A71 tr:eq(' + 3 + ')');
+            var targetElement2 = targetRow2.find('#' + row3);
+            //var index2 = $('#' + row3).val();
+            targetElement2.prop("selectedIndex", index);
+            dropdownindex = index;
+
+        }
+        else if (rowIndex == 3) {
+            var targetRow = $('#Product7_A71 tr:eq(' + 1 + ')');
+            var targetElement = targetRow.find('#' + row1);
+            var index = $('#' + row3).val();
+            targetElement.prop("selectedIndex", index);
+            var targetRow2 = $('#Product7_A71 tr:eq(' + 2 + ')');
+            var targetElement2 = targetRow2.find('#' + row2);
+            //var index2 = $('#' + row2).val();
+            targetElement2.prop("selectedIndex", index);
+            dropdownindex = index;
+
+        }
+        ChangeProduct6_1Dropdowns(val, options, dropdownindex);
+        var s = 0;
+    }
+    function ChangeProduct6_1Dropdowns(val, options,index)
+    {
+        //Product 6
+            var row1 = 'product6standard_row' + options;
+            var row2 = 'product6automobile_row' + options;
+            var row3 = 'product6transport_row' + options;
+            var targetRow = $('#product6_A71 tr:eq(' + 2 + ')');
+            var targetElement = targetRow.find('#' + row2);
+            targetElement.prop("selectedIndex", index);
+            var targetRow2 = $('#product6_A71 tr:eq(' + 3 + ')');
+            var targetElement2 = targetRow2.find('#' + row3);
+            targetElement2.prop("selectedIndex", index);
+            var targetRow1 = $('#product6_A71 tr:eq(' + 1 + ')');
+            var targetElement1 = targetRow1.find('#' + row1);
+            targetElement1.prop("selectedIndex", index);
+
+            //Product 1
+            var product1row1 = 'A71_Product1_EmergencyRow' + options;
+            var product1row2 = 'A71_Product1_HospitalRow' + options;
+            var product1row3 = 'A71_Product1_IntensiveRow' + options;
+
+            var targetRow = $('#A71Product1 tr:eq(' + 2 + ')');
+            var targetElement = targetRow.find('#' + product1row2);
+            targetElement.prop("selectedIndex", index);
+            var targetRow2 = $('#A71Product1 tr:eq(' + 3 + ')');
+            var targetElement2 = targetRow2.find('#' + product1row3);
+            targetElement2.prop("selectedIndex", index);
+            var targetRow1 = $('#A71Product1 tr:eq(' + 1 + ')');
+            var targetElement1 = targetRow1.find('#' + product1row1);
+            targetElement1.prop("selectedIndex", index);
+    }
+    function ChangeProduct7_1Dropdowns(val, options, index) {
+        //Product 7
+
+            var product7row1 = 'product7standard_row' + options;
+            var product7row2 = 'product7automobile_row' + options;
+            var product7row3 = 'product7transport_row' + options;
+
+            var targetRow = $('#Product7_A71 tr:eq(' + 2 + ')');
+            var targetElement = targetRow.find('#' + product7row2);
+            targetElement.prop("selectedIndex", index);
+            var targetRow2 = $('#Product7_A71 tr:eq(' + 3 + ')');
+            var targetElement2 = targetRow2.find('#' + product7row3);
+            targetElement2.prop("selectedIndex", index);
+            var targetRow2 = $('#Product7_A71 tr:eq(' + 1 + ')');
+            var targetElement2 = targetRow2.find('#' + product7row1);
+            targetElement2.prop("selectedIndex", index);
+
+        //Product 1
+        var product1row1 = 'A71_Product1_EmergencyRow' + options;
+        var product1row2 = 'A71_Product1_HospitalRow' + options;
+        var product1row3 = 'A71_Product1_IntensiveRow' + options;
+
+        var targetRowp1 = $('#A71Product1 tr:eq(' + 2 + ')');
+        var targetElementp1 = targetRowp1.find('#' + product1row2);
+        targetElementp1.prop("selectedIndex", index);
+        var targetRow2p1 = $('#A71Product1 tr:eq(' + 3 + ')');
+        var targetElement2p1 = targetRow2p1.find('#' + product1row3);
+        targetElement2p1.prop("selectedIndex", index);
+        var targetRow1p1 = $('#A71Product1 tr:eq(' + 1 + ')');
+        var targetElement1 = targetRow1p1.find('#' + product1row1);
+        targetElement1.prop("selectedIndex", index);
+    }
+    function ChangeProduct6_7Dropdowns(val, options, index)
+    {
+        //Product 7
+            var product7row1 = 'product7standard_row' + options;
+            var product7row2 = 'product7automobile_row' + options;
+            var product7row3 = 'product7transport_row' + options;
+
+            var targetRow = $('#Product7_A71 tr:eq(' + 2 + ')');
+            var targetElement = targetRow.find('#' + product7row2);
+            targetElement.prop("selectedIndex", index);
+            var targetRow2 = $('#Product7_A71 tr:eq(' + 3 + ')');
+            var targetElement2 = targetRow2.find('#' + product7row3);
+            targetElement2.prop("selectedIndex", index);
+            var targetRow2 = $('#Product7_A71 tr:eq(' + 1 + ')');
+            var targetElement2 = targetRow2.find('#' + product7row1);
+            targetElement2.prop("selectedIndex", index);
+
+        //Product 6
+           var row1 = 'product6standard_row' + options;
+           var row2 = 'product6automobile_row' + options;
+           var row3 = 'product6transport_row' + options;
+           var targetRow = $('#product6_A71 tr:eq(' + 2 + ')');
+           var targetElement = targetRow.find('#' + row2);
+           targetElement.prop("selectedIndex", index);
+           var targetRow2 = $('#product6_A71 tr:eq(' + 3 + ')');
+           var targetElement2 = targetRow2.find('#' + row3);
+           targetElement2.prop("selectedIndex", index);
+           var targetRow1 = $('#product6_A71 tr:eq(' + 1 + ')');
+           var targetElement1 = targetRow1.find('#' + row1);
+           targetElement1.prop("selectedIndex", index);
+    }
+
+ 
+    $(document).ready(function () {
+
+
+        var options = localStorage.getItem("options");
+        var childs = localStorage.getItem("childrens");
+        var children = childs.split(',');
+        var spouse = localStorage.getItem("spouse");
+        var owner = localStorage.getItem("owner");
+        var count = 1;
+        var col = parseInt(7, 10);
+        var product10col = parseInt(37, 10);
+        var A71_Product1_EmergencyRow = '\'A71_Product1_EmergencyRow\'';
+        var A71_Product1_HospitalRow = '\'A71_Product1_HospitalRow\'';
+        var A71_Product1_IntensiveRow = '\'A71_Product1_IntensiveRow\'';
+        $(".childrentdheading").append('<td>' + owner + '</td>');
+        $(".childrentdheading").append('<td>' + spouse + '</td>');
+        $(".parentstdheading").append('<td>' + owner + '</td>');
+        $(".parentstdheading").append('<td>' + spouse + '</td>');
+        for (var s = 0; s < children.length; s++)
+        {
+            var col2 = parseInt(col, 10) + parseInt(1, 10);
+            var col3 = parseInt(col, 10) + parseInt(2, 10);
+            var product10col2 = parseInt(product10col, 10) + parseInt(1, 10);
+            var product10col3 = parseInt(product10col, 10) + parseInt(2, 10);
+            $(".childrentdheading").append('<td>'+children[s]+'</td>');
+            $(".optionstd").append('<td><div><div class="options1">Opción A</div><div class="options2">Opción B</div><div class="options3">Opción C</div></div ></td >');
+            $(".A71_Product1_EmergencyRow").append('<td class="DropDownSelects c"><div class= "re" ><select id="A71_Product1_EmergencyRow' + col + '" onchange="childdropdown(this,' + col + ')"><option value="0">$50</option ><option value="1">$100</option><option value="2">$150</option><option value="3">$200</option><option value="4">$250</option><option value="5">$300</option></select><select id="A71_Product1_EmergencyRow' + col2 + '" onchange="childdropdown(this,' + col2 + ')" class="options2"><option value="0">$50</option><option value="1">$100</option><option value="2">$150</option><option value="3">$200</option><option value="4">$250</option><option value="5">$300</option></select><select id="A71_Product1_EmergencyRow' + col3 + '" onchange="childdropdown(this,' + col3 + ')" class="options3" ><option value="0">$50</option><option value="1">$100</option><option value="2">$150</option><option value="3">$200</option><option value="4">$250</option><option value="5">$300</option></select></div ></td >')
+            $(".A71_Product1_HospitalRow").append('<td class="DropDownSelects c"><div class= "re" ><select id="A71_Product1_HospitalRow' + col + '" onchange="childdropdown(this, ' + col + ')"><option value="0">$100</option ><option value="1">$200</option><option value="2">$300</option><option value="3">$400</option><option value="4">$500</option><option value="5">$600</option></select><select id="A71_Product1_HospitalRow' + col2 + '" onchange="childdropdown(this,' + col2 + ')" class="options2"><option value="0">$100</option><option value="1">$200</option><option value="2">$300</option><option value="3">$400</option><option value="4">$500</option><option value="5">$600</option></select><select id="A71_Product1_HospitalRow' + col3 + '" onchange="childdropdown(this,' + col3 + ')" class="options3" ><option value="0">$100</option><option value="1">$200</option><option value="2">$300</option><option value="3">$400</option><option value="4">$500</option><option value="5">$600</option></select></div ></td >')
+            $(".A71_Product1_IntensiveRow").append('<td class="DropDownSelects c"><div class= "re" ><select id="A71_Product1_IntensiveRow' + col + '" onchange="childdropdown(this,' + col + ')"><option value="0">$200</option ><option value="1">$400</option><option value="2">$600</option><option value="3">$800</option><option value="4">$1,000</option><option value="5">$1,200</option></select><select id="A71_Product1_IntensiveRow' + col2 + '" onchange="childdropdown(this,' + col2 + ')" class="options2"><option value="0">$200</option><option value="1">$400</option><option value="2">$600</option><option value="3">$800</option><option value="4">$1,000</option><option value="5">$1,200</option></select><select id="A71_Product1_IntensiveRow' + col3 + '" onchange="childdropdown(this,' + col3 + ')" class="options3" ><option value="0">$200</option><option value="1">$400</option><option value="2">$600</option><option value="3">$800</option><option value="4">$1,000</option><option value="5">$1,200</option></select></div ></td >')
+            $(".h34product2").append('<td class="DropDownSelects"><div><select class="options1" id="Product2_H34_Row' + col + '"><option value="0">$50</option><option value="1">$75</option><option value="2">$100</option><option value="3">$150</option></select><select class="options2"id="Product2_H34_Row' + col2 + '"><option value="0">$50</option><option value="1">$75</option><option value="2">$100</option><option value="3">$150</option></select><select class="options3" id="Product2_H34_Row' + col3 + '"><option value="0">$50</option><option value="1">$75</option><option value="2">$100</option><option value="3">$150</option></select></div></td>')
+            $(".product3").append('<td class="DropDownSelects"><div><div class="options1"><input type="text" id="Product3_Row' + col + '" oninput="formatCurrency(this)" value="$"/></div><div class="options2"><input type="text" id="Product3_Row' + col2 + '" oninput="formatCurrency(this)" value="$"/></div><div class="options3"><input type="text" id="Product3_Row' + col3 + '" oninput="formatCurrency(this)" value="$"/></div></div></td>');
+            $(".product5").append('<td class="DropDownSelects"><div><div><input type="text" id="Product5_Row' + col + '" oninput="formatCurrency(this)" value="$"/></div><div><input type="text" id="Product5_Row' + col2 + '" oninput="formatCurrency(this)" value="$"/></div><div><input type="text" id="Product5_Row' + col3 + '" oninput="formatCurrency(this)" value="$"/></div></div></td>');
+            //product6
+            $(".product6standard_row").append('<td class="DropDownSelects"><div><select class="options1" id="product6standard_row' + col + '" onchange="Product6Dropdowns(this,'+col+')"><option value="0">$2,000</option><option value="1">$4,000</option><option value="2">$6,000</option><option value="3">$8,000</option><option value="4">$10,000</option><option value="5">$12,000</option></select><select class="options2" id="product6standard_row' + col2 + '"  onchange="Product6Dropdowns(this,' + col2 + ')"><option value="0">$2,000</option><option value="1">$4,000</option><option value="2">$6,000</option><option value="3">$8,000</option><option value="4">$10,000</option><option value="5">$12,000</option></select><select class="options3" id="product6standard_row' + col3 + '" onchange="Product6Dropdowns(this,' + col3 + ')"><option value="0">$2,000</option><option value="1">$4,000</option><option value="2">$6,000</option><option value="3">$8,000</option><option value="4">$10,000</option><option value="5">$12,000</option></select></div></td>');
+            $(".product6automobile_row").append('<td class="DropDownSelects"><div><select class="options1" id="product6automobile_row' + col + '" onchange="Product6Dropdowns(this,'+col+')"><option value="0">$4,000</option><option value="1">$8,000</option><option value="2">$12,000</option><option value="3">$16,000</option><option value="4">$20,000</option><option value="5">$24,000</option></select><select class="options2" id="product6automobile_row' + col2 + '"  onchange="Product6Dropdowns(this,' + col2 + ')"><option value="0">$4,000</option><option value="1">$8,000</option><option value="2">$12,000</option><option value="3">$16,000</option><option value="4">$20,000</option><option value="5">$24,000</option></select><select class="options3"  id="product6automobile_row' + col3 + '" onchange="Product6Dropdowns(this,' + col3 + ')"><option value="0">$4,000</option><option value="1">$8,000</option><option value="2">$12,000</option><option value="3">$16,000</option><option value="4">$20,000</option><option value="5">$24,000</option></select></div></td>');
+            $(".product6transport_row").append(' <td class="DropDownSelects"><div><select class="options1"id="product6transport_row' + col + '" onchange="Product6Dropdowns(this,'+col+')"><option value="0">$10,000</option><option value="1">$20,000</option><option value="2">$30,000</option><option value="3">$40,000</option><option value="4">$50,000</option><option value="5">$60,000</option></select><select class="options2" id="product6transport_row' + col2 + '"  onchange="Product6Dropdowns(this,' + col2 + ')"><option value="0">$10,000</option><option value="1">$20,000</option><option value="2">$30,000</option><option value="3">$40,000</option><option value="4">$50,000</option><option value="5">$60,000</option></select><select class="options3" id="product6transport_row' + col3 + '" onchange="Product6Dropdowns(this,' + col3 + ')"><option value="0">$10,000</option><option value="1">$20,000</option><option value="2">$30,000</option><option value="3">$40,000</option><option value="4">$50,000</option><option value="5">$60,000</option></select></div></td>');
+
+
+            //product7
+
+            $(".product7standard_row").append('<td class="DropDownSelects"><div><select class="options1" id="product7standard_row' + col + '" onchange="Product7Dropdowns(this,' + col + ')"><option value="0">$1,000</option><option value="1">$2,000</option><option value="2">$3,000</option><option value="3">$4,000</option><option value="4">$5,000</option><option value="5">$6,000</option></select><select class="options2" id="product7standard_row' + col2 + '"  onchange="Product7Dropdowns(this,' + col2 + ')"><option value="0">$1,000</option><option value="1">$2,000</option><option value="2">$3,000</option><option value="3">$4,000</option><option value="4">$5,000</option><option value="5">$6,000</option></select><select class="options3" id="product7standard_row' + col3 + '" onchange="Product7Dropdowns(this,' + col3 + ')"><option value="0">$1,000</option><option value="1">$2,000</option><option value="2">$3,000</option><option value="3">$4,000</option><option value="4">$5,000</option><option value="5">$6,000</option></select></div></td>');
+            $(".product7automobile_row").append('<td class="DropDownSelects"><div><select class="options1" id="product7automobile_row' + col + '" onchange="Product7Dropdowns(this,' + col + ')"><option value="0">$2,000</option><option value="1">$4,000</option><option value="2">$6,000</option><option value="3">$8,000</option><option value="4">$10,000</option><option value="5">$12,000</option></select><select class="options2" id="product7automobile_row' + col2 + '"  onchange="Product7Dropdowns(this,' + col2 + ')"><option value="0">$2,000</option><option value="1">$4,000</option><option value="2">$6,000</option><option value="3">$8,000</option><option value="4">$10,000</option><option value="5">$12,000</option></select><select class="options3"  id="product7automobile_row' + col3 + '" onchange="Product7Dropdowns(this,' + col3 + ')"><option value="0">$2,000</option><option value="1">$4,000</option><option value="2">$6,000</option><option value="3">$8,000</option><option value="4">$10,000</option><option value="5">$12,000</option></select></div></td>');
+            $(".product7transport_row").append(' <td class="DropDownSelects"><div><select class="options1"id="product7transport_row' + col + '" onchange="Product7Dropdowns(this,' + col + ')"><option value="0">$5,000</option><option value="1">$10,000</option><option value="2">$15,000</option><option value="3">$20,000</option><option value="4">$25,000</option><option value="5">$30,000</option></select><select class="options2" id="product7transport_row' + col2 + '"  onchange="Product7Dropdowns(this,' + col2 + ')"><option value="0">$5,000</option><option value="1">$10,000</option><option value="2">$15,000</option><option value="3">$20,000</option><option value="4">$25,000</option><option value="5">$30,000</option></select><select class="options3" id="product7transport_row' + col3 + '" onchange="Product7Dropdowns(this,' + col3 + ')"><option value="0">$5,000</option><option value="1">$10,000</option><option value="2">$15,000</option><option value="3">$20,000</option><option value="4">$25,000</option><option value="5">$60,000</option></select></div></td>');
+
+
+            //product8
+            $(".product8row").append('<td class="DropDownSelects"><div><select class="options1" id="product8_CNM_row' + col + '"><option value="0">$50,000</option><option value="1">$100,000</option><option value="2">$150,000</option></select><select class="options2" id="product8_CNM_row' + col2 + '"><option value="0">$50,000</option><option value="1">$100,000</option><option value="2">$150,000</option></select><select class="options3" id="product8_CNM_row' + col3 + '"><option value="0">$50,000</option><option value="1">$100,000</option><option value="2">$150,000</option></select></div></td>');
+            //product9
+            $(".product9row").append(' <td class="DropDownSelects"><div><select class="options1"id="product9_C20_row' + col + '"><option value="0">$10,000</option><option value="1">$25,000</option><option value="2">$50,000</option></select><select class="options2" id="product9_C20_row' + col2 + '"><option value="0">$10,000</option><option value="1">$25,000</option><option value="2">$50,000</option></select><select class="options3" id="product9_C20_row' + col3 + '"><option value="0">$10,000</option><option value="1">$25,000</option><option value="2">$50,000</option></select></div></td>');
+            //product10
+            $(".product10row").append('<td class="DropDownSelects"><div><select class="options1" id="product10_CT_row' + product10col + '"><option selected disabled hidden>Selecciona el valor</option><option value="0">$10,000</option><option value="1">$25,000</option><option value="2">$50,000</option></select><select class="options2" id="product10_CT_row' + product10col2 + '"><option selected disabled hidden>Selecciona el valor</option><option value="0">$10,000</option><option value="1">$25,000</option><option value="2">$50,000</option></select><select class="options3"id="product10_CT_row' + product10col3 + '"><option selected disabled hidden>Selecciona el valor</option><option value="0">$10,000</option><option value="1">$25,000</option><option value="2">$50,000</option></select></div></td>');
+            //product12
+            $(".product12row").append('<td class="DropDownSelects"><div><div><input type="text" id="Product12_Row' + col + '" oninput="formatCurrency(this)" value="$"/></div><div><input type="text" id="Product12_Row' + col2 + '" oninput="formatCurrency(this)" value="$"/></div><div><input type="text" id="Product12_Row' + col3 + '" oninput="formatCurrency(this)" value="$" /></div></div></td>');
+
+            count++;
+            col++;
+            col++;
+            col++;
+        }
+        var classNames = [];
+        for (var s = 1; s <= 12; s++)
+        {
+            classNames[s]=localStorage.getItem("product" + s);
+        }
+
+        classNames.forEach(function (className)
+        {
+            $('#'+className).hide();
+
+        });
+
+
+        console.log(classNames);
+        if (options == "1") {
+            $('.options2').hide();
+            $('.options3').hide();
+        }
+        else if (options == "2") {
+            $('.options3').hide();
+        }
+
+        /*$('.tr-hover-class').click(function () {
+            $('.tr-hover-class').removeClass('rowselected');
+            $('.tr-hover-class').find('select').css('background-color', '');
+            $(this).addClass('rowselected');
+            $(this).find('select').css('background-color', '#FFF3C7');
+
+        });*/
+
+        $('.nextbtn').click(function () {
+            var html = $('#parent_products_div').html();
+            var selectedValues = [];
+            var selectedValuesid = [];
+            var InputValues = [];
+            var InputValuesId = [];
+
+
+            $('select').each(function () {
+
+                var selectedValue = $(this).val();
+                selectedValues.push(selectedValue);
+                var id = $(this).attr('id');
+                selectedValuesid.push(id);
+            });
+
+            $('input').each(function () {
+
+                var selectedValue = $(this).val();
+                InputValues.push(selectedValue);
+                var id = $(this).attr('id');
+                InputValuesId.push(id);
+            });
+
+/*
+            console.log(selectedValues);
+            console.log(selectedValuesid);*/
+            localStorage.setItem('FPPViewHtml', html);
+            localStorage.setItem('SelectedValues', selectedValues);
+            localStorage.setItem('SelectedValuesId', selectedValuesid);
+
+            localStorage.setItem('InputValues', InputValues);
+            localStorage.setItem('InputValuesId', InputValuesId);
+
+            window.location.href = '@Url.Action("FamilyProtectionFullView")';
+
+        });
+    });
+</script>

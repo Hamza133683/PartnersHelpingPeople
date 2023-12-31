@@ -1,0 +1,303 @@
+﻿body {
+}
+
+@media screen and (max-width:992px) {
+
+    .calculator-container {
+        flex-wrap: wrap;
+    }
+}
+
+.calculator-width .row > div {
+    padding: 0 7px;
+}
+
+.first-box {
+    max-width: 320px;
+    width: 100%;
+    min-width: 320px;
+}
+
+.calculator-box {
+    background-color: white;
+    box-shadow: 5px 5px 20px rgba(0,0,0,0.15);
+    padding: 20px 10px;
+}
+
+.box-heading {
+    background-color: #025599;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 18px;
+    letter-spacing: 0em;
+    text-align: center;
+    text-transform: capitalize;
+    color: white;
+    margin-bottom: 1px;
+    padding: 8px 7px;
+}
+
+.box-table {
+    border-collapse: collapse;
+    table-layout: auto;
+    width: 100%;
+}
+
+    .box-table thead tr td {
+        padding: 9px 30px 9px 5px;
+        text-transform: capitalize;
+        background-color: rgba(2, 85, 153, 0.4);
+        width: 50%;
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 15px;
+        letter-spacing: 0em;
+        text-align: left;
+    }
+
+    .box-table tfoot tr td {
+        padding: 9px 30px 9px 12px;
+        text-transform: capitalize;
+        background-color: rgba(2, 85, 153, 0.4);
+        width: 50%;
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 15px;
+        letter-spacing: 0em;
+        text-align: left;
+    }
+
+    .box-table tbody tr td {
+        text-align: start;
+        padding: 9px 30px 9px 12px;
+        text-transform: capitalize;
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 15px;
+        letter-spacing: 0em;
+        text-align: left;
+    }
+
+.two-table {
+    border-collapse: collapse;
+    margin: 10px 0;
+    border-left: 0.3px solid rgba(121, 121, 121, 1);
+}
+
+    .two-table tbody tr td {
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 15px;
+        letter-spacing: 0em;
+        text-align: left;
+        text-transform: capitalize;
+        color: black;
+        padding: 5px 8px;
+    }
+
+        .two-table tbody tr td:nth-child(2) {
+            text-align: right;
+        }
+
+.semana-table {
+    border-collapse: collapse;
+    border-spacing: 1px 0;
+}
+
+    .semana-table thead tr td {
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 17px;
+        letter-spacing: 0em;
+        text-align: center;
+        color: black;
+        text-transform: uppercase;
+    }
+
+    .semana-table tbody tr td div {
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 19px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: black;
+        text-transform: uppercase;
+        padding: 4px 5px;
+        margin: 1px 2px 0 0;
+    }
+
+    .semana-table tbody tr td:nth-child(1) {
+        border-left: 0.3px solid #797979;
+    }
+
+    .semana-table tbody tr td:nth-child(2) div {
+        text-align: center;
+        background-color: #E6EEF5;
+    }
+
+.total-box {
+    margin-top: auto;
+}
+
+.total-para {
+    font-size: 9px;
+    font-weight: 400;
+    line-height: 15px;
+    letter-spacing: 0.1em;
+    text-align: center;
+    padding: 5px 15px;
+    color: white;
+    background-color: #797979;
+    margin-bottom: 1px;
+    white-space: nowrap;
+    text-transform: capitalize;
+    min-width: 110px;
+    width: 100%;
+}
+
+.total-number {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: black;
+    border: 1px solid black;
+    padding: 3px 15px;
+    margin-bottom: 0;
+    white-space: nowrap;
+}
+
+.total-mes-box {
+    padding: 4px 10px;
+    background-color: #D3D3D3;
+    margin-bottom: 1px;
+}
+
+    .total-mes-box p {
+        font-size: 10px;
+        font-weight: 400;
+        line-height: 12px;
+        letter-spacing: 0em;
+        text-align: left;
+        text-transform: uppercase;
+        color: black;
+        margin-bottom: 0;
+    }
+
+.total-mes-box-1 {
+    padding: 4px 10px;
+    background-color: #797979;
+    margin-bottom: 1px;
+}
+
+    .total-mes-box-1 p {
+        font-size: 10px;
+        font-weight: 400;
+        line-height: 12px;
+        letter-spacing: 0em;
+        text-align: left;
+        text-transform: uppercase;
+        color: white;
+        margin-bottom: 0;
+    }
+
+.bonus-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0px 2px;
+}
+
+    .bonus-table thead tr td {
+        font-size: 9px;
+        font-weight: 400;
+        line-height: 12px;
+        letter-spacing: 0em;
+        text-align: center;
+        text-transform: uppercase;
+        padding: 4px 10px;
+        background-color: #D3D3D3;
+    }
+
+    .bonus-table tbody tr:nth-child(1) td {
+        font-size: 9px;
+        font-weight: 400;
+        line-height: 12px;
+        letter-spacing: 0em;
+        text-align: center;
+        text-transform: uppercase;
+        padding: 4px 10px;
+        background-color: #E6EEF5;
+    }
+
+    .bonus-table tbody tr:nth-child(2) td {
+        background-color: #797979;
+        font-size: 9px;
+        font-weight: 400;
+        line-height: 12px;
+        letter-spacing: 0em;
+        text-align: center;
+        text-transform: uppercase;
+        padding: 4px 10px;
+        color: white;
+    }
+
+
+.annual-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0px 2px;
+}
+
+    .annual-table tbody tr td {
+        font-size: 9px;
+        font-weight: 400;
+        line-height: 12px;
+        letter-spacing: 0em;
+        text-align: center;
+        background-color: #D3D3D3;
+        text-transform: capitalize;
+        padding: 4px 10px;
+    }
+
+.last-foot {
+    width: 100%;
+    padding: 10px 10px;
+    background-color: rgba(2, 85, 153, 0.4);
+    text-align: center;
+}
+
+    .last-foot p:nth-child(1) {
+        font-size: 10px;
+        font-weight: 400;
+        line-height: 15px;
+        letter-spacing: 0em;
+        text-align: center;
+        text-transform: uppercase;
+        margin-bottom:0;
+    }
+
+    .last-foot p:nth-child(2) {
+        font-size: 10px;
+        font-weight: 700;
+        line-height: 15px;
+        letter-spacing: 0em;
+        margin-bottom: 0;
+        text-align: center;
+    }
+
+
+
+.dropdownUser {
+    display: block !important;
+}
+
+.RigthSideBar {
+    display: none !important;
+}
+
+.center-bar-head:after {
+    content: "Calculador de Ingresos y Gastos"
+}
+
+

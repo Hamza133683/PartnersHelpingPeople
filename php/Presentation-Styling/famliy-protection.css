@@ -1,0 +1,346 @@
+﻿body {
+}
+
+
+
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.wizard {
+}
+
+.steps .current-info, .steps .number {
+    display: none;
+}
+
+.steps ul {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.steps li a {
+    display: block;
+}
+
+.steps li .step-arrow {
+    display: block;
+    margin-top: 3px;
+    margin-left: 32%;
+}
+
+.steps li:nth-child(2) .step-arrow, .steps li:last-child .step-arrow {
+    margin-left: 57%;
+}
+
+.actions {
+    padding-bottom: 4rem;
+}
+
+    .actions ul {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .actions li a {
+        padding: 0;
+        border: none;
+        display: inline-flex;
+        height: 42px;
+        width: 120px;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid #fff;
+        background: #025599;
+        cursor: pointer;
+        color: rgba(211, 211, 211, 1);
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: 0em;
+        text-align: left;
+        text-decoration: none;
+        border-radius: 4px;
+    }
+
+    .actions li[aria-disabled="true"] a {
+        opacity: 0;
+        transition: all 1s;
+    }
+
+.request {
+    margin-bottom: 21px;
+}
+
+.special-request {
+    margin-bottom: 21px;
+}
+
+    .special-request label {
+        float: left;
+        margin-top: 8px;
+    }
+
+    .special-request input.form-control {
+        width: calc(100% - 155px);
+        margin-left: auto;
+    }
+
+.question-request {
+    line-height: 2;
+    margin-top: 23px;
+}
+
+    .question-request span {
+        color: #ccc;
+    }
+
+    .question-request input.form-control {
+        width: 56px;
+        margin: 0 2px;
+        transform: translateY(-5px);
+    }
+
+
+/*sourceMappingURL=style.css.map */
+
+/*text inputs styling*/
+
+
+input[type="text"] {
+    max-width: unset;
+    width: 100%;
+    border: 1px solid #797979;
+    padding: 15px 20px;
+    border-radius: 4px;
+    margin: 7px 0;
+}
+
+input[type=text]::placeholder {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    text-transform: capitalize;
+    color: #797979;
+}
+
+input[type="text"]:focus {
+    box-shadow: 0 2px 5px rgba(5, 137, 200, 0.5);
+    border: 1px solid #797979;
+}
+
+input[type="text"]:focus-visible {
+    outline: none;
+}
+
+/*text inputs styling*/
+/* radio inputs styling  */
+.inputsWidth .row > div {
+    padding: 0 5px;
+    margin: 5px 0;
+}
+
+@media screen and (max-width:557px) {
+    .inputsWidth .row div {
+        padding: 0;
+    }
+}
+
+
+.labelWithInput {
+    border: 1px solid #797979;
+    padding: 15px 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 4px;
+    height:100%;
+}
+
+    .labelWithInput span {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 20px;
+        letter-spacing: 0em;
+        text-align: left;
+        text-transform: capitalize;
+        color: #797979;
+    }
+
+input[type="radio"] {
+    /* Add if not using autoprefixer */
+    -webkit-appearance: none;
+    /* Remove most all native input styles */
+    appearance: none;
+    /* For iOS < 15 */
+    background-color: var(--form-background);
+    /* Not removed via appearance */
+    margin: 0 0 0 15px;
+    font: inherit;
+    min-width: 1.15em;
+    min-height: 1.15em;
+    border: 0.5px solid #025599;
+    border-radius: 50%;
+    transform: translateY(-0.075em);
+    display: grid;
+    place-content: center;
+}
+
+    input[type="radio"]::before {
+        content: "";
+        align-content: center;
+        display: flex;
+        justify-content: center;
+        min-width: 1.15em;
+        min-height: 1.15em;
+        border-radius: 50%;
+        transform: scale(0);
+        transition: 120ms transform ease-in-out;
+        /* Windows High Contrast Mode */
+        background-color: #025599;
+    }
+
+    input[type="radio"]:checked::after {
+        content: "\2713";
+        color: white;
+        position: absolute;
+        top: 60%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        font-size: 15px;
+        line-height: 17px;
+    }
+
+
+    input[type="radio"]:checked::before {
+        transform: scale(1);
+    }
+
+.customProduct {
+    background-color: transparent;
+    border: 1px solid #025599;
+    border-radius: 4px;
+    color: #025599;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    padding: 8px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* radio inputs styling  */
+
+/*protectionTable styling*/
+
+.protectionTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem 0;
+}
+
+    .protectionTable thead tr {
+        background-color: rgba(230, 238, 245, 1);
+        box-shadow: 0 1px 5px rgba(0, 0, 0, 0.08);
+    }
+
+        .protectionTable thead tr td {
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 24px;
+            letter-spacing: 0em;
+            text-align: left;
+            text-transform: capitalize;
+            color: #025599;
+            padding: 15px 12px;
+            white-space: nowrap;
+        }
+
+            .protectionTable thead tr td button {
+                background-color: transparent;
+                border: none;
+                padding: 0;
+                margin-right: 5px;
+            }
+
+            .protectionTable thead tr td:last-child {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+    .protectionTable tbody tr {
+        background-color: transparent;
+        box-shadow: 0 1px 5px rgba(0, 0, 0, 0.08)
+    }
+
+        .protectionTable tbody tr td {
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 24px;
+            letter-spacing: 0em;
+            text-align: left;
+            text-transform: capitalize;
+            color: #797979;
+            padding: 15px 12px;
+        }
+
+            .protectionTable tbody tr td button {
+                background-color: transparent;
+                border: none;
+                padding: 0;
+                margin-right: 5px;
+            }
+
+            .protectionTable tbody tr td:last-child {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+/*protectionTable styling*/
+
+#HeadingOnTopBar::after {
+    content: "family protection plan";
+}
+
+@media screen and (min-width:992px) {
+
+    .center-back {
+        display: none;
+    }
+}
+
+@media screen and (max-width:992px) {
+
+    .twoImgBar {
+        display: none !important;
+    }
+}
+
+
+.FamilyProtectionTopic {
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 30px;
+    letter-spacing: 0em;
+    text-align: left;
+    text-transform: capitalize;
+    color: black;
+    padding: 10px 0;
+    border-bottom: 1px solid #D3D3D3;
+    display: inline-block;
+}
+
+    .FamilyProtectionTopic > span {
+        color: #00558E;
+    }

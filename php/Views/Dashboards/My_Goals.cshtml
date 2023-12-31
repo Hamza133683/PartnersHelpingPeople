@@ -1,0 +1,199 @@
+﻿
+@{
+    ViewBag.Title = "My_Goals";
+    Layout = "~/Views/Shared/Dashboards_Layout.cshtml";
+}
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/easy-pie-chart/2.1.6/jquery.easypiechart.min.js" charset="utf-8"></script>
+
+<link href="~/Dashboard-styling/My-goals.css" rel="stylesheet" />
+<link href="~/Dashboard-styling/bars_Stylings.css" rel="stylesheet" />
+
+
+
+
+
+<div class="container-fluid containWidth">
+    <div class="row">
+        <div class="col-lg-3 rightSideBar order-1">
+            <div class="right-side-bar" style=" overflow-y: auto;">
+                <div>
+                    @{
+                        Html.RenderPartial("User_data_partial_view");
+                    }
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-9 order-0">
+
+            <div class="container-fluid four-cards-width px-3">
+                <div class="row">
+                    <div class="col-md-3 col-sm-6  mt-md-0 mt-3">
+                        <div class="box-card d-flex align-items-center justify-content-between">
+                            <div>
+                                <h3 class="card-head">
+                                    25
+                                </h3>
+                                <p class="card-para">
+                                    Appointments
+                                </p>
+                            </div>
+                            <div class="CircularBox">
+                                <div class="chart Dimenstion" data-percent="85">85%</div>
+
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 mt-md-0 mt-3">
+                        <div class="box-card  d-flex align-items-center justify-content-between">
+                            <div>
+                                <h3 class="card-head">
+                                    50
+                                </h3>
+                                <p class="card-para">
+                                    referrals
+                                </p>
+                            </div>
+                            <div class="CircularBox">
+                                <div class="chart Dimenstion" data-percent="65">65%</div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 mt-md-0 mt-3">
+                        <div class="box-card d-flex align-items-center justify-content-between">
+                            <div>
+                                <h3 class="card-head">
+                                    5
+                                </h3>
+                                <p class="card-para">
+                                    number of sales
+                                </p>
+                            </div>
+                            <div class="CircularBox">
+                                <div class="chart Dimenstion" data-percent="45">45%</div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 mt-md-0 mt-3">
+                        <div class="box-card d-flex align-items-center justify-content-between">
+                            <div>
+                                <h3 class="card-head">
+                                    $700
+                                </h3>
+                                <p class="card-para">
+                                    ALP
+                                </p>
+                            </div>
+                            <div class="CircularBox">
+                                <div class="chart4 Dimenstion" data-percent="90">90%</div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="container-fluid inputs-field mt-4 px-0">
+
+                <div class="d-flex align-items-center justify-content-between w-100">
+                    <div class="form-item">
+                        <input type="text" class="form-style" autocomplete="off" placeholder="Appointments" style="max-width:unset;" />
+                    </div>
+
+                </div>
+                <div class="d-flex align-items-center justify-content-between w-100">
+                    <div class="form-item">
+                        <input type="text" class="form-style" autocomplete="off" placeholder="Presentations" style="max-width:unset;" />
+                    </div>
+
+                </div>
+                <div class="d-flex align-items-center justify-content-between w-100">
+                    <div class="form-item">
+                        <input type="text" class="form-style" autocomplete="off" placeholder="Referrals" style="max-width:unset;" />
+                    </div>
+
+                </div>
+                <div class="d-flex align-items-center justify-content-between w-100">
+                    <div class="form-item">
+                        <input type="text" class="form-style" autocomplete="off" placeholder="Number Of Sales" style="max-width:unset;" />
+                    </div>
+
+                </div>
+                <div class="d-flex align-items-center justify-content-between w-100">
+                    <div class="form-item">
+                        <input type="text" class="form-style" autocomplete="off" placeholder="Total ALP" style="max-width:unset;" />
+                    </div>
+
+                </div>
+                <div>
+                    <button class="report-save-btn">
+                        Save
+                    </button>
+                </div>
+
+
+            </div>
+
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+    $(function () {
+        $('.chart').easyPieChart({
+            size: 160,
+            barColor: function (percent) {
+                return (percent < 50 ? '#0589C8' : percent < 85 ? '#06BEF9' : '#025599');
+            },
+            scaleLength: 5,
+            lineWidth: 5,
+            trackColor: "#D3D3D3",
+            lineCap: "circle",
+            animate: 900,
+            rotate: 180,
+
+        });
+    });
+
+    $(function () {
+        $('.chart4').easyPieChart({
+            size: 160,
+            barColor: function () {
+                var ctx = this.renderer.getCtx();
+                var canvas = this.renderer.getCanvas();
+                var gradient = ctx.createLinearGradient(0, 0, 0, canvas.width, 0);
+                gradient.addColorStop(0, "#4E9EB8");
+                gradient.addColorStop(0.3, "#87BAAD");
+                gradient.addColorStop(0.63, "#BED6A2");
+                gradient.addColorStop(0.87, "#E0E79C");
+                gradient.addColorStop(1, "#EEEE9A");
+                return gradient;
+            },
+            scaleLength: 5,
+            lineWidth: 5,
+            trackColor: "#D3D3D3",
+            lineCap: "circle",
+            animate: 900,
+            rotate: 180,
+        });
+    });
+
+
+</script>

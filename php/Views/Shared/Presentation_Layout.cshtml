@@ -1,0 +1,603 @@
+﻿<!DOCTYPE html>
+<html class="" id="noOverflow">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+
+    <link href="~/Presentation-Styling/Presentation_Layout.css" rel="stylesheet" />
+    <link href="~/Presentation-Styling/Presentaion-Bar-styling.css" rel="stylesheet" />
+
+
+    @*vdeo.js cdn*@
+    <link href="https://vjs.zencdn.net/8.0.4/video-js.css" rel="stylesheet" />
+    @*vdeo.js cdn*@
+
+
+
+
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+
+
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+
+
+
+
+</head>
+<body>
+
+
+    @*for dropdown of userInfo*@
+
+    <script>
+        function menuToggle() {
+            const toggleMenu = document.querySelector(".menu");
+            toggleMenu.classList.toggle("active");
+        }
+
+        $(document).on('click', '.sl-nav', function () {
+            $('.menu').removeClass('active');
+        });
+    </script>
+
+    @*for dropdown of userInfo*@
+
+
+
+    <script>
+
+        function openRightSideNavPre() {
+
+            jQuery("#left-present-bar").addClass("RightSideShowBar");
+            jQuery("#RightOverlayBar").addClass("overlayRightBar");
+            jQuery("#noOverflow").addClass("noOverflow");
+
+        }
+
+        function RightcloseSideNav() {
+
+            jQuery("#left-present-bar").removeClass("RightSideShowBar");
+            jQuery("#RightOverlayBar").removeClass("overlayRightBar");
+            jQuery("#noOverflow").removeClass("noOverflow");
+
+        }
+    </script>
+
+
+    <script>
+
+        function openSideNav() {
+
+            jQuery("#side-menu").addClass("aside-show");
+            jQuery("#overlay").addClass("overlay");
+
+            jQuery("#noOverflow").addClass("noOverflow");
+        }
+
+        function closeSideNav() {
+
+            jQuery("#side-menu").removeClass("aside-show");
+            jQuery("#noOverflow").removeClass("noOverflow");
+            jQuery("#overlay").removeClass("overlay");
+        }
+
+    </script>
+    @*for small scrreen search bar*@
+    <script>
+
+        function openSearchBar() {
+
+            jQuery("#SmallScreenSearchBox").addClass("SmallScreenSearchBox");
+            jQuery("#closeSearchBox").addClass("closeSearchBox");
+
+
+        }
+        function closeSearchBox() {
+
+            jQuery("#SmallScreenSearchBox").removeClass("SmallScreenSearchBox");
+            jQuery("#closeSearchBox").removeClass("closeSearchBox");
+        }
+
+
+
+    </script>
+
+
+    @*for small scrreen search bar*@
+
+
+
+    <div id="closeSearchBox" onclick="closeSearchBox()"></div>
+    <div id="RightOverlayBar" onclick="RightcloseSideNav()"></div>
+    <div id="overlay" onclick="closeSideNav()"></div>
+
+    <div class="aside" id="side-menu" style="overflow-y:hidden !important;">
+        <div class="d-flex align-items-center justify-content-start" style="padding-left:30px;padding-bottom:15px;">
+            <a href=" @Url.Action("Index","Dashboards")">
+                <img src="~/images/white logo.svg" width="135px" />
+            </a>
+        </div>
+        <div class="side-bar">
+            <ul class="side-bar-list">
+                <li class="one">
+                    <a href="@Url.Action("Announcements","Dashboards")">
+                        <div class="d-flex align-items-center justify-content-center   mr-3">
+                            <img src="~/images/announcement.svg" width="32px" />
+                        </div>
+                        Anuncios
+                    </a>
+                </li>
+                <li class="one">
+                    <a href="@Url.Action("Hired_Agent","Dashboards")">
+                        <div class="d-flex align-items-center justify-content-center   mr-3">
+                            <img src="~/images/hired agent.svg" width="32px" />
+                        </div>
+                        De contratado a ser Agente
+                    </a>
+                </li>
+                <li class="one">
+                    <a href="@Url.Action("Agent_Training","Dashboards")">
+                        <div class="d-flex align-items-center justify-content-center   mr-3">
+                            <img src="~/images/agent Training.svg" width="32px" />
+                        </div>
+                        Entrenamiento para nuevos agentes
+                    </a>
+                </li>
+                <li class="one six">
+                    <a href="@Url.Action("Start_Presentation","Dashboards")">
+                        <div class="d-flex align-items-center justify-content-center   mr-3">
+                            <img src="~/images/Microsoft PowerPoint.svg" width="32px" />
+                        </div>
+                        iniciar presentación
+                    </a>
+                </li>
+                <li class="one">
+                    <a href="@Url.Action("Continue_Training","Dashboards")">
+                        <div class="d-flex align-items-center justify-content-center   mr-3">
+                            <img src="~/images/Development.svg" width="32px" />
+                        </div>
+                        Educación y desarrollo profesional
+                    </a>
+                </li>
+                <li class="one">
+                    <a href="@Url.Action("Current_Contests","Dashboards")">
+                        <div class="d-flex align-items-center justify-content-center   mr-3">
+                            <img src="~/images/Prize.svg" width="32px" />
+                        </div>
+                        Concursos Actuales
+                    </a>
+                </li>
+                <li class="one">
+                    <a href="@Url.Action("Executive_Council","Dashboards")">
+                        <div class="d-flex align-items-center justify-content-center   mr-3">
+                            <img src="~/images/City Hall.svg" width="32px" />
+                        </div>
+                        executive council
+                    </a>
+                </li>
+                <li class="one">
+                    <a href="@Url.Action("Free_Benefits","Dashboards")">
+                        <div class="d-flex align-items-center justify-content-center   mr-3">
+                            <img src="~/images/Extra Features.svg" width="32px" />
+                        </div>
+                        Beneficios sin costo
+                    </a>
+                </li>
+                <li class="one">
+                    <a href="@Url.Action("Reports","Dashboards")">
+                        <div class="d-flex align-items-center justify-content-center   mr-3">
+                            <img src="~/images/report and goals.svg" width="32px" />
+                        </div>
+                        Reportes de actividad
+                    </a>
+                </li>
+                <li class="one">
+                    <a href="@Url.Action("Production_Reports","Dashboards")">
+                        <div class="d-flex align-items-center justify-content-center   mr-3">
+                            <img src="~/images/Report File.svg" width="32px" />
+                        </div>
+                        Reportes de Producción
+                    </a>
+                </li>
+                <li class="one">
+                    <a href="@Url.Action("My_Goals","Dashboards")">
+                        <div class="d-flex align-items-center justify-content-center   mr-3">
+                            <img src="~/images/Goal.svg" width="32px" />
+                        </div>
+                        Metas de producción
+                    </a>
+                </li>
+                <li class="one">
+                    <a href="@Url.Action("IE_Calculator","Dashboards")">
+                        <div class="d-flex align-items-center justify-content-center   mr-3">
+                            <img src="~/images/Calculator.svg" width="32px" />
+                        </div>
+                        Calculador de Ingresos y Gastos
+                    </a>
+                </li>
+                <li class="one">
+                    <a href="@Url.Action("Recruiting_Reports","Dashboards")">
+                        <div class="d-flex align-items-center justify-content-center   mr-3">
+                            <img src="~/images/Human Resources.svg" width="32px" />
+                        </div>
+                        Reportes de Reclutamiento
+                    </a>
+                </li>
+
+                <li class="one">
+                    <a href="@Url.Action("Agency_Resource_Center","Dashboards")">
+                        <div class="d-flex align-items-center justify-content-center   mr-3">
+                            <img src="~/images/Data Center.svg" width="32px" />
+                        </div>
+                        centro de recursos de la agencia
+                    </a>
+                </li>
+                <li class="one">
+                    <a href="@Url.Action("Webinar","Dashboards")">
+                        <div class="d-flex align-items-center justify-content-center   mr-3">
+                            <img src="~/images/Video Chat.svg" width="32px" />
+                        </div>
+                        seminarios web
+                    </a>
+                </li>
+                <li class="one">
+                    <a href="@Url.Action("Follow_Us","Dashboards")">
+                        <div class="d-flex align-items-center justify-content-center   mr-3">
+                            <img src="~/images/Add User Male.svg" width="32px" />
+                        </div>
+                        Siguenos en Redes
+                    </a>
+                </li>
+                <li class="one">
+                    <a href="@Url.Action("Virtual_Card","Dashboards")">
+                        <div class="d-flex align-items-center justify-content-center   mr-3">
+                            <img src="~/images/Credit Card.svg" width="32px" />
+                        </div>
+                        cambiar tarjeta virtual
+                    </a>
+                </li>
+                <li class="one">
+                    <a href="@Url.Action("Legacy_Rewards","Dashboards")">
+                        <div class="d-flex align-items-center justify-content-center   mr-3">
+                            <img src="~/images/Giveaway.svg" width="32px" />
+                        </div>
+                        recompensas heredadas
+                    </a>
+                </li>
+                <li class="one">
+                    <a href="@Url.Action("Documents","Dashboards")">
+                        <div class="d-flex align-items-center justify-content-center   mr-3">
+                            <img src="~/images/Documents.svg" width="32px" />
+                        </div>
+                        Documentos
+                    </a>
+                </li>
+                <li class="one">
+                    <a href="@Url.Action("Career_Path","Dashboards")">
+                        <div class="d-flex align-items-center justify-content-center   mr-3">
+                            <img src="~/images/Personal Growth.svg" width="32px" />
+                        </div>
+                        pista de carrera
+                    </a>
+                </li>
+                <li class="one">
+                    <a href="@Url.Action("Helpful_Links","Dashboards")">
+                        <div class="d-flex align-items-center justify-content-center   mr-3">
+                            <img src="~/images/Link.svg" width="32px" />
+                        </div>
+                        Enlaces Útiles
+                    </a>
+                </li>
+                <li class="one">
+                    <a href="@Url.Action("Conventions","Dashboards")">
+                        <div class="d-flex align-items-center justify-content-center   mr-3">
+                            <img src="~/images/Internet Connection.svg" width="32px" />
+                        </div>
+                        Convenciones
+                    </a>
+                </li>
+                <li class="one">
+                    <a href="@Url.Action("Graphic_Material","Dashboards")">
+                        <div class="d-flex align-items-center justify-content-center   mr-3">
+                            <img src="~/images/Photo Editor.svg" width="32px" />
+                        </div>
+                        Material Grafico
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+
+
+    <div class="d-flex">
+
+        <div class="left-present-bar" id="left-present-bar">
+            <div>
+                <a onclick="openSideNav()" style="cursor:pointer;" class="noShowLessthan1200">
+                    <img src="~/images/Menu Rounded.svg" width="35px" />
+                </a>
+                <div class="mt-3 ">
+                    <img src="~/images/new olivia.svg" width="160px" class="mx-auto d-flex" />
+                </div>
+                <div class="ml-4 mt-3 mt-4 pt-3">
+                    <div class="d-flex align-items-center selectDiv">
+                        <select class="UserSelectDrop">
+                            <option>Producción semanal</option>
+                            <option>TX # 543</option>
+                            <option>NY # 632</option>
+                            <option>TN # 321</option>
+                            <option>NV # 786</option>
+                        </select>
+
+                        @*<h4 class="olivia-para">
+                                Producción semanal
+
+                            </h4>*@
+                    </div>
+                    <h4 class="olivia-para">
+                        switch virtual card
+                    </h4>
+                </div>
+                <div class="d-flex align-items-center justify-content-around my-3">
+                    <div class="mr-4">
+                        <img src="~/images/globalWhite.svg" width="85px" />
+                    </div>
+                    <div class="">
+                        <img src="~/images/quinteroWhite.svg" width="60px" />
+                    </div>
+                </div>
+                <ul class="side-present-list">
+                    <li id="nav">
+                        <a class="dropdown-toggle">
+                            Conoce Sobre Nosotros
+                        </a>
+                        <ul class="dropdown" style="z-index:3;">
+                            <li>
+                                <a href="@Url.Action("Play_Video","Presentation")">
+                                    Play video
+
+                                </a>
+                            </li>
+                            <li>
+                                <a href="@Url.Action("About_Us","Presentation")">
+                                    Sobre Nosotros
+
+                                </a>
+                            </li>
+                            <li>
+                                <a href="@Url.Action("Social_Media","Presentation")">
+                                    redes sociales
+                                </a>
+                            </li>
+                            <li>
+                                <a href="@Url.Action("Our_Process","Presentation")">
+                                    Nuestro proceso
+
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li id="nav">
+                        <a class="dropdown-toggle">
+                            cartas de apoyo
+                        </a>
+                        <ul class="dropdown" style="z-index:2;">
+                            <li>
+                                <a href="@Url.Action("AFT","Presentation")">
+
+                                    AFT
+                                </a>
+                            </li>
+                            <li>
+                                <a href="@Url.Action("AFSA","Presentation")">
+                                    AFSA
+
+                                </a>
+                            </li>
+                            <li>
+                                <a href="@Url.Action("IUOPA","Presentation")">
+                                    IUOPA
+
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li id="nav">
+                        <a class="dropdown-toggle" href="@Url.Action("Free_Benefits","Presentation")">
+                            free benefits
+                        </a>
+
+                    </li>
+                    <li id="nav">
+                        <a class="dropdown-toggle" href="@Url.Action("Free_Benefits","Presentation")">
+                            Análisis de Necesidades
+                        </a>
+
+                    </li>
+                    <li class="d-flex justify-content-center" style="margin:0 -16px;">
+                        <a class="HousePowerBtn" type="button" data-toggle="modal" data-target="#familyModal">
+                            family protection plan
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="scanBox">
+                <button class="scanBoxBtn ">
+                    <a href="@Url.Action("Help","Presentation")">
+                        <img src="~/images/XMLID_1348_.svg" class="mr-1" />
+                        help
+                    </a>
+                </button>
+            </div>
+
+
+
+
+        </div>
+
+        <div class="w-100" style="max-width:2600px;overflow-y:scroll;height:100vh;">
+            <div class="container-fluid px-0" style="height:100%;">
+                <div class="row w-100 mx-0" style="">
+                    <div class="col-12 pr-0 px-md-3 px-0 center-back mb-3" style="position:sticky;top:0;z-index:555;">
+                        <div class="center-bar">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <div class="d-flex align-items-center">
+                                    <a onclick="openSideNav()" style="cursor:pointer; display:none;" class="mr-1 leftToggleIcon">
+                                        <img src="~/images/Menu Rounded.svg" style="filter:brightness(0)" width="35px" />
+                                    </a>
+                                    <h4 class="center-bar-head" id="HeadingOnTopBar">
+                                    </h4>
+                                </div>
+
+                                <div class="d-flex">
+
+                                    <a class="SmallScreenSearchBar" onclick="openSearchBar()">
+
+                                        <img src="~/images/Search.svg" width="24px" />
+
+                                        <div class="" id="SmallScreenSearchBox">
+                                            <div style="position:relative;">
+                                                <input type="search" />
+                                                <button class="SearchBtnBox">
+                                                    Search
+                                                </button>
+                                            </div>
+                                        </div>
+
+                                    </a>
+                                    <form role="search" method="get" class="search-form search-btn" action="" style="position: relative; box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.15);border-radius:25px;">
+                                        <label>
+
+                                            <input type="search" class="search-field" placeholder="Search" value="" name="s" title="Search for:" />
+                                        </label>
+                                        <input type="submit" class="search-submit" value="Search" />
+                                    </form>
+                                    <a href="#" type="button" data-toggle="modal" data-target="#languagemodel">
+                                        <div class="side-img mr-2 ml-2" style="box-shadow:5px 5px 20px 0 rgba(0, 0, 0, 0.15)">
+                                            <img src="~/images/Geography.svg" />
+                                        </div>
+                                    </a>
+                                    <a onclick="openRightSideNavPre()" style="cursor:pointer;" class="RigthSideBar">
+                                        <div class="side-img " style="box-shadow:5px 5px 20px 0 rgba(0, 0, 0, 0.15)">
+                                            <img src="~/images/userIcon.png" width="45px" />
+                                        </div>
+                                    </a>
+
+                                    <div class="nav-item action">
+                                        <div class="menu ">
+                                            <ul class="mb-0" style="padding:0 !important;">
+                                                <li style="border:none !important;">
+                                                    <a href="@Url.Action("About","Home")">
+                                                        About
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="@Url.Action("FAQs","Home")">
+                                                        FAQ
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="@Url.Action("Contact","Home")">
+                                                        Contact
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <a class="profile dropdownUser" onclick="menuToggle();">
+                                            <div class="side-img ">
+                                                <img src="~/images/userIcon.png" width="45px" />
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    @RenderBody()
+                </div>
+            </div>
+        </div>
+
+        @*language modal*@
+
+        <div class="modal fade" id="languagemodel" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        ...
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        @*language modal*@
+
+        @*modal for family protection*@
+        <div class="modal fade" id="familyModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document" style="max-width: 380px; border-radius: 0; ">
+                <div class="familyModalBox modal-content">
+                    <div class="d-flex justify-content-end align-content-center">
+                        <img src="~/images/Cancel.svg"  data-dismiss="modal" style="pointer-events:all; cursor:pointer;" />
+                    </div>
+                    <div class="d-flex justify-content-center align-content-center my-3">
+                        <img src="~/images/elemphant TV IMage.png" width="80px" />
+                    </div>
+                    <h2 class="familyModalHead">Accede a la aplicación Eapp para completar el análisis de necesidades.</h2>
+                    <div class="d-flex justify-content-center align-content-center my-3">
+                        <button class="familyModalBtn">
+                            <a href="@Url.Action("Family_Protection","Presentation")">
+                                continuar
+                            </a>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        @*modal for family protection*@
+    </div>
+
+
+
+
+    <script>
+        $(function () { // Dropdown toggle
+            $('.dropdown-toggle').click(function () {
+                $(this).next('.dropdown').slideToggle();
+            });
+
+            $(document).click(function (e) {
+                var target = e.target;
+                if (!$(target).is('.dropdown-toggle') && !$(target).parents().is('.dropdown-toggle'))
+                //{ $('.dropdown').hide(); }
+                { $('.dropdown').slideUp(); }
+            });
+        });
+    </script>
+
+
+
+
+
+</body>
+</html>

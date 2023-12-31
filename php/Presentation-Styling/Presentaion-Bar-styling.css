@@ -1,0 +1,325 @@
+﻿body {
+}
+
+/*center bar styling*/
+
+.center-back {
+    background-color: rgba(0, 85, 143, 1);
+}
+
+.center-bar {
+    padding: 20px 15px;
+}
+
+@media screen and (max-width:992px) {
+    .leftToggleIcon {
+        display: block !important;
+    }
+
+    .noShowLessthan1200 {
+        display: none !important;
+    }
+}
+
+@media screen and (max-width:767px) {
+    .search-btn {
+        display: none;
+    }
+
+    .center-bar-head {
+        font-size: 15px !important;
+        margin-bottom: 1px;
+        line-height: 20px !important;
+    }
+
+    .sideBarTrigger img {
+        width: 30px;
+    }
+}
+
+
+.center-bar-head {
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 39px;
+    letter-spacing: 0em;
+    text-align: left;
+    text-transform: capitalize;
+    color: white;
+    margin-bottom: 0;
+}
+
+@media screen and (max-width:766px) {
+    .side-img {
+        width: 35px;
+        height: 35px;
+        max-width: 35px;
+        min-width: 35px;
+    }
+
+        .side-img img {
+            width: 27px !important;
+        }
+}
+
+
+
+/*click to open search bar*/
+
+
+
+/*smallScreenSearch Bar styling*/
+.SmallScreenSearchBar {
+    width: 35px;
+    height: 35px;
+    max-width: 35px;
+    min-width: 35px;
+    text-decoration: none;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: 5px 5px 20px 0 rgba(0, 0, 0, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+@media screen and (min-width:765px) {
+    .SmallScreenSearchBar {
+        display: none;
+    }
+}
+
+/*smallScreenSearch Bar styling*/
+
+/*SmallScreenSearchBox*/
+
+#SmallScreenSearchBox {
+    display: none;
+}
+
+.SmallScreenSearchBox {
+    position: absolute;
+    top: 75px;
+    left: 0;
+    z-index: 50;
+    width: 100%;
+    display: block !important;
+    text-align: center;
+}
+
+    .SmallScreenSearchBox input {
+        max-width: unset;
+        width: calc( 100% - 25px);
+        height: 50px;
+        border-radius: 8px;
+        border: none;
+        box-shadow: 5px 5px 20px 0 rgba(0, 0, 0, 0.2);
+        padding: 25px;
+        padding-right: 55px;
+    }
+
+        .SmallScreenSearchBox input:focus-visible {
+            outline: none;
+            box-shadow: 5px 5px 20px 0 rgba(2, 85, 153, 0.4);
+            animation: shadow 1s ease-in-out infinite;
+        }
+
+@keyframes shadow {
+    0% {
+        box-shadow: 5px 5px 20px 0 rgba(2, 85, 153, 0.4);
+    }
+
+    50% {
+        box-shadow: 5px 5px 20px 0 rgba(2, 85, 153, 0.6);
+    }
+
+    75% {
+        box-shadow: 5px 5px 20px 0 rgba(2, 85, 153, 1);
+    }
+
+    100% {
+        box-shadow: 5px 5px 20px 0 rgba(2, 85, 153, 0.4);
+    }
+}
+
+.SearchBtnBox {
+    position: absolute;
+    right: 12px;
+    top: 0;
+    height: 50px;
+    min-width: 50px;
+    border: none;
+    border-radius: 0 8px 8px 0;
+    background-color: #025599;
+    padding: 5px 15px;
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+
+.search-btn {
+    height: 45px;
+    background-color: white;
+    border-radius: 50%;
+    min-width: 45px;
+    border: none;
+}
+
+
+
+.search-field {
+    background-color: transparent;
+    background-image: url(../images/Search.svg);
+    background-position: 10px center;
+    background-repeat: no-repeat;
+    background-size: 24px 24px;
+    border: none;
+    cursor: pointer;
+    height: 40px;
+    margin: 3px 0;
+    padding: 5px 5px 6px 40px;
+    position: relative;
+    -webkit-transition: width 400ms ease, background 400ms ease;
+    transition: width 400ms ease, background 400ms ease;
+    width: 0px;
+    cursor: pointer;
+    border-radius: 22px;
+}
+
+    .search-field:focus {
+        background-color: white;
+        border: 2px solid white;
+        border-radius: 22px;
+        cursor: text;
+        outline: 0;
+        width: 250px;
+        color: rgba(211, 211, 211, 1);
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: 0em;
+    }
+
+.search-form .search-submit {
+    display: none;
+}
+
+
+/*click to open search bar*/
+/*center bar styling*/
+
+
+
+.closeSearchBox {
+    background-color: transparent;
+    opacity: 0.2;
+    filter: blur(10px);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 49;
+}
+
+
+/*accounts dropdown*/
+
+.action .profile {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.action .profile {
+    position: relative;
+    z-index: 6 !important;
+}
+
+.action .menu {
+    position: absolute;
+    top: 0;
+    right: 28px;
+    background: rgba(255, 255, 255, 1);
+    width: 180px;
+    box-shadow: 5px 5px 20px 0 rgba(0, 0, 0, 0.3);
+    border-radius: 12px;
+    transition: 0.5s;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 7;
+}
+
+
+    .action .menu.active {
+        top: 75px;
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .action .menu::before {
+        content: "";
+        position: absolute;
+        top: -5px;
+        right: 16px;
+        width: 20px;
+        height: 20px;
+        background: rgba(255, 255, 255, 1);
+        transform: rotate(45deg);
+    }
+
+
+    .action .menu ul li {
+        list-style: none;
+        padding: 12px 0 12px 25px;
+        border-top: 1px solid rgba(26, 32, 44, 0.1);
+        display: flex;
+        align-items: center;
+        opacity: 1;
+    }
+
+        .action .menu ul li a {
+            display: inline-block;
+            text-decoration: none;
+            color: #1A202C;
+            transition: 0.5s;
+            opacity: 1;
+            font-size: 17px;
+            font-weight: 300;
+            line-height: 20px;
+            letter-spacing: 0em;
+            text-align: left;
+        }
+
+
+
+.nice-select1::after {
+    margin-left: 8px;
+    margin-right: 20px;
+    border-bottom: 2px solid black;
+    border-right: 2px solid black;
+    content: "";
+    display: block;
+    height: 5px;
+    box-sizing: content-box;
+    pointer-events: none;
+    -webkit-transform-origin: 66% 66%;
+    transform-origin: 66% 66%;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    transition: all .15s ease-in-out;
+    width: 5px
+}
+
+.menu.active ~ .profile .nice-select1::after {
+    -webkit-transform: rotate(-135deg);
+    transform: rotate(-135deg)
+}
+
+
+
+/*accounts dropdown*/
+

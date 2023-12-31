@@ -1,0 +1,170 @@
+﻿body {
+}
+
+.box {
+    background-color: white;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    padding: 0 0 50px 0;
+    position: relative;
+    height:100%;
+    display:flex;
+    flex-direction:column;
+
+}
+
+.social-head {
+    font-size: 55px;
+    font-weight: 600;
+    line-height: 50px;
+    letter-spacing: 0em;
+    text-align: center;
+    text-transform: capitalize;
+    max-width: 500px;
+}
+
+.social-para {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: center;
+    text-transform: capitalize;
+    max-width: 700px;
+}
+
+@media screen and (max-width:767px) {
+    .social-head {
+        font-size: 35px;
+        line-height: 35px;
+    }
+
+    .social-para {
+        font-size: 16px;
+        line-height: 20px;
+    }
+}
+
+.socialCardWidth {
+    max-width: 1050px;
+}
+
+    .socialCardWidth .row .col-md-4 {
+        padding: 0 7px;
+    }
+
+
+.back-color::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: linear-gradient(106deg, rgba(255,255,255,1) 0%, #06bef9 32%, #06bef9 70%, rgba(255,255,255,1) 100%);
+    opacity: 0.05;
+    filter: blur(11px);
+}
+
+.card-header-back {
+    background-color: rgba(5, 137, 200, 0.4);
+    padding: 60px 0 10px 0;
+    width: 100%;
+    text-align: center;
+    border-radius: 10px 10px 0 0;
+}
+
+.socialCardImg {
+    position: absolute;
+    top: -40px;
+    z-index: 2;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.socialCardHead {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 20px;
+    letter-spacing: 0em;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.socialCardPara {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    letter-spacing: 0em;
+    text-transform: capitalize;
+    color: rgba(26, 32, 44, 0.6);
+    text-align: center;
+    margin-bottom:0;
+}
+
+.cardStars {
+    padding: 15px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+    .cardStars img {
+        margin-right: 5px;
+    }
+
+.cardDate {
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 12px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: rgba(26, 32, 44, 0.6);
+}
+
+/*arc styling*/
+
+.wrapper {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 370px;
+    overflow: hidden;
+}
+
+.point {
+    position: absolute;
+    border-radius: 50%;
+    z-index: 3;
+}
+
+    .point img {
+        width: 100%;
+        aspect-ratio: 4/3.4;
+        max-width: 100%;
+    }
+
+
+
+/*arc styling*/
+
+
+#HeadingOnTopBar::after {
+    content: "who we are";
+}
+
+@media screen and (max-width:992px) {
+    .wrapper {
+        display: none !important;
+    }
+
+    .negativeMargin {
+        margin-top: 50px !important;
+    }
+
+    .back-color {
+        padding: 3rem 0 !important;
+    }
+}

@@ -1,0 +1,83 @@
+﻿body {
+}
+
+.webinar-head {
+    font-size: 50px;
+    font-weight: 600;
+    line-height: 50px;
+    letter-spacing: 0em;
+    text-align: center;
+    text-transform: capitalize;
+    color: black;
+    margin: 20px 0;
+}
+
+.multiple-cards .row > div {
+    padding: 0 7px;
+}
+
+figure {
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+}
+
+    figure img {
+        width: 100%;
+    }
+
+figcaption {
+    padding: 20px 20px 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.webinar-head1 {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: 0em;
+    text-align: left;
+    text-transform: capitalize;
+    color: black;
+    margin-bottom: 8px;
+}
+
+.webinar-para {
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 15px;
+    letter-spacing: 0em;
+    text-align: left;
+    text-transform: capitalize;
+    color: #797979;
+}
+
+.webinar-btn {
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 17px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: white;
+    background-color: #025599;
+    padding: 11px 25px;
+    border: none;
+    border-radius: 3px;
+    text-transform: capitalize;
+    white-space: nowrap;
+}
+
+
+
+.dropdownUser {
+    display: block !important;
+}
+
+.RigthSideBar {
+    display: none !important;
+}
+
+.center-bar-head:after {
+    content: "seminarios web"
+}

@@ -1,0 +1,132 @@
+﻿
+@{
+    ViewBag.Title = "SignUp";
+    Layout = "~/Views/Shared/Account_Layout.cshtml";
+}
+<link href="~/Account_styling/SignUp.css" rel="stylesheet" />
+
+
+<div class="container-fluid px-md-0">
+    <div class="row">
+        <div class="col-lg-6 img">
+            <div class="d-flex align-items-center justify-content-center" style="background-color:transparent; height: 100vh;">
+                <div class="d-flex align-items-center flex-column ">
+
+                    <img src="~/images/signinimg.svg" width="550px" class="" style="margin-top:5rem;" data-aos="zoom-out"/>
+
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6 position-relative px-md-4" style="background:url(../../images/accoutnbackimg.png) center center no-repeat; width:100%;background-size:cover;">
+            <form method="post" action="@Url.Action("Signup", "Account")" enctype="multipart/form-data">
+                <div class="d-flex align-items-center justify-content-center" style=" height: 100%;">
+                    <div style="max-width:750px; width:100%;">
+                        <div class="d-flex align-items-center flex-column " style=" " data-aos="zoom-in">
+
+                            <h1 class="loginpara mb-4 mt-5 pt-4">
+                                Crear una cuenta
+                            </h1>
+
+                            <div class="d-flex align-items-center justify-content-between w-100 wrap-inputs" style="max-width:750px;">
+                                <div class="form-item">
+                                    <input type="text" name="FirstName" class="form-style" autocomplete="off" placeholder="Primer Nombre" />
+                                </div>
+                                <div class="form-item">
+                                    <input type="text" name="LastName" id="email" class="form-style" autocomplete="off" placeholder="Apellido" />
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center justify-content-between w-100 wrap-inputs" style="max-width:750px;">
+                                <div class="form-item">
+                                    <input type="number" name="Phone" class="form-style" placeholder="Número de Teléfono" />
+                                </div>
+                                <div class="form-item">
+                                    <input type="text" name="Email" class="form-style" autocomplete="off" placeholder="Email" />
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center justify-content-between w-100 wrap-inputs" style="max-width:750px;">
+                                <div class="form-item">
+                                    <input type="number" name="AgentNumber" class="form-style" placeholder="Número de agente" />
+                                </div>
+                                <div class="form-item">
+                                    <input type="text" name="City" class="form-style" autocomplete="off" placeholder="city" />
+                                </div>
+                            </div>
+
+                            <div class="d-flex align-items-center justify-content-between w-100 wrap-inputs" style="max-width:750px;">
+                                <div class="form-item">
+                                    <input type="text" name="VirtualCardURL" id="password" class="form-style" placeholder="solicitar virtual card" />
+                                </div>
+                                <div class="form-item">
+                                    <select class="selectDropdown" name="LicenseNo">
+                                        <option>Aadir Licencias</option>
+                                        @{
+                                        Random rnd = new Random();
+                                        for (int s = 0; s < 32; s++)
+                                        {
+                                            <option>@rnd.Next(100000, 900000)</option>
+                                        }
+                                        }
+                                    </select>
+                                    @* <input type="text" name="insurance" class="form-style" autocomplete="off" placeholder="Aadir Licencias" />*@
+                                </div>
+                            </div>
+
+                            <div class="d-flex align-items-center justify-content-between w-100 wrap-inputs" style="max-width:750px;">
+                                <div class="form-item">
+                                    <input type="text" name="number" class="form-style" autocomplete="off" placeholder="License Format" />
+                                </div>
+                               
+                                <div class="form-item">
+                                    <label class="form-control d-flex justify-content-start align-items-center form-style p-0" for="file-name" style="border:none; background-color:transparent;margin-bottom:1rem;">
+                                        <span class="file-span">Anadir foto de perfil</span>
+                                    </label>
+                                    <input type="file" class="form-control form-style" name="_profilephoto" id="file-name" onchange="pressed()" style="position:absolute;top:0;z-index:0;" />
+
+                                </div>
+                            </div> 
+                            <div class="d-flex align-items-center justify-content-between w-100 wrap-inputs" style="max-width:750px;">
+                             
+                                <div class="form-item">
+                                    <input type="text" name="_Password" class="form-style" autocomplete="off" placeholder="Password" />
+                                </div>
+                              
+                            </div>
+
+                            <div class="w-100 mb-5">
+                                <div class="form-group mx-3">
+                                    <input type="checkbox" id="html">
+                                    <label for="html">
+                                        Estoy de acuerdo con los terminos y condiciones.
+                                    </label>
+                                </div>
+                            </div>
+
+                            <a class="d-flex align-items-center justify-content-center  w-100" style="max-width:330px;">
+                                <div class="d-flex align-items-center justify-content-center w-100" style="max-width:330px;">
+                                    <input type="submit" class="login pull-right" value="Crear cuenta">
+                                </div>
+                            </a>
+
+                            <div class="mt-3 mb-5">
+                                <p class=" text-capitalize" style="color: #797979; font-size: 16px; font-weight: 400; line-height: 19px; letter-spacing: 0em; text-align: left; ">
+                                    don’t have an account yet ?
+                                    <a href="@Url.Action("Index","Account")" style="color: #025599;">
+                                        Login
+                                    </a>
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </form>
+           
+
+        </div>
+    </div>
+
+</div>
+
+
+
+

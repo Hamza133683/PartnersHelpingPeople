@@ -1,0 +1,116 @@
+﻿body {
+}
+
+.executiveHead {
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 40px;
+    letter-spacing: 0em;
+    text-align: center;
+    text-transform: capitalize;
+    color: #0d0d0d;
+}
+
+
+.grid-container1 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(195px, 1fr));
+    grid-gap: 25px;
+    padding: 0 20px;
+    grid-template-rows: repeat(1, minmax(150px, min-content));
+    margin-bottom: 40px;
+ 
+}
+
+figure {
+    margin: 0;
+   
+}
+figure > div{
+    display:flex;
+    justify-content:center;
+}
+
+    figure > div img {
+        object-fit: cover;
+        border-radius: 50%;
+        height: 180px;
+        width: 180px;
+        border: 3px solid #00558E;
+    }
+
+figcaption {
+    margin-top: 5px;
+    padding: 15px 0 12px 0;
+}
+
+.executiveHead1 {
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 25px;
+    letter-spacing: 0em;
+    text-align: center;
+    text-transform: capitalize;
+    color: #0d0d0d;
+    margin-bottom: 6px;
+}
+
+.executivePara {
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 25px;
+    letter-spacing: 0em;
+    text-align: center;
+    text-transform: capitalize;
+    color: #0d0d0d;
+    margin-bottom: 2px;
+}
+
+
+
+.center-bar-head:after {
+    content: "pista de carrera"
+}
+
+
+/*career path detail*/
+.careerHead {
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 49px;
+    letter-spacing: 0em;
+    text-align: left;
+    text-transform:capitalize;
+    color:black;
+}
+.careerTitle {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 29px;
+    letter-spacing: 0em;
+    text-align: left;
+    text-transform: capitalize;
+    color: black;
+}
+.careerList li {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: left;
+    text-transform: capitalize;
+    color: black;
+}
+
+
+
+
+.dropdownUser {
+    display: block !important;
+}
+
+.RigthSideBar {
+    display: none !important;
+}
+
+/*career path detail*/

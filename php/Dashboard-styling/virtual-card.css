@@ -1,0 +1,632 @@
+﻿
+.multiple-cards .row > div {
+    padding: 0 7px;
+}
+
+.con-train-2-head {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 17px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: black;
+    text-transform: capitalize;
+    margin: 10px 0;
+}
+
+.con-train-2-para {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 15px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: black;
+    text-transform: capitalize;
+    margin: 5px 0;
+}
+
+.add-btn {
+    background-color: #025599;
+    color: white;
+    padding: 4px 13px;
+    border-radius: 4px;
+    border: none;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 29px;
+    letter-spacing: 0em;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    text-transform: capitalize;
+}
+
+.modal-head {
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 39px;
+    letter-spacing: 0em;
+    text-align: left;
+    text-transform: capitalize;
+    color: #025599;
+}
+
+
+
+label.wrapper {
+    position: relative;
+    width: 100%;
+    background-color: transparent;
+    margin-bottom: 0;
+}
+
+
+/*form styling*/
+
+.form {
+    max-width: unset !important;
+    width: 100%;
+}
+
+div.form-item {
+    position: relative;
+    display: block;
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+@media screen and (max-width:557px) {
+    div.form-item {
+        margin-right: 10px;
+    }
+}
+
+
+.file-span {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 20px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: rgba(211, 211, 211, 1);
+    text-transform: capitalize;
+    margin-top: 16px;
+    margin-left: 5px;
+    z-index: 5;
+}
+
+.form-control:focus {
+    box-shadow: none;
+}
+
+input {
+    transition: all 0.2s ease;
+}
+
+    input::placeholder {
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 20px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: rgba(211, 211, 211, 1);
+        text-transform: capitalize;
+    }
+
+    input.form-style {
+        display: block;
+        height: 55px;
+        padding: 5px 10px;
+        border: none;
+        border-bottom: 1px solid rgba(121, 121, 121, 1);
+        border-radius: 0;
+        background-color: transparent;
+        max-width: unset;
+        width: 100%;
+        font-size: 17px;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: rgba(0, 0, 0, 1);
+    }
+
+div.form-item .form-style:focus {
+    outline: none;
+    border: none;
+    border-bottom: 1px solid rgba(121, 121, 121, 1);
+    background-color: transparent;
+}
+
+
+input[type="file"]::-webkit-file-upload-button {
+    background: transparent;
+    color: transparent !important;
+    border: none;
+    position: absolute;
+    right: 20px;
+    top: 12.5px;
+    background: url(../images/Attach.svg) no-repeat;
+    background-position: right;
+}
+
+input[type="file"] {
+    color: transparent;
+    background-color: transparent;
+}
+
+    input[type="file"]:focus {
+        color: transparent !important;
+        background-color: transparent;
+    }
+
+
+
+/*form styling*/
+
+figure img {
+    width: 100%;
+}
+
+
+.fig-btn {
+    font-size: 11px;
+    font-weight: 300;
+    line-height: 17px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: white;
+    background-color: #025599;
+    padding: 8px 10px;
+    border: none;
+    border-radius: 4px;
+    text-transform: capitalize;
+}
+
+
+
+@media screen and (max-width:776px) {
+
+    .agent-pills {
+        padding: 5px 0;
+        overflow-x: scroll;
+        flex-wrap: nowrap !important;
+    }
+}
+
+.agent-pills li a {
+    padding: 3px 15px;
+    border-bottom: 1px solid rgba(211, 211, 211, 1);
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: left;
+    text-transform: capitalize;
+    color: rgba(2, 85, 153, 1);
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+    .agent-pills li a.active {
+        border-bottom: 2px solid rgba(2, 85, 153, 1);
+    }
+
+
+.increase-box {
+    padding: 5rem 20px;
+    text-align: center;
+    background-color: #F8F8F8;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+    .increase-box p:nth-child(1) {
+        font-size: 27px;
+        font-weight: 800;
+        line-height: 32px;
+        letter-spacing: 0em;
+        text-align: center;
+        text-transform: capitalize;
+        max-width: 900px;
+    }
+
+    .increase-box p:nth-child(2) {
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 19px;
+        letter-spacing: 0em;
+        max-width: 850px;
+        text-transform: capitalize;
+        text-align: center;
+    }
+
+.impact-width {
+    padding: 7rem 15px;
+    max-width: 1000px;
+}
+
+@media screen and (max-width:768px) {
+    .impact-text {
+        max-width: unset !important;
+    }
+}
+
+.impact-head {
+    font-size: 28px;
+    font-weight: 800;
+    line-height: 32px;
+    letter-spacing: 0em;
+    text-align: left;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+}
+
+.impact-para {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 25px;
+    letter-spacing: 0em;
+    text-align: left;
+    text-transform: capitalize;
+    color: black;
+}
+
+.share-channels {
+    max-width: 850px;
+}
+
+    .share-channels .row > div {
+        padding: 0 7px;
+    }
+
+        .share-channels .row > div > div {
+            background-color: white;
+        }
+
+.share-channels-para {
+    font-size: 14px !important;
+    font-weight: 400;
+    line-height: 23px;
+    letter-spacing: 0em;
+    text-align: left !important;
+    margin-bottom: 0;
+    text-transform: capitalize;
+    padding: 20px;
+}
+
+.oneCardWidth {
+    max-width: 900px;
+    padding: 6rem 15px;
+}
+
+.oneCardPara {
+    font-size: 26px;
+    font-weight: 800;
+    line-height: 36px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.oneCardList {
+    padding-left: 26px;
+}
+
+    .oneCardList li {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: 0em;
+        text-align: left;
+        text-transform: capitalize;
+    }
+
+.oneMonthWidth {
+    max-width: 900px;
+    padding: 0rem 15px;
+}
+
+.oneMonthList {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+    .oneMonthList li {
+        font-size: 11px;
+        font-weight: 400;
+        line-height: 17px;
+        letter-spacing: 0em;
+        text-align: left;
+        padding: 2px 2px;
+        text-transform: capitalize;
+    }
+
+.oneMonthBtn {
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 17px;
+    letter-spacing: 0em;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: #025599;
+    padding: 12px 20px;
+}
+
+
+.switchCardWidth {
+    background-color: black;
+    padding: 4rem 15px;
+    margin-top: 4rem;
+}
+
+.switchCardPara {
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 17px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: white;
+    text-transform: capitalize;
+    margin: 3rem 0;
+}
+
+.careerWidth {
+    padding: 3rem 15px;
+    max-width: 900px;
+}
+
+.blackBox {
+    background-color: black;
+    padding: 70px 20px;
+    margin-top: 20px;
+}
+
+.absoluteDesign {
+    position: absolute;
+    right: 0;
+    z-index: 0;
+    bottom:50px;
+}
+
+.passBtn {
+    border: none;
+    border-radius: 4px;
+    background-color: #E6EEF5;
+    color: #797979;
+    padding: 10px 25px;
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 17px;
+    text-transform: capitalize;
+    letter-spacing: 0em;
+}
+
+.watchBtn {
+    border: none;
+    border-radius: 4px;
+    background-color: #025599;
+    color: white;
+    padding: 10px 25px;
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 17px;
+    letter-spacing: 0em;
+    text-transform: capitalize;
+}
+
+.getYourBtn {
+}
+
+
+
+
+.dropdownUser {
+    display: block !important;
+}
+
+.RigthSideBar {
+    display: none !important;
+}
+
+
+
+.center-bar-head:after {
+    content: "switch virtual card"
+}
+
+/*for cards*/
+
+
+.multiple-cards .row > div {
+    padding: 0 7px;
+}
+
+    .multiple-cards .row > div figure {
+        margin-bottom: 15px;
+    }
+
+figure {
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    height:100%;
+    display:flex;
+    flex-direction:column;
+
+}
+
+
+    figure img {
+        width: 100%;
+    }
+
+.card-caption {
+    background-color: white;
+    border-radius: 0 0 6px 6px;
+    padding: 20px 15px 10px 15px;
+    display:flex;
+    flex-direction:column;
+    flex:1;
+    align-items:self-start;
+    justify-content:space-between
+}
+
+.card-head {
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: black;
+    text-transform: capitalize;
+}
+
+.card-para {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0em;
+    text-align: left;
+    text-transform: capitalize;
+    color: #797979;
+    margin-bottom: 8px;
+    max-width: 280px;
+}
+
+.fig-btn {
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 17px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: white;
+    background-color: #025599;
+    padding: 6px 20px;
+    border: none;
+    border-radius: 4px;
+    text-transform: capitalize;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+/*for cards*/
+
+
+
+.cambiarHead {
+    font-size: 40px;
+    font-weight: 900;
+    line-height: 45px;
+    letter-spacing: 0em;
+    text-align: left;
+    text-transform: capitalize;
+    color: black;
+    max-width: 450px;
+}
+.cambiarPara {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 25px;
+    letter-spacing: 0em;
+    text-align: left;
+    text-transform: capitalize;
+    color: black;
+}
+
+
+.addBusinessForm {
+    padding: 4rem;
+}
+
+@media screen and (max-width:768px) {
+
+    .addBusinessForm {
+        padding: 1rem 0;
+    }
+
+    .addBusinessBack > div {
+        margin: 0 1rem;
+    }
+}
+
+.addBusinessForm > select {
+    max-width: unset;
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+    height: 50px;
+    border: none;
+    border-bottom: 1px solid #797979;
+    padding: 15px 30px;
+}
+
+.addBusinessForm input[type=text] {
+    max-width: unset;
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+    height: 50px;
+    border: none;
+    border-bottom: 1px solid #797979;
+    padding: 15px 30px;
+    background-color: transparent;
+}
+
+    .addBusinessForm input[type=text]::placeholder {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 22px;
+        letter-spacing: 0em;
+        text-align: left;
+        text-transform: capitalize;
+        color: black;
+    }
+
+.form-item {
+    position: relative;
+    display: block;
+    width: 100%;
+    margin: 15px 0;
+}
+
+input[type=file] {
+    max-width: unset;
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+    height: 50px;
+    border: none;
+    border-bottom: 1px solid #797979;
+    padding: 15px 30px;
+}
+
+
+input[type="file"]::-webkit-file-upload-button {
+    background: transparent;
+    color: transparent !important;
+    border: none;
+    position: absolute;
+    right: 0px;
+    top: 12.5px;
+    background: url(../images/Attach1.svg) no-repeat;
+    background-position: right;
+    filter: contrast(50%)brightness(60%);
+}
+
+input[type="file"] {
+    color: transparent;
+    background-color: transparent;
+}
+
+    input[type="file"]:focus {
+        color: transparent !important;
+        background-color: transparent;
+    }

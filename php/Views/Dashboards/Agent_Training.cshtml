@@ -1,0 +1,1351 @@
+﻿
+@{
+    ViewBag.Title = "Agent_Training";
+    Layout = "~/Views/Shared/Dashboards_Layout.cshtml";
+}
+<link href="~/Dashboard-styling/bars_Stylings.css" rel="stylesheet" />
+<link href="~/Dashboard-styling/Agent_Training.css" rel="stylesheet" />
+
+
+
+<link rel="stylesheet" type="text/css" href="~/LoadingBar/dist/loading-bar.css" />
+<style type="text/css">
+    .ldBar path.mainline {
+        stroke-width: 4;
+        stroke: #87BAAD;
+        stroke-linecap: round;
+    }
+
+    .ldBar path.baseline {
+        stroke-width: 3;
+        stroke: rgba(211, 211, 211, 1);
+        stroke-linecap: round;
+        filter: url(#custom-shadow);
+    }
+</style>
+<script type="text/javascript" src="~/LoadingBar/dist/loading-bar.js"></script>
+
+
+
+<div class="container-fluid px-0 " style="">
+    <div class="row w-100 mx-0" style="">
+        <div class="col-lg-9 col-12 pr-0 pl-xl-2 pl-0 center-back " style="order:0 !important;">
+            <div class="center-bar">
+                <div class="d-flex align-items-center justify-content-between">
+                    <div class="d-flex align-items-center">
+                        <a class="sideBarTrigger" onclick="openSideNav()" style="cursor:pointer; margin-right:5px; display:none;">
+                            <img src="~/images/Menu Rounded.svg" style="filter:brightness(0)" width="35px" />
+                        </a>
+                        <h4 class="center-bar-head" style="color: #00558E">
+                            Entrenamiento para nuevos agentes
+                        </h4>
+                    </div>
+                    <div class="d-flex">
+
+                        <a class="SmallScreenSearchBar" onclick="openSearchBar1()">
+
+                            <img src="~/images/Search.svg" width="24px" />
+
+                            <div class="" id="SmallScreenSearchBox1">
+                                <div style="position:relative;">
+                                    <input type="search" />
+                                    <button class="SearchBtnBox1">
+                                        Search
+                                    </button>
+                                </div>
+                            </div>
+
+                        </a>
+
+                        <form role="search" method="get" class="search-form search-btn" action="" style="position: relative; box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15);border-radius:25px;">
+                            <label>
+
+                                <input type="search" class="search-field" placeholder="Search" value="" name="s" title="Search for:" />
+                            </label>
+                            <input type="submit" class="search-submit" value="Search" />
+                        </form>
+                        <a href="#" type="button" data-toggle="modal" data-target="#languagemodel">
+                            <div class="side-img mr-2 ml-2" style=" box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15); border-radius: 50%;">
+                                <img src="~/images/Geography.svg" />
+                            </div>
+                        </a>
+
+
+
+                        <div class="nav-item action2">
+                            <div class="menu2 ">
+                                <ul class="mb-0" style="padding:0 !important;">
+                                    <li style="border:none !important;">
+                                        <a href="@Url.Action("About","Home")">
+                                            About
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="@Url.Action("FAQs","Home")">
+                                            FAQ
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="@Url.Action("Contact","Home")">
+                                            Contact
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <a class="profile2 " onclick="menuToggle2();">
+                                <div class="side-img " style=" box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15); border-radius: 50%;">
+                                    <img src="~/images/userIcon.png" width="45px" />
+                                </div>
+                            </a>
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </div>
+
+
+
+            @*main page and date*@
+
+
+
+            <div class="container-fluid mt-4">
+                <div class="row">
+
+                    <div class="col-12">
+                        <ul class="nav nav-pills agent-pills">
+                            <li class="">
+                                <a data-toggle="pill" href="#home" class="active">
+                                    Introduction to AIL
+                                </a>
+                            </li>
+                            <li>
+                                <a data-toggle="pill" href="#menu1">
+                                    Llamadas y Scripts
+                                </a>
+                            </li>
+                            <li>
+                                <a data-toggle="pill" href="#menu2">
+                                    Llamadas y Scripts
+                                </a>
+                            </li>
+                            <li>
+                                <a data-toggle="pill" href="#menu3">
+                                    Método de IRT y el Poder de La Hora
+                                </a>
+                            </li>
+                           
+                        </ul>
+
+                        <div class="tab-content mt-2 mb-5 pb-5">
+
+                            <div class="d-flex align-items-center justify-content-md-end justify-content-center">
+                                <div class="d-flex align-items-center flex-md-column justify-content-md-center justify-content-between dial-cirle " style="margin-top:-50px;">
+
+                                    <div class="progress-container">
+                                        <svg class="progress-bar" width="100%" height="100%" viewBox="0 0 42 42">
+                                            <!--
+                                              <circle class="progress-ring" cx="21" cy="21" r="15.91549430918954" fill="transparent"/>
+                                              <circle class="progress-value" cx="21" cy="21" r="15.91549430918954" fill="transparent"/>
+                                            -->
+                                            <path class="progress-ring" d="M21 21 m-11.254 11.254 a 15.91549430918954 15.91549430918954 135 1 1 22.508 0" fill="transparent" stroke-linecap="round" />
+                                            <path class="progress-value" d="M21 21 m-11.254 11.254 a 15.91549430918954 15.91549430918954 135 1 1 22.508 0" fill="transparent" stroke-linecap="round" />
+                                        </svg>
+                                        <div class="progress-text">50%</div>
+                                    </div>
+
+                                    <button class="cc-btn">
+                                        Completar y continuar <img src="~/images/Chevron Left.svg" width="12px" style="margin:2px 0 0 2px;" />
+                                    </button>
+                                </div>
+                            </div>
+
+
+
+                            <div id="home" class="tab-pane fade-in active mt-md-3 mt-2">
+                                <div>
+                                    <video style="width:100%; height:360px;" controls>
+                                        <source type="video/mp4" src="https://www.w3schools.com/html/mov_bbb.mp4"></source>
+                                    </video>
+                                </div>
+
+
+                                <div class="video-head my-3">
+                                    Información básica para nuevos agentes
+                                </div>
+
+                                <div class="d-flex align-items-center justify-content-start mt-3 mb-2">
+
+                                    <div class="d-flex align-items-center justify-content-center">
+                                        <div style="border-radius:50%;">
+                                            <img src="~/images/chanallogo.svg" width="52px" />
+
+                                        </div>
+                                        <div class="d-flex align-items-start flex-column ml-2 mr-3">
+                                            <span class="video-head1">
+                                               Beto Quintero 
+                                            </span>
+                                            <span class="video-para">
+                                                CEO
+                                            </span>
+                                        </div>
+
+                                    </div>
+                                    <div>
+                                        <button class="subs-btn">
+                                            Subscribe
+                                        </button>
+                                    </div>
+
+
+
+                                </div>
+
+                                <div class="mt-4">
+                                    <p class="video-detail">
+                                        Obtén una comprensión integral de tu nueva carrera, cubriendo temas esenciales como tu horario y el funcionamiento interno de nuestro modelo de negocio.
+                                    </p>
+
+                                    <button class="cc-btn">
+                                        Completar y continuar <img src="~/images/Chevron Left.svg" width="12px" style="margin:1.5px 0 0 2px" />
+                                    </button>
+
+                                </div>
+
+
+
+
+
+
+                            </div>
+
+
+                            <div id="menu1" class="tab-pane fade mt-md-3 mt-2">
+
+
+
+
+                                <div>
+
+                                    <video style="width:100%; height:360px;">
+                                    </video>
+
+
+                                </div>
+
+
+                                <div class="video-head my-3">
+                                    Llamadas y Scripts
+                                </div>
+
+                                <div class="d-flex align-items-center justify-content-start mt-3 mb-2">
+
+                                    <div class="d-flex align-items-center justify-content-center">
+                                        <div style="border-radius:50%;">
+                                            <img src="~/images/chanallogo.svg" width="52px" />
+
+                                        </div>
+                                        <div class="d-flex align-items-start flex-column ml-2 mr-3">
+                                            <span class="video-head1">
+                                                Beto Quintero
+                                            </span>
+                                            <span class="video-para">
+                                                CEO
+
+                                            </span>
+                                        </div>
+
+                                    </div>
+                                    <div>
+                                        <button class="subs-btn">
+                                            Subscribe
+                                        </button>
+                                    </div>
+
+
+
+                                </div>
+
+                                <div class="mt-4">
+                                    <p class="video-detail">
+                                        En este entrenamiento, repasaremos nuestros diferentes tipos de Leads y aprenderemos a realizar llamadas efectivas siguiendo nuestros guiones. También aprenderemos cómo realizar seguimientos y obtener más citas.
+                                    </p>
+
+                                    <button class="cc-btn">
+                                        Completar y continuar <img src="~/images/Chevron Left.svg" width="12px" style="margin:1.5px 0 0 2px" />
+                                    </button>
+
+                                </div>
+
+
+
+
+
+
+                            </div>
+                            <div id="menu2" class="tab-pane fade mt-md-3 mt-2">
+
+
+
+
+                                <div>
+
+                                    <video style="width:100%; height:360px;">
+                                    </video>
+
+
+                                </div>
+
+
+                                <div class="video-head my-3">
+                                    Todo Sobre Calendly
+                                </div>
+
+                                <div class="d-flex align-items-center justify-content-start mt-3 mb-2">
+
+                                    <div class="d-flex align-items-center justify-content-center">
+                                        <div style="border-radius:50%;">
+                                            <img src="~/images/chanallogo.svg" width="52px" />
+
+                                        </div>
+                                        <div class="d-flex align-items-start flex-column ml-2 mr-3">
+                                            <span class="video-head1">
+                                                Eleisa Carlino
+                                            </span>
+                                            <span class="video-para">
+                                                Manager
+
+                                            </span>
+                                        </div>
+
+                                    </div>
+                                    <div>
+                                        <button class="subs-btn">
+                                            Subscribe
+                                        </button>
+                                    </div>
+
+
+
+                                </div>
+
+                                <div class="mt-4">
+                                    <p class="video-detail">
+                                        En este entrenamiento, aprenderás cómo aprovechar al máximo Calendly para mejorar tu gestión del tiempo y lograr que tus clientes se comprometan más con las citas programadas. Descubre todas las increíbles posibilidades que esta herramienta ofrece y cómo puede beneficiar tu trabajo.
+                                    </p>
+
+                                    <button class="cc-btn">
+                                        Completar y continuar <img src="~/images/Chevron Left.svg" width="12px" style="margin:1.5px 0 0 2px" />
+                                    </button>
+
+                                </div>
+
+
+
+
+
+
+
+                            </div>
+                            <div id="menu3" class="tab-pane fade mt-md-3 mt-2">
+
+
+
+                                <div>
+
+                                    <video style="width:100%; height:360px;">
+                                    </video>
+
+
+                                </div>
+
+
+                                <div class="video-head my-3">
+                                    Método de IRT y el Poder de La Hora
+                                </div>
+
+                                <div class="d-flex align-items-center justify-content-start mt-3 mb-2">
+
+                                    <div class="d-flex align-items-center justify-content-center">
+                                        <div style="border-radius:50%;">
+                                            <img src="~/images/chanallogo.svg" width="52px" />
+
+                                        </div>
+                                        <div class="d-flex align-items-start flex-column ml-2 mr-3">
+                                            <span class="video-head1">
+                                               Beto Quintero 
+                                            </span>
+                                            <span class="video-para">
+                                                CEO
+
+                                            </span>
+                                        </div>
+
+                                    </div>
+                                    <div>
+                                        <button class="subs-btn">
+                                            Subscribe
+                                        </button>
+                                    </div>
+
+
+
+                                </div>
+
+                                <div class="mt-4">
+                                    <p class="video-detail">
+                                        En este video, abordaremos dos métodos de cierre de ventas extremadamente importantes que nos ayudarán a concretar acuerdos con nuestros clientes. Nuestro CEO, Beto Quintero, ha destacado que estos métodos son altamente efectivos y benefician a todos nuestros agentes al incrementar el número de ventas cerradas.
+                                    </p>
+
+                                    <button class="cc-btn">
+                                        Completar y continuar <img src="~/images/Chevron Left.svg" width="12px" style="margin:1.5px 0 0 2px" />
+                                    </button>
+
+                                </div>
+
+
+
+
+
+
+
+
+                            </div>
+                         </div>
+                    </div>
+                </div>
+            </div>
+            @*main page and date*@
+        </div>
+
+
+
+        <div class="col-lg-3 col-12 px-0 " style="order:1 !important">
+
+            <div class="right-side-bar" style=" padding:0px 0px;height:100%;">
+
+                <div class="d-flex align-items-center justify-content-between" style="border-bottom: 1px solid rgba(211, 211, 211, 1);margin:0px 10px;">
+                    <p class="progress-para mb-0">
+                        Your Progress
+                    </p>
+
+                    <div class="circle-small">
+                        <div class="text">
+                            65%
+                        </div>
+                        <svg>
+                            <circle class="bg" cx="40" cy="40" r="25"></circle>
+                            <circle class="progress two" cx="40" cy="40" r="25"></circle>
+                        </svg>
+                    </div>
+                </div>
+                <div class="enclosure-for-video-bar">
+
+
+                    <div class="" style="font-size: 16px; font-weight: 400; line-height: 19px; letter-spacing: 0em; text-align: left; color: white; background-color: rgba(2, 85, 153, 0.4); padding: 8px 15px; margin:14px 0 0 0;  ">
+                        Introduction to AIL
+                    </div>
+                    <div>
+                        <progress max="100" min="0" value="65">
+
+                        </progress>
+                    </div>
+
+
+                    <ul class="nav nav-tabs tabs-nav" style="border-bottom:none; ">
+                        <li class="active">
+                            <a data-toggle="tab" href="#side" class="active">
+                                Videos
+                            </a>
+                        </li>
+                        <li>
+                            <a data-toggle="tab" href="#side1">
+                                Voice Notes
+                            </a>
+                        </li>
+                        <li>
+                            <a data-toggle="tab" href="#side2">
+                                Documents
+                            </a>
+                        </li>
+                        <li>
+                            <a data-toggle="tab" href="#side3">
+                                Images
+                            </a>
+                        </li>
+
+
+                    </ul>
+
+                    <div class="tab-content" style="">
+                        <div id="side" class="tab-pane fade-in active" style="">
+
+                            <ul class="video-bar" style="">
+                                <li class="active">
+                                    <div class="d-flex align-items-center">
+                                        <input type="checkbox" value="yes" name="radio" id="radio1" />
+                                        <label class="d-flex align-items-center mb-0 mx-2">
+                                            <img src="~/images/Laptop Play Video.svg" width="26px" class="mr-2" />
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="video-tag">
+                                                    Lorem ipsum dolor sit amet consectetur.
+                                                </span>
+                                                <span class="video-time">
+                                                    (02:18)
+                                                </span>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="video-tag">
+                                        01
+                                    </div>
+                                </li>
+                                <li class="">
+                                    <div class="d-flex align-items-center">
+                                        <input type="checkbox" value="yes" name="radio" id="radio2" />
+                                        <label class="d-flex align-items-center mb-0 mx-2">
+                                            <img src="~/images/Laptop Play Video.svg" width="26px" class="mr-2" />
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="video-tag">
+                                                    Lorem ipsum dolor sit amet consectetur.
+                                                </span>
+                                                <span class="video-time">
+                                                    (02:18)
+                                                </span>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="video-tag">
+                                        01
+                                    </div>
+                                </li>
+                                <li class="">
+                                    <div class="d-flex align-items-center">
+                                        <input type="checkbox" value="yes" name="radio" id="radio2" />
+                                        <label class="d-flex align-items-center mb-0 mx-2">
+                                            <img src="~/images/Laptop Play Video.svg" width="26px" class="mr-2" />
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="video-tag">
+                                                    Lorem ipsum dolor sit amet consectetur.
+                                                </span>
+                                                <span class="video-time">
+                                                    (02:18)
+                                                </span>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="video-tag">
+                                        01
+                                    </div>
+                                </li>
+                                <li class="">
+                                    <div class="d-flex align-items-center">
+                                        <input type="checkbox" value="yes" name="radio" id="radio2" />
+                                        <label class="d-flex align-items-center mb-0 mx-2">
+                                            <img src="~/images/Laptop Play Video.svg" width="26px" class="mr-2" />
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="video-tag">
+                                                    Lorem ipsum dolor sit amet consectetur.
+                                                </span>
+                                                <span class="video-time">
+                                                    (02:18)
+                                                </span>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="video-tag">
+                                        01
+                                    </div>
+                                </li>
+                                <li class="">
+                                    <div class="d-flex align-items-center">
+                                        <input type="checkbox" value="yes" name="radio" id="radio2" />
+                                        <label class="d-flex align-items-center mb-0 mx-2">
+                                            <img src="~/images/Laptop Play Video.svg" width="26px" class="mr-2" />
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="video-tag">
+                                                    Lorem ipsum dolor sit amet consectetur.
+                                                </span>
+                                                <span class="video-time">
+                                                    (02:18)
+                                                </span>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="video-tag">
+                                        01
+                                    </div>
+                                </li>
+                                <li class="">
+                                    <div class="d-flex align-items-center">
+                                        <input type="checkbox" value="yes" name="radio" id="radio2" />
+                                        <label class="d-flex align-items-center mb-0 mx-2">
+                                            <img src="~/images/Laptop Play Video.svg" width="26px" class="mr-2" />
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="video-tag">
+                                                    Lorem ipsum dolor sit amet consectetur.
+                                                </span>
+                                                <span class="video-time">
+                                                    (02:18)
+                                                </span>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="video-tag">
+                                        01
+                                    </div>
+                                </li>
+                                <li class="">
+                                    <div class="d-flex align-items-center">
+                                        <input type="checkbox" value="yes" name="radio" id="radio2" />
+                                        <label class="d-flex align-items-center mb-0 mx-2">
+                                            <img src="~/images/Laptop Play Video.svg" width="26px" class="mr-2" />
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="video-tag">
+                                                    Lorem ipsum dolor sit amet consectetur.
+                                                </span>
+                                                <span class="video-time">
+                                                    (02:18)
+                                                </span>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="video-tag">
+                                        01
+                                    </div>
+                                </li>
+                                <li class="">
+                                    <div class="d-flex align-items-center">
+                                        <input type="checkbox" value="yes" name="radio" id="radio2" />
+                                        <label class="d-flex align-items-center mb-0 mx-2">
+                                            <img src="~/images/Laptop Play Video.svg" width="26px" class="mr-2" />
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="video-tag">
+                                                    Lorem ipsum dolor sit amet consectetur.
+                                                </span>
+                                                <span class="video-time">
+                                                    (02:18)
+                                                </span>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="video-tag">
+                                        01
+                                    </div>
+                                </li>
+                                <li class="">
+                                    <div class="d-flex align-items-center">
+                                        <input type="checkbox" value="yes" name="radio" id="radio2" />
+                                        <label class="d-flex align-items-center mb-0 mx-2">
+                                            <img src="~/images/Laptop Play Video.svg" width="26px" class="mr-2" />
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="video-tag">
+                                                    Lorem ipsum dolor sit amet consectetur.
+                                                </span>
+                                                <span class="video-time">
+                                                    (02:18)
+                                                </span>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="video-tag">
+                                        01
+                                    </div>
+                                </li>
+                                <li class="">
+                                    <div class="d-flex align-items-center">
+                                        <input type="checkbox" value="yes" name="radio" id="radio2" />
+                                        <label class="d-flex align-items-center mb-0 mx-2">
+                                            <img src="~/images/Laptop Play Video.svg" width="26px" class="mr-2" />
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="video-tag">
+                                                    Lorem ipsum dolor sit amet consectetur.
+                                                </span>
+                                                <span class="video-time">
+                                                    (02:18)
+                                                </span>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="video-tag">
+                                        01
+                                    </div>
+                                </li>
+                                <li class="">
+                                    <div class="d-flex align-items-center">
+                                        <input type="checkbox" value="yes" name="radio" id="radio2" />
+                                        <label class="d-flex align-items-center mb-0 mx-2">
+                                            <img src="~/images/Laptop Play Video.svg" width="26px" class="mr-2" />
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="video-tag">
+                                                    Lorem ipsum dolor sit amet consectetur.
+                                                </span>
+                                                <span class="video-time">
+                                                    (02:18)
+                                                </span>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="video-tag">
+                                        01
+                                    </div>
+                                </li>
+                                <li class="">
+                                    <div class="d-flex align-items-center">
+                                        <input type="checkbox" value="yes" name="radio" id="radio2" />
+                                        <label class="d-flex align-items-center mb-0 mx-2">
+                                            <img src="~/images/Laptop Play Video.svg" width="26px" class="mr-2" />
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="video-tag">
+                                                    Lorem ipsum dolor sit amet consectetur.
+                                                </span>
+                                                <span class="video-time">
+                                                    (02:18)
+                                                </span>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="video-tag">
+                                        01
+                                    </div>
+                                </li>
+                                <li class="">
+                                    <div class="d-flex align-items-center">
+                                        <input type="checkbox" value="yes" name="radio" id="radio2" />
+                                        <label class="d-flex align-items-center mb-0 mx-2">
+                                            <img src="~/images/Laptop Play Video.svg" width="26px" class="mr-2" />
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="video-tag">
+                                                    Lorem ipsum dolor sit amet consectetur.
+                                                </span>
+                                                <span class="video-time">
+                                                    (02:18)
+                                                </span>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="video-tag">
+                                        01
+                                    </div>
+                                </li>
+                                <li class="">
+                                    <div class="d-flex align-items-center">
+                                        <input type="checkbox" value="yes" name="radio" id="radio2" />
+                                        <label class="d-flex align-items-center mb-0 mx-2">
+                                            <img src="~/images/Laptop Play Video.svg" width="26px" class="mr-2" />
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="video-tag">
+                                                    Lorem ipsum dolor sit amet consectetur.
+                                                </span>
+                                                <span class="video-time">
+                                                    (02:18)
+                                                </span>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="video-tag">
+                                        01
+                                    </div>
+                                </li>
+                                <li class="">
+                                    <div class="d-flex align-items-center">
+                                        <input type="checkbox" value="yes" name="radio" id="radio2" />
+                                        <label class="d-flex align-items-center mb-0 mx-2">
+                                            <img src="~/images/Laptop Play Video.svg" width="26px" class="mr-2" />
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="video-tag">
+                                                    Lorem ipsum dolor sit amet consectetur.
+                                                </span>
+                                                <span class="video-time">
+                                                    (02:18)
+                                                </span>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="video-tag">
+                                        01
+                                    </div>
+                                </li>
+                                <li class="">
+                                    <div class="d-flex align-items-center">
+                                        <input type="checkbox" value="yes" name="radio" id="radio2" />
+                                        <label class="d-flex align-items-center mb-0 mx-2">
+                                            <img src="~/images/Laptop Play Video.svg" width="26px" class="mr-2" />
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="video-tag">
+                                                    Lorem ipsum dolor sit amet consectetur.
+                                                </span>
+                                                <span class="video-time">
+                                                    (02:18)
+                                                </span>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="video-tag">
+                                        01
+                                    </div>
+                                </li>
+                            </ul>
+
+
+                            <div class="" style="font-size: 16px; font-weight: 400; line-height: 19px; letter-spacing: 0em; text-align: left; color: white; background-color: rgba(2, 85, 153, 0.4); padding: 8px 15px; margin:5px 0;">
+                                Loading Call Scripts
+                            </div>
+                            <ul class="video-bar">
+                                <li class="active">
+                                    <div class="d-flex align-items-center">
+                                        <input type="checkbox" value="yes" name="radio" id="radio1" />
+                                        <label class="d-flex align-items-center mb-0 mx-2">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="video-tag">
+                                                    Lorem ipsum dolor sit amet consectetur.
+                                                </span>
+                                                <span class="video-time">
+                                                    (02:18)
+                                                </span>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="video-tag">
+                                        01
+                                    </div>
+                                    <div id="nav">
+                                        <a class="dropdown-toggle" href="#">
+                                            <img src="~/images/Menu Vertical.svg" width="18px" />
+                                        </a>
+                                        <ul class="dropdown">
+                                            <li>
+                                                <a href="#">
+                                                    <span>ADD</span>
+                                                    <img src="~/images/Add properties.svg" />
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <span>Remove</span>
+                                                    <img src="~/images/Remove.svg" />
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <span>change file</span>
+                                                    <img src="~/images/Replace.svg" />
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <span>change name</span>
+                                                    <img src="~/images/Change User.svg" />
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                </li>
+
+                                <li class="">
+                                    <div class="d-flex align-items-center">
+                                        <input type="checkbox" value="yes" name="radio" id="radio1" />
+                                        <label class="d-flex align-items-center mb-0 mx-2">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="video-tag">
+                                                    Lorem ipsum dolor sit amet consectetur.
+                                                </span>
+                                                <span class="video-time">
+                                                    (02:18)
+                                                </span>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="video-tag">
+                                        01
+                                    </div>
+                                    <div id="nav">
+                                        <a class="dropdown-toggle" href="#">
+                                            <img src="~/images/Menu Vertical.svg" width="18px" />
+                                        </a>
+                                        <ul class="dropdown">
+                                            <li>
+                                                <a href="#">
+                                                    <span>ADD</span>
+                                                    <img src="~/images/Add properties.svg" />
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <span>Remove</span>
+                                                    <img src="~/images/Remove.svg" />
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <span>change file</span>
+                                                    <img src="~/images/Replace.svg" />
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <span>change name</span>
+                                                    <img src="~/images/Change User.svg" />
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                </li>
+
+                                <li class="">
+                                    <div class="d-flex align-items-center">
+                                        <input type="checkbox" value="yes" name="radio" id="radio1" />
+                                        <label class="d-flex align-items-center mb-0 mx-2">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="video-tag">
+                                                    Lorem ipsum dolor sit amet consectetur.
+                                                </span>
+                                                <span class="video-time">
+                                                    (02:18)
+                                                </span>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="video-tag">
+                                        01
+                                    </div>
+                                    <div id="nav">
+                                        <a class="dropdown-toggle" href="#">
+                                            <img src="~/images/Menu Vertical.svg" width="18px" />
+                                        </a>
+                                        <ul class="dropdown">
+                                            <li>
+                                                <a href="#">
+                                                    <span>ADD</span>
+                                                    <img src="~/images/Add properties.svg" />
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <span>Remove</span>
+                                                    <img src="~/images/Remove.svg" />
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <span>change file</span>
+                                                    <img src="~/images/Replace.svg" />
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <span>change name</span>
+                                                    <img src="~/images/Change User.svg" />
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                </li>
+
+                                <li class="">
+                                    <div class="d-flex align-items-center">
+                                        <input type="checkbox" value="yes" name="radio" id="radio1" />
+                                        <label class="d-flex align-items-center mb-0 mx-2">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="video-tag">
+                                                    Lorem ipsum dolor sit amet consectetur.
+                                                </span>
+                                                <span class="video-time">
+                                                    (02:18)
+                                                </span>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="video-tag">
+                                        01
+                                    </div>
+                                    <div id="nav">
+                                        <a class="dropdown-toggle" href="#">
+                                            <img src="~/images/Menu Vertical.svg" width="18px" />
+                                        </a>
+                                        <ul class="dropdown">
+                                            <li>
+                                                <a href="#">
+                                                    <span>ADD</span>
+                                                    <img src="~/images/Add properties.svg" />
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <span>Remove</span>
+                                                    <img src="~/images/Remove.svg" />
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <span>change file</span>
+                                                    <img src="~/images/Replace.svg" />
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <span>change name</span>
+                                                    <img src="~/images/Change User.svg" />
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                </li>
+
+                            </ul>
+                            <div class="" style="font-size: 16px; font-weight: 400; line-height: 19px; letter-spacing: 0em; text-align: left; color: white; background-color: rgba(2, 85, 153, 0.4); padding: 8px 15px; margin:5px 0;">
+                                Referral Text Message
+                            </div>
+                            <ul class="video-bar">
+                                <li class="active">
+                                    <div class="d-flex align-items-center">
+                                        <input type="checkbox" value="yes" name="radio" id="radio1" />
+                                        <label class="d-flex align-items-center mb-0 mx-2">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="video-tag">
+                                                    Lorem ipsum dolor sit amet consectetur.
+                                                </span>
+                                                <span class="video-time">
+                                                    (02:18)
+                                                </span>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="video-tag">
+                                        01
+                                    </div>
+                                    <div id="nav">
+                                        <a class="dropdown-toggle" href="#">
+                                            <img src="~/images/Menu Vertical.svg" width="18px" />
+                                        </a>
+                                        <ul class="dropdown">
+                                            <li>
+                                                <a href="#">
+                                                    <span>ADD</span>
+                                                    <img src="~/images/Add properties.svg" />
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <span>Remove</span>
+                                                    <img src="~/images/Remove.svg" />
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <span>change file</span>
+                                                    <img src="~/images/Replace.svg" />
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <span>change name</span>
+                                                    <img src="~/images/Change User.svg" />
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                </li>
+                                <li class="">
+                                    <div class="d-flex align-items-center">
+                                        <input type="checkbox" value="yes" name="radio" id="radio1" />
+                                        <label class="d-flex align-items-center mb-0 mx-2">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="video-tag">
+                                                    Lorem ipsum dolor sit amet consectetur.
+                                                </span>
+                                                <span class="video-time">
+                                                    (02:18)
+                                                </span>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="video-tag">
+                                        01
+                                    </div>
+                                    <div id="nav">
+                                        <a class="dropdown-toggle" href="#">
+                                            <img src="~/images/Menu Vertical.svg" width="18px" />
+                                        </a>
+                                        <ul class="dropdown">
+                                            <li>
+                                                <a href="#">
+                                                    <span>ADD</span>
+                                                    <img src="~/images/Add properties.svg" />
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <span>Remove</span>
+                                                    <img src="~/images/Remove.svg" />
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <span>change file</span>
+                                                    <img src="~/images/Replace.svg" />
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <span>change name</span>
+                                                    <img src="~/images/Change User.svg" />
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                </li>
+
+                                <li class="">
+                                    <div class="d-flex align-items-center">
+                                        <input type="checkbox" value="yes" name="radio" id="radio1" />
+                                        <label class="d-flex align-items-center mb-0 mx-2">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="video-tag">
+                                                    Lorem ipsum dolor sit amet consectetur.
+                                                </span>
+                                                <span class="video-time">
+                                                    (02:18)
+                                                </span>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="video-tag">
+                                        01
+                                    </div>
+                                    <div id="nav">
+                                        <a class="dropdown-toggle" href="#">
+                                            <img src="~/images/Menu Vertical.svg" width="18px" />
+                                        </a>
+                                        <ul class="dropdown">
+                                            <li>
+                                                <a href="#">
+                                                    <span>ADD</span>
+                                                    <img src="~/images/Add properties.svg" />
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <span>Remove</span>
+                                                    <img src="~/images/Remove.svg" />
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <span>change file</span>
+                                                    <img src="~/images/Replace.svg" />
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <span>change name</span>
+                                                    <img src="~/images/Change User.svg" />
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                </li>
+
+                                <li class="">
+                                    <div class="d-flex align-items-center">
+                                        <input type="checkbox" value="yes" name="radio" id="radio1" />
+                                        <label class="d-flex align-items-center mb-0 mx-2">
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="video-tag">
+                                                    Lorem ipsum dolor sit amet consectetur.
+                                                </span>
+                                                <span class="video-time">
+                                                    (02:18)
+                                                </span>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="video-tag">
+                                        01
+                                    </div>
+                                    <div id="nav">
+                                        <a class="dropdown-toggle" href="#">
+                                            <img src="~/images/Menu Vertical.svg" width="18px" />
+                                        </a>
+                                        <ul class="dropdown">
+                                            <li>
+                                                <a href="#">
+                                                    <span>ADD</span>
+                                                    <img src="~/images/Add properties.svg" />
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <span>Remove</span>
+                                                    <img src="~/images/Remove.svg" />
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <span>change file</span>
+                                                    <img src="~/images/Replace.svg" />
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <span>change name</span>
+                                                    <img src="~/images/Change User.svg" />
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                </li>
+                            </ul>
+                            <div class="" style="font-size: 16px; font-weight: 400; line-height: 19px; letter-spacing: 0em; text-align: left; color: white; background-color: rgba(2, 85, 153, 0.4); padding: 8px 15px; margin:5px 0;">
+                                Calendly and Calls
+                            </div>
+                            <ul class="video-bar">
+                                <li class="active">
+                                    <div class="d-flex align-items-center">
+                                        <input type="checkbox" value="yes" name="radio" id="radio1" />
+                                        <label class="d-flex align-items-center mb-0 mx-2">
+                                            <img src="~/images/Laptop Play Video.svg" width="26px" class="mr-2" />
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="video-tag">
+                                                    Lorem ipsum dolor sit amet consectetur.
+                                                </span>
+                                                <span class="video-time">
+                                                    (02:18)
+                                                </span>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="video-tag">
+                                        01
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="" style="font-size: 16px; font-weight: 400; line-height: 19px; letter-spacing: 0em; text-align: left; color: white; background-color: rgba(2, 85, 153, 0.4); padding: 8px 15px; margin:5px 0;">
+                                IRT Training
+                            </div>
+                            <ul class="video-bar">
+                                <li class="active">
+                                    <div class="d-flex align-items-center">
+                                        <input type="checkbox" value="yes" name="radio" id="radio1" />
+                                        <label class="d-flex align-items-center mb-0 mx-2">
+                                            <img src="~/images/Laptop Play Video.svg" width="26px" class="mr-2" />
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="video-tag">
+                                                    Lorem ipsum dolor sit amet consectetur.
+                                                </span>
+                                                <span class="video-time">
+                                                    (02:18)
+                                                </span>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="video-tag">
+                                        01
+                                    </div>
+                                </li>
+                            </ul>
+
+                        </div>
+
+
+
+                        <div id="side1" class="tab-pane fade">
+                            <h3>side 1</h3>
+                            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        </div>
+                        <div id="side2" class="tab-pane fade">
+                            <h3>side 2</h3>
+                            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+                        </div>
+                        <div id="side3" class="tab-pane fade">
+                            <h3>side 3</h3>
+                            <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+
+
+
+
+<script>
+    $(function () { // Dropdown toggle
+        $('.dropdown-toggle').click(function () {
+            $(this).next('.dropdown').slideToggle();
+        });
+
+        $(document).click(function (e) {
+            var target = e.target;
+            if (!$(target).is('.dropdown-toggle') && !$(target).parents().is('.dropdown-toggle'))
+            //{ $('.dropdown').hide(); }
+            { $('.dropdown').slideUp(); }
+        });
+    });
+</script>
+
+<script>
+
+    // The JavaScript code to update the progress bar
+    const progressContainer = document.querySelector('.progress-container');
+    const progressBar = progressContainer.querySelector('.progress-bar');
+    const progressValue = progressBar.querySelector('.progress-value');
+    const progressText = progressContainer.querySelector('.progress-text');
+
+    const updateProgress = (value) => {
+        // Update the value of the progress bar
+        //progressValue.style.strokeDasharray = `${value} 100`;
+        progressValue.style.strokeDasharray = `${value * 3 / 4} 75`;
+
+        // Update the text inside the progress bar
+        progressText.textContent = `${value}%`;
+    }
+
+    updateProgress(20); // Set the progress bar to 50%
+</script>
+
+<script>
+    function menuToggle2() {
+        const toggleMenu = document.querySelector(".menu2");
+        toggleMenu.classList.toggle("active2");
+    }
+
+    $(document).on('click', '.sl-nav', function () {
+        $('.menu2').removeClass('active2');
+    });
+</script>
+@*for small scrreen search bar*@
+<script>
+
+    function openSearchBar1() {
+
+        jQuery("#SmallScreenSearchBox1").addClass("SmallScreenSearchBox1");
+        jQuery("#closeSearchBox").addClass("closeSearchBox");
+    }
+    function closeSearchBox() {
+
+        jQuery("#SmallScreenSearchBox1").removeClass("SmallScreenSearchBox1");
+        jQuery("#closeSearchBox").removeClass("closeSearchBox");
+    }
+
+</script>
+
+
+@*for small scrreen search bar*@

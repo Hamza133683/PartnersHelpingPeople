@@ -1,0 +1,306 @@
+﻿body {
+}
+
+
+#HeadingOnTopBar::after {
+    content: "family protection plan";
+}
+
+@media screen and (min-width:992px) {
+
+    .center-back {
+        display: none;
+    }
+}
+
+@media screen and (max-width:992px) {
+
+    .twoImgBar {
+        display: none !important;
+    }
+}
+
+.indication-btn {
+    padding: 0;
+    border: none;
+    display: inline-flex;
+    height: 42px;
+    width: 120px;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #fff;
+    background: #025599;
+    cursor: pointer;
+    color: rgba(211, 211, 211, 1);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    text-decoration: none;
+    border-radius: 4px;
+    text-transform: capitalize;
+}
+
+/*table styling */
+
+.overflowContainer {
+    overflow-x: scroll;
+}
+
+
+.FullViewTablePara {
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 34px;
+    letter-spacing: 0em;
+    text-align: left;
+    text-transform: capitalize;
+    display: inline-block;
+    border-bottom: 1px solid rgba(211, 211, 211, 1);
+    padding: 20px 0;
+    margin-bottom: 0;
+}
+
+    .FullViewTablePara span {
+        font-size: 22px;
+        font-weight: 700;
+        line-height: 34px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: #025599;
+    }
+
+.FullViewTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem 0 1rem 0;
+    table-layout: auto
+}
+
+    .FullViewTable thead tr {
+        background-color: #E6EEF5;
+        box-shadow: 0 1px 5px rgba(0, 0, 0, 0.08);
+        margin-bottom: 1rem;
+    }
+
+        .FullViewTable thead tr td {
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 24px;
+            letter-spacing: 0em;
+            text-align: center;
+            text-transform: capitalize;
+            color: #025599;
+            padding: 15px 10px;
+            white-space: nowrap;
+        }
+
+    .FullViewTable tbody tr {
+        /*background-color: transparent;*/
+        box-shadow: 0 1px 5px rgba(0, 0, 0, 0.08);
+    }
+
+        .FullViewTable tbody tr:nth-child(1) td > div {
+            display: flex !important;
+        }
+
+            .FullViewTable tbody tr:nth-child(1) td > div > div {
+                width: 100%;
+                background-color: rgba(230, 238, 245, 1);
+                padding: 1rem 0.5rem;
+                font-size: 15px;
+                font-weight: 400;
+                line-height: 24px;
+                letter-spacing: 0em;
+                text-align: center;
+                color: rgba(0, 0, 0, 1);
+            }
+
+                .FullViewTable tbody tr:nth-child(1) td > div > div:nth-child(2) {
+                    margin: 0 1px;
+                }
+
+
+    .FullViewTable tbody:before {
+        line-height: 1em;
+        content: "\200C";
+        display: block;
+    }
+
+
+
+    .FullViewTable tbody tr td {
+        border: none;
+        min-width: 300px;
+        border-right: 2px solid rgba(0, 0, 0, 0.7);
+    }
+
+        .FullViewTable tbody tr td h1 {
+            font-size: 13px;
+            font-weight: 600;
+            line-height: 16px;
+            letter-spacing: 0em;
+            text-align: left;
+            text-transform: capitalize;
+            color: #797979;
+            position: relative;
+            margin-bottom: 0;
+            padding: 12px 15px
+        }
+
+        .FullViewTable tbody tr td:first-child {
+            width: 200px !important;
+        }
+
+
+
+/*select dropdown*/
+
+
+.DropDownSelects > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+    .DropDownSelects > div > select {
+        border: none;
+        height: 55px;
+        width: 100%;
+        appearance: none;
+        position: relative;
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        appearance: none;
+        background-image: url('../images/downArrow.svg');
+        background-repeat: no-repeat;
+        background-position: right .7em top 50%;
+        background-size: .95em auto;
+        padding: 5px 5px 5px 15px;
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 18px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: #797979;
+        text-transform: capitalize;
+    }
+
+        .DropDownSelects > div > select:focus {
+            border: none;
+            outline: none;
+        }
+
+        .DropDownSelects > div > select:nth-child(1) {
+            background-color: #CEF4D7;
+        }
+
+        .DropDownSelects > div > select:nth-child(2) {
+            background-color: #FFF3C7;
+        }
+
+        .DropDownSelects > div > select:nth-child(3) {
+            background-color: #D6CAC0
+        }
+
+
+.InputTables tbody .tr-hover-class td > div > div:nth-child(1) input {
+    background-color: #CEF4D7;
+}
+
+.InputTables tbody .tr-hover-class td > div > div:nth-child(2) input {
+    background-color: #FFF3C7;
+}
+
+.InputTables tbody .tr-hover-class td > div > div:nth-child(3) input {
+    background-color: #D6CAC0
+}
+/*select dropdown*/
+.threeDropsInRow {
+    width: 100%;
+    margin: 0 10px;
+    position: relative;
+}
+/*table styling */
+.AnadirProductoHead {
+    color: #00558E;
+    text-transform: capitalize;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 38px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.AnadirProductoList {
+    list-style: none;
+    padding-left: 0;
+}
+/*checkbox styling*/
+.form-group {
+    display: flex;
+    align-items: center;
+}
+
+    .form-group input {
+        padding: 0;
+        height: initial;
+        width: initial;
+        margin-bottom: 0;
+        display: none;
+        cursor: pointer;
+    }
+
+    .form-group label {
+        position: relative;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: rgba(121, 121, 121, 1);
+        text-transform: capitalize;
+        margin-bottom: 0;
+    }
+
+        .form-group label > span {
+            color: #00558E;
+            font-weight: 700
+        }
+
+        .form-group label:before {
+            content: '';
+            -webkit-appearance: none;
+            background-color: transparent;
+            border: 2px solid #00558E;
+            border-radius: 2px;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
+            padding: 10px;
+            display: inline-block;
+            position: relative;
+            vertical-align: middle;
+            cursor: pointer;
+            margin-right: 5px;
+        }
+
+    .form-group input:checked + label:after {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 3px;
+        left: 9px;
+        width: 6px;
+        height: 14px;
+        border: 2px solid white;
+        border-width: 0 3px 3px 0;
+        transform: rotate(45deg);
+    }
+
+    .form-group input:checked + label:before {
+        border: 2px solid #025599;
+        background-color: #025599;
+    }
+
+/*checkbox styling*/

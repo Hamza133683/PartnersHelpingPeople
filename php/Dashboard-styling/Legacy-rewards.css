@@ -1,0 +1,499 @@
+﻿
+
+
+
+
+/*tabs styling*/
+
+
+@media screen and (max-width:776px) {
+
+    .PR-pills {
+        padding: 10px 0;
+        overflow-x: scroll;
+        flex-wrap: nowrap !important;
+    }
+}
+
+
+.PR-pills li a {
+    padding: 3px 15px 8px 15px;
+    border-bottom: 1px solid rgba(211, 211, 211, 1);
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: left;
+    text-transform: capitalize;
+    color: rgba(2, 85, 153, 1);
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+    .PR-pills li a.active {
+        border-bottom: 2px solid rgba(2, 85, 153, 1);
+    }
+
+
+
+.Legacy_img_content {
+    background: url('../images/legacy rewerds img.svg') center center no-repeat;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    padding: 4rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.legacy_head {
+    font-size: 32px;
+    font-weight: 800;
+    line-height: 35px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: white;
+    text-transform: capitalize;
+    max-width: 650px;
+    margin: 20px auto;
+}
+
+.legacy_para {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: white;
+    text-transform: capitalize;
+    margin: 1px auto;
+    max-width: 700px;
+}
+
+.Legacy_img_btn {
+    background-color: #025599;
+    color: white;
+    padding: 4px 13px;
+    border-radius: 4px;
+    border: none;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 29px;
+    letter-spacing: 0em;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    text-transform: capitalize;
+}
+
+.two-cards-width {
+    max-width: 1000px;
+}
+
+    .two-cards-width .row > div {
+        padding: 0 7px;
+    }
+
+.twoFigure {
+    box-shadow: none !important;
+}
+
+    .twoFigure > figcaption {
+        padding: 15px 15px;
+    }
+
+    .twoFigure .card-overlay-color > img {
+        width: 100%;
+        position: relative;
+    }
+
+.card-overlay-color {
+    position: relative;
+}
+
+    .card-overlay-color:after {
+        content: "";
+        position: absolute;
+        background: black;
+        opacity: 0.6;
+        z-index: 2;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+
+.four-props-cards-width {
+    background-color: #025599;
+    padding: 4rem 15px;
+    width: 100%;
+}
+
+.four-props-cards-head {
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 27px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: white;
+    text-transform: capitalize;
+}
+
+.four-props-cards-para {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: white;
+    text-transform: capitalize;
+}
+
+.woman-width {
+    padding-top: 3rem;
+}
+
+    .woman-width .row > div {
+        padding: 0 7px;
+    }
+
+.three-cards-width {
+    background: rgb(78,158,184);
+    background: linear-gradient(53deg, rgba(78,158,184,1) 0%, rgba(135,186,173,1) 37%, rgba(190,214,162,1) 62%);
+    padding: 4rem 15px;
+    width: 100%;
+    margin:0 auto;
+}
+
+    .three-cards-width .row > div {
+        padding: 0 7px;
+    }
+
+.colored-card {
+    background-color: white;
+    box-shadow: 5px 5px 20px rgba(0,0,0,0.15);
+    padding: 25px;
+    height:100%;
+}
+
+.colored-card-head {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0em;
+    text-align: left;
+    text-transform: capitalize;
+    color: #797979;
+}
+
+.colored-card-para {
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 23px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #025599;
+    text-transform: capitalize;
+    margin-bottom: 5px;
+}
+
+.colored-card-location {
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #0589C8;
+    text-transform: capitalize;
+}
+
+
+
+.multiple-cards .row > div {
+    padding: 0 7px;
+    margin-bottom: 14px;
+}
+
+
+
+figure {
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    height: 100%;
+}
+
+
+    figure img {
+        width: 100%;
+    }
+
+.card-caption {
+    background-color: white;
+    border-radius: 0 0 6px 6px;
+    padding: 20px;
+}
+
+.card-head {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 25px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: black;
+    text-transform: capitalize;
+}
+
+.card-para {
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0em;
+    text-align: left;
+    text-transform: capitalize;
+    color: #797979;
+    margin-bottom: 8px;
+    max-width: 250px;
+}
+
+.fig-btn {
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 17px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: white;
+    background-color: #025599;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 4px;
+    text-transform: capitalize;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+
+/*Legacy_Rewards_Video_Page styling */
+
+.content-width {
+    max-width: 1200px;
+    margin-top: 4rem;
+}
+
+
+.content-head {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 25px;
+    letter-spacing: 0em;
+    text-align: left;
+    text-transform: capitalize;
+    color: black;
+    margin-top: 35px;
+}
+
+.content-para {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 17px;
+    letter-spacing: 0em;
+    text-align: left;
+    text-transform: capitalize;
+    color: black;
+}
+
+.content-btn {
+    background-color: #025599;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 4px;
+    border: none;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0em;
+    text-align: left;
+    text-transform: capitalize;
+}
+
+
+
+/*Legacy_Rewards_Video_Page styling */
+
+
+
+
+.dropdownUser {
+    display: block !important;
+}
+
+.RigthSideBar {
+    display: none !important;
+}
+
+
+.center-bar-head:after {
+    content: "legacy rewards"
+}
+
+
+.fivePeopleBox {
+    background: linear-gradient(232deg, rgba(238,238,154,1) 5%, rgba(224,231,156,1) 15%, rgba(190,214,162,1) 30%, rgba(135,186,173,1) 45%, rgba(78,158,184,1) 100%);
+    padding: 30px 50px;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: baseline;
+}
+
+    .fivePeopleBox p:nth-child(1) {
+        font-size: 26px;
+        font-weight: 700;
+        line-height: 29px;
+        letter-spacing: 0em;
+        text-align: left;
+        text-transform: capitalize;
+        color: white;
+        max-width: 350px;
+    }
+
+    .fivePeopleBox p:nth-child(2) {
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 19px;
+        letter-spacing: 0em;
+        text-align: left;
+        text-transform: capitalize;
+        color: white;
+        max-width: 350px;
+    }
+
+
+.addBusinessBack {
+    background: url(../images/addbusinessimg.png) center center no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    padding: 10rem 0;
+}
+
+    .addBusinessBack > div {
+        margin-left: 5rem;
+    }
+
+.addBusinessHead {
+    font-size: 23px;
+    font-weight: 700;
+    line-height: 29px;
+    letter-spacing: 0em;
+    text-align: left;
+    text-transform: capitalize;
+    color: white;
+}
+
+.addBusinessPara {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    text-transform: capitalize;
+    color: white;
+}
+
+.addBusinessForm {
+    margin: 4rem;
+}
+
+@media screen and (max-width:768px) {
+
+    .addBusinessForm {
+        margin: 1rem 0;
+    }
+
+    .addBusinessBack > div {
+        margin: 0 1rem;
+    }
+}
+
+.addBusinessForm > select {
+    max-width: unset;
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+    height: 50px;
+    border: none;
+    border-bottom: 1px solid #797979;
+    padding: 15px 30px;
+}
+
+.addBusinessForm input[type=text] {
+    max-width: unset;
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+    height: 50px;
+    border: none;
+    border-bottom: 1px solid #797979;
+    padding: 15px 30px;
+}
+
+    .addBusinessForm input[type=text]::placeholder {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 22px;
+        letter-spacing: 0em;
+        text-align: left;
+        text-transform: capitalize;
+        color: black;
+    }
+
+.form-item {
+    position: relative;
+    display: block;
+    width: 100%;
+    margin: 15px 0;
+}
+
+input[type=file] {
+    max-width: unset;
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+    height: 50px;
+    border: none;
+    border-bottom: 1px solid #797979;
+    padding: 15px 30px;
+}
+
+
+input[type="file"]::-webkit-file-upload-button {
+    background: transparent;
+    color: transparent !important;
+    border: none;
+    position: absolute;
+    right: 0px;
+    top: 12.5px;
+    background: url(../images/Attach1.svg) no-repeat;
+    background-position: right;
+    filter: contrast(50%)brightness(60%);
+}
+
+input[type="file"] {
+    color: transparent;
+    background-color: transparent;
+}
+
+    input[type="file"]:focus {
+        color: transparent !important;
+        background-color: transparent;
+    }

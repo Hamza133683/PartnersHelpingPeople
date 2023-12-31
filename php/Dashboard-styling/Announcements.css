@@ -1,0 +1,200 @@
+﻿body {
+}
+
+.hero-indicators {
+    z-index: 7;
+    bottom: -15px;
+}
+
+    .hero-indicators li {
+        width: 10px !important;
+        height: 10px !important;
+        border-radius: 50%;
+        background-color: rgba(211, 211, 211, 1);
+        margin-right: 1px !important;
+        margin-left: 1px !important;
+    }
+
+        .hero-indicators li.active {
+            background-color: #025599;
+        }
+
+.carousel-item {
+    position: relative !important;
+    height: 100%;
+}
+
+    .carousel-item img {
+        width: 100%;
+        height: 400px;
+        border-radius: 9px;
+        object-fit: cover;
+    }
+
+@media screen and (max-width:767px) {
+    .carousel-item > img {
+        height: 500px;
+        object-fit: cover;
+    }
+}
+
+
+.carousel-item::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(125deg, rgba(35, 31, 32, 1) 15%,rgba(2, 85, 153, 0.4) 40%, rgba(0, 0, 0, 0) 95%);
+    opacity: 0.8;
+    z-index: 2;
+    border-radius: 9px;
+}
+
+.carousel-caption {
+    text-align: left;
+    left: 4%;
+    top: 25px;
+    z-index: 3;
+}
+
+
+.caro-head {
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 32px;
+    letter-spacing: 0em;
+    text-align: left;
+    text-transform: capitalize;
+    color: white;
+    max-width: 500px;
+    margin-bottom: 20px;
+}
+
+.caro-para {
+    text-transform: capitalize;
+    color: white;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: left;
+    max-width: 420px;
+}
+
+.caro-btn {
+    text-transform: capitalize;
+    background-color: #025599;
+    color: white;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    padding: 8px 22px;
+    border: none;
+    border-radius: 6px;
+}
+
+
+.btn-flow {
+    text-align: left;
+    left: 4%;
+    bottom: 35px;
+    display: block;
+    z-index: 3;
+    position: absolute;
+}
+
+
+/*cards with buttons on them */
+
+
+
+.announ-bar {
+    padding: 8px 15px;
+    background-color: rgba(2, 85, 153, 0.4);
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 29px;
+    letter-spacing: 0em;
+    text-align: left;
+    text-transform: capitalize;
+    border-radius: 6px;
+}
+
+
+figure {
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    position: relative;
+    margin-bottom: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  
+}
+
+
+    figure img {
+        width: 100%;
+    }
+
+.card-caption {
+    padding: 10px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-head {
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 14px;
+    letter-spacing: 0em;
+    text-transform: capitalize;
+    text-align: left;
+}
+
+.card-para {
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 14px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #797979;
+    text-transform: capitalize;
+    margin-bottom: 0;
+    max-width: 260px;
+}
+
+.fig-btn {
+    font-size: 8.5px;
+    font-weight: 300;
+    line-height: 12px;
+    letter-spacing: 0.07em;
+    text-align: center;
+    color: white;
+    background-color: #025599;
+    padding: 6px;
+    border: none;
+    border-radius: 4px;
+    margin-top: auto;
+    margin-left:auto;
+}
+
+/*cards with buttons on them */
+
+.RigthSideBar {
+    display: none !important;
+}
+
+.profile.dropdownUser {
+    display: block !important;
+}
+
+.center-bar-head:after {
+    content: "Anuncios"
+}

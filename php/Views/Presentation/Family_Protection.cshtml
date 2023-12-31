@@ -1,0 +1,435 @@
+﻿
+@{
+    ViewBag.Title = "Family_Protection";
+    Layout = "~/Views/Shared/Presentation_Layout.cshtml";
+}
+
+
+
+<link href="~/Presentation-Styling/famliy-protection.css" rel="stylesheet" />
+<link href="~/Presentation-Styling/Presentaion-Bar-styling.css" rel="stylesheet" />
+
+<div class="d-flex align-items-center px-4 mt-3">
+    <h1 class="mb-0 backbtn" style=" font-size: 14px; cursor:pointer; font-weight: 400; line-height: 19px; letter-spacing: 0em; text-align: left; color: rgba(0, 0, 0, 1);">
+        Back
+        <img src="~/images/Back To.svg" alt="" width="25px" />
+    </h1>
+    <h1 class="mb-0 ml-2 nextbtn" style=" font-size: 14px; cursor: pointer; font-weight: 400; line-height: 19px; letter-spacing: 0em; text-align: left; color: rgba(0, 0, 0, 1);">
+        <img src="~/images/next.svg" alt="" width="25px" />
+        Next
+    </h1>
+</div>
+
+<div class="col-12 d-flex align-items-center justify-content-between py-3 px-4 twoImgBar">
+    <img src="~/images/global life.svg" width="120px" />
+    <div class="d-flex flex-column mt-5">
+        <h3 class="olivia-head" style="font-size: 30px; text-align: center; color: #00558E;">
+            FAMILY PROTECTION PLAN BUILDER
+        </h3>
+        <h2 class="olivia-head" style="font-size: 20px; font-weight: 400; line-height: 24px; letter-spacing: 0em; text-align: center;color:black;text-transform:capitalize; ">
+            Añade los miembros de la familia
+        </h2>
+    </div>
+    <div>
+        <img src="~/images/elemphant TV IMage.png" width="40px" class="mr-2" />
+        <img src="~/images/quintero.svg" width="90px" />
+    </div>
+</div>
+
+
+<div class="col-12 px-4">
+
+    <div class="wrapper">
+        <div class="form-content">
+            <form action="#">
+                <div id="wizard">
+                    <!-- SECTION 1 -->
+                    <h4></h4>
+                    <div>
+                        <section id="section1">
+                            <form style="margin:2rem 0;">
+                                <div class="container-fluid inputsWidth">
+                                    <div class="row">
+                                        <div class="col-md-3 col-sm-6">
+                                            <input type="text" name="owner" placeholder="Nombre del titular" />
+                                        </div>
+                                        <div class="col-md-3 col-sm-6">
+                                            <input type="text" name="spouse" placeholder="Nombre del cónyuge" />
+                                        </div>
+                                        <div class="col-md-6">
+                                            @*<input type="text" name="" placeholder="Nombre de cada niño" />*@
+                                            <div class="d-flex align-content-center justify-content-between ">
+                                                <input type="text" name="child" placeholder="Niño #1" class="mr-3" />
+                                                <input type="text" name="child" placeholder="Niño #2" />
+
+                                            </div>
+                                            <div class="d-flex align-content-center justify-content-between ">
+                                                <input type="text" name="child" placeholder="Niño #3" class="mr-3" />
+                                                <input type="text" name="child" placeholder="Niño #4" />
+
+                                            </div>
+                                            <div class="d-flex align-content-center justify-content-between ">
+                                                <input type="text" name="child" placeholder="Niño #5" class="mr-3" />
+                                                <input type="text" name="child" placeholder="Niño #6" />
+
+                                            </div>
+                                            <div class="d-flex align-content-center justify-content-between ">
+                                                <input type="text" name="child" placeholder="Niño #7" class="mr-3" />
+                                                <input type="text" name="child" placeholder="Niño #8" />
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </form>
+                        </section>
+                    </div>
+                       
+                    
+                  
+
+                    <!-- SECTION 2 -->
+                    <h4></h4>
+                    <div id="w">
+                        <section id="section2">
+                            <form style="margin:2rem 0;">
+
+                                <h2 class="FamilyProtectionTopic">
+                                    <span>1.</span> Selecciona los Productos
+                                </h2>
+
+                                <div class="container-fluid inputsWidth mt-1">
+                                    <div class="row flex-wrap">
+                                        <div class="col-md-3 col-sm-6">
+                                            <label class="labelWithInput" name="A7yh1">
+                                                <span>A71 Visita el hospital por accidente o lesión.</span>
+                                                <input type="radio" name="A71yh1" class="A71 product1" onclick="A71radioclicked()" />
+                                            </label>
+                                        </div>
+                                        <div class="col-md-3 col-sm-6">
+                                            <label class="labelWithInput" name="A70">
+                                                <span>H34 Visita al hospital por enfermedades.</span>
+                                                <input type="radio" name="A70" value="123" id="A7031" class="product2" onclick="uncheckIfChecked('A7031')" />
+
+                                            </label>
+                                        </div>
+
+                                        <div class="col-md-3 col-sm-6">
+                                            <label class="labelWithInput" name="A703">
+                                                <span>Freedoom of choice (Gastos finales)</span>
+                                                <input type="radio" name="A703" id="A703" class="product3" onclick="uncheckIfChecked('A703')" />
+
+                                            </label>
+                                        </div>
+                                        <div class="col-md-3 col-sm-6">
+                                            <label class="labelWithInput" name="A732">
+                                                <span>Protector de Ingresos</span>
+                                                <input type="radio" name="A732" id="A732" class="product4" onclick="uncheckIfChecked('A732')" />
+
+                                            </label>
+                                        </div>
+                                        <div class="col-md-3 col-sm-6">
+                                            <label class="labelWithInput" name="A763">
+                                                <span>ADB Fallecimiento por accidente</span>
+                                                <input type="radio" name="A763" id="A763" class="product5" onclick="uncheckIfChecked('A763')" />
+
+                                            </label>
+                                        </div>
+                                        <div class="col-md-3 col-sm-6">
+                                            <label class="labelWithInput" name="A71">
+                                                <span>A71 Muerte Accidental</span>
+                                                <input type="radio" name="A712" id="A71link2" class="A71 product6" onclick="A71radioclicked()" />
+
+                                            </label>
+                                        </div>
+                                        <div class="col-md-3 col-sm-6">
+                                            <label class="labelWithInput" name="A71">
+                                                <span>A71 Desmembramiento por accidente.</span>
+                                                <input type="radio" name="A713" id="A1" class="A71link3 product7" onclick="A71radioclicked('1')" />
+
+                                            </label>
+                                        </div>
+                                        <div class="col-md-3 col-sm-6">
+                                            <label class="labelWithInput">
+                                                <span>CNM Indemnización por Cancer</span>
+                                                <input type="radio" id="A79663" class="product8" onclick="uncheckIfChecked('A79663')" />
+
+                                            </label>
+                                        </div>
+
+                                        <div class="col-md-3 col-sm-6">
+                                            <label class="labelWithInput" name="A796">
+                                                <span>C20 Pago total por Cancer</span>
+                                                <input type="radio" name="A796" id="A7963" class="product9" onclick="uncheckIfChecked('A7963')" />
+
+                                            </label>
+                                        </div>
+                                        <div class="col-md-3 col-sm-6">
+                                            <label class="labelWithInput" name="A774">
+                                                <span>CT Enfermedades críticas</span>
+                                                <input type="radio" name="A774" id="A774" class="uncheckbtn product10" onclick="uncheckIfChecked('A774')" />
+
+                                            </label>
+                                        </div>
+                                        <div class="col-md-3 col-sm-6">
+                                            <label class="labelWithInput" name="A7742">
+                                                <span>Protector de hipotecario</span>
+                                                <input type="radio" name="A7742" id="A796" class="product11" onclick="uncheckIfChecked('A796')" />
+
+                                            </label>
+                                        </div>
+                                        <div class="col-md-3 col-sm-6">
+                                            <label class="labelWithInput" name="A736">
+                                                <span>LPU65 Termino a los 65 años</span>
+                                                <input type="radio" name="A736" id="A736" class="product12" onclick="uncheckIfChecked('A736')" />
+
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <h2 class="FamilyProtectionTopic mt-5">
+                                    <span>2.</span>Cuantas opciones estas cotizando?
+                                </h2>
+
+                                <div class="container-fluid inputsWidth mt-1">
+                                    <div class="row flex-wrap">
+                                        <div class="col-md-3 col-sm-6" onclick="options('1')">
+                                            <label class="labelWithInput" name="options">
+                                                <span>A</span>
+                                                <input type="radio" name="options" />
+
+                                            </label>
+                                        </div>
+                                        <div class="col-md-3 col-sm-6" onclick="options('2')">
+                                            <label class="labelWithInput" name="options">
+                                                <span>A Y B</span>
+                                                <input type="radio" name="options" />
+
+                                            </label>
+                                        </div>
+                                        <div class="col-md-3 col-sm-6">
+                                            <label class="labelWithInput" name="options">
+                                                <span>A, Y B C</span>
+                                                <input type="radio" name="options" />
+
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <h2 class="FamilyProtectionTopic mt-5">
+                                    <span>3.</span> El aplicante es mayor de 65 anos?
+                                </h2>
+
+                                <div class="container-fluid inputsWidth mt-1">
+                                    <div class="row flex-wrap">
+                                        <div class="col-md-3 col-sm-6">
+                                            <label class="labelWithInput" name="ApplicantAge1">
+                                                <span>Yes</span>
+                                                <input type="radio" name="ApplicantAge" onclick="Age65btn('1')" />
+
+                                            </label>
+                                        </div>
+                                        <div class="col-md-3 col-sm-6">
+                                            <label class="labelWithInput" name="ApplicantAge2">
+                                                <span>No</span>
+                                                <input type="radio" name="ApplicantAge" onclick="Age65btn('2')" />
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                              @*  <div class="d-flex justify-content-end">
+                                    <button class="customProduct" type="button">
+                                        Add Custom Product <img src="~/images/plusBlue.svg" class="ml-1" width="13px" style="margin-top: 3px;" />
+                                    </button>
+                                </div>*@
+                            </form>
+
+                        </section>
+                    </div>
+                   
+
+                </div>
+            </form>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+<script src="~/jquery 3.3/jquery-3.3.1.min.js"></script>
+<script src="~/jquery 3.3/jquery.steps.js"></script>
+
+<script>
+    function Age65btn(val) {
+        if (val == "1") {
+            $('#A7031').prop('checked', false);
+            $('#A7031').prop('disabled', true);
+
+            $('#A732').prop('checked', false);
+            $('#A732').prop('disabled', true);
+
+            $('#A763').prop('checked', false);
+            $('#A763').prop('disabled', true);
+
+            $('#A7963').prop('checked', false);
+            $('#A7963').prop('disabled', true);
+
+            $('#A774').prop('checked', false);
+            $('#A774').prop('disabled', true);
+
+            $('#A796').prop('checked', false);
+            $('#A796').prop('disabled', true);
+
+            $('#A736').prop('checked', false);
+            $('#A736').prop('disabled', true);
+        }
+        else if (val == "2") {
+
+            $('#A7031').prop('disabled', false);
+            $('#A732').prop('disabled', false);
+            $('#A763').prop('disabled', false);
+            $('#A7963').prop('disabled', false);
+            $('#A774').prop('disabled', false);
+            $('#A796').prop('disabled', false);
+            $('#A736').prop('disabled', false);
+        }
+
+
+    }
+    function options(val) {
+        localStorage.setItem("options", val);
+    }
+    function uncheckIfChecked(id) {
+        var ischecked = localStorage.getItem(id);
+        if (ischecked == "true") {
+            $('#' + id).prop('checked', false);
+            localStorage.removeItem(id);
+        }
+        else {
+            localStorage.removeItem(id);
+            localStorage.setItem(id, "true");
+        }
+    }
+    function A71radioclicked(val) {
+        if (val == 1) {
+            if ($('.A71').is(':checked')) {
+                $('.A71').prop('checked', false);
+                $('.A71link3').prop('checked', false);
+            }
+            else {
+                $('.A71').prop('checked', true);
+                $('.A71link3').prop('checked', true);
+            }
+        }
+        else {
+            var isChecked = $('#A1').prop('checked');
+            $('.A71').prop('checked', !isChecked);
+            $('.A71link3').prop('checked', !isChecked);
+        }
+    }
+    $(function () {
+        $("#wizard").steps({
+            headerTag: "h4",
+            bodyTag: "div",
+            transitionEffect: "fade",
+            enableAllSteps: true,
+            titleTemplate: '<span class="number">#index#</span>',
+            labels: {
+                current: "",
+                finish: "Next",
+                next: "Next",
+                previous: "Previous"
+            },
+            onStepChanging: function (event, currentIndex, newIndex) {
+                if (newIndex >= 1) {
+                    $('.steps ul li:first-child a .step-arrow').remove();
+                } else {
+                    $('.steps ul li:first-child a').append('<img src="images/step-arrow.png" alt="" class="step-arrow">');
+                }
+
+                if (newIndex === 1) {
+                    $('.steps ul li:nth-child(2) a').append('<img src="images/step-arrow.png" alt="" class="step-arrow">');;
+                } else {
+                    $('.steps ul li:nth-child(2) a .step-arrow').remove();
+                }
+
+                if (newIndex === 2) {
+                    $('.steps ul li:nth-child(3) a').append('<img src="images/step-arrow.png" alt="" class="step-arrow">');;
+                } else {
+                    $('.steps ul li:nth-child(3) a .step-arrow').remove();
+                }
+                return true;
+            }
+        });
+        // Create Steps Image
+        $('.steps ul li:first-child a').append('<img src="images/step-1.png" alt="">').append('<img src="images/step-arrow.png" alt="" class="step-arrow">');
+        $('.steps ul li:nth-child(2) a').append('<img src="images/step-2.png" alt="">');
+        $('.steps ul li:last-child a').append('<img src="images/step-3.png" alt="">');
+
+    })
+</script>
+<script>
+    var a = 0;
+    $(document).ready(function ()
+    {
+        var Section_No = localStorage.getItem("section");
+        if (Section_No == 2) {
+            a = 1;
+            $('.actions ul li:nth-child(2) a').click();
+        }
+
+        localStorage.clear();      
+        $('.actions ul li:last-child a').click(function () {
+
+            var classNames = ['product1', 'product2', 'product3', 'product4', 'product5', 'product6', 'product7', 'product8', 'product9', 'product10', 'product11', 'product12' ];
+            classNames.forEach(function (className)
+            {
+                var isChecked = $('input.' + className + ':checked').length > 0;
+                if (!isChecked)
+                {
+                    localStorage.setItem(className, className);
+                }
+            });
+       window.location.href = `@Url.Action("Family_Protection_SDetail", "Presentation")`;
+       return false;
+   });
+
+        $('.actions ul li:nth-child(2) a').click(function () {
+
+            var values = [];
+            $("input[name='child']").each(function () {
+                if ($(this).val() != "")
+                {
+                    values.push($(this).val());
+
+                }
+            });
+            var owner = $("input[name='owner']").val();
+           var spouse= $("input[name='spouse']").val();
+            localStorage.setItem("childrens", values);
+            localStorage.setItem("owner",owner);
+            localStorage.setItem("spouse", spouse);
+       });
+    });
+    $('.nextbtn').click(function () {
+        if (a == 0) {
+            $('.actions ul li:nth-child(2) a').click();
+            a = 1;
+            localStorage.setItem("section", 2);
+        }
+        else if (a == 1)
+        {
+            $('.actions ul li:nth-child(3) a').click();
+        }
+    });
+    $('.backbtn').click(function () {
+        a = 0;
+        localStorage.removeItem("section");
+        $('.actions ul li:nth-child(1) a').click();
+    });
+</script>

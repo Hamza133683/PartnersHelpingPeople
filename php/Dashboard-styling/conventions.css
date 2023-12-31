@@ -1,0 +1,315 @@
+﻿body {
+}
+
+.hero-indicators {
+    z-index: 7;
+}
+
+    .hero-indicators li {
+        width: 12px !important;
+        height: 12px !important;
+        border-radius: 50%;
+        background-color: rgba(211, 211, 211, 1);
+    }
+
+        .hero-indicators li.active {
+            background-color: #025599;
+        }
+
+.carousel-item {
+    position: relative !important;
+}
+
+    .carousel-item img {
+        width: 100%;
+        border-radius: 9px;
+        height:400px;
+        object-fit:cover;
+    }
+
+    .carousel-item::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: black;
+        opacity: 0.8;
+        z-index: 2;
+        border-radius: 9px;
+    }
+
+.carousel-caption {
+    text-align: left;
+    left: 8%;
+    top: 40px;
+    z-index: 3;
+}
+
+
+.caro-head {
+    font-size: 27px;
+    font-weight: 700;
+    line-height: 44px;
+    letter-spacing: 0em;
+    text-align: left;
+    text-transform: capitalize;
+    color: white;
+}
+
+.caro-para {
+    text-transform: capitalize;
+    color: white;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 29px;
+    letter-spacing: 0em;
+    text-align: left;
+    max-width: 400px;
+}
+
+.caro-btn {
+    text-transform: capitalize;
+    background-color: #025599;
+    color:white;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    padding: 8px 22px;
+    border: none;
+    border-radius: 6px;
+}
+
+
+.btn-flow {
+    text-align: left;
+    left: 8%;
+    bottom: 60px;
+    display: block;
+    z-index: 3;
+    position: absolute;
+}
+
+
+
+.multiple-cards .row .col-md-3 {
+    padding: 0 7px;
+}
+
+.multiple-cards .row .col-md-4 figure {
+    max-height: 100%;
+}
+
+figure {
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+}
+
+
+    figure img {
+        width: 100%;
+    }
+
+.card-caption {
+    background-color: white;
+    border-radius: 0 0 6px 6px;
+    padding: 20px 15px 10px 15px;
+}
+
+.card-head {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 20px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: black;
+    text-transform: capitalize;
+}
+
+.card-para {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0em;
+    text-align: left;
+    text-transform: capitalize;
+    color: #797979;
+    margin-bottom: 8px;
+}
+
+.fig-btn {
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 17px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: white;
+    background-color: #025599;
+    padding: 6px 20px;
+    border: none;
+    border-radius: 4px;
+    text-transform: capitalize;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+
+.add-btn {
+    background-color: #025599;
+    color: white;
+    padding: 4px 13px;
+    border-radius: 4px;
+    border: none;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 29px;
+    letter-spacing: 0em;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    text-transform: capitalize;
+}
+
+.modal-head {
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 39px;
+    letter-spacing: 0em;
+    text-align: left;
+    text-transform: capitalize;
+    color: #025599;
+}
+
+
+
+label.wrapper {
+    position: relative;
+    width: 100%;
+    background-color: transparent;
+    margin-bottom: 0;
+}
+
+
+/*form styling*/
+
+.form {
+    max-width: unset !important;
+    width: 100%;
+}
+
+div.form-item {
+    position: relative;
+    display: block;
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+@media screen and (max-width:557px) {
+    div.form-item {
+        margin-right: 10px;
+    }
+}
+
+
+.file-span {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 20px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: rgba(211, 211, 211, 1);
+    text-transform: capitalize;
+    margin-top: 16px;
+    margin-left: 5px;
+    z-index: 5;
+}
+
+.form-control:focus {
+    box-shadow: none;
+}
+
+input {
+    transition: all 0.2s ease;
+}
+
+    input::placeholder {
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 20px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: rgba(211, 211, 211, 1);
+        text-transform: capitalize;
+    }
+
+    input.form-style {
+        display: block;
+        height: 55px;
+        padding: 5px 10px;
+        border: none;
+        border-bottom: 1px solid rgba(121, 121, 121, 1);
+        border-radius: 0;
+        background-color: transparent;
+        max-width: unset;
+        width: 100%;
+        font-size: 17px;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: rgba(0, 0, 0, 1);
+    }
+
+div.form-item .form-style:focus {
+    outline: none;
+    border: none;
+    border-bottom: 1px solid rgba(121, 121, 121, 1);
+    background-color: transparent;
+}
+
+
+input[type="file"]::-webkit-file-upload-button {
+    background: transparent;
+    color: transparent !important;
+    border: none;
+    position: absolute;
+    right: 20px;
+    top: 12.5px;
+    background: url(../images/Attach.svg) no-repeat;
+    background-position: right;
+}
+
+input[type="file"] {
+    color: transparent;
+    background-color: transparent;
+}
+
+    input[type="file"]:focus {
+        color: transparent !important;
+        background-color: transparent;
+    }
+
+
+
+/*form styling*/
+
+
+
+
+
+.dropdownUser {
+    display: block !important;
+}
+
+.RigthSideBar {
+    display: none !important;
+}
+
+.center-bar-head:after {
+    content: "Convenciones"
+}

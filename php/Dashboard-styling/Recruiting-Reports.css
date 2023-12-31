@@ -1,0 +1,267 @@
+﻿body {
+    font-family: 'Figtree', sans-serif;
+}
+
+
+.cards-width .row .col-sm-4 {
+    padding: 0 5px;
+}
+
+
+.box-card {
+    background-color: white;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.15);
+    padding: 20px 25px;
+    border-radius: 8px;
+    height:100%;
+}
+
+@media screen and (max-width:767px) {
+    .production-table {
+        max-width: 800px;
+        overflow-x: scroll;
+        width: 700px !important;
+    }
+}
+
+
+.card-head {
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 35px;
+    letter-spacing: 0em;
+    text-align: left;
+    text-transform: capitalize;
+    margin-bottom: 7px;
+}
+
+.card-para {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0em;
+    text-transform: capitalize;
+    text-align: left;
+    color: rgba(121, 121, 121, 1);
+    margin-bottom: 5px;
+}
+
+
+
+
+.PR-pills li a {
+    padding: 3px 15px 8px 15px;
+    border-bottom: 1px solid rgba(211, 211, 211, 1);
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: left;
+    text-transform: capitalize;
+    color: rgba(2, 85, 153, 1);
+    text-decoration: none;
+}
+
+    .PR-pills li a.active {
+        border-bottom: 2px solid rgba(2, 85, 153, 1);
+    }
+
+
+.production-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0 3px;
+}
+
+    .production-table thead tr td {
+        background-color: rgba(211, 211, 211, 1);
+        color: rgba(0, 0, 0, 0.5);
+        padding: 15px 10px;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 22px;
+        letter-spacing: 0em;
+        text-align: left;
+        text-transform: capitalize;
+    }
+
+    .production-table tbody tr {
+        box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+    }
+
+        .production-table tbody tr td {
+            background-color: white;
+            padding: 15px 10px;
+            font-size: 15px;
+            font-weight: 400;
+            line-height: 22px;
+            letter-spacing: 0em;
+            text-align: left;
+        }
+
+.active-row {
+    color: green
+}
+
+.non-active-row {
+    color: red;
+}
+
+
+
+.right-side-bar {
+    height: unset !important;
+    padding: 30px 10px 30px 10px !important;
+}
+
+
+
+.add-btn {
+    background-color: #025599;
+    color: white;
+    padding: 4px 13px;
+    border-radius: 4px;
+    border: none;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 29px;
+    letter-spacing: 0em;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    text-transform: capitalize;
+}
+
+.modal-head {
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 39px;
+    letter-spacing: 0em;
+    text-align: left;
+    text-transform: capitalize;
+    color: #025599;
+}
+
+
+
+label.wrapper {
+    position: relative;
+    width: 100%;
+    background-color: transparent;
+    margin-bottom: 0;
+}
+
+
+/*form styling*/
+
+.form {
+    max-width: unset !important;
+    width: 100%;
+}
+
+div.form-item {
+    position: relative;
+    display: block;
+    margin-bottom: 12px;
+    width: 100%;
+}
+
+@media screen and (max-width:557px) {
+    div.form-item {
+        margin-right: 10px;
+    }
+}
+
+
+.file-span {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 20px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: rgba(211, 211, 211, 1);
+    text-transform: capitalize;
+    margin-top: 16px;
+    margin-left: 5px;
+    z-index: 5;
+}
+
+.form-control:focus {
+    box-shadow: none;
+}
+
+input {
+    transition: all 0.2s ease;
+}
+
+    input::placeholder {
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 20px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: rgba(211, 211, 211, 1);
+        text-transform: capitalize;
+    }
+
+    input.form-style {
+        display: block;
+        height: 55px;
+        padding: 5px 10px;
+        border: none;
+        border-bottom: 1px solid rgba(121, 121, 121, 1);
+        border-radius: 0;
+        background-color: transparent;
+        max-width: unset;
+        width: 100%;
+        font-size: 17px;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: rgba(0, 0, 0, 1);
+    }
+
+div.form-item .form-style:focus {
+    outline: none;
+    border: none;
+    border-bottom: 1px solid rgba(121, 121, 121, 1);
+    background-color: transparent;
+}
+
+
+input[type="file"]::-webkit-file-upload-button {
+    background: transparent;
+    color: transparent !important;
+    border: none;
+    position: absolute;
+    right: 20px;
+    top: 12.5px;
+    background: url(../images/Attach.svg) no-repeat;
+    background-position: right;
+}
+
+input[type="file"] {
+    color: transparent;
+    background-color: transparent;
+}
+
+    input[type="file"]:focus {
+        color: transparent !important;
+        background-color: transparent;
+    }
+
+
+
+/*form styling*/
+
+
+.center-bar-head:after {
+    content: "Reportes de Reclutamiento"
+}
+
+@media screen and (max-width:992px) {
+    .right-side-bar {
+        height: 100% !important;
+    }
+}

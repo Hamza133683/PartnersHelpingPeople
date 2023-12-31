@@ -1,0 +1,812 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>FamlyProtectionDetail</title>
+
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-3.6.4.min.js"></script>
+    <script src="~/Scripts/bootstrap.js"></script>
+
+    <link href="~/Presentation-Styling/FamilyProtectionDetails.css" rel="stylesheet" />
+
+
+
+</head>
+<body>
+
+
+    <script>
+
+        function openSideNav() {
+
+            jQuery("#side-menu").addClass("aside-show");
+            jQuery("#overlay").addClass("overlay");
+        }
+
+        function closeSideNav() {
+
+            jQuery("#side-menu").removeClass("aside-show");
+            jQuery("#overlay").removeClass("overlay");
+        }
+
+    </script>
+
+
+    <div id="overlay" onclick="closeSideNav()"></div>
+
+    <div class="aside" id="side-menu" style="overflow-y:hidden !important;">
+        <div class="d-flex align-items-center justify-content-start" style="padding-left:30px;padding-bottom:15px;">
+            <a href=" @Url.Action("Index","Dashboards")">
+                <img src="~/images/white logo.svg" width="135px" />
+            </a>
+        </div>
+        <div class="side-bar">
+
+            <ul class="side-bar-list">
+                <li class="one six">
+                    <a href="@Url.Action("Announcements","Dashboards")">
+                        <div class="d-flex align-items-center justify-content-center   mr-3">
+                            <img src="~/images/announcement.svg" width="32px" />
+                        </div>
+                        Anuncios
+                    </a>
+                </li>
+                <li class="one">
+                    <a href="@Url.Action("Hired_Agent","Dashboards")">
+                        <div class="d-flex align-items-center justify-content-center   mr-3">
+                            <img src="~/images/hired agent.svg" width="32px" />
+                        </div>
+                        De contratado a ser Agente
+                    </a>
+                </li>
+                <li class="one">
+                    <a href="@Url.Action("Agent_Training","Dashboards")">
+                        <div class="d-flex align-items-center justify-content-center   mr-3">
+                            <img src="~/images/agent Training.svg" width="32px" />
+                        </div>
+                        Entrenamiento para nuevos agentes
+                    </a>
+                </li>
+                <li class="one">
+                    <a href="@Url.Action("Start_Presentation","Dashboards")">
+                        <div class="d-flex align-items-center justify-content-center   mr-3">
+                            <img src="~/images/Microsoft PowerPoint.svg" width="32px" />
+                        </div>
+                        iniciar presentación
+                    </a>
+                </li>
+                <li class="one">
+                    <a href="@Url.Action("Continue_Training","Dashboards")">
+                        <div class="d-flex align-items-center justify-content-center   mr-3">
+                            <img src="~/images/Development.svg" width="32px" />
+                        </div>
+                        Educación y desarrollo profesional
+                    </a>
+                </li>
+                <li class="one">
+                    <a href="@Url.Action("Current_Contests","Dashboards")">
+                        <div class="d-flex align-items-center justify-content-center   mr-3">
+                            <img src="~/images/Prize.svg" width="32px" />
+                        </div>
+                        Concursos Actuales
+                    </a>
+                </li>
+                <li class="one">
+                    <a href="@Url.Action("Executive_Council","Dashboards")">
+                        <div class="d-flex align-items-center justify-content-center   mr-3">
+                            <img src="~/images/City Hall.svg" width="32px" />
+                        </div>
+                        executive council
+                    </a>
+                </li>
+                <li class="one">
+                    <a href="@Url.Action("Free_Benefits","Dashboards")">
+                        <div class="d-flex align-items-center justify-content-center   mr-3">
+                            <img src="~/images/Extra Features.svg" width="32px" />
+                        </div>
+                        Beneficios sin costo
+                    </a>
+                </li>
+                <li class="one">
+                    <a href="@Url.Action("Reports","Dashboards")">
+                        <div class="d-flex align-items-center justify-content-center   mr-3">
+                            <img src="~/images/report and goals.svg" width="32px" />
+                        </div>
+                        Reportes de actividad
+                    </a>
+                </li>
+                <li class="one">
+                    <a href="@Url.Action("Production_Reports","Dashboards")">
+                        <div class="d-flex align-items-center justify-content-center   mr-3">
+                            <img src="~/images/Report File.svg" width="32px" />
+                        </div>
+                        Reportes de Producción
+                    </a>
+                </li>
+                <li class="one">
+                    <a href="@Url.Action("My_Goals","Dashboards")">
+                        <div class="d-flex align-items-center justify-content-center   mr-3">
+                            <img src="~/images/Goal.svg" width="32px" />
+                        </div>
+                        Metas de producción
+                    </a>
+                </li>
+                <li class="one">
+                    <a href="@Url.Action("IE_Calculator","Dashboards")">
+                        <div class="d-flex align-items-center justify-content-center   mr-3">
+                            <img src="~/images/Calculator.svg" width="32px" />
+                        </div>
+                        Calculador de Ingresos y Gastos
+                    </a>
+                </li>
+                <li class="one">
+                    <a href="@Url.Action("Recruiting_Reports","Dashboards")">
+                        <div class="d-flex align-items-center justify-content-center   mr-3">
+                            <img src="~/images/Human Resources.svg" width="32px" />
+                        </div>
+                        Reportes de Reclutamiento
+                    </a>
+                </li>
+
+                <li class="one">
+                    <a href="@Url.Action("Agency_Resource_Center","Dashboards")">
+                        <div class="d-flex align-items-center justify-content-center   mr-3">
+                            <img src="~/images/Data Center.svg" width="32px" />
+                        </div>
+                        agency resource center
+                    </a>
+                </li>
+                <li class="one">
+                    <a href="@Url.Action("Follow_Us","Dashboards")">
+                        <div class="d-flex align-items-center justify-content-center   mr-3">
+                            <img src="~/images/Add User Male.svg" width="32px" />
+                        </div>
+                        Siguenos en Redes
+                    </a>
+                </li>
+                <li class="one">
+                    <a href="@Url.Action("Virtual_Card","Dashboards")">
+                        <div class="d-flex align-items-center justify-content-center   mr-3">
+                            <img src="~/images/Credit Card.svg" width="32px" />
+                        </div>
+                        switch virtual card
+                    </a>
+                </li>
+                <li class="one">
+                    <a href="@Url.Action("Legacy_Rewards","Dashboards")">
+                        <div class="d-flex align-items-center justify-content-center   mr-3">
+                            <img src="~/images/Giveaway.svg" width="32px" />
+                        </div>
+                        legacy rewards
+                    </a>
+                </li>
+                <li class="one">
+                    <a href="@Url.Action("Documents","Dashboards")">
+                        <div class="d-flex align-items-center justify-content-center   mr-3">
+                            <img src="~/images/Documents.svg" width="32px" />
+                        </div>
+                        Documentos
+                    </a>
+                </li>
+                <li class="one">
+                    <a href="@Url.Action("Career_Path","Dashboards")">
+                        <div class="d-flex align-items-center justify-content-center   mr-3">
+                            <img src="~/images/Personal Growth.svg" width="32px" />
+                        </div>
+                        pista de carrera
+                    </a>
+                </li>
+                <li class="one">
+                    <a href="@Url.Action("Helpful_Links","Dashboards")">
+                        <div class="d-flex align-items-center justify-content-center   mr-3">
+                            <img src="~/images/Link.svg" width="32px" />
+                        </div>
+                        Enlaces Útiles
+                    </a>
+                </li>
+                <li class="one">
+                    <a href="@Url.Action("Conventions","Dashboards")">
+                        <div class="d-flex align-items-center justify-content-center   mr-3">
+                            <img src="~/images/Internet Connection.svg" width="32px" />
+                        </div>
+                        Convenciones
+                    </a>
+                </li>
+                <li class="one">
+                    <a href="@Url.Action("Graphic_Material","Dashboards")">
+                        <div class="d-flex align-items-center justify-content-center   mr-3">
+                            <img src="~/images/Photo Editor.svg" width="32px" />
+                        </div>
+                        Material Grafico
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+
+
+    <div class="container-fluid px-0">
+        <div class="row">
+            <div class="col-lg-8 col-12 pr-0">
+                <div class="d-flex">
+                    <div class="sideTabBar">
+                        <a onclick="openSideNav()" style="cursor:pointer;padding:5px 20px;">
+                            <img src="~/images/Menu Rounded.svg" style="filter:brightness(0)" width="35px" />
+                        </a>
+
+                        <ul class="nav nav-tabs sideBarNav" role="tablist">
+                            <li role="presentation" class="active">
+                                <a class="active" data-toggle="pill" href="#home">
+                                    A71
+                                </a>
+                            </li>
+                            <li>
+                                <a data-toggle="tab" href="#menu1">
+                                    H34
+                                </a>
+                            </li>
+                            <li>
+                                <a data-toggle="tab" href="#menu2">
+                                    FC
+                                </a>
+                            </li>
+                            <li>
+                                <a data-toggle="tab" href="#menu3">
+                                    IP
+                                </a>
+                            </li>
+                            <li>
+                                <a data-toggle="tab" href="#menu4">
+                                    ABD
+                                </a>
+                            </li>
+                            <li>
+                                <a data-toggle="tab" href="#menu5">
+                                    A71(MA)
+                                </a>
+                            </li>
+                            <li>
+                                <a data-toggle="tab" href="#menu6">
+                                    A71(DA)
+                                </a>
+                            </li>
+                            <li>
+                                <a data-toggle="tab" href="#menu7">
+                                    CNM
+                                </a>
+                            </li>
+                            <li>
+                                <a data-toggle="tab" href="#menu8">
+                                    C20
+                                </a>
+                            </li>
+                            <li>
+                                <a data-toggle="tab" href="#menu9">
+                                    CT
+                                </a>
+                            </li>
+                            <li>
+                                <a data-toggle="tab" href="#menu10">
+                                    PH
+                                </a>
+                            </li>
+                            <li>
+                                <a data-toggle="tab" href="#menu11">
+                                    LPU65
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-content" style="padding:15px ;width:100%;overflow:hidden;min-height:100vh;">
+                        <div class="d-flex align-items-center">
+                            <h1 class="mb-0" style=" font-size: 14px; font-weight: 400; line-height: 19px; letter-spacing: 0em; text-align: left; color: rgba(0, 0, 0, 1);">
+                                Back
+                                <img src="~/images/Back To.svg" alt="" width="25px" />
+                            </h1>
+                            <h1 class="mb-0 ml-2" style=" font-size: 14px; font-weight: 400; line-height: 19px; letter-spacing: 0em; text-align: left; color: rgba(0, 0, 0, 1);">
+                                <img src="~/images/next.svg" alt="" width="25px" />
+                                Next
+                            </h1>
+                        </div>
+                        <h3 class="tabHead">
+                            Family Protection Plan
+                        </h3>
+                        <div class="d-flex justify-content-end w-100">
+                            <h1 style="font-size: 28px; font-weight: 700; line-height: 34px; letter-spacing: 0em; text-align: left; color: rgba(0, 85, 142, 1);">
+                                Watch Video
+                                <img src="~/images/youtubeIconImg.svg" alt="" width="45px" />
+                            </h1>
+                        </div>
+
+
+
+                        <div id="home" class="tab-pane active">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <p class="FullViewTablePara d-inline-block">
+                                    <span>A71</span> Hospital visit dua to accident injury
+                                </p>
+                                <a href="#" style=" font-size: 18px; font-weight: 400; line-height: 29px; letter-spacing: 0em; text-align: left;color:#797979;">
+                                    Edit
+                                    <img src="~/images/edit creat Imge.png" alt="" />
+                                </a>
+                            </div>
+
+                            <div class="overflowContainer" style="">
+                                <div class="scrollWidth" style="">
+                                    <table class="FullViewTable" style="">
+                                        <thead>
+                                            <tr>
+                                                <td></td>
+                                                <td>
+                                                    Primary
+                                                </td>
+                                                <td>
+                                                    Spouse
+                                                </td>
+                                                <td>
+                                                    children1
+                                                </td>
+
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td></td>
+                                                <td>
+                                                    <div>
+                                                        <div>Opción A</div>
+                                                        <div>Opción B</div>
+                                                        <div>Opción C</div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div>
+                                                        <div>Opción A</div>
+                                                        <div>Opción B</div>
+                                                        <div>Opción C</div>
+                                                    </div>
+                                                </td>
+                                                <td>
+                                                    <div>
+                                                        <div>Opción A</div>
+                                                        <div>Opción B</div>
+                                                        <div>Opción C</div>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                            <tr class='tr-hover-class'>
+                                                <td>
+                                                    <h1>
+                                                        daily hospital stay
+                                                    </h1>
+                                                </td>
+                                                <td class="DropDownSelects">
+                                                    <div>
+                                                        <select class="options1">
+                                                            <option>50$</option>
+                                                            <option>75$</option>
+                                                            <option>100$</option>
+                                                            <option>150$</option>
+                                                        </select>
+                                                        <select class="options2">
+                                                            <option>50$</option>
+                                                            <option>75$</option>
+                                                            <option>100$</option>
+                                                            <option>150$</option>
+                                                        </select>
+                                                        <select class="options3">
+                                                            <option>50$</option>
+                                                            <option>75$</option>
+                                                            <option>100$</option>
+                                                            <option>150$</option>
+                                                        </select>
+
+                                                    </div>
+                                                </td>
+                                                <td class="DropDownSelects">
+                                                    <div>
+                                                        <select class="options1">
+                                                            <option>50$</option>
+                                                            <option>75$</option>
+                                                            <option>100$</option>
+                                                            <option>150$</option>
+                                                        </select>
+                                                        <select class="options2">
+                                                            <option>50$</option>
+                                                            <option>75$</option>
+                                                            <option>100$</option>
+                                                            <option>150$</option>
+                                                        </select>
+                                                        <select class="options3">
+                                                            <option>50$</option>
+                                                            <option>75$</option>
+                                                            <option>100$</option>
+                                                            <option>150$</option>
+                                                        </select>
+
+                                                    </div>
+                                                </td>
+                                                <td class="DropDownSelects">
+                                                    <div>
+                                                        <select class="options1">
+                                                            <option>50$</option>
+                                                            <option>75$</option>
+                                                            <option>100$</option>
+                                                            <option>150$</option>
+                                                        </select>
+                                                        <select class="options2">
+                                                            <option>50$</option>
+                                                            <option>75$</option>
+                                                            <option>100$</option>
+                                                            <option>150$</option>
+                                                        </select>
+                                                        <select class="options3">
+                                                            <option>50$</option>
+                                                            <option>75$</option>
+                                                            <option>100$</option>
+                                                            <option>150$</option>
+                                                        </select>
+
+                                                    </div>
+                                                </td>
+
+
+
+                                            </tr>
+
+                                            <tr class='tr-hover-class'>
+                                                <td>
+                                                    <h1>
+                                                        intensive care unit
+                                                    </h1>
+                                                </td>
+                                                <td class="DropDownSelects">
+                                                    <div>
+                                                        <select class="options1">
+                                                            <option>50$</option>
+                                                            <option>75$</option>
+                                                            <option>100$</option>
+                                                            <option>150$</option>
+                                                        </select>
+                                                        <select class="options2">
+                                                            <option>50$</option>
+                                                            <option>75$</option>
+                                                            <option>100$</option>
+                                                            <option>150$</option>
+                                                        </select>
+                                                        <select class="options3">
+                                                            <option>50$</option>
+                                                            <option>75$</option>
+                                                            <option>100$</option>
+                                                            <option>150$</option>
+                                                        </select>
+
+                                                    </div>
+                                                </td>
+                                                <td class="DropDownSelects">
+                                                    <div>
+                                                        <select class="options1">
+                                                            <option>50$</option>
+                                                            <option>75$</option>
+                                                            <option>100$</option>
+                                                            <option>150$</option>
+                                                        </select>
+                                                        <select class="options2">
+                                                            <option>50$</option>
+                                                            <option>75$</option>
+                                                            <option>100$</option>
+                                                            <option>150$</option>
+                                                        </select>
+                                                        <select class="options3">
+                                                            <option>50$</option>
+                                                            <option>75$</option>
+                                                            <option>100$</option>
+                                                            <option>150$</option>
+                                                        </select>
+
+                                                    </div>
+                                                </td>
+                                                <td class="DropDownSelects">
+                                                    <div>
+                                                        <select class="options1">
+                                                            <option>50$</option>
+                                                            <option>75$</option>
+                                                            <option>100$</option>
+                                                            <option>150$</option>
+                                                        </select>
+                                                        <select class="options2">
+                                                            <option>50$</option>
+                                                            <option>75$</option>
+                                                            <option>100$</option>
+                                                            <option>150$</option>
+                                                        </select>
+                                                        <select class="options3">
+                                                            <option>50$</option>
+                                                            <option>75$</option>
+                                                            <option>100$</option>
+                                                            <option>150$</option>
+                                                        </select>
+
+                                                    </div>
+                                                </td>
+
+
+
+                                            </tr>
+
+                                            <tr class='tr-hover-class'>
+                                                <td>
+                                                    <h1>
+                                                        emergency
+                                                    </h1>
+                                                </td>
+                                                <td class="DropDownSelects">
+                                                    <div>
+                                                        <select class="options1">
+                                                            <option>50$</option>
+                                                            <option>75$</option>
+                                                            <option>100$</option>
+                                                            <option>150$</option>
+                                                        </select>
+                                                        <select class="options2">
+                                                            <option>50$</option>
+                                                            <option>75$</option>
+                                                            <option>100$</option>
+                                                            <option>150$</option>
+                                                        </select>
+                                                        <select class="options3">
+                                                            <option>50$</option>
+                                                            <option>75$</option>
+                                                            <option>100$</option>
+                                                            <option>150$</option>
+                                                        </select>
+
+                                                    </div>
+                                                </td>
+                                                <td class="DropDownSelects">
+                                                    <div>
+                                                        <select class="options1">
+                                                            <option>50$</option>
+                                                            <option>75$</option>
+                                                            <option>100$</option>
+                                                            <option>150$</option>
+                                                        </select>
+                                                        <select class="options2">
+                                                            <option>50$</option>
+                                                            <option>75$</option>
+                                                            <option>100$</option>
+                                                            <option>150$</option>
+                                                        </select>
+                                                        <select class="options3">
+                                                            <option>50$</option>
+                                                            <option>75$</option>
+                                                            <option>100$</option>
+                                                            <option>150$</option>
+                                                        </select>
+
+                                                    </div>
+                                                </td>
+                                                <td class="DropDownSelects">
+                                                    <div>
+                                                        <select class="options1">
+                                                            <option>50$</option>
+                                                            <option>75$</option>
+                                                            <option>100$</option>
+                                                            <option>150$</option>
+                                                        </select>
+                                                        <select class="options2">
+                                                            <option>50$</option>
+                                                            <option>75$</option>
+                                                            <option>100$</option>
+                                                            <option>150$</option>
+                                                        </select>
+                                                        <select class="options3">
+                                                            <option>50$</option>
+                                                            <option>75$</option>
+                                                            <option>100$</option>
+                                                            <option>150$</option>
+                                                        </select>
+
+                                                    </div>
+                                                </td>
+
+
+
+                                            </tr>
+
+
+                                        </tbody>
+                                    </table>
+
+                                </div>
+                            </div>
+
+
+
+
+
+
+                        </div>
+                        <div id="menu1" class="tab-pane ">
+                            <h3>Menu 1</h3>
+                            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        </div>
+                        <div id="menu2" class="tab-pane ">
+                            <h3>Menu 2</h3>
+                            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+                        </div>
+                        <div id="menu3" class="tab-pane ">
+                            <h3>Menu 3</h3>
+                            <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                        </div>
+                        <div id="menu4" class="tab-pane ">
+                            <h3>Menu 3</h3>
+                            <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                        </div>
+
+
+
+
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-lg-4 px-0">
+
+
+                <div id="demo" class="carousel slide h-100" data-ride="carousel">
+                    <!-- The slideshow -->
+                    <div class="carousel-inner h-100">
+                        <div class="carousel-item active">
+
+                            <div class="h-100 d-flex align-content-end position-relative">
+                                <img src="~/images/DetailCarousel (1).png" alt="" class="detailBackImg" />
+                                <p class="mt-auto mb-4 mx-4 " style=" font-size: 14px; font-weight: 400; line-height: 19px; letter-spacing: 0em; text-align: left;color:white; text-transform:capitalize; z-index:2;padding-top:5rem;">
+                                    <strong class="d-block">A71:</strong>
+                                    Los accidentes ocurren de manera inesperada, por lo que es fundamental estar prevenidos. ¿Alguna vez te has cuestionado quién se haría cargo de los días laborales que podrías perder en caso de una incapacidad? Precisamente para abordar esta situación, la cobertura de A71 ha sido meticulosamente diseñada. Su propósito es cubrir esos días de inactividad y proporcionarte un pago directo, brindándote la tranquilidad que necesitas.
+                                </p>
+                            </div>
+
+                        </div>
+                        <div class="carousel-item">
+
+                            <div class="h-100 d-flex align-content-end position-relative">
+                                <img src="~/images/DetailCarousel (12).png" alt="" class="detailBackImg" />
+                                <p class="mt-auto mb-4 mx-4 " style=" font-size: 14px; font-weight: 400; line-height: 19px; letter-spacing: 0em; text-align: left;color:white; text-transform:capitalize; z-index:2;padding-top:5rem;">
+                                    <strong class="d-block">   H34:</strong>
+                                 
+                                    Una enfermedad puede manifestarse en cualquier momento, resultando en la pérdida de días laborales. El plan H34 ha sido creado con el propósito de brindarte compensación en caso de hospitalización debido a una enfermedad, asegurando la restitución de los días laborados que puedas llegar a perder.
+                                </p>
+                            </div>
+
+                        </div>
+                        <div class="carousel-item">
+
+                            <div class="h-100 d-flex align-content-end position-relative">
+                                <img src="~/images/DetailCarousel (11).png" alt="" class="detailBackImg" />
+                                <p class="mt-auto mb-4 mx-4 " style=" font-size: 14px; font-weight: 400; line-height: 19px; letter-spacing: 0em; text-align: left;color:white; text-transform:capitalize; z-index:2;padding-top:5rem;">
+                                    <strong class="d-block">Freedom of Choice (Libertad de elección):</strong>
+                                  
+                                    El fallecimiento es inevitable y en el momento en que ocurra, puede generar cargas económicas para una familia.
+                                    El certificado Freedom of Choice brinda la seguridad de que los gastos funerarios estarán cubiertos, aliviando así esta carga financiera.
+                                </p>
+                            </div>
+
+                        </div>
+                        <div class="carousel-item">
+
+                            <div class="h-100 d-flex align-content-end position-relative">
+                                <img src="~/images/DetailCarousel (10).png" alt="" class="detailBackImg" />
+                                <p class="mt-auto mb-4 mx-4 " style=" font-size: 14px; font-weight: 400; line-height: 19px; letter-spacing: 0em; text-align: left;color:white; text-transform:capitalize; z-index:2;padding-top:5rem;">
+                                    <strong class="d-block">Protector de Ingresos:</strong>
+                                    
+                                    La cobertura de protección de ingresos fue diseñada con el propósito de reemplazar el activo más crucial para todas las familias: sus ingresos económicos. ¿Alguna vez se ha planteado cómo se mantendrán sus seres queridos cuando el soporte financiero que usted provee ya no esté disponible? Es en ese momento cuando cobra relevancia el protector de ingresos, asegurando un flujo económico constante para su familia.
+                                </p>
+                            </div>
+
+                        </div>
+                        <div class="carousel-item">
+
+                            <div class="h-100 d-flex align-content-end position-relative">
+                                <img src="~/images/DetailCarousel (9).png" alt="" class="detailBackImg" />
+                                <p class="mt-auto mb-4 mx-4 " style=" font-size: 14px; font-weight: 400; line-height: 19px; letter-spacing: 0em; text-align: left;color:white; text-transform:capitalize; z-index:2;padding-top:5rem;">
+                                    <strong class="d-block">Beneficio por Fallecimiento Accidental:</strong>
+                                    
+                                    Esta cobertura proporciona a sus beneficiarios importantes sumas de dinero en caso de que el titular fallezca debido a un accidente. Lamentablemente, los accidentes son una de las principales causas de fallecimiento en los Estados Unidos. El Beneficio por Fallecimiento Accidental asegura a las familias un respaldo económico sólido en momentos críticos.
+                                </p>
+                            </div>
+
+                        </div>
+                        <div class="carousel-item">
+
+                            <div class="h-100 d-flex align-content-end position-relative">
+                                <img src="~/images/DetailCarousel (8).png" alt="" class="detailBackImg" />
+                                <p class="mt-auto mb-4 mx-4 " style=" font-size: 14px; font-weight: 400; line-height: 19px; letter-spacing: 0em; text-align: left;color:white; text-transform:capitalize; z-index:2;padding-top:5rem;">
+                                    El beneficio por desmembramiento ofrece protección a los miembros de la familia en caso de que sufran la pérdida de una extremidad debido a un accidente inesperado, ya sea en las categorías estándar, automovilística o de transporte público. Este beneficio se paga mientras la persona está viva, brindando un alivio significativo a los familiares cuando se enfrentan a un accidente que afecta el bienestar de un miembro en vida.
+                                </p>
+                            </div>
+
+                        </div>
+                        <div class="carousel-item">
+
+                            <div class="h-100 d-flex align-content-end position-relative">
+                                <img src="~/images/DetailCarousel (7).png" alt="" class="detailBackImg" />
+                                <p class="mt-auto mb-4 mx-4 " style=" font-size: 14px; font-weight: 400; line-height: 19px; letter-spacing: 0em; text-align: left;color:white; text-transform:capitalize; z-index:2;padding-top:5rem;">
+                                     
+                                    El beneficio por desmembramiento ofrece protección a los miembros de la familia en caso de que sufran la pérdida de una extremidad debido a un accidente inesperado, ya sea en las categorías estándar, automovilística o de transporte público. Este beneficio se paga mientras la persona está viva, brindando un alivio significativo a los familiares cuando se enfrentan a un accidente que afecta el bienestar de un miembro en vida.
+                                </p>
+                            </div>
+
+                        </div>
+                        <div class="carousel-item">
+
+                            <div class="h-100 d-flex align-content-end position-relative">
+                                <img src="~/images/DetailCarousel (6).png" alt="" class="detailBackImg" />
+                                <p class="mt-auto mb-4 mx-4 " style=" font-size: 14px; font-weight: 400; line-height: 19px; letter-spacing: 0em; text-align: left;color:white; text-transform:capitalize; z-index:2;padding-top:5rem;">
+                                     
+                                    El beneficio de cobertura por cáncer ha sido diseñado para brindar a los beneficiarios hasta $150,000 en gastos relacionados con una de las enfermedades más comunes y que causa un alto número de fallecimientos en los Estados Unidos.
+                                </p>
+                            </div>
+
+                        </div>
+                        <div class="carousel-item">
+
+                            <div class="h-100 d-flex align-content-end position-relative">
+                                <img src="~/images/DetailCarousel (5).png" alt="" class="detailBackImg" />
+                                <p class="mt-auto mb-4 mx-4 " style=" font-size: 14px; font-weight: 400; line-height: 19px; letter-spacing: 0em; text-align: left;color:white; text-transform:capitalize; z-index:2;padding-top:5rem;">
+                                     
+                                    La cobertura C20 (Pago Total por Cáncer) ha sido diseñada para proporcionar un pago único en caso de diagnóstico de cáncer, una enfermedad bastante común en los Estados Unidos.
+                                </p>
+                            </div>
+
+                        </div>
+                        <div class="carousel-item">
+
+                            <div class="h-100 d-flex align-content-end position-relative">
+                                <img src="~/images/DetailCarousel (4).png" alt="" class="detailBackImg" />
+                                <p class="mt-auto mb-4 mx-4 " style=" font-size: 14px; font-weight: 400; line-height: 19px; letter-spacing: 0em; text-align: left;color:white; text-transform:capitalize; z-index:2;padding-top:5rem;">
+                                    El Beneficio de Enfermedad Crítica (CI) brinda respaldo económico a los miembros en caso de enfermedades específicas que pueden afectar a cualquiera. Estas incluyen infartos, derrames cerebrales, pérdida de la vista y más. Como todos los beneficios de nuestra organización, este proporciona tranquilidad a su familia para afrontar situaciones imprevistas.
+                                </p>
+                            </div>
+
+                        </div>
+                        <div class="carousel-item">
+
+                            <div class="h-100 d-flex align-content-end position-relative">
+                                <img src="~/images/DetailCarousel (3).png" alt="" class="detailBackImg" />
+                                <p class="mt-auto mb-4 mx-4 " style=" font-size: 14px; font-weight: 400; line-height: 19px; letter-spacing: 0em; text-align: left;color:white; text-transform:capitalize; z-index:2;padding-top:5rem;">
+                                    El beneficio de Cobertura de Hipoteca está diseñado para brindar apoyo al cubrir un porcentaje del costo de su propiedad en situaciones específicas en las que no pueda afrontar el pago. Nuestros beneficios no solo protegen sus ingresos, sino también sus propiedades, asegurando una cobertura integral.
+                                </p>
+                            </div>
+
+                        </div>
+                        <div class="carousel-item">
+
+                            <div class="h-100 d-flex align-content-end position-relative">
+                                <img src="~/images/DetailCarousel (2).png" alt="" class="detailBackImg" />
+                                <p class="mt-auto mb-4 mx-4 " style=" font-size: 14px; font-weight: 400; line-height: 19px; letter-spacing: 0em; text-align: left;color:white; text-transform:capitalize; z-index:2;padding-top:5rem;">
+                                    El LPU65 es una cobertura a término hasta los 65 años que proporciona una indemnización a sus miembros hasta alcanzar esa edad.
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>

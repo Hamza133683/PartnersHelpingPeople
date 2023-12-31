@@ -1,0 +1,128 @@
+﻿body {
+}
+
+.follow-head-top {
+    font-size: 50px;
+    font-weight: 600;
+    line-height: 65px;
+    letter-spacing: 0em;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.follow-head-top1 {
+    font-size: 52px;
+    font-weight: 800;
+    line-height: 65px;
+    letter-spacing: 0em;
+    text-align: center;
+}
+
+
+
+.follow-width {
+    max-width: 800px;
+}
+
+    .follow-width .row > div {
+        padding: 0 7px;
+    }
+
+figure {
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.15);
+    border-radius: 15px 15px 10px 10px;
+}
+
+    figure img {
+        width: 100%;
+    }
+
+figcaption {
+    padding: 20px;
+}
+
+.follow-head {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    text-transform: capitalize;
+    margin-bottom: 0;
+}
+
+.follow-para {
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0em;
+    text-align: left;
+    text-transform: capitalize;
+    margin-bottom: 0;
+}
+
+.follow-btn {
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 17px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: white;
+    background-color: #025599;
+    padding: 6px 25px;
+    border: none;
+    border-radius: 3px;
+    text-transform: capitalize;
+}
+
+.small-text {
+    font-size: 9px;
+    font-weight: 400;
+    line-height: 12px;
+    letter-spacing: 0em;
+    text-align: left;
+    text-transform: capitalize;
+}
+
+.location-box {
+    box-shadow: 5px 5px 20px rgba(0,0,0,0.15);
+    border-radius: 6px;
+    padding: 8px 10px 15px 10px;
+    width: 45px;
+    height: 45px;
+    text-align: center;
+}
+
+
+.follow-web {
+    font-size: 35px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 0;
+    margin-top: 20px;
+}
+
+.web-link {
+    font-size: 22px;
+    text-align: center;
+    margin-bottom: 0;
+    text-decoration: underline;
+    color: #0589C8;
+    margin-bottom: 20px;
+}
+
+
+
+
+.dropdownUser {
+    display: block !important;
+}
+
+.RigthSideBar {
+    display: none !important;
+}
+
+
+.center-bar-head:after {
+    content: "Siguenos en Redes"
+}

@@ -1,0 +1,1238 @@
+﻿
+@{
+    ViewBag.Title = "Hired_Agent";
+    Layout = "~/Views/Shared/Dashboards_Layout.cshtml";
+}
+<link href="~/Dashboard-styling/Hired_Agent.css" rel="stylesheet" />
+<link href="~/Dashboard-styling/bars_Stylings.css" rel="stylesheet" />
+
+
+<link rel="stylesheet" type="text/css" href="~/LoadingBar/dist/loading-bar.css" />
+<style type="text/css">
+    .ldBar path.mainline {
+        stroke-width: 4;
+        stroke: #87BAAD;
+        stroke-linecap: round;
+    }
+
+    .ldBar path.baseline {
+        stroke-width: 3;
+        stroke: rgba(211, 211, 211, 1);
+        stroke-linecap: round;
+        filter: url(#custom-shadow);
+    }
+</style>
+
+
+
+<script type="text/javascript" src="~/LoadingBar/dist/loading-bar.js"></script>
+
+
+
+
+<div class="container-fluid px-0 " style="">
+    <div class="row w-100 mx-0" style="">
+        <div class="col-lg-9 col-12 pr-0 pl-xl-2 pl-0 center-back" style="order:0 !important;">
+            <div class="center-bar">
+                <div class="d-flex align-items-center justify-content-between">
+                    <div class="d-flex align-items-center">
+                        <a class="sideBarTrigger" onclick="openSideNav()" style="cursor:pointer; margin-right:5px; display:none;">
+                            <img src="~/images/Menu Rounded.svg" style="filter:brightness(0)" width="35px" />
+                        </a>
+                        <h4 class="center-bar-head" style="color: #00558E">
+                            De contratado a ser Agente
+                        </h4>
+                    </div>
+                    <div class="d-flex">
+
+                        <a class="SmallScreenSearchBar" onclick="openSearchBar1()">
+
+                            <img src="~/images/Search.svg" width="24px" />
+
+                            <div class="" id="SmallScreenSearchBox1">
+                                <div style="position:relative;">
+                                    <input type="search" />
+                                    <button class="SearchBtnBox1">
+                                        Search
+                                    </button>
+                                </div>
+                            </div>
+
+                        </a>
+
+                        <form role="search" method="get" class="search-form search-btn" action="" style="position: relative; box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15);border-radius:25px;">
+                            <label>
+
+                                <input type="search" class="search-field" placeholder="Search" value="" name="s" title="Search for:" />
+                            </label>
+                            <input type="submit" class="search-submit" value="Search" />
+                        </form>
+                        <a href="#" type="button" data-toggle="modal" data-target="#languagemodel">
+                            <div class="side-img mr-2 ml-2" style=" box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15); border-radius: 50%;">
+                                <img src="~/images/Geography.svg" />
+                            </div>
+                        </a>
+
+
+                        <div class="nav-item action2">
+                            <div class="menu2 ">
+                                <ul class="mb-0" style="padding:0 !important;">
+                                    <li style="border:none !important;">
+                                        <a href="@Url.Action("About","Home")">
+                                            About
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="@Url.Action("FAQs","Home")">
+                                            FAQ
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="@Url.Action("Contact","Home")">
+                                            Contact
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <a class="profile2 " onclick="menuToggle2();">
+                                <div class="side-img" style=" box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15); border-radius: 50%;">
+                                    <img src="~/images/userIcon.png" width="45px" />
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            @*main page and date*@
+
+
+
+            <div class="container-fluid mt-4">
+                <div class="row">
+
+                    <div class="col-12">
+                        <ul class="nav nav-pills agent-pills">
+                            <li class="">
+                                <a data-toggle="pill" href="#home" class="active">
+                                    Curso de ExamFX
+                                </a>
+                            </li>
+                            <li>
+                                <a data-toggle="pill" href="#menu1">
+                                    Huellas dactilares
+                                </a>
+                            </li>
+                            <li>
+                                <a data-toggle="pill" href="#menu2">
+                                    Programar examen del Estado
+                                </a>
+                            </li>
+                            <li>
+                                <a data-toggle="pill" href="#menu3">
+                                    Aplicación estatal (DICE)
+                                </a>
+                            </li>
+                            <li>
+                                <a data-toggle="pill" href="#menu4">
+                                    Proceso de Contrato
+                                </a>
+                            </li>
+                        </ul>
+
+                        <div class="tab-content mt-2 mb-5 pb-5">
+
+                            <div class="d-flex align-items-center justify-content-md-end justify-content-center">
+                                <div class="d-flex align-items-center flex-md-column justify-content-md-center justify-content-between dial-cirle " style="margin-top:-50px;">
+
+                                    <div class="progress-container">
+                                        <svg class="progress-bar" width="100%" height="100%" viewBox="0 0 42 42">
+                                            <!--
+                                              <circle class="progress-ring" cx="21" cy="21" r="15.91549430918954" fill="transparent"/>
+                                              <circle class="progress-value" cx="21" cy="21" r="15.91549430918954" fill="transparent"/>
+                                            -->
+
+                                            <path class="progress-ring" d="M21 21 m-11.254 11.254 a 15.91549430918954 15.91549430918954 135 1 1 22.508 0" fill="transparent" stroke-linecap="round" />
+                                            <path class="progress-value" d="M21 21 m-11.254 11.254 a 15.91549430918954 15.91549430918954 135 1 1 22.508 0" fill="transparent" stroke-linecap="round" />
+                                        </svg>
+                                        <div class="progress-text">40%</div>
+                                    </div>
+
+                                    <button class="cc-btn">
+                                        Completar y continuar <img src="~/images/Chevron Left.svg" width="12px" style="margin:2px 0 0 2px;" />
+                                    </button>
+                                </div>
+                            </div>
+
+
+
+
+
+
+
+                            <div id="home" class="tab-pane fade-in active mt-md-3 mt-2">
+                                <div>
+                                    <video id="background-video" width="100%" controls>
+                                        <source src="https://assets.codepen.io/6093409/river.mp4" type="video/mp4">
+                                    </video>
+
+                                </div>
+
+
+                                <div class="video-head my-3">
+                                    Capítulo #1 Curso ExamFX
+                                </div>
+
+                                <div class="d-flex align-items-center justify-content-start mt-3 mb-2">
+
+                                    <div class="d-flex align-items-center justify-content-center">
+                                        <div style="border-radius:50%;">
+                                            <img src="~/images/chanallogo.svg" width="52px" />
+
+                                        </div>
+                                        <div class="d-flex align-items-start flex-column ml-2 mr-3">
+                                            <span class="video-head1">
+                                                Alexis Avila
+                                            </span>
+                                            <span class="video-para">
+                                                Head of training
+                                            </span>
+                                        </div>
+
+                                    </div>
+                                    <div>
+                                        <button class="subs-btn">
+                                            Subscribe
+                                        </button>
+                                    </div>
+
+
+
+                                </div>
+
+                                <div class="mt-4">
+                                    <p class="video-detail">
+                                        En esta sesión, tendrás acceso a todos los capítulos del curso de ExamFX, lo que te permitirá prepararte de manera efectiva para obtener tu licencia estatal en el menor tiempo posible. Cada uno de estos capítulos contiene la información necesaria y relevante para tu preparación.
+                                    </p>
+
+                                    <button class="cc-btn">
+                                        Completar y continuar <img src="~/images/Chevron Left.svg" width="12px" style="margin:1.5px 0 0 2px" />
+                                    </button>
+
+                                </div>
+
+
+
+
+
+
+                            </div>
+
+
+                            <div id="menu1" class="tab-pane fade mt-md-3 mt-2">
+
+
+
+
+                                <div>
+
+                                    <video style="width:100%; height:360px;">
+                                    </video>
+
+
+                                </div>
+
+
+                                <div class="video-head my-3">
+                                    Capítulo #1 Curso ExamFX
+                                </div>
+
+                                <div class="d-flex align-items-center justify-content-start mt-3 mb-2">
+
+                                    <div class="d-flex align-items-center justify-content-center">
+                                        <div style="border-radius:50%;">
+                                            <img src="~/images/chanallogo.svg" width="52px" />
+
+                                        </div>
+                                        <div class="d-flex align-items-start flex-column ml-2 mr-3">
+                                            <span class="video-head1">
+                                                Eleisa Carlino
+                                            </span>
+                                            <span class="video-para">
+                                                Manager
+
+                                            </span> Subscribers
+
+                                        </div>
+
+                                    </div>
+                                    <div>
+                                        <button class="subs-btn">
+                                            Subscribe
+                                        </button>
+                                    </div>
+
+
+
+                                </div>
+
+                                <div class="mt-4">
+                                    <p class="video-detail">
+                                        En este segmento, nuestro CEO Beto Quintero proporcionará una explicación completa de todo el procedimiento y los pasos necesarios para el proceso de toma de huellas dactilares. Aprende cómo completar eficientemente el proceso de toma de huellas dactilares para obtener tu licencia estatal.
+                                        Enlace del botón:
+                                    </p>
+
+                                    <button class="cc-btn">
+                                        Completar y continuar <img src="~/images/Chevron Left.svg" width="12px" style="margin:1.5px 0 0 2px" />
+                                    </button>
+
+                                </div>
+
+
+
+
+
+
+                            </div>
+                            <div id="menu2" class="tab-pane fade mt-md-3 mt-2">
+
+
+
+
+                                <div>
+
+                                    <video style="width:100%; height:360px;">
+                                    </video>
+
+
+                                </div>
+
+
+                                <div class="video-head my-3">
+                                    Capítulo #1 Curso ExamFX
+                                </div>
+
+                                <div class="d-flex align-items-center justify-content-start mt-3 mb-2">
+
+                                    <div class="d-flex align-items-center justify-content-center">
+                                        <div style="border-radius:50%;">
+                                            <img src="~/images/chanallogo.svg" width="52px" />
+
+                                        </div>
+                                        <div class="d-flex align-items-start flex-column ml-2 mr-3">
+                                            <span class="video-head1">
+                                                Eleisa Carlino
+                                            </span>
+                                            <span class="video-para">
+                                                Manager
+                                            </span>
+                                        </div>
+
+                                    </div>
+                                    <div>
+                                        <button class="subs-btn">
+                                            Subscribe
+                                        </button>
+                                    </div>
+
+
+
+                                </div>
+
+                                <div class="mt-4">
+                                    <p class="video-detail mb-0">
+                                        Mira nuestro video para aprender cómo programar tu examen estatal y obtener valiosos consejos para aprobarlo con éxito. Ingresa la fecha de tu examen y carga tus resultados cuando los recibas. ¡Buena suerte!
+                                    </p>
+                                    <p class="video-detail">
+                                        Enlace del botón:
+                                    </p>
+
+                                    <div class="d-flex my-3  w-100">
+                                        <div class="form-item mr-3">
+                                            <input type="date" required="required" />
+                                            <span class="open-button">
+                                                <button type="button">📅</button>
+                                            </span>
+                                        </div>
+                                        <div class="form-item">
+                                            <input type="file"  placeholder="upload your result "   />
+                                        </div>
+                                    </div>
+
+                                    <button class="cc-btn">
+                                        Completar y continuar <img src="~/images/Chevron Left.svg" width="12px" style="margin:1.5px 0 0 2px" />
+                                    </button>
+
+                                </div>
+
+
+
+
+
+
+
+                            </div>
+                            <div id="menu3" class="tab-pane fade mt-md-3 mt-2">
+
+
+
+                                <div>
+
+                                    <video style="width:100%; height:360px;">
+                                    </video>
+
+
+                                </div>
+
+
+                                <div class="video-head my-3">
+                                    Capítulo #1 Curso ExamFX
+                                </div>
+
+                                <div class="d-flex align-items-center justify-content-start mt-3 mb-2">
+
+                                    <div class="d-flex align-items-center justify-content-center">
+                                        <div style="border-radius:50%;">
+                                            <img src="~/images/chanallogo.svg" width="52px" />
+
+                                        </div>
+                                        <div class="d-flex align-items-start flex-column ml-2 mr-3">
+                                            <span class="video-head1">
+                                                Alexis Avila
+                                            </span>
+                                            <span class="video-para">
+                                                Head of training
+
+                                            </span>
+                                        </div>
+
+                                    </div>
+                                    <div>
+                                        <button class="subs-btn">
+                                            Subscribe
+                                        </button>
+                                    </div>
+
+
+
+                                </div>
+
+                                <div class="mt-4">
+                                    <p class="video-detail">
+                                        Envía tu solicitud de licencia: Proceso simplificado: Aprende cómo enviar tu solicitud de licencia sin problemas. Reúne la documentación requerida, completa el formulario de solicitud con precisión, paga las tarifas correspondientes y verifica la exactitud. Da el siguiente paso para obtener tu licencia con confianza.
+                                    </p>
+
+                                    <button class="cc-btn">
+                                        Completar y continuar <img src="~/images/Chevron Left.svg" width="12px" style="margin:1.5px 0 0 2px" />
+                                    </button>
+
+                                </div>
+
+
+
+
+
+
+
+
+                            </div>
+                            <div id="menu4" class="tab-pane fade mt-md-3  mt-2">
+
+
+
+
+                                <div>
+
+                                    <video style="width:100%; height:360px;">
+                                    </video>
+
+
+                                </div>
+
+
+                                <div class="video-head my-3">
+                                    Capítulo #1 Curso ExamFX
+                                </div>
+
+                                <div class="d-flex align-items-center justify-content-start mt-3 mb-2">
+
+                                    <div class="d-flex align-items-center justify-content-center">
+                                        <div style="border-radius:50%;">
+                                            <img src="~/images/chanallogo.svg" width="52px" />
+
+                                        </div>
+                                        <div class="d-flex align-items-start flex-column ml-2 mr-3">
+                                            <span class="video-head1">
+                                                Alexis Avila
+                                            </span>
+                                            <span class="video-para">
+                                                Head of training
+
+                                            </span>
+                                        </div>
+
+                                    </div>
+                                    <div>
+                                        <button class="subs-btn">
+                                            Subscribe
+                                        </button>
+                                    </div>
+
+
+
+                                </div>
+
+                                <div class="mt-4">
+                                    <p class="video-detail">
+                                        ¿Listo para comenzar tu carrera con nosotros? Simplemente envía tus documentos para obtener tu código de agente y ID.
+                                    </p>
+
+                                    <button class="cc-btn">
+                                        Completar y continuar <img src="~/images/Chevron Left.svg" width="12px" style="margin:1.5px 0 0 2px" />
+                                    </button>
+
+                                </div>
+
+
+
+
+
+
+
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+
+            </div>
+
+
+
+
+            @*main page and date*@
+
+
+
+
+
+
+
+
+        </div>
+
+
+
+        <div class="col-lg-3 col-12 px-0 " style="order:1 !important">
+
+            <div class="right-side-bar" style=" padding:0px 0px;height:100%;">
+
+                <div class="d-flex align-items-center justify-content-between" style="border-bottom: 1px solid rgba(211, 211, 211, 1);margin:0px 10px;">
+                    <p class="progress-para mb-0">
+                        Your Progress
+                    </p>
+
+                    <div class="circle-small">
+                        <div class="text">
+                            65%
+                        </div>
+                        <svg>
+                            <circle class="bg" cx="40" cy="40" r="25"></circle>
+                            <circle class="progress two" cx="40" cy="40" r="25"></circle>
+                        </svg>
+                    </div>
+                </div>
+                <div class="enclosure-for-video-bar">
+
+
+                    <div class="" style="font-size: 16px; font-weight: 400; line-height: 19px; letter-spacing: 0em; text-align: left; color: white; background-color: rgba(2, 85, 153, 0.4); padding: 8px 15px; margin:14px 0 0 0;  ">
+                        ExamFX Course
+                    </div>
+                    <div>
+                        <progress max="100" min="0" value="65">
+
+                        </progress>
+                    </div>
+
+
+                    <ul class="nav nav-tabs tabs-nav" style="border-bottom:none; ">
+                        <li class="active">
+                            <a data-toggle="tab" href="#side" class="active">
+                                Videos
+                            </a>
+                        </li>
+                        <li>
+                            <a data-toggle="tab" href="#side1">
+                                Voice Notes
+                            </a>
+                        </li>
+                        <li>
+                            <a data-toggle="tab" href="#side2">
+                                Documents
+                            </a>
+                        </li>
+                        <li>
+                            <a data-toggle="tab" href="#side3">
+                                Images
+                            </a>
+                        </li>
+
+
+                    </ul>
+
+                    <div class="tab-content" style="">
+                        <div id="side" class="tab-pane fade-in active" style="">
+
+                            <ul class="video-bar" style="">
+                                <li class="active">
+                                    <div class="d-flex align-items-center">
+                                        <input type="checkbox" value="yes" name="radio" id="radio1" />
+                                        <label class="d-flex align-items-center mb-0 mx-2">
+                                            <img src="~/images/Laptop Play Video.svg" width="26px" class="mr-2" />
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="video-tag">
+                                                    Capítulo #1 Curso ExamFX
+                                                </span>
+                                                <span class="video-time">
+                                                    (02:18)
+                                                </span>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="video-tag">
+                                        01
+                                    </div>
+                                </li>
+                                <li class="">
+                                    <div class="d-flex align-items-center">
+                                        <input type="checkbox" value="yes" name="radio" id="radio2" />
+                                        <label class="d-flex align-items-center mb-0 mx-2">
+                                            <img src="~/images/Laptop Play Video.svg" width="26px" class="mr-2" />
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="video-tag">
+                                                    Capítulo #1 Curso ExamFX
+                                                </span>
+                                                <span class="video-time">
+                                                    (02:18)
+                                                </span>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="video-tag">
+                                        01
+                                    </div>
+                                </li>
+                                <li class="">
+                                    <div class="d-flex align-items-center">
+                                        <input type="checkbox" value="yes" name="radio" id="radio2" />
+                                        <label class="d-flex align-items-center mb-0 mx-2">
+                                            <img src="~/images/Laptop Play Video.svg" width="26px" class="mr-2" />
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="video-tag">
+                                                    Capítulo #1 Curso ExamFX
+                                                </span>
+                                                <span class="video-time">
+                                                    (02:18)
+                                                </span>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="video-tag">
+                                        01
+                                    </div>
+                                </li>
+                                <li class="">
+                                    <div class="d-flex align-items-center">
+                                        <input type="checkbox" value="yes" name="radio" id="radio2" />
+                                        <label class="d-flex align-items-center mb-0 mx-2">
+                                            <img src="~/images/Laptop Play Video.svg" width="26px" class="mr-2" />
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="video-tag">
+                                                    Capítulo #1 Curso ExamFX
+                                                </span>
+                                                <span class="video-time">
+                                                    (02:18)
+                                                </span>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="video-tag">
+                                        01
+                                    </div>
+                                </li>
+                                <li class="">
+                                    <div class="d-flex align-items-center">
+                                        <input type="checkbox" value="yes" name="radio" id="radio2" />
+                                        <label class="d-flex align-items-center mb-0 mx-2">
+                                            <img src="~/images/Laptop Play Video.svg" width="26px" class="mr-2" />
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="video-tag">
+                                                    Capítulo #1 Curso ExamFX
+                                                </span>
+                                                <span class="video-time">
+                                                    (02:18)
+                                                </span>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="video-tag">
+                                        01
+                                    </div>
+                                </li>
+                                <li class="">
+                                    <div class="d-flex align-items-center">
+                                        <input type="checkbox" value="yes" name="radio" id="radio2" />
+                                        <label class="d-flex align-items-center mb-0 mx-2">
+                                            <img src="~/images/Laptop Play Video.svg" width="26px" class="mr-2" />
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="video-tag">
+                                                    Capítulo #1 Curso ExamFX
+                                                </span>
+                                                <span class="video-time">
+                                                    (02:18)
+                                                </span>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="video-tag">
+                                        01
+                                    </div>
+                                </li>
+                                <li class="">
+                                    <div class="d-flex align-items-center">
+                                        <input type="checkbox" value="yes" name="radio" id="radio2" />
+                                        <label class="d-flex align-items-center mb-0 mx-2">
+                                            <img src="~/images/Laptop Play Video.svg" width="26px" class="mr-2" />
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="video-tag">
+                                                    Capítulo #1 Curso ExamFX
+                                                </span>
+                                                <span class="video-time">
+                                                    (02:18)
+                                                </span>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="video-tag">
+                                        01
+                                    </div>
+                                </li>
+                                <li class="">
+                                    <div class="d-flex align-items-center">
+                                        <input type="checkbox" value="yes" name="radio" id="radio2" />
+                                        <label class="d-flex align-items-center mb-0 mx-2">
+                                            <img src="~/images/Laptop Play Video.svg" width="26px" class="mr-2" />
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="video-tag">
+                                                    Capítulo #1 Curso ExamFX
+                                                </span>
+                                                <span class="video-time">
+                                                    (02:18)
+                                                </span>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="video-tag">
+                                        01
+                                    </div>
+                                </li>
+                                <li class="">
+                                    <div class="d-flex align-items-center">
+                                        <input type="checkbox" value="yes" name="radio" id="radio2" />
+                                        <label class="d-flex align-items-center mb-0 mx-2">
+                                            <img src="~/images/Laptop Play Video.svg" width="26px" class="mr-2" />
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="video-tag">
+                                                    Capítulo #1 Curso ExamFX
+                                                </span>
+                                                <span class="video-time">
+                                                    (02:18)
+                                                </span>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="video-tag">
+                                        01
+                                    </div>
+                                </li>
+                                <li class="">
+                                    <div class="d-flex align-items-center">
+                                        <input type="checkbox" value="yes" name="radio" id="radio2" />
+                                        <label class="d-flex align-items-center mb-0 mx-2">
+                                            <img src="~/images/Laptop Play Video.svg" width="26px" class="mr-2" />
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="video-tag">
+                                                    Capítulo #1 Curso ExamFX
+                                                </span>
+                                                <span class="video-time">
+                                                    (02:18)
+                                                </span>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="video-tag">
+                                        01
+                                    </div>
+                                </li>
+                                <li class="">
+                                    <div class="d-flex align-items-center">
+                                        <input type="checkbox" value="yes" name="radio" id="radio2" />
+                                        <label class="d-flex align-items-center mb-0 mx-2">
+                                            <img src="~/images/Laptop Play Video.svg" width="26px" class="mr-2" />
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="video-tag">
+                                                    Capítulo #1 Curso ExamFX
+                                                </span>
+                                                <span class="video-time">
+                                                    (02:18)
+                                                </span>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="video-tag">
+                                        01
+                                    </div>
+                                </li>
+                                <li class="">
+                                    <div class="d-flex align-items-center">
+                                        <input type="checkbox" value="yes" name="radio" id="radio2" />
+                                        <label class="d-flex align-items-center mb-0 mx-2">
+                                            <img src="~/images/Laptop Play Video.svg" width="26px" class="mr-2" />
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="video-tag">
+                                                    Capítulo #1 Curso ExamFX
+                                                </span>
+                                                <span class="video-time">
+                                                    (02:18)
+                                                </span>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="video-tag">
+                                        01
+                                    </div>
+                                </li>
+                                <li class="">
+                                    <div class="d-flex align-items-center">
+                                        <input type="checkbox" value="yes" name="radio" id="radio2" />
+                                        <label class="d-flex align-items-center mb-0 mx-2">
+                                            <img src="~/images/Laptop Play Video.svg" width="26px" class="mr-2" />
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="video-tag">
+                                                    Capítulo #1 Curso ExamFX
+                                                </span>
+                                                <span class="video-time">
+                                                    (02:18)
+                                                </span>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="video-tag">
+                                        01
+                                    </div>
+                                </li>
+                                <li class="">
+                                    <div class="d-flex align-items-center">
+                                        <input type="checkbox" value="yes" name="radio" id="radio2" />
+                                        <label class="d-flex align-items-center mb-0 mx-2">
+                                            <img src="~/images/Laptop Play Video.svg" width="26px" class="mr-2" />
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="video-tag">
+                                                    Capítulo #1 Curso ExamFX
+                                                </span>
+                                                <span class="video-time">
+                                                    (02:18)
+                                                </span>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="video-tag">
+                                        01
+                                    </div>
+                                </li>
+                                <li class="">
+                                    <div class="d-flex align-items-center">
+                                        <input type="checkbox" value="yes" name="radio" id="radio2" />
+                                        <label class="d-flex align-items-center mb-0 mx-2">
+                                            <img src="~/images/Laptop Play Video.svg" width="26px" class="mr-2" />
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="video-tag">
+                                                    Capítulo #1 Curso ExamFX
+                                                </span>
+                                                <span class="video-time">
+                                                    (02:18)
+                                                </span>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="video-tag">
+                                        01
+                                    </div>
+                                </li>
+                                <li class="">
+                                    <div class="d-flex align-items-center">
+                                        <input type="checkbox" value="yes" name="radio" id="radio2" />
+                                        <label class="d-flex align-items-center mb-0 mx-2">
+                                            <img src="~/images/Laptop Play Video.svg" width="26px" class="mr-2" />
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="video-tag">
+                                                    Capítulo #1 Curso ExamFX
+                                                </span>
+                                                <span class="video-time">
+                                                    (02:18)
+                                                </span>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="video-tag">
+                                        01
+                                    </div>
+                                </li>
+                            </ul>
+
+
+                            <div class="" style="font-size: 16px; font-weight: 400; line-height: 19px; letter-spacing: 0em; text-align: left; color: white; background-color: rgba(2, 85, 153, 0.4); padding: 8px 15px; margin:5px 0;">
+                                Fingerpritns
+                            </div>
+                            <ul class="video-bar">
+                                <li class="active">
+                                    <div class="d-flex align-items-center">
+                                        <input type="checkbox" value="yes" name="radio" id="radio1" />
+                                        <label class="d-flex align-items-center mb-0 mx-2">
+                                            <img src="~/images/Laptop Play Video.svg" width="26px" class="mr-2" />
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="video-tag">
+                                                    Capítulo #1 Curso ExamFX
+                                                </span>
+                                                <span class="video-time">
+                                                    (02:18)
+                                                </span>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="video-tag">
+                                        01
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="" style="font-size: 16px; font-weight: 400; line-height: 19px; letter-spacing: 0em; text-align: left; color: white; background-color: rgba(2, 85, 153, 0.4); padding: 8px 15px; margin:5px 0;">
+                                Schedule Exams
+                            </div>
+                            <ul class="video-bar">
+                                <li class="active">
+                                    <div class="d-flex align-items-center">
+                                        <input type="checkbox" value="yes" name="radio" id="radio1" />
+                                        <label class="d-flex align-items-center mb-0 mx-2">
+                                            <img src="~/images/Laptop Play Video.svg" width="26px" class="mr-2" />
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="video-tag">
+                                                    Capítulo #1 Curso ExamFX
+                                                </span>
+                                                <span class="video-time">
+                                                    (02:18)
+                                                </span>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="video-tag">
+                                        01
+                                    </div>
+                                </li>
+                            </ul>
+
+                            <div class="" style="font-size: 16px; font-weight: 400; line-height: 19px; letter-spacing: 0em; text-align: left; color: white; background-color: rgba(2, 85, 153, 0.4); padding: 8px 15px; margin:5px 0;">
+                                Application Video
+                            </div>
+                            <ul class="video-bar">
+                                <li class="active">
+                                    <div class="d-flex align-items-center">
+                                        <input type="checkbox" value="yes" name="radio" id="radio1" />
+                                        <label class="d-flex align-items-center mb-0 mx-2">
+                                            <img src="~/images/Laptop Play Video.svg" width="26px" class="mr-2" />
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="video-tag">
+                                                    Capítulo #1 Curso ExamFX
+                                                </span>
+                                                <span class="video-time">
+                                                    (02:18)
+                                                </span>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="video-tag">
+                                        01
+                                    </div>
+                                </li>
+                            </ul>
+
+                            <div class="" style="font-size: 16px; font-weight: 400; line-height: 19px; letter-spacing: 0em; text-align: left; color: white; background-color: rgba(2, 85, 153, 0.4); padding: 8px 15px; margin:5px 0;">
+                                Agent Video
+                            </div>
+                            <ul class="video-bar">
+                                <li class="active">
+                                    <div class="d-flex align-items-center">
+                                        <input type="checkbox" value="yes" name="radio" id="radio1" />
+                                        <label class="d-flex align-items-center mb-0 mx-2">
+                                            <img src="~/images/Laptop Play Video.svg" width="26px" class="mr-2" />
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="video-tag">
+                                                    Capítulo #1 Curso ExamFX
+                                                </span>
+                                                <span class="video-time">
+                                                    (02:18)
+                                                </span>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="video-tag">
+                                        01
+                                    </div>
+                                </li>
+                                <li class="">
+                                    <div class="d-flex align-items-center">
+                                        <input type="checkbox" value="yes" name="radio" id="radio1" />
+                                        <label class="d-flex align-items-center mb-0 mx-2">
+                                            <img src="~/images/Laptop Play Video.svg" width="26px" class="mr-2" />
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="video-tag">
+                                                    Capítulo #1 Curso ExamFX
+                                                </span>
+                                                <span class="video-time">
+                                                    (02:18)
+                                                </span>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="video-tag">
+                                        01
+                                    </div>
+                                </li>
+                                <li class="">
+                                    <div class="d-flex align-items-center">
+                                        <input type="checkbox" value="yes" name="radio" id="radio1" />
+                                        <label class="d-flex align-items-center mb-0 mx-2">
+                                            <img src="~/images/Laptop Play Video.svg" width="26px" class="mr-2" />
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="video-tag">
+                                                    Capítulo #1 Curso ExamFX
+                                                </span>
+                                                <span class="video-time">
+                                                    (02:18)
+                                                </span>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="video-tag">
+                                        01
+                                    </div>
+                                </li>
+                                <li class="">
+                                    <div class="d-flex align-items-center">
+                                        <input type="checkbox" value="yes" name="radio" id="radio1" />
+                                        <label class="d-flex align-items-center mb-0 mx-2">
+                                            <img src="~/images/Laptop Play Video.svg" width="26px" class="mr-2" />
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="video-tag">
+                                                    Capítulo #1 Curso ExamFX
+                                                </span>
+                                                <span class="video-time">
+                                                    (02:18)
+                                                </span>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="video-tag">
+                                        01
+                                    </div>
+                                </li>
+                                <li class="">
+                                    <div class="d-flex align-items-center">
+                                        <input type="checkbox" value="yes" name="radio" id="radio1" />
+                                        <label class="d-flex align-items-center mb-0 mx-2">
+                                            <img src="~/images/Laptop Play Video.svg" width="26px" class="mr-2" />
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="video-tag">
+                                                    Capítulo #1 Curso ExamFX
+                                                </span>
+                                                <span class="video-time">
+                                                    (02:18)
+                                                </span>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="video-tag">
+                                        01
+                                    </div>
+                                </li>
+                                <li class="">
+                                    <div class="d-flex align-items-center">
+                                        <input type="checkbox" value="yes" name="radio" id="radio1" />
+                                        <label class="d-flex align-items-center mb-0 mx-2">
+                                            <img src="~/images/Laptop Play Video.svg" width="26px" class="mr-2" />
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="video-tag">
+                                                    Capítulo #1 Curso ExamFX
+                                                </span>
+                                                <span class="video-time">
+                                                    (02:18)
+                                                </span>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="video-tag">
+                                        01
+                                    </div>
+                                </li>
+                                <li class="">
+                                    <div class="d-flex align-items-center">
+                                        <input type="checkbox" value="yes" name="radio" id="radio1" />
+                                        <label class="d-flex align-items-center mb-0 mx-2">
+                                            <img src="~/images/Laptop Play Video.svg" width="26px" class="mr-2" />
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="video-tag">
+                                                    Capítulo #1 Curso ExamFX
+                                                </span>
+                                                <span class="video-time">
+                                                    (02:18)
+                                                </span>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="video-tag">
+                                        01
+                                    </div>
+                                </li>
+                                <li class="">
+                                    <div class="d-flex align-items-center">
+                                        <input type="checkbox" value="yes" name="radio" id="radio1" />
+                                        <label class="d-flex align-items-center mb-0 mx-2">
+                                            <img src="~/images/Laptop Play Video.svg" width="26px" class="mr-2" />
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="video-tag">
+                                                    Capítulo #1 Curso ExamFX
+                                                </span>
+                                                <span class="video-time">
+                                                    (02:18)
+                                                </span>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="video-tag">
+                                        01
+                                    </div>
+                                </li>
+                                <li class="">
+                                    <div class="d-flex align-items-center">
+                                        <input type="checkbox" value="yes" name="radio" id="radio1" />
+                                        <label class="d-flex align-items-center mb-0 mx-2">
+                                            <img src="~/images/Laptop Play Video.svg" width="26px" class="mr-2" />
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="video-tag">
+                                                    Capítulo #1 Curso ExamFX
+                                                </span>
+                                                <span class="video-time">
+                                                    (02:18)
+                                                </span>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="video-tag">
+                                        01
+                                    </div>
+                                </li>
+                                <li class="">
+                                    <div class="d-flex align-items-center">
+                                        <input type="checkbox" value="yes" name="radio" id="radio1" />
+                                        <label class="d-flex align-items-center mb-0 mx-2">
+                                            <img src="~/images/Laptop Play Video.svg" width="26px" class="mr-2" />
+                                            <div class="d-flex flex-column align-items-start">
+                                                <span class="video-tag">
+                                                    Capítulo #1 Curso ExamFX
+                                                </span>
+                                                <span class="video-time">
+                                                    (02:18)
+                                                </span>
+                                            </div>
+                                        </label>
+                                    </div>
+                                    <div class="video-tag">
+                                        01
+                                    </div>
+                                </li>
+                            </ul>
+
+                        </div>
+
+
+
+                        <div id="side1" class="tab-pane fade">
+                            <h3>side 1</h3>
+                            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                        </div>
+                        <div id="side2" class="tab-pane fade">
+                            <h3>side 2</h3>
+                            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+                        </div>
+                        <div id="side3" class="tab-pane fade">
+                            <h3>side 3</h3>
+                            <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+
+    // The JavaScript code to update the progress bar
+    const progressContainer = document.querySelector('.progress-container');
+    const progressBar = progressContainer.querySelector('.progress-bar');
+    const progressValue = progressBar.querySelector('.progress-value');
+    const progressText = progressContainer.querySelector('.progress-text');
+
+    const updateProgress = (value) => {
+        // Update the value of the progress bar
+        //progressValue.style.strokeDasharray = `${value} 100`;
+        progressValue.style.strokeDasharray = `${value * 3 / 4} 75`;
+
+        // Update the text inside the progress bar
+        progressText.textContent = `${value}%`;
+    }
+
+    updateProgress(50); // Set the progress bar to 50%
+</script>
+
+<script>
+    function menuToggle2() {
+        const toggleMenu = document.querySelector(".menu2");
+        toggleMenu.classList.toggle("active2");
+    }
+
+    $(document).on('click', '.sl-nav', function () {
+        $('.menu2').removeClass('active2');
+    });
+</script>
+<script>
+
+    function openSearchBar1() {
+
+        jQuery("#SmallScreenSearchBox1").addClass("SmallScreenSearchBox1");
+        jQuery("#closeSearchBox").addClass("closeSearchBox");
+    }
+    function closeSearchBox() {
+
+        jQuery("#SmallScreenSearchBox1").removeClass("SmallScreenSearchBox1");
+        jQuery("#closeSearchBox").removeClass("closeSearchBox");
+    }
+
+</script>

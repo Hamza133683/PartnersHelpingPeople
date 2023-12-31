@@ -1,0 +1,220 @@
+﻿body {
+}
+
+.hero-indicators {
+    z-index: 7;
+}
+
+    .hero-indicators li {
+        width: 10px !important;
+        height: 10px !important;
+        border-radius: 50%;
+        background-color: rgba(211, 211, 211, 1);
+        margin-left: 1px !important;
+        margin-right: 1px !important;
+    }
+
+        .hero-indicators li.active {
+            background-color: #025599;
+        }
+
+.carousel-item {
+    position: relative !important;
+    height: 100%;
+}
+
+    .carousel-item img {
+        width: 100%;
+        height: 100%;
+        border-radius: 8px;
+    }
+
+@media screen and (max-width:767px) {
+    .carousel-item > img {
+        height: 450px;
+        object-fit: cover;
+        border-radius: 8px;
+    }
+}
+
+.carousel-item::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(125deg, rgba(35, 31, 32, 1) 15%,rgba(2, 85, 153, 0.4) 40%, rgba(0, 0, 0, 0) 95%);
+    opacity: 0.8;
+    z-index: 2;
+    border-radius: 9px;
+}
+
+.carousel-caption {
+    text-align: left;
+    left: 3.5%;
+    top: 5px;
+    z-index: 3;
+}
+
+
+.caro-head {
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 32px;
+    letter-spacing: 0em;
+    text-align: left;
+    text-transform: capitalize;
+    color: white;
+    max-width: 400px;
+    margin-bottom: 20px;
+}
+
+.caro-para {
+    text-transform: capitalize;
+    color: white;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: left;
+    max-width: 310px;
+}
+
+.caro-btn {
+    text-transform: capitalize;
+    background-color: #025599;
+    color: white;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    padding: 8px 22px;
+    border: none;
+    border-radius: 6px;
+}
+
+
+.btn-flow {
+    text-align: left;
+    left: 3.5%;
+    bottom: 30px;
+    display: block;
+    z-index: 3;
+    position: absolute;
+}
+
+
+
+.multiple-cards .row .col-md-4 {
+    padding: 0 7px;
+}
+
+    .multiple-cards .row .col-md-4 figure {
+        max-height: 100%;
+    }
+
+
+.figur {
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.15);
+    border-radius: 6px;
+    margin: 0;
+    position: relative;
+    margin-bottom: 15px;
+}
+
+    .figur > img {
+        width: 100%;
+        height: 280px;
+        object-fit: cover;
+        border-radius: 6px;
+    }
+
+    .figur:hover::after {
+        content: none;
+    }
+
+    .figur::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.6);
+        z-index: 2;
+        border-radius: 6px;
+    }
+
+
+
+.figurCaption {
+    padding: 20px 15px;
+    position: absolute;
+    bottom: 5px;
+    z-index: 5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.figurCaptionCenter {
+    position: absolute;
+    top: 50%;
+    right:0;
+    z-index: 5;
+    width: 100%;
+    transform:translate(0,-50%);
+}
+.card-head-center {
+    font-size: 44px;
+    font-weight: 700;
+    line-height: 54px;
+    letter-spacing: 0em;
+    text-align: center;
+    text-transform:capitalize;
+    color:white;
+}
+
+
+.card-head {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: white;
+    text-transform: capitalize;
+    margin-bottom: 0;
+    max-width: 220px;
+}
+
+.card-para {
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: left;
+    text-transform: capitalize;
+    color: #797979;
+}
+
+.fig-btn {
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 17px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: white;
+    background-color: #025599;
+    padding: 6px 20px;
+    border: none;
+    border-radius: 4px;
+    white-space: nowrap;
+    text-transform: capitalize;
+}
+
+.center-bar-head:after {
+    content: "bienvenido"
+}

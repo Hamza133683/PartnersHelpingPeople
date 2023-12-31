@@ -1,0 +1,150 @@
+﻿body {
+}
+
+
+
+#HeadingOnTopBar::after {
+    content: "family protection plan";
+}
+
+@media screen and (min-width:992px) {
+
+    .center-back {
+        display: none;
+    }
+}
+
+@media screen and (max-width:992px) {
+
+    .twoImgBar {
+        display: none !important;
+    }
+}
+
+
+.overflowContainer {
+    overflow-x: scroll;
+}
+
+
+
+.FamlyProtectionPlanViewTable, .FamlyProtectionPlanViewTable1 {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: auto;
+}
+
+
+    .FamlyProtectionPlanViewTable tbody tr td:nth-child(1) {
+        border: none !important;
+    }
+
+    .FamlyProtectionPlanViewTable tbody tr td {
+        min-width: 250px;
+        border: 1px solid rgba(211, 211, 211, 1);
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 19px;
+        letter-spacing: 0em;
+        text-align: center;
+        color: #000000;
+        padding: 0.5rem 1rem;
+    }
+
+
+.ColoredDiv {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+    .ColoredDiv > h2 {
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 26px;
+        letter-spacing: 0em;
+        text-align: center;
+        text-transform: capitalize;
+        color: #000000;
+        display: inline-block;
+        margin: 5px 0 10px 0;
+    }
+
+
+.FamlyProtectionPlanViewTable1 tr td:nth-child(1) {
+    min-width: 200px !important;
+}
+
+.FamlyProtectionPlanViewTable1 tr td {
+    min-width: 250px;
+}
+
+.FamlyProtectionPlanViewTable1 thead tr td, .FamlyProtectionPlanViewTable thead tr td {
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #000000;
+    text-transform: capitalize;
+}
+
+.FamlyProtectionPlanViewTable1 tbody tr td {
+    border: 1px solid rgba(211, 211, 211, 1);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #000000;
+    padding: 0.5rem 1rem;
+}
+
+.FamlyProtectionPlanViewTable1 tbody tr:last-child td {
+    border: none;
+}
+
+.FamlyProtectionPlanViewTable1 tbody tr td:nth-child(1) {
+    border: none;
+}
+
+.FamlyProtectionPlanViewTable1 tbody tr td:last-child {
+    text-align: left !important;
+    border: none;
+}
+
+.FamlyProtectionPlanViewTable1 tbody tr td:nth-child(1) h2, .FamlyProtectionPlanViewTable tbody tr td:nth-child(1) h2 {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: center;
+    text-transform: capitalize;
+    color: #000000;
+    display: inline-block;
+    background-color: rgba(255, 214, 64, 1);
+    width: 200px;
+    padding: 5px;
+}
+
+
+.FamlyProtectionPlanViewTableMirror tbody tr:nth-child(1) td:last-child {
+    border: none !important;
+}
+
+
+.LabelInputs > label {
+    display: flex;
+    align-items: center;
+}
+
+.LabelInputs input {
+    margin-left: 5px;
+    max-width: 300px;
+    width: 100%;
+    border: 1px solid rgba(211, 211, 211, 1);
+    padding: 12px 20px;
+    height: 45px;
+}

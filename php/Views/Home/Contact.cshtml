@@ -1,0 +1,62 @@
+﻿@{
+    ViewBag.Title = "Contact";
+}
+
+
+<link href="~/Home_Styling/contact.css" rel="stylesheet" />
+
+<div class="container-fluid about-width">
+    <div class="row">
+        <div class="col-12 d-flex justify-content-center">
+            <div class="d-flex flex-column align-items-center " style="max-width: 800px; padding: 11.5% 0; ">
+                <h1 class="aboutPara">
+                    about us
+                </h1>
+                <h1 class="aboutHead">
+                    Lorem ipsum dolor sit amet consectetur. Quis eget neque
+                </h1>
+                <p class="aboutPara1">
+                    Lorem ipsum dolor sit amet consectetur. Metus et sodales ullamcorper sit lectus tristique. Arcu risus scelerisque in nulla tempus vitae.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="container-fluid contactWidth">
+    <div class="row">
+        <div class="col-md-6 d-flex align-items-center justify-content-center">
+           
+                <img src="~/images/phone 1.svg" class="img-fluid" width="300px" />
+            
+        </div>
+        <div class="col-md-6 mt-md-0 mt-4">
+            <div class="d-flex flex-column align-items-start mt-md-4">
+                <p class="index-para mb-3">
+                    Contact us
+                </p>
+                <h3 class="index-head mb-3">
+                    let’s make things happen by saying hi.!
+                </h3>
+            </div>
+            <form>
+                <div class="form-item">
+                    <input type="text" name="FirstName" id="FirstName" class="form-style" autocomplete="off" placeholder="First Name" required />
+                </div>
+                <div class="form-item">
+                    <input type="text" name="LastName" id="LastName" class="form-style" autocomplete="off" placeholder="Last Name" required />
+                </div>
+                <div class="form-item">
+                    <input type="email" name="email" id="email" class="form-style" autocomplete="off" placeholder="Email" required />
+                </div>
+
+                <textarea placeholder="Message"></textarea>
+
+                <button class="sendBtn">
+                    Send Message
+                </button>
+            </form>
+        </div>
+    </div>
+</div>

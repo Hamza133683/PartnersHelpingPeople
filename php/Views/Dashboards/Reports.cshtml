@@ -1,0 +1,90 @@
+﻿
+@{
+    ViewBag.Title = "Reports";
+    Layout = "~/Views/Shared/Dashboards_Layout.cshtml";
+}
+<link href="~/Dashboard-styling/reports.css" rel="stylesheet" />
+<link href="~/Dashboard-styling/bars_Stylings.css" rel="stylesheet" />
+
+
+
+<div class="container-fluid containWidth" style="height:100vh;">
+    <div class="row">
+        <div class="col-lg-3 rightSideBar order-1" style="">
+            <div class="right-side-bar" style=" overflow-y: auto;">
+                <div>
+                    @{
+                        Html.RenderPartial("User_data_partial_view");
+                    }
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-9 order-0">
+
+            <div class="container-fluid inputs-field">
+                <div class="d-flex align-items-center justify-content-between w-100 flex-sm-nowrap flex-wrap" style="">
+                    <div class="form-item mr-sm-3">
+                        <label class="form-control d-flex justify-content-start align-items-center form-style" for="file-name" style="border:none; background-color:transparent;margin-bottom:1rem;">
+                            <span class="file-span">Enter My Report</span>
+                        </label>
+                        <input type="file" class="form-control form-style" id="file-name" onchange="pressed()" style="position:absolute;top:0;z-index:0;" />
+
+                    </div>
+                    <div class="form-item">
+                        <label class="wrapper">
+                            <input type="date"
+                                   required="required" />
+                            <span></span>
+                        </label>
+                    </div>
+                </div>
+
+
+                <div class="d-flex align-items-center justify-content-between w-100">
+                    <div class="form-item">
+                        <input type="text" class="form-style" autocomplete="off" placeholder="Appointments" style="max-width:unset;" />
+                    </div>
+
+                </div>
+                <div class="d-flex align-items-center justify-content-between w-100">
+                    <div class="form-item">
+                        <input type="text" class="form-style" autocomplete="off" placeholder="Presentations" style="max-width:unset;" />
+                    </div>
+
+                </div>
+                <div class="d-flex align-items-center justify-content-between w-100">
+                    <div class="form-item">
+                        <input type="text" class="form-style" autocomplete="off" placeholder="Referrals" style="max-width:unset;" />
+                    </div>
+
+                </div>
+                <div class="d-flex align-items-center justify-content-between w-100">
+                    <div class="form-item">
+                        <input type="text" class="form-style" autocomplete="off" placeholder="Number Of Sales" style="max-width:unset;" />
+                    </div>
+
+                </div>
+                <div class="d-flex align-items-center justify-content-between w-100">
+                    <div class="form-item">
+                        <input type="text" class="form-style" autocomplete="off" placeholder="Total ALP" style="max-width:unset;" />
+                    </div>
+
+                </div>
+                <div>
+                    <button class="report-save-btn">
+                        Save
+                    </button>
+                </div>
+
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+

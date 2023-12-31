@@ -1,0 +1,78 @@
+﻿body {
+}
+
+.presentation-3cards .row .col-md-4 img {
+    width: 100%;
+}
+
+.presentation-3cards .row .col-md-4 {
+    padding: 0 7px;
+}
+
+.video-3cards-head {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-top: 10px;
+    text-transform: capitalize;
+}
+
+.video-3cards-para {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-top: 10px;
+    text-transform: capitalize;
+}
+
+
+.documents-list {
+    list-style: none;
+    padding-left: 0;
+    counter-reset: list-counter;
+    margin-top: 20px;
+}
+
+
+    .documents-list li {
+        padding: 10px 15px;
+        border-bottom: 1px solid rgba(211, 211, 211, 0.4);
+        position: relative;
+    }
+
+        .documents-list li:before {
+            counter-increment: list-counter;
+            content: counter(list-counter);
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 29px;
+            letter-spacing: 0em;
+            color: #797979;
+            height: 20px;
+            width: 20px;
+            text-align: center;
+            position: absolute;
+            left: 0;
+        }
+
+        .documents-list li a {
+            text-decoration: underline;
+            color: #025599;
+            font-size: 17px;
+            font-weight: 400;
+            line-height: 29px;
+            letter-spacing: 0em;
+            text-align: left;
+            background-color: transparent;
+            margin-left: 20px;
+        }
+
+
+#HeadingOnTopBar::after {
+    content: "Start Presentation";
+
+}

@@ -1,0 +1,415 @@
+﻿
+html {
+}
+
+body {
+    margin: 0;
+    overflow-x: hidden;
+}
+
+/*floating side bar*/
+
+.overlay {
+    background-color: transparent;
+    opacity: 0.2;
+    filter: blur(10px);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 49;
+}
+
+.aside {
+    background-color: #025599;
+    max-width: 280px;
+    padding: 15px 0 0 0;
+    width: 100%;
+    position: absolute;
+    left: -100%;
+    z-index: 50;
+    transition: left 0.4s cubic-bezier(.42,.97,.52,1);
+}
+
+.aside-show {
+    left: 0 !important;
+}
+
+.side-bar {
+    overflow-y: scroll;
+    height: 100vh;
+}
+
+    .side-bar::-webkit-scrollbar {
+        width: 8px;
+        background-color: transparent;
+    }
+
+    .side-bar::-webkit-scrollbar-track {
+        background-color: rgba(211, 211, 211, 1);
+        border: 8px solid transparent;
+        background-clip: content-box;
+    }
+
+    .side-bar::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        background-color: rgba(211, 211, 211, 1);
+    }
+
+
+
+
+.side-bar-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 6rem;
+    padding-bottom: 8rem;
+    background-color: transparent;
+}
+
+    .side-bar-list li.one {
+        margin-top: 2px;
+    }
+
+        .side-bar-list li.one a {
+            display: flex;
+            align-items: center;
+            justify-content: start;
+            font-size: 12.5px;
+            font-weight: 400;
+            line-height: 19px;
+            letter-spacing: 0em;
+            text-align: left;
+            color: white !important;
+            text-transform: capitalize;
+            text-decoration: none;
+            padding: 8px 20px;
+        }
+
+    .side-bar-list li.six.one a {
+        box-shadow: 10px 10px 30px rgba(255, 255, 255, 0.2);
+        color: rgba(0, 85, 142, 1) !important;
+        background-color: white;
+        border-bottom: 2px solid rgba(0, 159, 35, 1);
+    }
+
+        .side-bar-list li.six.one a > div img {
+            filter: invert(203%) sepia(52%) saturate(2948%) hue-rotate(189deg) brightness(69%) contrast(104%);
+        }
+
+    .side-bar-list li.one a > div {
+        min-width: 40px;
+        height: 40px;
+        border-radius: 50%;
+    }
+
+    .side-bar-list li.one a:hover {
+        box-shadow: 5px 5px 30px rgba(255, 255, 255, 0.3);
+        color: white !important
+    }
+
+    .side-bar-list li.six.one a:hover {
+        box-shadow: 5px 5px 30px rgba(255, 255, 255, 0.3);
+        color: rgba(0, 85, 142, 1) !important;
+    }
+
+    .side-bar-list li.one a div img {
+        filter: invert(50%) sepia(31%) saturate(1916%) hue-rotate(230deg) brightness(159%) contrast(309%);
+    }
+
+
+.side-img {
+    height: 45px;
+    width: 45px;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.05);
+    min-width: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/*floating side bar*/
+
+
+
+/*sidetab bar*/
+
+.sideTabBar {
+    max-width: 140px;
+    background-color: rgba(241, 250, 255, 1);
+    min-height: 100vh;
+    width: 100%;
+    padding: 30px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.sideBarNav {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+}
+
+    .sideBarNav li {
+        width: 100%;
+    }
+
+        .sideBarNav li a {
+            width: 100%;
+            display: block;
+            padding: 12px 20px;
+            border-bottom: 0.5px solid rgba(211, 211, 211, 1);
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 24px;
+            letter-spacing: 0em;
+            text-decoration: none;
+            text-transform: none;
+            color: rgba(0, 0, 0, 1);
+        }
+
+            .sideBarNav li a.active {
+                box-shadow: 5px 5px 20px 0 rgba(0, 0, 0, 0.15);
+                background-color: rgba(230, 238, 245, 1);
+            }
+
+/*sidetab bar*/
+
+.tabHead {
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 39px;
+    letter-spacing: 0em;
+    text-align: left;
+    text-transform: capitalize;
+    color: #025599;
+    margin-bottom: 25px;
+}
+
+/*table styling */
+
+.overflowContainer {
+    overflow-x: scroll;
+}
+
+
+.FullViewTablePara {
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 34px;
+    letter-spacing: 0em;
+    text-align: left;
+    text-transform: capitalize;
+    display: inline-block;
+    border-bottom: 1px solid rgba(211, 211, 211, 1);
+    padding: 20px 0;
+    margin-bottom: 0;
+}
+
+    .FullViewTablePara span {
+        font-size: 22px;
+        font-weight: 700;
+        line-height: 34px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: #025599;
+    }
+
+.FullViewTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0 1rem 0;
+    table-layout: auto
+}
+
+    .FullViewTable thead tr {
+        background-color: #E6EEF5;
+        box-shadow: 0 1px 5px rgba(0, 0, 0, 0.08);
+        margin-bottom: 1rem;
+    }
+
+        .FullViewTable thead tr td {
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 24px;
+            letter-spacing: 0em;
+            text-align: center;
+            text-transform: capitalize;
+            color: #025599;
+            padding: 10px 10px;
+            white-space: nowrap;
+        }
+
+    .FullViewTable tbody tr {
+        /*background-color: transparent;*/
+        box-shadow: 0 1px 5px rgba(0, 0, 0, 0.08);
+    }
+
+        .FullViewTable tbody tr:nth-child(1) td > div {
+            display: flex !important;
+        }
+
+            .FullViewTable tbody tr:nth-child(1) td > div > div {
+                width: 100%;
+                background-color: rgba(230, 238, 245, 1);
+                padding: 0.7rem 0.5rem;
+                font-size: 15px;
+                font-weight: 400;
+                line-height: 24px;
+                letter-spacing: 0em;
+                text-align: center;
+                color: rgba(0, 0, 0, 1);
+            }
+
+                .FullViewTable tbody tr:nth-child(1) td > div > div:nth-child(2) {
+                    margin: 0 1px;
+                }
+
+
+    .FullViewTable tbody:before {
+        line-height: 0.1em;
+        content: "\200C";
+        display: block;
+    }
+
+
+
+    .FullViewTable tbody tr td {
+        border: none;
+        min-width: 300px;
+        border-right: 2px solid rgba(0, 0, 0, 0.7);
+    }
+
+        .FullViewTable tbody tr td h1 {
+            font-size: 13px;
+            font-weight: 600;
+            line-height: 16px;
+            letter-spacing: 0em;
+            text-align: left;
+            text-transform: capitalize;
+            color: #797979;
+            position: relative;
+            margin-bottom: 0;
+            padding: 12px 15px
+        }
+
+        .FullViewTable tbody tr td:first-child {
+            width: 200px !important;
+        }
+
+
+
+/*select dropdown*/
+
+
+.DropDownSelects > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+    .DropDownSelects > div > select {
+        border: none;
+        height: 55px;
+        width: 100%;
+        appearance: none;
+        position: relative;
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        appearance: none;
+        background-image: url('../images/downArrow.svg');
+        background-repeat: no-repeat;
+        background-position: right .7em top 50%;
+        background-size: .95em auto;
+        padding: 5px 5px 5px 15px;
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 18px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: #797979;
+        text-transform: capitalize;
+    }
+
+        .DropDownSelects > div > select:focus {
+            border: none;
+            outline: none;
+        }
+
+        .DropDownSelects > div > select:nth-child(1) {
+            background-color: #CEF4D7;
+        }
+
+        .DropDownSelects > div > select:nth-child(2) {
+            background-color: #FFF3C7;
+        }
+
+        .DropDownSelects > div > select:nth-child(3) {
+            background-color: #D6CAC0
+        }
+
+
+.InputTables tbody .tr-hover-class td > div > div:nth-child(1) input {
+    background-color: #CEF4D7;
+}
+
+.InputTables tbody .tr-hover-class td > div > div:nth-child(2) input {
+    background-color: #FFF3C7;
+}
+
+.InputTables tbody .tr-hover-class td > div > div:nth-child(3) input {
+    background-color: #D6CAC0
+}
+/*select dropdown*/
+.threeDropsInRow {
+    width: 100%;
+    margin: 0 10px;
+    position: relative;
+}
+/*table styling */
+
+.detailBackImg {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    object-fit:cover;
+    
+}
+
+    .detailBackImg:after {
+        content: "";
+        background: linear-gradient(180deg, rgba(35,31,32,0) 60%, rgba(35,31,32,0.8) 100%);
+        opacity: 3;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+    }
+
+
+.ToggleBtn {
+    background-color: transparent;
+    border: none;
+    padding: 10px;
+    color: black;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: left;
+    text-transform: capitalize;
+    color: #797979;
+}
+
+    .ToggleBtn img {
+        width: 50px;
+    }
+
+
+.carousel-item{
+    height:100%;
+}

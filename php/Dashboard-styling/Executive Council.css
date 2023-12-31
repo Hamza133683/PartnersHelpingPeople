@@ -1,0 +1,125 @@
+﻿body {  
+}
+
+.executiveHead {
+    font-size: 36px;
+    font-weight: 800;
+    line-height: 40px;
+    letter-spacing: 0em;
+    text-align: center;
+    text-transform: capitalize;
+    color: #0d0d0d;
+}
+
+figure {
+    margin: 0;
+    box-shadow: 5px 5px 20px rgba(0,0,0,0.15);
+    border-radius: 12px;
+}
+
+    figure img {
+        width: 100%;
+        object-fit: cover;
+        border-radius: 12px 12px 0 0;
+    }
+
+figcaption {
+    margin-top: 5px;
+    background-color: white;
+    padding: 8px 0 12px 0;
+    border-radius: 0 0 8px 8px;
+}
+
+.executiveHead1 {
+    font-size: 19px;
+    font-weight: 600;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: center;
+    text-transform: capitalize;
+    color: #0d0d0d;
+    margin-bottom: 2px;
+}
+
+.executivePara {
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 17px;
+    letter-spacing: 0em;
+    text-align: center;
+    text-transform: capitalize;
+    color: #0d0d0d;
+    margin-bottom: 2px;
+}
+
+.grid-container1 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(115px, 1fr));
+    grid-gap: 10px;
+    padding: 0 5px;
+    grid-template-rows: repeat(1, minmax(150px, min-content));
+    margin-bottom: 40px;
+    margin-top: 20px;
+}
+
+.executiveBtn {
+    font-family: Proxima Nova;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 25px;
+    letter-spacing: 0em;
+    text-align: left;
+    text-transform: capitalize;
+    color: rgba(211, 211, 211, 1);
+    padding: 10px 25px;
+    background-color: #00558E;
+    border: none;
+    border-radius: 4px;
+    margin: 30px auto 0 auto;
+}
+
+.ExecutiveUpdateHead {
+    font-size: 35px;
+    font-weight: 800;
+    line-height: 42px;
+    letter-spacing: 0em;
+    text-align: left;
+    text-transform: capitalize;
+    color: #0d0d0d;
+}
+
+.ExecutiveUpdateList {
+    list-style: none;
+    counter-reset: my-awesome-counter;
+    padding-left:2px;
+}
+
+    .ExecutiveUpdateList li {
+        counter-increment: my-awesome-counter;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: 0em;
+        text-align: left;
+        text-transform: capitalize;
+        color: rgba(0, 85, 142, 1);
+    }
+        .ExecutiveUpdateList li::before {
+            content: counter(my-awesome-counter) ". ";
+            color: rgba(0, 85, 142, 1);
+            font-weight: 400;
+        }
+
+.center-bar-head:after {
+    content: "executive council"
+}
+
+
+
+.dropdownUser {
+    display: block !important;
+}
+
+.RigthSideBar {
+    display: none !important;
+}

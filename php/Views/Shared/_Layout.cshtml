@@ -1,0 +1,257 @@
+﻿<!DOCTYPE html>
+<html class="html">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+
+    <link href="~/Home_Styling/LayoutHome.css" rel="stylesheet" />
+
+    @*fontawesom cdn*@
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    @*fontawesom cdn*@
+
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+
+    @*topnav-bar for large screens*@
+    <div style="position:relative;">
+        <div class=" align-items-center justify-content-center px-5 top-navbar" style="min-height:5rem;display:flex;">
+            <nav class="d-flex align-items-center justify-content-between nav-width w-100" data-aos="fade-down">
+                <div class="d-flex align-items-center justify-content-between logo-width">
+                    <a href="@Url.Action("Index","Home")">
+                        <img src="~/images/Logo.svg" width="140px" style="margin-top:0.6rem;" class="homeLogo" />
+                        <img src="~/images/white logo.svg" width="140px" class="aboutLogo" style="margin-top:0.6rem;display:none;" />
+                    </a>
+                    <ul class="nav navbar-nav flex-row">
+                        <li>
+                            <a href="#Home">
+                                Inicio
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#About">
+                                Contáctanos
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#Contact">
+                                Sitio Web Principal
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="d-flex align-items-center justify-content-between btn-width">
+
+                    <a href="#">
+                        <img src="~/images//translate_9651949 1.svg" class="mr-lg-2 mr-1" />
+                    </a>
+
+                    <a href="@Url.Action("Index","Account")">
+                        <button class=" login-btn">
+                            Ingresar
+                        </button>
+                    </a>
+                    <a href="@Url.Action("SignUp","Account")">
+                        <button class=" get-btn">
+                            Registrarse
+                        </button>
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </div>
+    @*top and side nav bars for small screens*@
+
+
+
+
+
+
+
+    <div class="top-side-navbar">
+
+        <div class="d-flex align-content-center justify-content-between px-3 py-2">
+            <img src="~/images/Logo.svg" width="130px" />
+
+            <div class="d-flex align-items-center justify-content-between">
+                <a href="#">
+                    <img src="~/images//translate_9651949 1.svg" class="mr-3" />
+                </a>
+
+                <div class="button">
+                    <a class="btn-open" href="#"></a>
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+
+    <div class="overlay">
+        <div class="wrap">
+            <ul class=" smalsideNav">
+                <li>
+                    <a href="#Home">
+                        Inicio
+                    </a>
+                </li>
+                <li>
+                    <a href="#About">
+                        Contáctanos
+                    </a>
+                </li>
+                <li>
+                    <a href="#Contact">
+                        Sitio Web Principal
+                    </a>
+                </li>
+            </ul>
+
+            <div class="d-flex align-items-center justify-content-between w-100 mx-auto mt-5" style="max-width:300px">
+                <a href="@Url.Action("Index","Account")">
+                    <button class=" login-btn">
+                        Ingresar
+                    </button>
+                </a>
+                <a href="@Url.Action("SignUp","Account")">
+                    <button class="get-btn">
+                        Registrarse
+                    </button>
+                </a>
+            </div>
+        </div>
+    </div>
+    @*top and side nav bars for small screens*@
+
+
+    <div class="">
+
+        @RenderBody()
+
+
+
+
+
+    </div>
+
+
+
+    <footer class="php-footer">
+
+        <div class="footer-width container-fluid px-sm-5 px-2">
+            <div class="row mt-5 w-100 mx-0">
+            <div class="col-md">
+                <a href="#">
+                    <img src="~/images/white logo.svg"  width="230px"/>
+                </a>
+            </div>
+               @* <div class="col-md col-sm-4  mt-md-0 mt-3">
+                    <div>
+                        <div class="">
+                            <p class="foot-para">
+                                Lorem ipsum dolor sit amet consectetur. A cras sagittis faucibus faucibus eu nunc a pulvinar lobortis.
+                            </p>
+                        </div>
+                    </div>
+                </div>*@
+                <div class="col-md col-sm-4 d-flex justify-content-md-center mt-md-0 mt-3">
+                    <ul class="foot-list">
+                        <li>
+                            <a href="#">
+                                Home
+                            </a>
+                        </li>
+                       @* <li>
+                            <a href="#">
+                                About Us
+                            </a>
+                        </li>*@
+                    </ul>
+                </div>
+                <div class="col-md col-sm-4 mt-md-0 mt-3  d-flex justify-content-md-center ">
+                    <ul class="foot-list">
+                       @* <li>
+                            <a href="#">
+                                Why Us
+                            </a>
+                        </li>*@
+                        <li>
+                            <a href="#Contact">
+                                Contact Us
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md mt-md-0 mt-3 d-flex align-items-center">
+                    <div class="d-flex align-items-end flex-column">
+                        <div class="socialRow d-flex">
+                            <a href="#"> <img src="~/images/Facebook.svg" class="mr-1" width="35px" /></a>
+                            <a href="#"><img src="~/images/Twitter Squared.svg" class="mr-1" width="35px" /></a>
+                            <a href="#"> <img src="~/images/LinkedIn sq.svg" class="mr-1" width="35px" /></a>
+                            <a href="#"> <img src="~/images/Instagram sq.svg" width="35px" /></a>
+                        </div>
+                       @* <div class="mt-4" style="position:relative;">
+                            <input type="email" class="foot-input" placeholder="Enter your email" />
+                            <button class="subs-btn">
+                                Subscribe
+                            </button>
+                        </div>*@
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="d-flex align-items-center justify-content-center mt-5">
+                <p class="foot-para pb-4 mt-5">
+                    @@2023 untitled UI. all right are reserved.
+                </p>
+            </div>
+
+        </div>
+
+
+    </footer>
+
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+
+
+
+    <script>
+        AOS.init();
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            $(".button a").click(function () {
+                $(".overlay").fadeToggle(200);
+                $(this).toggleClass('btn-open').toggleClass('btn-close');
+                if ($('.html').hasClass('overflowhtml')) {
+                    $('.html').removeClass('overflowhtml');
+                } else {
+                    $('.html').addClass('overflowhtml');
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

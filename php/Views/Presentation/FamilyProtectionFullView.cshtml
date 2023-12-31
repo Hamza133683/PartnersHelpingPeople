@@ -1,0 +1,796 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<style>
+    
+
+    .rowselected {
+        border: 1px solid;
+        border-color: #FFF3C7;
+        background-color: #FFF3C7;
+    }
+
+    .dropdowncss {
+    }
+
+    .RowBackgroundColor {
+        background-color: #FFF3C7 !important;
+    }
+</style>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>FamilyProtectionFullView</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-3.6.4.min.js"></script>
+    <script src="~/Scripts/bootstrap.js"></script>
+
+    <link href="~/Presentation-Styling/Familyprotectionfullview.css" rel="stylesheet" />
+    <link href="~/Presentation-Styling/Presentaion-Bar-styling.css" rel="stylesheet" />
+
+
+
+</head>
+
+<body>
+
+    <div class="d-flex align-items-center px-4 mt-3">
+        <h1 class="mb-0" style=" font-size: 14px; font-weight: 400; line-height: 19px; letter-spacing: 0em; text-align: left; color: rgba(0, 0, 0, 1);">
+            Back
+            <img src="~/images/Back To.svg" alt="" width="25px" />
+        </h1>
+        <h1 class="mb-0 ml-2" style=" font-size: 14px; font-weight: 400; line-height: 19px; letter-spacing: 0em; text-align: left; color: rgba(0, 0, 0, 1);">
+            <img src="~/images/next.svg" alt="" width="25px" />
+            Next
+        </h1>
+    </div>
+    <h3 class="fullViewHead">
+        Family protection plan
+    </h3>
+
+    <div class="d-flex align-items-center justify-content-between px-4 mx-2">
+        <div class="d-flex flex-column">
+            <img src="~/images/global life.svg" class="mb-3" width="174px" />
+
+        </div>
+        <div class="d-flex flex-column">
+            <img src="~/images/quintero.svg" class="mb-3 mx-auto" width="130px" />
+
+        </div>
+    </div>
+
+
+
+    <div class="d-flex px-4 mt-4 flex-md-nowrap flex-wrap justify-content-md-start justify-content-center">
+
+        <div class="mr-3">
+            <div class="right-side-bar">
+                @{
+                    Html.RenderPartial("User_data_partial_view");
+                }
+            </div>
+            <a href="@Url.Action("FamlyProtectionPlanView","Presentation")">
+                <button class="FullViewBtn">
+                    Full View
+                </button>
+            </a>
+            <a href="@Url.Action("FamlyProtectionDetail","Presentation")">
+                <button class="FullViewBtn">
+                    Presentation
+                </button>
+            </a>
+        </div>
+    </div>
+    <div  id="appendhtml">
+
+    </div>
+
+
+    @*    <div class="d-flex px-4 mt-4 flex-md-nowrap flex-wrap justify-content-md-start justify-content-center">//
+
+            <div class="mr-3">
+                <div class="right-side-bar">
+                    @{
+                        Html.RenderPartial("User_data_partial_view");
+                    }
+                </div>
+                <a href="@Url.Action("FamlyProtectionPlanView","Presentation")">
+                    <button class="FullViewBtn">
+                        Full View
+                    </button>
+                </a>
+                <a href="@Url.Action("FamlyProtectionDetail","Presentation")">
+                    <button class="FullViewBtn">
+                        Presentation
+                    </button>
+                </a>
+            </div>
+
+            <div class="" style="width:100%;overflow:auto;">
+
+                <div class="">
+                    <p class="FullViewTablePara mt-0 pt-md-0 pt-3 pb-2">
+                        <span>H34</span> Hospital visit due to accident injury
+                    </p>
+                    <div class="overflowContainer" style="">
+                        <div class="scrollWidth" style="">
+                            <table class="FullViewTable" style="">
+                                <thead>
+                                    <tr>
+                                        <td></td>
+                                        <td>
+                                            Primary
+                                        </td>
+                                        <td>
+                                            Spouse
+                                        </td>
+                                        <td>
+                                            children1
+                                        </td>
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td></td>
+                                        <td>
+                                            <div>
+                                                <div>Opción A</div>
+                                                <div>Opción B</div>
+                                                <div>Opción C</div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div>
+                                                <div>Opción A</div>
+                                                <div>Opción B</div>
+                                                <div>Opción C</div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div>
+                                                <div>Opción A</div>
+                                                <div>Opción B</div>
+                                                <div>Opción C</div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class='tr-hover-class'>
+                                        <td>
+                                            <h1>
+                                                Estancia en el hospital Diaria.
+                                            </h1>
+                                        </td>
+                                        <td class="DropDownSelects">
+                                            <div>
+                                                <select class="options1" disabled>
+                                                    <option>50$</option>
+                                                </select>
+                                                <select class="options2" disabled>
+                                                    <option>50$</option>
+
+                                                </select>
+                                                <select class="options3" disabled>
+                                                    <option>50$</option>
+
+                                                </select>
+
+                                            </div>
+                                        </td>
+                                        <td class="DropDownSelects">
+                                            <div>
+                                                <select class="options1">
+                                                    <option>50$</option>
+                                                    <option>75$</option>
+                                                    <option>100$</option>
+                                                    <option>150$</option>
+                                                </select>
+                                                <select class="options2">
+                                                    <option>50$</option>
+                                                    <option>75$</option>
+                                                    <option>100$</option>
+                                                    <option>150$</option>
+                                                </select>
+                                                <select class="options3">
+                                                    <option>50$</option>
+                                                    <option>75$</option>
+                                                    <option>100$</option>
+                                                    <option>150$</option>
+                                                </select>
+
+                                            </div>
+                                        </td>
+                                        <td class="DropDownSelects">
+                                            <div>
+                                                <select class="options1">
+                                                    <option>50$</option>
+                                                    <option>75$</option>
+                                                    <option>100$</option>
+                                                    <option>150$</option>
+                                                </select>
+                                                <select class="options2">
+                                                    <option>50$</option>
+                                                    <option>75$</option>
+                                                    <option>100$</option>
+                                                    <option>150$</option>
+                                                </select>
+                                                <select class="options3">
+                                                    <option>50$</option>
+                                                    <option>75$</option>
+                                                    <option>100$</option>
+                                                    <option>150$</option>
+                                                </select>
+
+                                            </div>
+                                        </td>
+
+
+
+                                    </tr>
+
+
+                                </tbody>
+                            </table>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class=" ">
+                    <p class="FullViewTablePara pb-2">
+                        Protector de Ingresos
+                    </p>
+                    <div class="overflowContainer" style="">
+                        <div class="scrollWidth" style="">
+                            <table class="FullViewTable InputTables" style="">
+                                <thead>
+                                    <tr>
+                                        <td></td>
+                                        <td>
+                                            Primary
+                                        </td>
+                                        <td>
+                                            Spouse
+                                        </td>
+
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td></td>
+                                        <td>
+                                            <div>
+                                                <div>Opción A</div>
+                                                <div>Opción B</div>
+                                                <div>Opción C</div>
+                                            </div>
+                                        </td>
+                                        <td>
+                                            <div>
+                                                <div>Opción A</div>
+                                                <div>Opción B</div>
+                                                <div>Opción C</div>
+                                            </div>
+                                        </td>
+
+                                    </tr>
+                                    <tr class='tr-hover-class'>
+                                        <td>
+                                            <h1>
+                                                Por Mes
+                                            </h1>
+                                        </td>
+                                        <td class="DropDownSelects">
+                                            <div>
+                                                <div>
+                                                    <input type="number" />
+                                                </div>
+                                                <div>
+                                                    <input type="number" />
+                                                </div>
+                                                <div>
+                                                    <input type="number" />
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="DropDownSelects">
+                                            <div>
+                                                <div>
+                                                    <input type="number" />
+                                                </div>
+                                                <div>
+                                                    <input type="number" />
+                                                </div>
+                                                <div>
+                                                    <input type="number" />
+                                                </div>
+                                            </div>
+                                        </td>
+
+
+                                    </tr>
+
+                                    <tr class='tr-hover-class'>
+                                        <td>
+                                            <h1>
+                                                Valor total
+                                            </h1>
+                                        </td>
+                                        <td class="DropDownSelects">
+                                            <div>
+                                                <div>
+                                                    <input type="number" />
+                                                </div>
+                                                <div>
+                                                    <input type="number" />
+                                                </div>
+                                                <div>
+                                                    <input type="number" />
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="DropDownSelects">
+                                            <div>
+                                                <div>
+                                                    <input type="number" />
+                                                </div>
+                                                <div>
+                                                    <input type="number" />
+                                                </div>
+                                                <div>
+                                                    <input type="number" />
+                                                </div>
+                                            </div>
+                                        </td>
+
+
+
+                                    </tr>
+
+
+                                </tbody>
+                            </table>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="px-4">
+            <div class="">
+                <p class="FullViewTablePara mt-0 pt-md-0 pt-3 pb-2">
+                    <span>products</span>
+                </p>
+                <div class="overflowContainer" style="">
+                    <div class="scrollWidth" style="">
+                        <table class="FullViewTable" style="">
+                            <thead>
+                                <tr>
+                                    <td></td>
+                                    <td>
+                                        Primary
+                                    </td>
+                                    <td>
+                                        Spouse
+                                    </td>
+                                    <td>
+                                        children1
+                                    </td>
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td></td>
+                                    <td>
+                                        <div>
+                                            <div>Opción A</div>
+                                            <div>Opción B</div>
+                                            <div>Opción C</div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div>
+                                            <div>Opción A</div>
+                                            <div>Opción B</div>
+                                            <div>Opción C</div>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div>
+                                            <div>Opción A</div>
+                                            <div>Opción B</div>
+                                            <div>Opción C</div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class='tr-hover-class'>
+                                    <td>
+                                        <h1>
+                                            daily hospital stay
+                                        </h1>
+                                    </td>
+                                    <td class="DropDownSelects">
+                                        <div>
+                                            <select class="options1">
+                                                <option>50$</option>
+                                                <option>75$</option>
+                                                <option>100$</option>
+                                                <option>150$</option>
+                                            </select>
+                                            <select class="options2">
+                                                <option>50$</option>
+                                                <option>75$</option>
+                                                <option>100$</option>
+                                                <option>150$</option>
+                                            </select>
+                                            <select class="options3">
+                                                <option>50$</option>
+                                                <option>75$</option>
+                                                <option>100$</option>
+                                                <option>150$</option>
+                                            </select>
+
+                                        </div>
+                                    </td>
+                                    <td class="DropDownSelects">
+                                        <div>
+                                            <select class="options1">
+                                                <option>50$</option>
+                                                <option>75$</option>
+                                                <option>100$</option>
+                                                <option>150$</option>
+                                            </select>
+                                            <select class="options2">
+                                                <option>50$</option>
+                                                <option>75$</option>
+                                                <option>100$</option>
+                                                <option>150$</option>
+                                            </select>
+                                            <select class="options3">
+                                                <option>50$</option>
+                                                <option>75$</option>
+                                                <option>100$</option>
+                                                <option>150$</option>
+                                            </select>
+
+                                        </div>
+                                    </td>
+                                    <td class="DropDownSelects">
+                                        <div>
+                                            <select class="options1">
+                                                <option>50$</option>
+                                                <option>75$</option>
+                                                <option>100$</option>
+                                                <option>150$</option>
+                                            </select>
+                                            <select class="options2">
+                                                <option>50$</option>
+                                                <option>75$</option>
+                                                <option>100$</option>
+                                                <option>150$</option>
+                                            </select>
+                                            <select class="options3">
+                                                <option>50$</option>
+                                                <option>75$</option>
+                                                <option>100$</option>
+                                                <option>150$</option>
+                                            </select>
+
+                                        </div>
+                                    </td>
+
+
+
+                                </tr>
+
+                                <tr class='tr-hover-class'>
+                                    <td>
+                                        <h1>
+                                            intensive care unit
+                                        </h1>
+                                    </td>
+                                    <td class="DropDownSelects">
+                                        <div>
+                                            <select class="options1">
+                                                <option>50$</option>
+                                                <option>75$</option>
+                                                <option>100$</option>
+                                                <option>150$</option>
+                                            </select>
+                                            <select class="options2">
+                                                <option>50$</option>
+                                                <option>75$</option>
+                                                <option>100$</option>
+                                                <option>150$</option>
+                                            </select>
+                                            <select class="options3">
+                                                <option>50$</option>
+                                                <option>75$</option>
+                                                <option>100$</option>
+                                                <option>150$</option>
+                                            </select>
+
+                                        </div>
+                                    </td>
+                                    <td class="DropDownSelects">
+                                        <div>
+                                            <select class="options1">
+                                                <option>50$</option>
+                                                <option>75$</option>
+                                                <option>100$</option>
+                                                <option>150$</option>
+                                            </select>
+                                            <select class="options2">
+                                                <option>50$</option>
+                                                <option>75$</option>
+                                                <option>100$</option>
+                                                <option>150$</option>
+                                            </select>
+                                            <select class="options3">
+                                                <option>50$</option>
+                                                <option>75$</option>
+                                                <option>100$</option>
+                                                <option>150$</option>
+                                            </select>
+
+                                        </div>
+                                    </td>
+                                    <td class="DropDownSelects">
+                                        <div>
+                                            <select class="options1">
+                                                <option>50$</option>
+                                                <option>75$</option>
+                                                <option>100$</option>
+                                                <option>150$</option>
+                                            </select>
+                                            <select class="options2">
+                                                <option>50$</option>
+                                                <option>75$</option>
+                                                <option>100$</option>
+                                                <option>150$</option>
+                                            </select>
+                                            <select class="options3">
+                                                <option>50$</option>
+                                                <option>75$</option>
+                                                <option>100$</option>
+                                                <option>150$</option>
+                                            </select>
+
+                                        </div>
+                                    </td>
+
+
+
+                                </tr>
+
+                                <tr class='tr-hover-class'>
+                                    <td>
+                                        <h1>
+                                            emergency
+                                        </h1>
+                                    </td>
+                                    <td class="DropDownSelects">
+                                        <div>
+                                            <select class="options1">
+                                                <option>50$</option>
+                                                <option>75$</option>
+                                                <option>100$</option>
+                                                <option>150$</option>
+                                            </select>
+                                            <select class="options2">
+                                                <option>50$</option>
+                                                <option>75$</option>
+                                                <option>100$</option>
+                                                <option>150$</option>
+                                            </select>
+                                            <select class="options3">
+                                                <option>50$</option>
+                                                <option>75$</option>
+                                                <option>100$</option>
+                                                <option>150$</option>
+                                            </select>
+
+                                        </div>
+                                    </td>
+                                    <td class="DropDownSelects">
+                                        <div>
+                                            <select class="options1">
+                                                <option>50$</option>
+                                                <option>75$</option>
+                                                <option>100$</option>
+                                                <option>150$</option>
+                                            </select>
+                                            <select class="options2">
+                                                <option>50$</option>
+                                                <option>75$</option>
+                                                <option>100$</option>
+                                                <option>150$</option>
+                                            </select>
+                                            <select class="options3">
+                                                <option>50$</option>
+                                                <option>75$</option>
+                                                <option>100$</option>
+                                                <option>150$</option>
+                                            </select>
+
+                                        </div>
+                                    </td>
+                                    <td class="DropDownSelects">
+                                        <div>
+                                            <select class="options1">
+                                                <option>50$</option>
+                                                <option>75$</option>
+                                                <option>100$</option>
+                                                <option>150$</option>
+                                            </select>
+                                            <select class="options2">
+                                                <option>50$</option>
+                                                <option>75$</option>
+                                                <option>100$</option>
+                                                <option>150$</option>
+                                            </select>
+                                            <select class="options3">
+                                                <option>50$</option>
+                                                <option>75$</option>
+                                                <option>100$</option>
+                                                <option>150$</option>
+                                            </select>
+
+                                        </div>
+                                    </td>
+
+
+
+                                </tr>
+
+
+                            </tbody>
+                        </table>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>*@
+
+
+    <div class="d-flex px-4 mt-4 flex-md-nowrap flex-wrap pb-5 align-items-start justify-content-md-start justify-content-center">
+        <div class="w-100  ProgramInvestmentLeft">
+            Lorem ipsum dolor sit amet consectetur. A cras sagittis faucibus faucibus eu nunc a pulvinar lobortis. Dis erat sit nunc amet quis vitae sit nisl. Turpis laoreet metus etiam risus faucibus viverra rhoncus nec. Egestas sit risus porttitor quam convallis. Libero vitae eu tellus praesent convallis vel. Risus sit auctor dui sed. Ut tellus amet est vel.
+        </div>
+        <div class="ProgramInvestmentRight">
+
+            <p class="FullViewTablePara pt-md-0 pt-3 w-100 text-center pb-2">
+                <span style="font-size:20px !important;">Program investment</span>
+            </p>
+            <div class="ProgramInvestmentBox">
+                <h2 class="mr-2">I</h2>
+                <div>
+                    <h2>$80.00</h2>
+                    <sub>Per Month</sub>
+                </div>
+            </div>
+            <h2 class="OptionB">
+                Opción B
+            </h2>
+            <div class="ProgramInvestmentBox1">
+                $ ________ por mes
+
+            </div>
+            <h2 class="OptionB">
+                Opción C
+            </h2>
+            <div class="ProgramInvestmentBox1">
+                $ ________ por mes
+
+            </div>
+            <div class="d-flex justify-content-end mt-2">
+                <button class="HousePowerBtn">
+                    Hora de Poder
+                </button>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
+
+<script src="~/jquery 3.3/jquery-3.3.1.min.js"></script>
+<script>
+
+    $(document).ready(function ()
+    {
+       /* targetElement.prop("selectedIndex", index);*/
+
+        var html = localStorage.getItem('FPPViewHtml');
+        $('#appendhtml').html(html);
+
+        var selectedValues = localStorage.getItem('SelectedValues');
+        var selectedValuesid = localStorage.getItem('SelectedValuesId');
+        var InputValues = localStorage.getItem('InputValues');
+        var InputValuesId = localStorage.getItem('InputValuesId');
+
+        InputValues = InputValues.split(',');
+        InputValuesId = InputValuesId.split(',');
+
+        selectedValues = selectedValues.split(',');
+        selectedValuesid = selectedValuesid.split(',');
+        var count = 0;
+        for (var s = 1; s < selectedValuesid.length; s++) 
+        {
+            var index = selectedValues[s];
+            var id = selectedValuesid[s];
+            if (index && id != "" && index && id != null && index && id != undefined)
+            {
+                $('#' + id).prop("selectedIndex", index);
+                $('#' + id).prop('disabled', true);
+            }
+        }
+       
+
+        for (var s = 3; s < InputValuesId.length; s++)
+        {
+            var value = InputValues[s];
+            var inputId = InputValuesId[s];
+            if (value && inputId != "" && value && inputId != null && value && inputId != undefined) {
+                $('#' + inputId).val(value);
+                $('#' + inputId).prop('disabled', true);
+            }
+        }
+        $('.tr-hover-class').click(function ()
+        {
+            if ($(this).hasClass('rowselected'))
+            {
+                $('.tr-hover-class').removeClass('rowselected');
+            }
+            else
+            {
+                $('.tr-hover-class').removeClass('rowselected');
+                $('.tr-hover-class').find('select').css('background-color', '');
+                $(this).addClass('rowselected');
+                $(this).find('select').css('background-color', '#FFF3C7');
+            }
+        });
+        $('.td-coloumn-class').click(function ()
+        {
+            if ($(this).hasClass('rowselected'))
+            {
+                $('.td-coloumn-class').removeClass('rowselected');
+            }
+            else
+            {
+                $('.td-coloumn-class').removeClass('rowselected');
+                $('.td-coloumn-class').find('select').css('background-color', '');
+                $(this).addClass('rowselected');
+                $(this).find('select').css('background-color', '#FFF3C7');
+                
+            }
+        });
+
+
+
+        
+    });
+    function coloumnhighlight(id1,id2,id3)
+    {
+        $('#' + id1).find('select').css('background-color', '');
+
+        $('#'+id1).css('background-color', '');
+        $('#'+id2).css('background-color', '');
+        $('#'+id3).css('background-color', '');
+        $('#' + id1).addClass('rowselected');
+        $('#' + id2).addClass('rowselected');
+        $('#' + id3).addClass('rowselected');
+
+    }
+</script>

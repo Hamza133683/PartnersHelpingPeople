@@ -1,0 +1,185 @@
+﻿body {
+}
+
+
+
+.containWidth .row > div {
+    padding: 0 7px;
+    margin-bottom: 15px;
+}
+
+
+figure {
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    height: 100%;
+   
+}
+    figure a {
+        display: flex;
+        flex-direction: column;
+        height:100%;
+    }
+
+
+    figure img {
+        width: 100%;
+    }
+
+.card-caption {
+    background-color: white;
+    border-radius: 0 0 6px 6px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: space-between;
+}
+
+.card-head {
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #025599;
+    text-transform: capitalize;
+}
+
+.card-para {
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: left;
+    text-transform: capitalize;
+    color: #797979;
+    margin-bottom: 2px;
+}
+
+.fig-btn {
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 17px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: white;
+    background-color: #025599;
+    padding: 6px 20px;
+    border: none;
+    border-radius: 4px;
+    text-transform: capitalize;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+
+.hero-indicators {
+    z-index: 7;
+}
+
+    .hero-indicators li {
+        width: 10px !important;
+        height: 10px !important;
+        border-radius: 50%;
+        background-color: rgba(211, 211, 211, 1);
+        margin-left: 1px !important;
+        margin-right: 1px !important;
+    }
+
+        .hero-indicators li.active {
+            background-color: #025599;
+        }
+
+.carousel-item {
+    position: relative !important;
+    height: 100%;
+}
+
+    .carousel-item img {
+        width: 100%;
+        height: 100%;
+        border-radius: 8px;
+    }
+
+@media screen and (max-width:767px) {
+    .carousel-item > img {
+        height: 450px;
+        object-fit: cover;
+        border-radius: 8px;
+    }
+}
+
+.carousel-item::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(125deg, rgba(35, 31, 32, 1) 15%,rgba(2, 85, 153, 0.4) 40%, rgba(0, 0, 0, 0) 95%);
+    opacity: 0.8;
+    z-index: 2;
+    border-radius: 9px;
+}
+
+.carousel-caption {
+    text-align: left;
+    left: 3.5%;
+    top: 5px;
+    z-index: 3;
+}
+
+
+.caro-head {
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 32px;
+    letter-spacing: 0em;
+    text-align: left;
+    text-transform: capitalize;
+    color: white;
+    max-width: 400px;
+    margin-bottom: 20px;
+}
+
+.caro-para {
+    text-transform: capitalize;
+    color: white;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 19px;
+    letter-spacing: 0em;
+    text-align: left;
+    max-width: 310px;
+}
+
+.caro-btn {
+    text-transform: capitalize;
+    background-color: #025599;
+    color: white;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    padding: 8px 22px;
+    border: none;
+    border-radius: 6px;
+}
+
+.btn-flow {
+    text-align: left;
+    left: 3.5%;
+    bottom: 30px;
+    display: block;
+    z-index: 3;
+    position: absolute;
+}
+
+
+.center-bar-head:after {
+    content: "Concursos Actuales"
+}

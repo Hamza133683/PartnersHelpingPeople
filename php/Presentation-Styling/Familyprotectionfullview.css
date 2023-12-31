@@ -1,0 +1,348 @@
+﻿
+body {
+    overflow-x: hidden;
+    font-family: 'Figtree', sans-serif;
+    height: 100vh;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+html {
+    overflow: hidden;
+}
+
+.fullViewHead {
+    color: #025599;
+    text-transform: capitalize;
+    font-size: 36px;
+    font-weight: 600;
+    line-height: 44px;
+    letter-spacing: 0em;
+    text-align: center;
+    margin-bottom: 0;
+    margin-top: 20px;
+}
+
+.FullViewBtn {
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: rgba(211, 211, 211, 1);
+    background-color: #025599;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 4px;
+    width: 100%;
+    margin-top: 12px;
+}
+
+
+
+.addRowBtn {
+    background-color: transparent;
+    border: 1px solid #025599;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    text-transform: capitalize;
+    color: #025599;
+    padding: 8px 20px;
+}
+
+
+/*table styling */
+
+.overflowContainer {
+    overflow-x: scroll;
+}
+
+
+.FullViewTablePara {
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 34px;
+    letter-spacing: 0em;
+    text-align: left;
+    text-transform: capitalize;
+    display: inline-block;
+    border-bottom: 1px solid rgba(211, 211, 211, 1);
+    padding: 20px 0;
+    margin-bottom: 0;
+}
+
+    .FullViewTablePara span {
+        font-size: 22px;
+        font-weight: 700;
+        line-height: 34px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: #025599;
+    }
+
+.FullViewTable {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0 1rem 0;
+    table-layout: auto
+}
+
+    .FullViewTable thead tr {
+        background-color: #E6EEF5;
+        box-shadow: 0 1px 5px rgba(0, 0, 0, 0.08);
+        margin-bottom: 1rem;
+    }
+
+        .FullViewTable thead tr td {
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 24px;
+            letter-spacing: 0em;
+            text-align: center;
+            text-transform: capitalize;
+            color: #025599;
+            padding: 10px 10px;
+            white-space: nowrap;
+        }
+
+    .FullViewTable tbody tr {
+        /*background-color: transparent;*/
+        box-shadow: 0 1px 5px rgba(0, 0, 0, 0.08);
+    }
+
+        .FullViewTable tbody tr:nth-child(1) td > div {
+            display: flex !important;
+        }
+
+            .FullViewTable tbody tr:nth-child(1) td > div > div {
+                width: 100%;
+                background-color: rgba(230, 238, 245, 1);
+                padding: 0.7rem 0.5rem;
+                font-size: 15px;
+                font-weight: 400;
+                line-height: 24px;
+                letter-spacing: 0em;
+                text-align: center;
+                color: rgba(0, 0, 0, 1);
+            }
+
+                .FullViewTable tbody tr:nth-child(1) td > div > div:nth-child(2) {
+                    margin: 0 1px;
+                }
+
+
+    .FullViewTable tbody:before {
+        line-height: 0.1em;
+        content: "\200C";
+        display: block;
+    }
+
+
+
+    .FullViewTable tbody tr td {
+        border: none;
+        min-width: 300px;
+        border-right: 2px solid rgba(0, 0, 0, 0.7);
+    }
+
+        .FullViewTable tbody tr td h1 {
+            font-size: 13px;
+            font-weight: 600;
+            line-height: 16px;
+            letter-spacing: 0em;
+            text-align: left;
+            text-transform: capitalize;
+            color: #797979;
+            position: relative;
+            margin-bottom: 0;
+            padding: 12px 15px
+        }
+
+        .FullViewTable tbody tr td:first-child {
+            width: 200px !important;
+        }
+
+
+
+/*select dropdown*/
+
+
+.DropDownSelects > div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+    .DropDownSelects > div > select {
+        border: none;
+        height: 55px;
+        width: 100%;
+        appearance: none;
+        position: relative;
+        -moz-appearance: none;
+        -webkit-appearance: none;
+        appearance: none;
+        background-image: url('../images/downArrow.svg');
+        background-repeat: no-repeat;
+        background-position: right .7em top 50%;
+        background-size: .95em auto;
+        padding: 5px 5px 5px 15px;
+        font-size: 13px;
+        font-weight: 400;
+        line-height: 18px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: #797979;
+        text-transform: capitalize;
+    }
+
+        .DropDownSelects > div > select:focus {
+            border: none;
+            outline: none;
+        }
+
+        .DropDownSelects > div > select:nth-child(1) {
+            background-color: #CEF4D7;
+        }
+
+        .DropDownSelects > div > select:nth-child(2) {
+            background-color: #FFF3C7;
+        }
+
+        .DropDownSelects > div > select:nth-child(3) {
+            background-color: #D6CAC0
+        }
+
+
+.InputTables tbody .tr-hover-class td > div > div:nth-child(1) input {
+    background-color: #CEF4D7;
+}
+
+.InputTables tbody .tr-hover-class td > div > div:nth-child(2) input {
+    background-color: #FFF3C7;
+}
+
+.InputTables tbody .tr-hover-class td > div > div:nth-child(3) input {
+    background-color: #D6CAC0
+}
+/*select dropdown*/
+.threeDropsInRow {
+    width: 100%;
+    margin: 0 10px;
+    position: relative;
+}
+/*table styling */
+
+
+.ProgramInvestmentLeft {
+    padding: 2rem 1.5rem;
+    border: 1px solid #797979;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 29px;
+    letter-spacing: 0em;
+    text-align: left;
+    text-transform: capitalize;
+}
+
+.ProgramInvestmentRight {
+    width: 300px;
+    padding:0 1.5rem ;
+}
+
+.ProgramInvestmentBox {
+    display: flex;
+    padding: 1rem;
+    width: 100%;
+    justify-content: center;
+    margin-top: 1rem;
+    border-radius: 8px;
+    border: 1px solid rgba(211, 211, 211, 1);
+    box-shadow: 0 2px 5px 0 rgba(5, 137, 200, 0.5);
+}
+
+    .ProgramInvestmentBox h2 {
+        font-size: 32px;
+        font-weight: 400;
+        line-height: 25px;
+        letter-spacing: 0em;
+        text-align: right;
+        color: #797979;
+        margin-bottom: 0
+    }
+
+    .ProgramInvestmentBox sub {
+        color: rgba(211, 211, 211, 1);
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 19px;
+        letter-spacing: 0em;
+        text-align: right;
+    }
+
+.OptionB {
+    margin-top: 0.5rem;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 25px;
+    letter-spacing: 0em;
+    text-align: left;
+    text-transform: capitalize;
+    color: rgba(0, 85, 142, 1);
+}
+
+.ProgramInvestmentBox1 {
+    padding: 0.5rem;
+    width: 100%;
+    margin-top: 0.5rem;
+    border-radius: 8px;
+    border: 1px solid rgba(211, 211, 211, 1);
+    box-shadow: 0 2px 5px 0 rgba(5, 137, 200, 0.5);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #797979;
+}
+
+
+
+
+.HousePowerBtn {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: center;
+    text-transform: capitalize;
+    color: rgba(211, 211, 211, 1);
+    background-color: #025599;
+    border-radius: 4px;
+    border: none;
+    padding: 12px 20px;
+    margin-top: 10px;
+    animation: btncolor infinite 1s ease-in-out;
+}
+
+@keyframes btncolor {
+    0% {
+        background-color: #025599;
+    }
+
+    50% {
+        background: linear-gradient(30deg, rgba(78,158,184,1) 0%, rgba(135,186,173,1) 30%, rgba(190,214,162,1) 60%, rgba(224,231,156,1) 87%, rgba(238,238,154,1) 100%);
+        color: black;
+    }
+
+    100% {
+        background-color: #025599;
+    }
+}

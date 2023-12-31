@@ -1,0 +1,17 @@
+﻿@import url('../fonts/stylesheet.css');
+html {
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+
+body {
+    overflow-x: hidden;
+    font-family: 'Proxima Nova' !important;
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+    scrollbar-width: none; /* Firefox */
+}
+
+    body::-webkit-scrollbar {
+        display: none; /* Safari and Chrome */
+    }
